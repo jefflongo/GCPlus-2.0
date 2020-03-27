@@ -116,7 +116,7 @@ void main(void) {
     ADCInit(config.SXChan, config.SYChan, config.CXChan, config.CYChan);
     buttonsInit();
     SIInit();
-    rumbleInit();
+    // rumbleInit();
     //Restore configuration if X+Y+A are all pressed
     if (!inBut.X && !inBut.Y && !inBut.A) {
         configSetDefault();
@@ -152,15 +152,15 @@ void main(void) {
                     //Handle rumble
                     switch (cmd[2]) {
                         case 1:
-                            rumbleSpin(config.rumbleIntensity);
+                            // rumbleSpin(config.rumbleIntensity);
                         break;
 
                         case 2:
-                            rumbleBrake();
+                            // rumbleBrake();
                         break;
 
                         default:
-                            rumbleStop();
+                            // rumbleStop();
                         break;
                     }
                     //Answer
@@ -356,38 +356,38 @@ void portsInit(void) {
     GIE = 0;
     PPSLOCK = 0x55;
     PPSLOCK = 0xAA;
-    PPSLOCKbits.PPSLOCKED = 0x00; //Unlock PPS
+    PPSLOCKbits.PPSLOCKED = 0x00; // Unlock PPS
 
-    //Data line wired to RB2
-    //Reception
-    T6INPPS = 0x0A; //RB2 to T6INPPS. Used as reset trigger
-    SMT1SIGPPS = 0x0A; //RB2
+    // Data line wired to RB4
+    // Reception
+    T6INPPS = 0x0C;    // RB4 to T6INPPS. Used as reset trigger
+    SMT1SIGPPS = 0x0C; // RB4
 
-    //Transmission
-    RB2PPS = 0x04; //CLC4 to RB2
+    // Transmission
+    RB4PPS = 0x04; // CLC4 to RB4
 
     //Rumble PWM
-    RB3PPS = 0x09; //CCP1
+    // RB3PPS = 0x09; //CCP1
 
     PPSLOCK = 0x55;
     PPSLOCK = 0xAA;
-    PPSLOCKbits.PPSLOCKED = 0x01; //Lock PPS
-    GIE = state; //Restore interrupts
+    PPSLOCKbits.PPSLOCKED = 0x01; // Lock PPS
+    GIE = state;                  // Restore interrupts
 
     LATB = 0xFF;
 
     //Bootloader won't emulate analog triggers
     TRISA = 0xFF;
-    TRISB = 0xE7;
+    TRISB = 0xFF;
     TRISC = 0xFF;
-    ANSELA = 0x0F;
+    ANSELA = 0x03;
     ANSELB = 0x00;
-    ANSELC = 0x00;
-    WPUA = 0xF0;
-    WPUB = 0x27;
-    WPUC = 0xFF;
+    ANSELC = 0x1E;
+    WPUA = 0xFC;
+    WPUB = 0x3F;
+    WPUC = 0xE1;
     ODCONA = 0x00;
-    ODCONB = 0x04;
+    ODCONB = 0x10;
     ODCONC = 0x00;
 }
 

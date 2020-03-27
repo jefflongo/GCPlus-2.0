@@ -30,28 +30,29 @@ buttons.h: Handles buttons input and debouncing. Also generates the correct answ
 typedef union {
     struct {
         //PORTA
-        unsigned    : 4;
-        unsigned A  : 1;
-        unsigned B  : 1;
-        unsigned Y  : 1;
-        unsigned X  : 1;
-
-        //PORTB
-        unsigned DR : 1;
-        unsigned DL : 1;
-        unsigned    : 3;
-        unsigned Z2 : 1;
-        unsigned    : 2;
-
-        //PORTC
-        unsigned Z  : 1;
-        unsigned ST : 1;
-        unsigned RD : 1;
-        unsigned RA : 1;
-        unsigned LA : 1;
+        unsigned : 2;
         unsigned LD : 1;
+        unsigned DL : 1;
         unsigned DU : 1;
+        unsigned DR : 1;
+        unsigned ST : 1;
         unsigned DD : 1;
+
+        // PORTB
+        unsigned Z : 1;
+        unsigned RD : 1;
+        unsigned Y : 1;
+        unsigned X : 1;
+        unsigned : 1;
+        unsigned Z2 : 1;
+        unsigned : 2;
+
+        // PORTC
+        unsigned LA : 1;
+        unsigned : 4;
+        unsigned RA : 1;
+        unsigned B : 1;
+        unsigned A : 1;
     };
     struct {
         uint8_t PORTA;

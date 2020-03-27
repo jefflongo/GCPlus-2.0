@@ -37,7 +37,7 @@ main.h: Main code. Handles ports initialization and SI commands.
 #include "adc.h"
 #include "buttons.h"
 #include "si.h"
-#include "rumble.h"
+// #include "rumble.h"
 
 #define GCP2_VERSION_MAJ 2U
 #define GCP2_VERSION_MIN 0U

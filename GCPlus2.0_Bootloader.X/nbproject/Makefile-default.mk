@@ -19,7 +19,7 @@ endif
 endif
 
 # Environment
-MKDIR=mkdir -p
+MKDIR=gnumkdir -p
 RM=rm -f 
 MV=mv 
 CP=cp 
@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c config.c nvm.c adc.c buttons.c si.c rumble.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c config.c nvm.c adc.c buttons.c si.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.p1 ${OBJECTDIR}/config.p1 ${OBJECTDIR}/nvm.p1 ${OBJECTDIR}/adc.p1 ${OBJECTDIR}/buttons.p1 ${OBJECTDIR}/si.p1 ${OBJECTDIR}/rumble.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.p1.d ${OBJECTDIR}/config.p1.d ${OBJECTDIR}/nvm.p1.d ${OBJECTDIR}/adc.p1.d ${OBJECTDIR}/buttons.p1.d ${OBJECTDIR}/si.p1.d ${OBJECTDIR}/rumble.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.p1 ${OBJECTDIR}/config.p1 ${OBJECTDIR}/nvm.p1 ${OBJECTDIR}/adc.p1 ${OBJECTDIR}/buttons.p1 ${OBJECTDIR}/si.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.p1.d ${OBJECTDIR}/config.p1.d ${OBJECTDIR}/nvm.p1.d ${OBJECTDIR}/adc.p1.d ${OBJECTDIR}/buttons.p1.d ${OBJECTDIR}/si.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.p1 ${OBJECTDIR}/config.p1 ${OBJECTDIR}/nvm.p1 ${OBJECTDIR}/adc.p1 ${OBJECTDIR}/buttons.p1 ${OBJECTDIR}/si.p1 ${OBJECTDIR}/rumble.p1
+OBJECTFILES=${OBJECTDIR}/main.p1 ${OBJECTDIR}/config.p1 ${OBJECTDIR}/nvm.p1 ${OBJECTDIR}/adc.p1 ${OBJECTDIR}/buttons.p1 ${OBJECTDIR}/si.p1
 
 # Source Files
-SOURCEFILES=main.c config.c nvm.c adc.c buttons.c si.c rumble.c
+SOURCEFILES=main.c config.c nvm.c adc.c buttons.c si.c
 
 
 CFLAGS=
@@ -141,14 +141,6 @@ ${OBJECTDIR}/si.p1: si.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/si.d ${OBJECTDIR}/si.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/si.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/rumble.p1: rumble.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/rumble.p1.d 
-	@${RM} ${OBJECTDIR}/rumble.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fshort-double -fshort-float -memi=wordwrite -mrom=0-1FFF -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits -mc90lib $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/rumble.p1 rumble.c 
-	@-${MV} ${OBJECTDIR}/rumble.d ${OBJECTDIR}/rumble.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/rumble.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
 else
 ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -198,14 +190,6 @@ ${OBJECTDIR}/si.p1: si.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/si.d ${OBJECTDIR}/si.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/si.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/rumble.p1: rumble.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/rumble.p1.d 
-	@${RM} ${OBJECTDIR}/rumble.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fshort-double -fshort-float -memi=wordwrite -mrom=0-1FFF -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits -mc90lib $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/rumble.p1 rumble.c 
-	@-${MV} ${OBJECTDIR}/rumble.d ${OBJECTDIR}/rumble.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/rumble.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
 endif
 
 # ------------------------------------------------------------------------------------
@@ -234,7 +218,7 @@ dist/${CND_CONF}/${IMAGE_TYPE}/GCPlus2.0_Bootloader.X.${IMAGE_TYPE}.${OUTPUT_SUF
 	${MP_CC} $(MP_EXTRA_LD_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -Wl,-Map=dist/${CND_CONF}/${IMAGE_TYPE}/GCPlus2.0_Bootloader.X.${IMAGE_TYPE}.map  -DXPRJ_default=$(CND_CONF)  -Wl,--defsym=__MPLAB_BUILD=1  -fshort-double -fshort-float -memi=wordwrite -mrom=0-1FFF -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits -mc90lib -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     $(COMPARISON_BUILD) -Wl,--memorysummary,dist/${CND_CONF}/${IMAGE_TYPE}/memoryfile.xml -o dist/${CND_CONF}/${IMAGE_TYPE}/GCPlus2.0_Bootloader.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
 	
 	@echo "Creating unified hex file"
-	@"/Applications/microchip/mplabx/v5.20/mplab_platform/platform/../mplab_ide/modules/../../bin/hexmate" --edf="/Applications/microchip/mplabx/v5.20/mplab_platform/platform/../mplab_ide/modules/../../dat/en_msgs.txt" dist/${CND_CONF}/${IMAGE_TYPE}/GCPlus2.0_Bootloader.X.${IMAGE_TYPE}.hex ../GCPlus2.0.X/dist/default/production/GCPlus2.0.X.production.hex -odist/${CND_CONF}/production/GCPlus2.0_Bootloader.X.production.unified.hex
+	@"C:/Program Files (x86)/Microchip/MPLABX/v5.20/mplab_platform/platform/../mplab_ide/modules/../../bin/hexmate" --edf="C:/Program Files (x86)/Microchip/MPLABX/v5.20/mplab_platform/platform/../mplab_ide/modules/../../dat/en_msgs.txt" dist/${CND_CONF}/${IMAGE_TYPE}/GCPlus2.0_Bootloader.X.${IMAGE_TYPE}.hex ../GCPlus2.0.X/dist/default/production/GCPlus2.0.X.production.hex -odist/${CND_CONF}/production/GCPlus2.0_Bootloader.X.production.unified.hex
 
 endif
 
@@ -242,15 +226,15 @@ endif
 # Subprojects
 .build-subprojects:
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-	cd ../GCPlus2.0.X && ${MAKE}  -f Makefile CONF=default TYPE_IMAGE=DEBUG_RUN
+	cd /D ../GCPlus2.0.X && ${MAKE}  -f Makefile CONF=default TYPE_IMAGE=DEBUG_RUN
 else
-	cd ../GCPlus2.0.X && ${MAKE}  -f Makefile CONF=default
+	cd /D ../GCPlus2.0.X && ${MAKE}  -f Makefile CONF=default
 endif
 
 
 # Subprojects
 .clean-subprojects:
-	cd ../GCPlus2.0.X && rm -rf "build/default" "dist/default"
+	cd /D ../GCPlus2.0.X && rm -rf "build/default" "dist/default"
 
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
@@ -260,7 +244,7 @@ endif
 # Enable dependency checking
 .dep.inc: .depcheck-impl
 
-DEPFILES=$(shell "${PATH_TO_IDE_BIN}"mplabwildcard ${POSSIBLE_DEPFILES})
+DEPFILES=$(shell mplabwildcard ${POSSIBLE_DEPFILES})
 ifneq (${DEPFILES},)
 include ${DEPFILES}
 endif

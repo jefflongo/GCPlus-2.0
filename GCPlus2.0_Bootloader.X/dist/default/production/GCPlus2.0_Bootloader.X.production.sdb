@@ -1,0 +1,1205 @@
+[p GLOBOPT AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F25K42 ]
+[d frameptr 4065 ]
+"109 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\buttons.h
+[e E15478 . `uc
+BUTTON_A_ID 0
+BUTTON_B_ID 1
+BUTTON_X_ID 2
+BUTTON_Y_ID 3
+BUTTON_ST_ID 4
+BUTTON_DL_ID 5
+BUTTON_DR_ID 6
+BUTTON_DD_ID 7
+BUTTON_DU_ID 8
+BUTTON_Z_ID 9
+BUTTON_RD_ID 10
+BUTTON_LD_ID 11
+BUTTON_LA_ID 12
+BUTTON_RA_ID 13
+BUTTON_Z2_ID 14
+N_BUTTONS 15
+]
+[e E15478 . `uc
+BUTTON_A_ID 0
+BUTTON_B_ID 1
+BUTTON_X_ID 2
+BUTTON_Y_ID 3
+BUTTON_ST_ID 4
+BUTTON_DL_ID 5
+BUTTON_DR_ID 6
+BUTTON_DD_ID 7
+BUTTON_DU_ID 8
+BUTTON_Z_ID 9
+BUTTON_RD_ID 10
+BUTTON_LD_ID 11
+BUTTON_LA_ID 12
+BUTTON_RA_ID 13
+BUTTON_Z2_ID 14
+N_BUTTONS 15
+]
+[e E15478 . `uc
+BUTTON_A_ID 0
+BUTTON_B_ID 1
+BUTTON_X_ID 2
+BUTTON_Y_ID 3
+BUTTON_ST_ID 4
+BUTTON_DL_ID 5
+BUTTON_DR_ID 6
+BUTTON_DD_ID 7
+BUTTON_DU_ID 8
+BUTTON_Z_ID 9
+BUTTON_RD_ID 10
+BUTTON_LD_ID 11
+BUTTON_LA_ID 12
+BUTTON_RA_ID 13
+BUTTON_Z2_ID 14
+N_BUTTONS 15
+]
+[e E15478 . `uc
+BUTTON_A_ID 0
+BUTTON_B_ID 1
+BUTTON_X_ID 2
+BUTTON_Y_ID 3
+BUTTON_ST_ID 4
+BUTTON_DL_ID 5
+BUTTON_DR_ID 6
+BUTTON_DD_ID 7
+BUTTON_DU_ID 8
+BUTTON_Z_ID 9
+BUTTON_RD_ID 10
+BUTTON_LD_ID 11
+BUTTON_LA_ID 12
+BUTTON_RA_ID 13
+BUTTON_Z2_ID 14
+N_BUTTONS 15
+]
+"41 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\adc.c
+[v _ADCInit ADCInit `(v  1 e 1 0 ]
+"64 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\buttons.c
+[v _buttonsInit buttonsInit `(v  1 e 1 0 ]
+"91
+[v _buttonsUpdate buttonsUpdate `(v  1 e 1 0 ]
+"168
+[v _buttonsGetMessage buttonsGetMessage `(*.39uc  1 e 2 0 ]
+"230
+[v _buttonsSetMapByte0 buttonsSetMapByte0 `(v  1 e 1 0 ]
+"238
+[v _buttonsSetMapByte1 buttonsSetMapByte1 `(v  1 e 1 0 ]
+"246
+[v _buttonsGetMapByte0 buttonsGetMapByte0 `(*.39uc  1 e 2 0 ]
+"256
+[v _buttonsGetMapByte1 buttonsGetMapByte1 `(*.39uc  1 e 2 0 ]
+"266
+[v _buttonsBuildLUT buttonsBuildLUT `(v  1 e 1 0 ]
+"293
+[v _buttonsBuildLUTs buttonsBuildLUTs `(v  1 e 1 0 ]
+"7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"19 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"11 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul64.c
+[v ___omul __omul `(ul  1 e 4 0 ]
+"31 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\config.c
+[v _configInit configInit `(v  1 e 1 0 ]
+"47
+[v _configSetDefault configSetDefault `(v  1 e 1 0 ]
+"80
+[v _configFlashAll configFlashAll `(v  1 e 1 0 ]
+"79 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"469
+[v _portsInit portsInit `(v  1 e 1 0 ]
+"510
+[v _bootPayload bootPayload `(v  1 e 1 0 ]
+"29 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\nvm.c
+[v _NVMUnlock NVMUnlock `(v  1 e 1 0 ]
+"37
+[v _PGMEraseRow PGMEraseRow `(v  1 e 1 0 ]
+"55
+[v _PGMWriteBlock PGMWriteBlock `(v  1 e 1 0 ]
+"89
+[v _PGMReadBlock PGMReadBlock `(v  1 e 1 0 ]
+"113
+[v _EEPROMReadByte EEPROMReadByte `(uc  1 e 1 0 ]
+"120
+[v _EEPROMWriteByte EEPROMWriteByte `(v  1 e 1 0 ]
+"38 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\si.c
+[v _hi_int hi_int `II(v  1 e 1 0 ]
+"75
+[v _SIInit SIInit `(v  1 e 1 0 ]
+"129
+[v _SIConfigureCLC SIConfigureCLC `(v  1 e 1 0 ]
+"194
+[v _SISendMessage SISendMessage `(v  1 e 1 0 ]
+"257
+[v _SIGetCommand SIGetCommand `(uc  1 e 1 0 ]
+"283
+[v _SIClear SIClear `(v  1 e 1 0 ]
+[v i2_SIClear SIClear `(v  1 e 1 0 ]
+"32 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\adc.c
+[v _ADCChannels ADCChannels `[6]uc  1 e 6 0 ]
+"37
+[v _ADCValues ADCValues `[6]uc  1 e 6 0 ]
+[s S45 . 3 `uc 1 . 1 0 :2:0 
+`uc 1 LD 1 0 :1:2 
+`uc 1 DL 1 0 :1:3 
+`uc 1 DU 1 0 :1:4 
+`uc 1 DR 1 0 :1:5 
+`uc 1 ST 1 0 :1:6 
+`uc 1 DD 1 0 :1:7 
+`uc 1 Z 1 1 :1:0 
+`uc 1 RD 1 1 :1:1 
+`uc 1 Y 1 1 :1:2 
+`uc 1 X 1 1 :1:3 
+`uc 1 . 1 1 :1:4 
+`uc 1 Z2 1 1 :1:5 
+`uc 1 . 1 1 :2:6 
+`uc 1 LA 1 2 :1:0 
+`uc 1 . 1 2 :4:1 
+`uc 1 RA 1 2 :1:5 
+`uc 1 B 1 2 :1:6 
+`uc 1 A 1 2 :1:7 
+]
+"52 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\buttons.c
+[s S65 . 3 `uc 1 PORTA 1 0 `uc 1 PORTB 1 1 `uc 1 PORTC 1 2 ]
+[u S69 . 3 `S45 1 . 3 0 `S65 1 . 3 0 ]
+[v _prevButtons prevButtons `S69  1 e 3 0 ]
+[s S900 . 4 `uc 1 A 1 0 :1:0 
+`uc 1 B 1 0 :1:1 
+`uc 1 X 1 0 :1:2 
+`uc 1 Y 1 0 :1:3 
+`uc 1 ST 1 0 :1:4 
+`uc 1 . 1 0 :3:5 
+`uc 1 DL 1 1 :1:0 
+`uc 1 DR 1 1 :1:1 
+`uc 1 DD 1 1 :1:2 
+`uc 1 DU 1 1 :1:3 
+`uc 1 Z 1 1 :1:4 
+`uc 1 RD 1 1 :1:5 
+`uc 1 LD 1 1 :1:6 
+`uc 1 er 1 1 :1:7 
+`uc 1 LA 1 2 `uc 1 RA 1 3 ]
+"53
+[s S917 . 4 `uc 1 byte0 1 0 `uc 1 byte1 1 1 `uc 1 byte6 1 2 `uc 1 byte7 1 3 ]
+[u S922 . 4 `S900 1 . 4 0 `S917 1 . 4 0 ]
+[v _outButtons outButtons `S922  1 e 4 0 ]
+"55
+[v _buttonsTimers buttonsTimers `[15]uc  1 e 15 0 ]
+"56
+[v _buttonsMessage buttonsMessage `[8]uc  1 e 8 0 ]
+"57
+[v _buttonsMapByte0 buttonsMapByte0 `[15]uc  1 e 15 0 ]
+"58
+[v _buttonsMapByte1 buttonsMapByte1 `[15]uc  1 e 15 0 ]
+"59
+[v _LUT_SX LUT_SX `[256]uc  1 e 256 0 ]
+"60
+[v _LUT_SY LUT_SY `[256]uc  1 e 256 0 ]
+"61
+[v _LUT_CX LUT_CX `[256]uc  1 e 256 0 ]
+"62
+[v _LUT_CY LUT_CY `[256]uc  1 e 256 0 ]
+[s S1299 . 1 `uc 1 INT0IP 1 0 :1:0 
+`uc 1 ZCDIP 1 0 :1:1 
+`uc 1 ADIP 1 0 :1:2 
+`uc 1 ADTIP 1 0 :1:3 
+`uc 1 C1IP 1 0 :1:4 
+`uc 1 SMT1IP 1 0 :1:5 
+`uc 1 SMT1PRAIP 1 0 :1:6 
+`uc 1 SMT1PWAIP 1 0 :1:7 
+]
+"2851 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f25k42.h
+[s S1308 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IP 1 0 :1:4 
+`uc 1 RC1IP 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 PSPIP 1 0 :1:7 
+]
+[u S1314 . 1 `S1299 1 . 1 0 `S1308 1 . 1 0 ]
+[v _IPR1bits IPR1bits `VES1314  1 e 1 @14721 ]
+[s S1333 . 1 `uc 1 INT0IE 1 0 :1:0 
+`uc 1 ZCDIE 1 0 :1:1 
+`uc 1 ADIE 1 0 :1:2 
+`uc 1 ADTIE 1 0 :1:3 
+`uc 1 C1IE 1 0 :1:4 
+`uc 1 SMT1IE 1 0 :1:5 
+`uc 1 SMT1PRAIE 1 0 :1:6 
+`uc 1 SMT1PWAIE 1 0 :1:7 
+]
+"3502
+[s S1342 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IE 1 0 :1:4 
+`uc 1 RC1IE 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 PSPIE 1 0 :1:7 
+]
+[s S1348 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TXIE 1 0 :1:4 
+]
+[u S1351 . 1 `S1333 1 . 1 0 `S1342 1 . 1 0 `S1348 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES1351  1 e 1 @14737 ]
+[s S1175 . 1 `uc 1 TMR6IE 1 0 :1:0 
+`uc 1 CCP3IE 1 0 :1:1 
+`uc 1 CWG3IE 1 0 :1:2 
+`uc 1 CLC3IE 1 0 :1:3 
+]
+"4014
+[u S1180 . 1 `S1175 1 . 1 0 ]
+[v _PIE9bits PIE9bits `VES1180  1 e 1 @14745 ]
+[s S1258 . 1 `uc 1 INT0IF 1 0 :1:0 
+`uc 1 ZCDIF 1 0 :1:1 
+`uc 1 ADIF 1 0 :1:2 
+`uc 1 ADTIF 1 0 :1:3 
+`uc 1 C1IF 1 0 :1:4 
+`uc 1 SMT1IF 1 0 :1:5 
+`uc 1 SMT1PRAIF 1 0 :1:6 
+`uc 1 SMT1PWAIF 1 0 :1:7 
+]
+"4155
+[s S1267 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 PSPIF 1 0 :1:7 
+]
+[s S1273 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TXIF 1 0 :1:4 
+]
+[u S1276 . 1 `S1258 1 . 1 0 `S1267 1 . 1 0 `S1273 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES1276  1 e 1 @14753 ]
+[s S1193 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR1GIF 1 0 :1:1 
+`uc 1 TMR2IF 1 0 :1:2 
+`uc 1 CCP1IF 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 NCO1IF 1 0 :1:5 
+`uc 1 CWG1IF 1 0 :1:6 
+`uc 1 CLC1IF 1 0 :1:7 
+]
+"4386
+[u S1202 . 1 `S1193 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES1202  1 e 1 @14756 ]
+[s S1156 . 1 `uc 1 TMR6IF 1 0 :1:0 
+`uc 1 CCP3IF 1 0 :1:1 
+`uc 1 CWG3IF 1 0 :1:2 
+`uc 1 CLC3IF 1 0 :1:3 
+]
+"4635
+[u S1161 . 1 `S1156 1 . 1 0 ]
+[v _PIR9bits PIR9bits `VES1161  1 e 1 @14761 ]
+"5734
+[v _NVMADRL NVMADRL `VEuc  1 e 1 @14816 ]
+"5862
+[v _NVMDAT NVMDAT `VEuc  1 e 1 @14819 ]
+"5990
+[v _NVMCON1 NVMCON1 `VEuc  1 e 1 @14821 ]
+[s S536 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 FREE 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 REG 1 0 :2:6 
+]
+"6020
+[s S544 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 REG0 1 0 :1:6 
+`uc 1 REG1 1 0 :1:7 
+]
+[s S548 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 NVMREG 1 0 :2:6 
+]
+[s S551 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 NVMREG0 1 0 :1:6 
+`uc 1 NVMREG1 1 0 :1:7 
+]
+[u S555 . 1 `S536 1 . 1 0 `S544 1 . 1 0 `S548 1 . 1 0 `S551 1 . 1 0 ]
+[v _NVMCON1bits NVMCON1bits `VES555  1 e 1 @14821 ]
+"6080
+[v _NVMCON2 NVMCON2 `VEuc  1 e 1 @14822 ]
+"7060
+[v _RB4PPS RB4PPS `VEuc  1 e 1 @14860 ]
+"7660
+[v _ANSELA ANSELA `VEuc  1 e 1 @14912 ]
+"7722
+[v _WPUA WPUA `VEuc  1 e 1 @14913 ]
+"7784
+[v _ODCONA ODCONA `VEuc  1 e 1 @14914 ]
+"8280
+[v _ANSELB ANSELB `VEuc  1 e 1 @14928 ]
+"8342
+[v _WPUB WPUB `VEuc  1 e 1 @14929 ]
+"8404
+[v _ODCONB ODCONB `VEuc  1 e 1 @14930 ]
+"9116
+[v _ANSELC ANSELC `VEuc  1 e 1 @14944 ]
+"9178
+[v _WPUC WPUC `VEuc  1 e 1 @14945 ]
+"9240
+[v _ODCONC ODCONC `VEuc  1 e 1 @14946 ]
+"10113
+[v _PPSLOCK PPSLOCK `VEuc  1 e 1 @15039 ]
+[s S266 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
+]
+"10123
+[u S268 . 1 `S266 1 . 1 0 ]
+[v _PPSLOCKbits PPSLOCKbits `VES268  1 e 1 @15039 ]
+"10373
+[v _T6INPPS T6INPPS `VEuc  1 e 1 @15052 ]
+"10493
+[v _SMT1SIGPPS SMT1SIGPPS `VEuc  1 e 1 @15058 ]
+"11566
+[v _DMA2DSZL DMA2DSZL `VEuc  1 e 1 @15310 ]
+"11694
+[v _DMA2DSZH DMA2DSZH `VEuc  1 e 1 @15311 ]
+"11781
+[v _DMA2DSAL DMA2DSAL `VEuc  1 e 1 @15312 ]
+"11909
+[v _DMA2DSAH DMA2DSAH `VEuc  1 e 1 @15313 ]
+"12628
+[v _DMA2SSZL DMA2SSZL `VEuc  1 e 1 @15319 ]
+"12756
+[v _DMA2SSZH DMA2SSZH `VEuc  1 e 1 @15320 ]
+"12845
+[v _DMA2SSAL DMA2SSAL `VEuc  1 e 1 @15321 ]
+"12973
+[v _DMA2SSAH DMA2SSAH `VEuc  1 e 1 @15322 ]
+"13101
+[v _DMA2SSAU DMA2SSAU `VEuc  1 e 1 @15323 ]
+"13205
+[v _DMA2CON0 DMA2CON0 `VEuc  1 e 1 @15324 ]
+[s S742 . 1 `uc 1 SSTP 1 0 :1:0 
+`uc 1 SMODE 1 0 :2:1 
+`uc 1 SMR 1 0 :2:3 
+`uc 1 DSTP 1 0 :1:5 
+`uc 1 DMODE 1 0 :2:6 
+]
+"13299
+[u S748 . 1 `S742 1 . 1 0 ]
+[v _DMA2CON1bits DMA2CON1bits `VES748  1 e 1 @15325 ]
+"13445
+[v _DMA2SIRQ DMA2SIRQ `VEuc  1 e 1 @15327 ]
+"14174
+[v _DMA1DSZL DMA1DSZL `VEuc  1 e 1 @15342 ]
+"14302
+[v _DMA1DSZH DMA1DSZH `VEuc  1 e 1 @15343 ]
+"14389
+[v _DMA1DSAL DMA1DSAL `VEuc  1 e 1 @15344 ]
+"14517
+[v _DMA1DSAH DMA1DSAH `VEuc  1 e 1 @15345 ]
+"15236
+[v _DMA1SSZL DMA1SSZL `VEuc  1 e 1 @15351 ]
+"15364
+[v _DMA1SSZH DMA1SSZH `VEuc  1 e 1 @15352 ]
+"15453
+[v _DMA1SSAL DMA1SSAL `VEuc  1 e 1 @15353 ]
+"15581
+[v _DMA1SSAH DMA1SSAH `VEuc  1 e 1 @15354 ]
+"15709
+[v _DMA1SSAU DMA1SSAU `VEuc  1 e 1 @15355 ]
+"15813
+[v _DMA1CON0 DMA1CON0 `VEuc  1 e 1 @15356 ]
+[s S784 . 1 `uc 1 XIP 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 AIRQEN 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DGO 1 0 :1:5 
+`uc 1 SIRQEN 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"15838
+[s S792 . 1 `uc 1 DMA1XIP 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 DMA1AIRQEN 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DMA1DGO 1 0 :1:5 
+`uc 1 DMA1SIRQEN 1 0 :1:6 
+`uc 1 DMA1EN 1 0 :1:7 
+]
+[u S800 . 1 `S784 1 . 1 0 `S792 1 . 1 0 ]
+[v _DMA1CON0bits DMA1CON0bits `VES800  1 e 1 @15356 ]
+"15907
+[v _DMA1CON1bits DMA1CON1bits `VES748  1 e 1 @15357 ]
+"16053
+[v _DMA1SIRQ DMA1SIRQ `VEuc  1 e 1 @15359 ]
+"16169
+[v _CLC4CON CLC4CON `VEuc  1 e 1 @15446 ]
+"16297
+[v _CLC4POL CLC4POL `VEuc  1 e 1 @15447 ]
+"16375
+[v _CLC4SEL0 CLC4SEL0 `VEuc  1 e 1 @15448 ]
+"16503
+[v _CLC4SEL1 CLC4SEL1 `VEuc  1 e 1 @15449 ]
+"16631
+[v _CLC4SEL2 CLC4SEL2 `VEuc  1 e 1 @15450 ]
+"16759
+[v _CLC4SEL3 CLC4SEL3 `VEuc  1 e 1 @15451 ]
+"16887
+[v _CLC4GLS0 CLC4GLS0 `VEuc  1 e 1 @15452 ]
+"16999
+[v _CLC4GLS1 CLC4GLS1 `VEuc  1 e 1 @15453 ]
+"17111
+[v _CLC4GLS2 CLC4GLS2 `VEuc  1 e 1 @15454 ]
+"17223
+[v _CLC4GLS3 CLC4GLS3 `VEuc  1 e 1 @15455 ]
+"17335
+[v _CLC3CON CLC3CON `VEuc  1 e 1 @15456 ]
+"17463
+[v _CLC3POL CLC3POL `VEuc  1 e 1 @15457 ]
+"17541
+[v _CLC3SEL0 CLC3SEL0 `VEuc  1 e 1 @15458 ]
+"17669
+[v _CLC3SEL1 CLC3SEL1 `VEuc  1 e 1 @15459 ]
+"17797
+[v _CLC3SEL2 CLC3SEL2 `VEuc  1 e 1 @15460 ]
+"17925
+[v _CLC3SEL3 CLC3SEL3 `VEuc  1 e 1 @15461 ]
+"18053
+[v _CLC3GLS0 CLC3GLS0 `VEuc  1 e 1 @15462 ]
+"18165
+[v _CLC3GLS1 CLC3GLS1 `VEuc  1 e 1 @15463 ]
+"18277
+[v _CLC3GLS2 CLC3GLS2 `VEuc  1 e 1 @15464 ]
+"18389
+[v _CLC3GLS3 CLC3GLS3 `VEuc  1 e 1 @15465 ]
+"18501
+[v _CLC2CON CLC2CON `VEuc  1 e 1 @15466 ]
+"18629
+[v _CLC2POL CLC2POL `VEuc  1 e 1 @15467 ]
+"18707
+[v _CLC2SEL0 CLC2SEL0 `VEuc  1 e 1 @15468 ]
+"18835
+[v _CLC2SEL1 CLC2SEL1 `VEuc  1 e 1 @15469 ]
+"18963
+[v _CLC2SEL2 CLC2SEL2 `VEuc  1 e 1 @15470 ]
+"19091
+[v _CLC2SEL3 CLC2SEL3 `VEuc  1 e 1 @15471 ]
+"19219
+[v _CLC2GLS0 CLC2GLS0 `VEuc  1 e 1 @15472 ]
+"19331
+[v _CLC2GLS1 CLC2GLS1 `VEuc  1 e 1 @15473 ]
+"19443
+[v _CLC2GLS2 CLC2GLS2 `VEuc  1 e 1 @15474 ]
+"19555
+[v _CLC2GLS3 CLC2GLS3 `VEuc  1 e 1 @15475 ]
+"19667
+[v _CLC1CON CLC1CON `VEuc  1 e 1 @15476 ]
+"19795
+[v _CLC1POL CLC1POL `VEuc  1 e 1 @15477 ]
+"19873
+[v _CLC1SEL0 CLC1SEL0 `VEuc  1 e 1 @15478 ]
+"20001
+[v _CLC1SEL1 CLC1SEL1 `VEuc  1 e 1 @15479 ]
+"20129
+[v _CLC1SEL2 CLC1SEL2 `VEuc  1 e 1 @15480 ]
+"20257
+[v _CLC1SEL3 CLC1SEL3 `VEuc  1 e 1 @15481 ]
+"20385
+[v _CLC1GLS0 CLC1GLS0 `VEuc  1 e 1 @15482 ]
+"20497
+[v _CLC1GLS1 CLC1GLS1 `VEuc  1 e 1 @15483 ]
+"20609
+[v _CLC1GLS2 CLC1GLS2 `VEuc  1 e 1 @15484 ]
+"20721
+[v _CLC1GLS3 CLC1GLS3 `VEuc  1 e 1 @15485 ]
+"21517
+[v _SPI1TXB SPI1TXB `VEuc  1 e 1 @15633 ]
+"21594
+[v _SPI1TCNTL SPI1TCNTL `VEuc  1 e 1 @15634 ]
+"21634
+[v _SPI1CON0 SPI1CON0 `VEuc  1 e 1 @15636 ]
+"21700
+[v _SPI1CON1 SPI1CON1 `VEuc  1 e 1 @15637 ]
+"21802
+[v _SPI1CON2 SPI1CON2 `VEuc  1 e 1 @15638 ]
+[s S1459 . 1 `uc 1 RXBF 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 CLRBF 1 0 :1:2 
+`uc 1 RXRE 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 TXBE 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 TXWE 1 0 :1:7 
+]
+"21907
+[s S1468 . 1 `uc 1 SPI1RXBF 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 SPI1CLRBF 1 0 :1:2 
+`uc 1 SPI1RXRE 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 SPI1TXBE 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 SPI1TXWE 1 0 :1:7 
+]
+[u S1477 . 1 `S1459 1 . 1 0 `S1468 1 . 1 0 ]
+[v _SPI1STATUSbits SPI1STATUSbits `VES1477  1 e 1 @15639 ]
+"21962
+[v _SPI1TWIDTH SPI1TWIDTH `VEuc  1 e 1 @15640 ]
+"22002
+[v _SPI1BAUD SPI1BAUD `VEuc  1 e 1 @15641 ]
+[s S1521 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 TXUIF 1 0 :1:1 
+`uc 1 RXOIF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 EOSIF 1 0 :1:4 
+`uc 1 SOSIF 1 0 :1:5 
+`uc 1 TCZIF 1 0 :1:6 
+`uc 1 SRMTIF 1 0 :1:7 
+]
+"22099
+[s S1530 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 SPI1TXUIF 1 0 :1:1 
+`uc 1 SPI1RXOIF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 SPI1EOSIF 1 0 :1:4 
+`uc 1 SPI1SOSIF 1 0 :1:5 
+`uc 1 SPI1TCZIF 1 0 :1:6 
+`uc 1 SPI1SRMTIF 1 0 :1:7 
+]
+[u S1539 . 1 `S1521 1 . 1 0 `S1530 1 . 1 0 ]
+[v _SPI1INTFbits SPI1INTFbits `VES1539  1 e 1 @15642 ]
+"22256
+[v _SPI1CLK SPI1CLK `VEuc  1 e 1 @15644 ]
+[s S702 . 1 `uc 1 CPRDY 1 0 :1:0 
+`uc 1 . 1 0 :6:1 
+`uc 1 ON 1 0 :1:7 
+]
+"27369
+[s S706 . 1 `uc 1 ADCPRDY 1 0 :1:0 
+`uc 1 . 1 0 :6:1 
+`uc 1 CPON 1 0 :1:7 
+]
+[s S710 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 ADCPON 1 0 :1:7 
+]
+[u S713 . 1 `S702 1 . 1 0 `S706 1 . 1 0 `S710 1 . 1 0 ]
+[v _ADCPbits ADCPbits `VES713  1 e 1 @16087 ]
+"28458
+[v _ADFLTRL ADFLTRL `VEuc  1 e 1 @16102 ]
+"29235
+[v _ADRPT ADRPT `VEuc  1 e 1 @16108 ]
+"29881
+[v _ADPCH ADPCH `VEuc  1 e 1 @16113 ]
+"29946
+[v _ADACQL ADACQL `VEuc  1 e 1 @16115 ]
+"30445
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @16120 ]
+"30572
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @16121 ]
+"30647
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @16122 ]
+[s S619 . 1 `uc 1 MODE 1 0 :3:0 
+`uc 1 ACLR 1 0 :1:3 
+`uc 1 CRS 1 0 :3:4 
+`uc 1 PSIS 1 0 :1:7 
+]
+"30695
+[s S624 . 1 `uc 1 ADMD0 1 0 :1:0 
+`uc 1 ADMD1 1 0 :1:1 
+`uc 1 ADMD2 1 0 :1:2 
+`uc 1 ADACLR 1 0 :1:3 
+`uc 1 ADCRS0 1 0 :1:4 
+`uc 1 ADCRS1 1 0 :1:5 
+`uc 1 ADCRS2 1 0 :1:6 
+`uc 1 ADPSIS 1 0 :1:7 
+]
+[s S633 . 1 `uc 1 ADMD 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADCRS 1 0 :3:4 
+]
+[s S637 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CRS0 1 0 :1:4 
+`uc 1 CRS1 1 0 :1:5 
+`uc 1 CRS2 1 0 :1:6 
+]
+[s S645 . 1 `uc 1 MD 1 0 :3:0 
+]
+[s S647 . 1 `uc 1 MD0 1 0 :1:0 
+`uc 1 MD1 1 0 :1:1 
+`uc 1 MD2 1 0 :1:2 
+]
+[s S651 . 1 `uc 1 ADMODE 1 0 :3:0 
+]
+[u S653 . 1 `S619 1 . 1 0 `S624 1 . 1 0 `S633 1 . 1 0 `S637 1 . 1 0 `S645 1 . 1 0 `S647 1 . 1 0 `S651 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES653  1 e 1 @16122 ]
+"30825
+[v _ADCON3 ADCON3 `VEuc  1 e 1 @16123 ]
+"31080
+[v _ADREF ADREF `VEuc  1 e 1 @16125 ]
+"31162
+[v _ADACT ADACT `VEuc  1 e 1 @16126 ]
+"31254
+[v _ADCLK ADCLK `VEuc  1 e 1 @16127 ]
+"31367
+[v _SMT1TMRL SMT1TMRL `VEuc  1 e 1 @16146 ]
+"31495
+[v _SMT1TMRH SMT1TMRH `VEuc  1 e 1 @16147 ]
+"31623
+[v _SMT1TMRU SMT1TMRU `VEuc  1 e 1 @16148 ]
+"32153
+[v _SMT1CPWL SMT1CPWL `VEuc  1 e 1 @16152 ]
+"32546
+[v _SMT1PRL SMT1PRL `VEuc  1 e 1 @16155 ]
+"32674
+[v _SMT1PRH SMT1PRH `VEuc  1 e 1 @16156 ]
+"32802
+[v _SMT1PRU SMT1PRU `VEuc  1 e 1 @16157 ]
+"32930
+[v _SMT1CON0 SMT1CON0 `VEuc  1 e 1 @16158 ]
+"33048
+[v _SMT1CON1 SMT1CON1 `VEuc  1 e 1 @16159 ]
+[s S1374 . 1 `uc 1 MODE 1 0 :4:0 
+`uc 1 . 1 0 :2:4 
+`uc 1 REPEAT 1 0 :1:6 
+`uc 1 GO 1 0 :1:7 
+]
+"33073
+[s S1379 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 MODE3 1 0 :1:3 
+`uc 1 . 1 0 :2:4 
+`uc 1 SMT1REPEAT 1 0 :1:6 
+`uc 1 SMT1GO 1 0 :1:7 
+]
+"33073
+[s S1387 . 1 `uc 1 SMT1MODE 1 0 :4:0 
+]
+"33073
+[u S1389 . 1 `S1374 1 . 1 0 `S1379 1 . 1 0 `S1387 1 . 1 0 ]
+"33073
+"33073
+[v _SMT1CON1bits SMT1CON1bits `VES1389  1 e 1 @16159 ]
+"33227
+[v _SMT1CLK SMT1CLK `VEuc  1 e 1 @16161 ]
+"33295
+[v _SMT1SIG SMT1SIG `VEuc  1 e 1 @16162 ]
+"33387
+[v _SMT1WIN SMT1WIN `VEuc  1 e 1 @16163 ]
+"33488
+[v _NCO1ACCL NCO1ACCL `VEuc  1 e 1 @16184 ]
+"36878
+[v _CCPTMRS1 CCPTMRS1 `VEuc  1 e 1 @16223 ]
+"37870
+[v _PWM5DCL PWM5DCL `VEuc  1 e 1 @16236 ]
+"37936
+[v _PWM5DCH PWM5DCH `VEuc  1 e 1 @16237 ]
+"38106
+[v _PWM5CON PWM5CON `VEuc  1 e 1 @16238 ]
+"39130
+[v _T6TMR T6TMR `VEuc  1 e 1 @16274 ]
+"39168
+[v _T6PR T6PR `VEuc  1 e 1 @16275 ]
+"39206
+[v _T6CON T6CON `VEuc  1 e 1 @16276 ]
+"39352
+[v _T6HLT T6HLT `VEuc  1 e 1 @16277 ]
+"39485
+[v _T6CLK T6CLK `VEuc  1 e 1 @16278 ]
+"39638
+[v _T6RST T6RST `VEuc  1 e 1 @16279 ]
+"42082
+[v _T2TMR T2TMR `VEuc  1 e 1 @16298 ]
+"42120
+[v _T2PR T2PR `VEuc  1 e 1 @16299 ]
+"42158
+[v _T2CON T2CON `VEuc  1 e 1 @16300 ]
+"42304
+[v _T2HLT T2HLT `VEuc  1 e 1 @16301 ]
+"42432
+[v _T2CLKCON T2CLKCON `VEuc  1 e 1 @16302 ]
+"42437
+[v _T2CLK T2CLK `VEuc  1 e 1 @16302 ]
+"42590
+[v _T2RST T2RST `VEuc  1 e 1 @16303 ]
+"43696
+[v _TMR0H TMR0H `VEuc  1 e 1 @16311 ]
+"43950
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @16312 ]
+"44048
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @16313 ]
+"44302
+[v _LATB LATB `VEuc  1 e 1 @16315 ]
+"44526
+[v _TRISA TRISA `VEuc  1 e 1 @16322 ]
+"44588
+[v _TRISB TRISB `VEuc  1 e 1 @16323 ]
+[s S1499 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"44605
+[u S1508 . 1 `S1499 1 . 1 0 ]
+"44605
+"44605
+[v _TRISBbits TRISBbits `VES1508  1 e 1 @16323 ]
+"44650
+[v _TRISC TRISC `VEuc  1 e 1 @16324 ]
+"44712
+[v _PORTA PORTA `VEuc  1 e 1 @16330 ]
+"44796
+[v _PORTB PORTB `VEuc  1 e 1 @16331 ]
+[s S1214 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"44817
+[s S1223 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+"44817
+[u S1226 . 1 `S1214 1 . 1 0 `S1223 1 . 1 0 ]
+"44817
+"44817
+[v _PORTBbits PORTBbits `VES1226  1 e 1 @16331 ]
+"44867
+[v _PORTC PORTC `VEuc  1 e 1 @16332 ]
+"44992
+[v _INTCON0 INTCON0 `VEuc  1 e 1 @16338 ]
+[s S187 . 1 `uc 1 INT0EDG 1 0 :1:0 
+`uc 1 INT1EDG 1 0 :1:1 
+`uc 1 INT2EDG 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 IPEN 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"45012
+[s S195 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 GIEH 1 0 :1:7 
+]
+"45012
+[u S198 . 1 `S187 1 . 1 0 `S195 1 . 1 0 ]
+"45012
+"45012
+[v _INTCON0bits INTCON0bits `VES198  1 e 1 @16338 ]
+"45088
+[v _IVTLOCK IVTLOCK `VEuc  1 e 1 @16340 ]
+"45109
+"45109
+[v _IVTBASE IVTBASE `VEum  1 e 3 @16341 ]
+"46139
+[v _TABLAT TABLAT `VEuc  1 e 1 @16373 ]
+"46168
+[v _TBLPTRL TBLPTRL `VEuc  1 e 1 @16374 ]
+"46188
+[v _TBLPTRH TBLPTRH `VEuc  1 e 1 @16375 ]
+"46208
+[v _TBLPTRU TBLPTRU `VEuc  1 e 1 @16376 ]
+"46246
+[v _PCL PCL `VEuc  1 e 1 @16377 ]
+"46266
+[v _PCLATH PCLATH `VEuc  1 e 1 @16378 ]
+"46286
+[v _PCLATU PCLATU `VEuc  1 e 1 @16379 ]
+"46306
+[v _STKPTR STKPTR `VEuc  1 e 1 @16380 ]
+"47466
+"47466
+[v _ADTIF ADTIF `VEb  1 e 0 @118027 ]
+"50340
+[v _GIE GIE `VEb  1 e 0 @130711 ]
+"51012
+[v _IVTLOCKED IVTLOCKED `VEb  1 e 0 @130720 ]
+"54540
+[v _SMT1PWAIE SMT1PWAIE `VEb  1 e 0 @117903 ]
+"54543
+[v _SMT1PWAIF SMT1PWAIF `VEb  1 e 0 @118031 ]
+"55470
+[v _TMR0IF TMR0IF `VEb  1 e 0 @118047 ]
+[s S90 . 1 `uc 1 SXInvert 1 0 :1:0 
+`uc 1 SYInvert 1 0 :1:1 
+`uc 1 CXInvert 1 0 :1:2 
+`uc 1 CYInvert 1 0 :1:3 
+`uc 1 . 1 0 :4:4 
+]
+"29 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\config.c
+[u S96 . 1 `S90 1 . 1 0 `uc 1 axInvert 1 0 ]
+[s S99 . 24 `ul 1 magicCode 4 0 `ui 1 version 2 4 `uc 1 SXMin 1 6 `uc 1 SXMax 1 7 `uc 1 SYMin 1 8 `uc 1 SYMax 1 9 `uc 1 CXMin 1 10 `uc 1 CXMax 1 11 `uc 1 CYMin 1 12 `uc 1 CYMax 1 13 `uc 1 SXChan 1 14 `uc 1 SYChan 1 15 `uc 1 CXChan 1 16 `uc 1 CYChan 1 17 `S96 1 . 1 18 `uc 1 SDeadzone 1 19 `uc 1 CDeadzone 1 20 `uc 1 deadzoneMode 1 21 `uc 1 rumbleIntensity 1 22 `uc 1 triggersMode 1 23 ]
+[v _config config `S99  1 e 24 0 ]
+"32 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\si.c
+[v _SIInputMessage SIInputMessage `[36]uc  1 s 36 SIInputMessage ]
+"33
+[v _SIBitCounter SIBitCounter `uc  1 s 1 SIBitCounter ]
+"34
+[v _SIByteCounter SIByteCounter `uc  1 s 1 SIByteCounter ]
+"35
+[v _SICMDReceived SICMDReceived `uc  1 s 1 SICMDReceived ]
+"36
+[v _SITempByte SITempByte `uc  1 s 1 SITempByte ]
+"79 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"380
+[v main@len_366 len `uc  1 a 1 141 ]
+"250
+[v main@len len `uc  1 a 1 140 ]
+"329
+[v main@btnMsg_365 btnMsg `*.39uc  1 a 2 102 ]
+"315
+[v main@btnMsg btnMsg `*.39uc  1 a 2 100 ]
+"88
+[v main@flashBuffer flashBuffer `[64]uc  1 a 64 0 ]
+"83
+[v main@msgAnswer msgAnswer `[36]uc  1 a 36 104 ]
+"82
+[v main@cmd cmd `[36]uc  1 a 36 64 ]
+[s S45 . 3 `uc 1 . 1 0 :2:0 
+`uc 1 LD 1 0 :1:2 
+`uc 1 DL 1 0 :1:3 
+`uc 1 DU 1 0 :1:4 
+`uc 1 DR 1 0 :1:5 
+`uc 1 ST 1 0 :1:6 
+`uc 1 DD 1 0 :1:7 
+`uc 1 Z 1 1 :1:0 
+`uc 1 RD 1 1 :1:1 
+`uc 1 Y 1 1 :1:2 
+`uc 1 X 1 1 :1:3 
+`uc 1 . 1 1 :1:4 
+`uc 1 Z2 1 1 :1:5 
+`uc 1 . 1 1 :2:6 
+`uc 1 LA 1 2 :1:0 
+`uc 1 . 1 2 :4:1 
+`uc 1 RA 1 2 :1:5 
+`uc 1 B 1 2 :1:6 
+`uc 1 A 1 2 :1:7 
+]
+"106
+[s S65 . 3 `uc 1 PORTA 1 0 `uc 1 PORTB 1 1 `uc 1 PORTC 1 2 ]
+[u S69 . 3 `S45 1 . 3 0 `S65 1 . 3 0 ]
+[v main@inBut inBut `S69  1 a 3 147 ]
+"85
+[v main@addr addr `ui  1 a 2 144 ]
+"80
+[v main@i i `uc  1 a 1 150 ]
+"84
+[v main@gcpLocked gcpLocked `uc  1 a 1 146 ]
+"81
+[v main@cmdLen cmdLen `uc  1 a 1 143 ]
+"89
+[v main@flashBufferIdx flashBufferIdx `uc  1 a 1 142 ]
+"467
+} 0
+"469
+[v _portsInit portsInit `(v  1 e 1 0 ]
+{
+"471
+[v portsInit@state state `uc  1 a 1 0 ]
+"508
+} 0
+"31 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\config.c
+[v _configInit configInit `(v  1 e 1 0 ]
+{
+"32
+[v configInit@data data `*.39uc  1 a 2 8 ]
+"33
+[v configInit@i i `uc  1 a 1 10 ]
+"45
+} 0
+"47
+[v _configSetDefault configSetDefault `(v  1 e 1 0 ]
+{
+"78
+} 0
+"80
+[v _configFlashAll configFlashAll `(v  1 e 1 0 ]
+{
+"82
+[v configFlashAll@data data `*.39uc  1 a 2 2 ]
+"81
+[v configFlashAll@i i `uc  1 a 1 4 ]
+"86
+} 0
+"120 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\nvm.c
+[v _EEPROMWriteByte EEPROMWriteByte `(v  1 e 1 0 ]
+{
+[v EEPROMWriteByte@address address `uc  1 a 1 wreg ]
+[v EEPROMWriteByte@address address `uc  1 a 1 wreg ]
+[v EEPROMWriteByte@data data `uc  1 p 1 0 ]
+[v EEPROMWriteByte@address address `uc  1 a 1 1 ]
+"128
+} 0
+"113
+[v _EEPROMReadByte EEPROMReadByte `(uc  1 e 1 0 ]
+{
+[v EEPROMReadByte@address address `uc  1 a 1 wreg ]
+[v EEPROMReadByte@address address `uc  1 a 1 wreg ]
+[v EEPROMReadByte@address address `uc  1 a 1 0 ]
+"118
+} 0
+"91 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\buttons.c
+[v _buttonsUpdate buttonsUpdate `(v  1 e 1 0 ]
+{
+[s S45 . 3 `uc 1 . 1 0 :2:0 
+`uc 1 LD 1 0 :1:2 
+`uc 1 DL 1 0 :1:3 
+`uc 1 DU 1 0 :1:4 
+`uc 1 DR 1 0 :1:5 
+`uc 1 ST 1 0 :1:6 
+`uc 1 DD 1 0 :1:7 
+`uc 1 Z 1 1 :1:0 
+`uc 1 RD 1 1 :1:1 
+`uc 1 Y 1 1 :1:2 
+`uc 1 X 1 1 :1:3 
+`uc 1 . 1 1 :1:4 
+`uc 1 Z2 1 1 :1:5 
+`uc 1 . 1 1 :2:6 
+`uc 1 LA 1 2 :1:0 
+`uc 1 . 1 2 :4:1 
+`uc 1 RA 1 2 :1:5 
+`uc 1 B 1 2 :1:6 
+`uc 1 A 1 2 :1:7 
+]
+"94
+[s S65 . 3 `uc 1 PORTA 1 0 `uc 1 PORTB 1 1 `uc 1 PORTC 1 2 ]
+[u S69 . 3 `S45 1 . 3 0 `S65 1 . 3 0 ]
+[v buttonsUpdate@toggledButtons toggledButtons `S69  1 a 3 4 ]
+"92
+[v buttonsUpdate@i i `uc  1 a 1 3 ]
+"93
+[v buttonsUpdate@PC PC `uc  1 a 1 2 ]
+[v buttonsUpdate@PB PB `uc  1 a 1 1 ]
+[v buttonsUpdate@PA PA `uc  1 a 1 0 ]
+"166
+} 0
+"238
+[v _buttonsSetMapByte1 buttonsSetMapByte1 `(v  1 e 1 0 ]
+{
+"239
+[v buttonsSetMapByte1@i i `uc  1 a 1 2 ]
+"238
+[v buttonsSetMapByte1@map map `*.39uc  1 p 2 0 ]
+"244
+} 0
+"230
+[v _buttonsSetMapByte0 buttonsSetMapByte0 `(v  1 e 1 0 ]
+{
+"231
+[v buttonsSetMapByte0@i i `uc  1 a 1 2 ]
+"230
+[v buttonsSetMapByte0@map map `*.39uc  1 p 2 0 ]
+"236
+} 0
+"64
+[v _buttonsInit buttonsInit `(v  1 e 1 0 ]
+{
+"89
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
+{
+"15
+[v memset@p p `*.39uc  1 a 2 6 ]
+"8
+[v memset@p1 p1 `*.39v  1 p 2 0 ]
+[v memset@c c `i  1 p 2 2 ]
+[v memset@n n `ui  1 p 2 4 ]
+"22
+} 0
+"168 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\buttons.c
+[v _buttonsGetMessage buttonsGetMessage `(*.39uc  1 e 2 0 ]
+{
+[v buttonsGetMessage@analogMode analogMode `uc  1 a 1 wreg ]
+[v buttonsGetMessage@analogMode analogMode `uc  1 a 1 wreg ]
+[v buttonsGetMessage@triggersMode triggersMode `uc  1 p 1 0 ]
+[v buttonsGetMessage@analogMode analogMode `uc  1 a 1 3 ]
+"228
+} 0
+"256
+[v _buttonsGetMapByte1 buttonsGetMapByte1 `(*.39uc  1 e 2 0 ]
+{
+"257
+[v buttonsGetMapByte1@i i `uc  1 a 1 2 ]
+"264
+} 0
+"246
+[v _buttonsGetMapByte0 buttonsGetMapByte0 `(*.39uc  1 e 2 0 ]
+{
+"247
+[v buttonsGetMapByte0@i i `uc  1 a 1 2 ]
+"254
+} 0
+"293
+[v _buttonsBuildLUTs buttonsBuildLUTs `(v  1 e 1 0 ]
+{
+"298
+} 0
+"266
+[v _buttonsBuildLUT buttonsBuildLUT `(v  1 e 1 0 ]
+{
+"276
+[v buttonsBuildLUT@tempVal tempVal `i  1 a 2 29 ]
+"271
+[v buttonsBuildLUT@radius radius `i  1 a 2 33 ]
+"267
+[v buttonsBuildLUT@i i `i  1 a 2 31 ]
+"268
+[v buttonsBuildLUT@range range `i  1 a 2 27 ]
+"266
+[v buttonsBuildLUT@LUT LUT `*.39uc  1 p 2 14 ]
+[v buttonsBuildLUT@minVal minVal `uc  1 p 1 16 ]
+[v buttonsBuildLUT@maxVal maxVal `uc  1 p 1 17 ]
+[v buttonsBuildLUT@origin origin `uc  1 p 1 18 ]
+[v buttonsBuildLUT@dz dz `uc  1 p 1 19 ]
+[v buttonsBuildLUT@dzMode dzMode `uc  1 p 1 20 ]
+[v buttonsBuildLUT@invert invert `uc  1 p 1 21 ]
+"291
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 12 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 11 ]
+[v ___awdiv@counter counter `uc  1 a 1 10 ]
+"7
+[v ___awdiv@dividend dividend `i  1 p 2 6 ]
+[v ___awdiv@divisor divisor `i  1 p 2 8 ]
+"41
+} 0
+"510 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\main.c
+[v _bootPayload bootPayload `(v  1 e 1 0 ]
+{
+"528
+} 0
+"194 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\si.c
+[v _SISendMessage SISendMessage `(v  1 e 1 0 ]
+{
+"195
+[v SISendMessage@leftToSend leftToSend `c  1 a 1 15 ]
+"196
+[v SISendMessage@idx idx `uc  1 a 1 14 ]
+"194
+[v SISendMessage@msg msg `*.39uc  1 p 2 6 ]
+[v SISendMessage@len len `uc  1 p 1 8 ]
+"255
+} 0
+"75
+[v _SIInit SIInit `(v  1 e 1 0 ]
+{
+"127
+} 0
+"129
+[v _SIConfigureCLC SIConfigureCLC `(v  1 e 1 0 ]
+{
+"192
+} 0
+"257
+[v _SIGetCommand SIGetCommand `(uc  1 e 1 0 ]
+{
+"258
+[v SIGetCommand@i i `uc  1 a 1 2 ]
+"257
+[v SIGetCommand@msg msg `*.39uc  1 p 2 0 ]
+"267
+} 0
+"283
+[v _SIClear SIClear `(v  1 e 1 0 ]
+{
+"289
+} 0
+"55 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\nvm.c
+[v _PGMWriteBlock PGMWriteBlock `(v  1 e 1 0 ]
+{
+"61
+[v PGMWriteBlock@i i `ui  1 a 2 10 ]
+"55
+[v PGMWriteBlock@addr addr `ui  1 p 2 4 ]
+[v PGMWriteBlock@data data `*.39uc  1 p 2 6 ]
+"87
+} 0
+"37
+[v _PGMEraseRow PGMEraseRow `(v  1 e 1 0 ]
+{
+[v PGMEraseRow@addr addr `ui  1 p 2 0 ]
+"53
+} 0
+"29
+[v _NVMUnlock NVMUnlock `(v  1 e 1 0 ]
+{
+"35
+} 0
+"89
+[v _PGMReadBlock PGMReadBlock `(v  1 e 1 0 ]
+{
+"95
+[v PGMReadBlock@i i `ui  1 a 2 6 ]
+"89
+[v PGMReadBlock@addr addr `ui  1 p 2 0 ]
+[v PGMReadBlock@data data `*.39uc  1 p 2 2 ]
+"111
+} 0
+"41 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\adc.c
+[v _ADCInit ADCInit `(v  1 e 1 0 ]
+{
+[v ADCInit@sxCh sxCh `uc  1 a 1 wreg ]
+"42
+[v ADCInit@i i `uc  1 a 1 8 ]
+"41
+[v ADCInit@sxCh sxCh `uc  1 a 1 wreg ]
+[v ADCInit@syCh syCh `uc  1 p 1 0 ]
+[v ADCInit@cxCh cxCh `uc  1 p 1 1 ]
+[v ADCInit@cyCh cyCh `uc  1 p 1 2 ]
+"45
+[v ADCInit@sxCh sxCh `uc  1 a 1 7 ]
+"121
+} 0
+"38 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\si.c
+[v _hi_int hi_int `II(v  1 e 1 0 ]
+{
+"73
+} 0
+"283
+[v i2_SIClear SIClear `(v  1 e 1 0 ]
+{
+"289
+} 0
