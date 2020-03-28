@@ -46,9 +46,10 @@ buttons.c: Handles buttons input and debouncing. Also generates the correct answ
 
 inButtons_t prevButtons;
 outButtons_t outButtons;
+origins_t origins;
 
 uint8_t buttonsTimers[N_BUTTONS];
-uint8_t buttonsMessage[8];
+uint8_t buttonsMessage[10];
 uint8_t buttonsMapByte0[N_BUTTONS];
 uint8_t buttonsMapByte1[N_BUTTONS];
 uint8_t LUT_SX[0x100];
@@ -216,6 +217,35 @@ uint8_t* buttonsGetMessage(uint8_t analogMode, uint8_t triggersMode) {
         break;
     }
 
+    return buttonsMessage;
+}
+
+void buttonsSetOrigins(uint8_t triggersMode) {
+    origins.SX = LUT_SX[ADC_SX];
+    origins.SY = LUT_SY[ADC_SY];
+    origins.CX = LUT_CX[ADC_CX];
+    origins.CY = LUT_CY[ADC_CY];
+    if (triggersMode == TRIG_MODE_DIGITAL) {
+        origins.L = outButtons.LA;
+        origins.R = outButtons.RA;
+    } else {
+        origins.L = ADC_L;
+        origins.R = ADC_R;
+    }
+}
+
+uint8_t* buttonsGetOrigins(void) {
+    buttonsMessage[0] = 0x00;
+    buttonsMessage[1] = 0x00;
+    buttonsMessage[2] = origins.SX;
+    buttonsMessage[3] = origins.SY;
+    buttonsMessage[4] = origins.CX;
+    buttonsMessage[5] = origins.CY;
+    buttonsMessage[6] = origins.L;
+    buttonsMessage[7] = origins.R;
+    buttonsMessage[8] = 0x02;
+    buttonsMessage[9] = 0x02;
+    
     return buttonsMessage;
 }
 

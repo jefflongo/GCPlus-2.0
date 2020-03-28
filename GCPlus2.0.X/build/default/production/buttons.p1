@@ -1,7 +1,7 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"109 buttons.h
-[c E15470 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 .. ]
-[n E15470 . BUTTON_A_ID BUTTON_B_ID BUTTON_X_ID BUTTON_Y_ID BUTTON_ST_ID BUTTON_DL_ID BUTTON_DR_ID BUTTON_DD_ID BUTTON_DU_ID BUTTON_Z_ID BUTTON_RD_ID BUTTON_LD_ID BUTTON_LA_ID BUTTON_RA_ID BUTTON_Z2_ID N_BUTTONS  ]
+"118 buttons.h
+[c E15478 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 .. ]
+[n E15478 . BUTTON_A_ID BUTTON_B_ID BUTTON_X_ID BUTTON_Y_ID BUTTON_ST_ID BUTTON_DL_ID BUTTON_DR_ID BUTTON_DD_ID BUTTON_DU_ID BUTTON_Z_ID BUTTON_RD_ID BUTTON_LD_ID BUTTON_LA_ID BUTTON_RA_ID BUTTON_Z2_ID N_BUTTONS  ]
 "31
 [s S2143 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S2143 . . LD DL DU DR ST DD Z RD Y X . Z2 . LA . RA B A ]
@@ -20,6 +20,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "64
 [u S2145 `S2146 1 `S2147 1 ]
 [n S2145 . . . ]
+"92
+[s S2148 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S2148 . SX SY CX CY L R ]
 "43950 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f25k42.h
 [v _T0CON0 `Vuc ~T0 @X0 0 e@16312 ]
 "44048
@@ -17535,35 +17538,45 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;buttons.h: 88: uint8_t byte7;
 [; ;buttons.h: 89: };
 [; ;buttons.h: 90: } outButtons_t;
-"109 buttons.h
-[v _ButtonsID `E15470 ~T0 @X0 1 e ]
-[; ;buttons.h: 92: enum {
-[; ;buttons.h: 93: BUTTON_A_ID = 0,
-[; ;buttons.h: 94: BUTTON_B_ID,
-[; ;buttons.h: 95: BUTTON_X_ID,
-[; ;buttons.h: 96: BUTTON_Y_ID,
-[; ;buttons.h: 97: BUTTON_ST_ID,
-[; ;buttons.h: 98: BUTTON_DL_ID,
-[; ;buttons.h: 99: BUTTON_DR_ID,
-[; ;buttons.h: 100: BUTTON_DD_ID,
-[; ;buttons.h: 101: BUTTON_DU_ID,
-[; ;buttons.h: 102: BUTTON_Z_ID,
-[; ;buttons.h: 103: BUTTON_RD_ID,
-[; ;buttons.h: 104: BUTTON_LD_ID,
-[; ;buttons.h: 105: BUTTON_LA_ID,
-[; ;buttons.h: 106: BUTTON_RA_ID,
-[; ;buttons.h: 107: BUTTON_Z2_ID,
-[; ;buttons.h: 108: N_BUTTONS
-[; ;buttons.h: 109: } ButtonsID;
-[; ;buttons.h: 111: void buttonsInit(void);
-[; ;buttons.h: 112: void buttonsUpdate(void);
-[; ;buttons.h: 113: uint8_t* buttonsGetMessage(uint8_t analogMode, uint8_t triggersMode);
-[; ;buttons.h: 114: void buttonsSetMapByte0(uint8_t* map);
-[; ;buttons.h: 115: void buttonsSetMapByte1(uint8_t* map);
-[; ;buttons.h: 116: uint8_t* buttonsGetMapByte0(void);
-[; ;buttons.h: 117: uint8_t* buttonsGetMapByte1(void);
-[; ;buttons.h: 129: void buttonsBuildLUT(uint8_t* LUT, uint8_t minVal, uint8_t maxVal, uint8_t origin, uint8_t dz, uint8_t dzMode, uint8_t invert);
-[; ;buttons.h: 131: void buttonsBuildLUTs(void);
+[; ;buttons.h: 92: typedef struct {
+[; ;buttons.h: 93: uint8_t SX;
+[; ;buttons.h: 94: uint8_t SY;
+[; ;buttons.h: 95: uint8_t CX;
+[; ;buttons.h: 96: uint8_t CY;
+[; ;buttons.h: 97: uint8_t L;
+[; ;buttons.h: 98: uint8_t R;
+[; ;buttons.h: 99: } origins_t;
+"118 buttons.h
+[v _ButtonsID `E15478 ~T0 @X0 1 e ]
+[; ;buttons.h: 101: enum {
+[; ;buttons.h: 102: BUTTON_A_ID = 0,
+[; ;buttons.h: 103: BUTTON_B_ID,
+[; ;buttons.h: 104: BUTTON_X_ID,
+[; ;buttons.h: 105: BUTTON_Y_ID,
+[; ;buttons.h: 106: BUTTON_ST_ID,
+[; ;buttons.h: 107: BUTTON_DL_ID,
+[; ;buttons.h: 108: BUTTON_DR_ID,
+[; ;buttons.h: 109: BUTTON_DD_ID,
+[; ;buttons.h: 110: BUTTON_DU_ID,
+[; ;buttons.h: 111: BUTTON_Z_ID,
+[; ;buttons.h: 112: BUTTON_RD_ID,
+[; ;buttons.h: 113: BUTTON_LD_ID,
+[; ;buttons.h: 114: BUTTON_LA_ID,
+[; ;buttons.h: 115: BUTTON_RA_ID,
+[; ;buttons.h: 116: BUTTON_Z2_ID,
+[; ;buttons.h: 117: N_BUTTONS
+[; ;buttons.h: 118: } ButtonsID;
+[; ;buttons.h: 120: void buttonsInit(void);
+[; ;buttons.h: 121: void buttonsUpdate(void);
+[; ;buttons.h: 122: uint8_t* buttonsGetMessage(uint8_t analogMode, uint8_t triggersMode);
+[; ;buttons.h: 123: void buttonsSetOrigins(uint8_t triggersMode);
+[; ;buttons.h: 124: uint8_t* buttonsGetOrigins(void);
+[; ;buttons.h: 125: void buttonsSetMapByte0(uint8_t* map);
+[; ;buttons.h: 126: void buttonsSetMapByte1(uint8_t* map);
+[; ;buttons.h: 127: uint8_t* buttonsGetMapByte0(void);
+[; ;buttons.h: 128: uint8_t* buttonsGetMapByte1(void);
+[; ;buttons.h: 140: void buttonsBuildLUT(uint8_t* LUT, uint8_t minVal, uint8_t maxVal, uint8_t origin, uint8_t dz, uint8_t dzMode, uint8_t invert);
+[; ;buttons.h: 142: void buttonsBuildLUTs(void);
 [; ;si.h: 69: void SIInit(void);
 [; ;si.h: 70: void SIConfigureCLC(void);
 [; ;si.h: 71: void SISendMessage(uint8_t* msg, uint8_t len);
@@ -17579,822 +17592,918 @@ Version 3.2 HI-TECH Software Intermediate Code
 "48
 [v _outButtons `S2145 ~T0 @X0 1 e ]
 [; ;buttons.c: 48: outButtons_t outButtons;
-"50
-[v _buttonsTimers `uc ~T0 @X0 . `E15470 15 e ]
-[; ;buttons.c: 50: uint8_t buttonsTimers[N_BUTTONS];
+"49
+[v _origins `S2148 ~T0 @X0 1 e ]
+[; ;buttons.c: 49: origins_t origins;
 "51
-[v _buttonsMessage `uc ~T0 @X0 -> 8 `i e ]
-[; ;buttons.c: 51: uint8_t buttonsMessage[8];
+[v _buttonsTimers `uc ~T0 @X0 . `E15478 15 e ]
+[; ;buttons.c: 51: uint8_t buttonsTimers[N_BUTTONS];
 "52
-[v _buttonsMapByte0 `uc ~T0 @X0 . `E15470 15 e ]
-[; ;buttons.c: 52: uint8_t buttonsMapByte0[N_BUTTONS];
+[v _buttonsMessage `uc ~T0 @X0 -> 10 `i e ]
+[; ;buttons.c: 52: uint8_t buttonsMessage[10];
 "53
-[v _buttonsMapByte1 `uc ~T0 @X0 . `E15470 15 e ]
-[; ;buttons.c: 53: uint8_t buttonsMapByte1[N_BUTTONS];
+[v _buttonsMapByte0 `uc ~T0 @X0 . `E15478 15 e ]
+[; ;buttons.c: 53: uint8_t buttonsMapByte0[N_BUTTONS];
 "54
-[v _LUT_SX `uc ~T0 @X0 -> 256 `i e ]
-[; ;buttons.c: 54: uint8_t LUT_SX[0x100];
+[v _buttonsMapByte1 `uc ~T0 @X0 . `E15478 15 e ]
+[; ;buttons.c: 54: uint8_t buttonsMapByte1[N_BUTTONS];
 "55
-[v _LUT_SY `uc ~T0 @X0 -> 256 `i e ]
-[; ;buttons.c: 55: uint8_t LUT_SY[0x100];
+[v _LUT_SX `uc ~T0 @X0 -> 256 `i e ]
+[; ;buttons.c: 55: uint8_t LUT_SX[0x100];
 "56
-[v _LUT_CX `uc ~T0 @X0 -> 256 `i e ]
-[; ;buttons.c: 56: uint8_t LUT_CX[0x100];
+[v _LUT_SY `uc ~T0 @X0 -> 256 `i e ]
+[; ;buttons.c: 56: uint8_t LUT_SY[0x100];
 "57
+[v _LUT_CX `uc ~T0 @X0 -> 256 `i e ]
+[; ;buttons.c: 57: uint8_t LUT_CX[0x100];
+"58
 [v _LUT_CY `uc ~T0 @X0 -> 256 `i e ]
-[; ;buttons.c: 57: uint8_t LUT_CY[0x100];
-"59
+[; ;buttons.c: 58: uint8_t LUT_CY[0x100];
+"60
 [v _buttonsInit `(v ~T0 @X0 1 ef ]
 {
-[; ;buttons.c: 59: void buttonsInit(void) {
+[; ;buttons.c: 60: void buttonsInit(void) {
 [e :U _buttonsInit ]
 [f ]
-[; ;buttons.c: 61: T0CON0 = 0x00;
-"61
-[e = _T0CON0 -> -> 0 `i `uc ]
-[; ;buttons.c: 62: T0CON1 = 0x47;
+[; ;buttons.c: 62: T0CON0 = 0x00;
 "62
-[e = _T0CON1 -> -> 71 `i `uc ]
-[; ;buttons.c: 63: TMR0H = 124;
+[e = _T0CON0 -> -> 0 `i `uc ]
+[; ;buttons.c: 63: T0CON1 = 0x47;
 "63
-[e = _TMR0H -> -> 124 `i `uc ]
-[; ;buttons.c: 64: TMR0IF = 0;
+[e = _T0CON1 -> -> 71 `i `uc ]
+[; ;buttons.c: 64: TMR0H = 124;
 "64
-[e = _TMR0IF -> -> 0 `i `b ]
-[; ;buttons.c: 65: T0CON0 = 0x80;
+[e = _TMR0H -> -> 124 `i `uc ]
+[; ;buttons.c: 65: TMR0IF = 0;
 "65
+[e = _TMR0IF -> -> 0 `i `b ]
+[; ;buttons.c: 66: T0CON0 = 0x80;
+"66
 [e = _T0CON0 -> -> 128 `i `uc ]
-[; ;buttons.c: 68: memset(buttonsMapByte0, 0, N_BUTTONS);
-"68
-[e ( _memset (3 , , -> &U _buttonsMapByte0 `*v -> 0 `i -> . `E15470 15 `ui ]
-[; ;buttons.c: 69: memset(buttonsMapByte1, 0, N_BUTTONS);
+[; ;buttons.c: 69: memset(buttonsMapByte0, 0, N_BUTTONS);
 "69
-[e ( _memset (3 , , -> &U _buttonsMapByte1 `*v -> 0 `i -> . `E15470 15 `ui ]
-[; ;buttons.c: 71: buttonsMapByte0[BUTTON_A_ID] = 0x01;
-"71
-[e = *U + &U _buttonsMapByte0 * -> . `E15470 0 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux -> -> 1 `i `uc ]
-[; ;buttons.c: 72: buttonsMapByte0[BUTTON_B_ID] = 0x02;
+[e ( _memset (3 , , -> &U _buttonsMapByte0 `*v -> 0 `i -> . `E15478 15 `ui ]
+[; ;buttons.c: 70: memset(buttonsMapByte1, 0, N_BUTTONS);
+"70
+[e ( _memset (3 , , -> &U _buttonsMapByte1 `*v -> 0 `i -> . `E15478 15 `ui ]
+[; ;buttons.c: 72: buttonsMapByte0[BUTTON_A_ID] = 0x01;
 "72
-[e = *U + &U _buttonsMapByte0 * -> . `E15470 1 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux -> -> 2 `i `uc ]
-[; ;buttons.c: 73: buttonsMapByte0[BUTTON_X_ID] = 0x04;
+[e = *U + &U _buttonsMapByte0 * -> . `E15478 0 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux -> -> 1 `i `uc ]
+[; ;buttons.c: 73: buttonsMapByte0[BUTTON_B_ID] = 0x02;
 "73
-[e = *U + &U _buttonsMapByte0 * -> . `E15470 2 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux -> -> 4 `i `uc ]
-[; ;buttons.c: 74: buttonsMapByte0[BUTTON_Y_ID] = 0x08;
+[e = *U + &U _buttonsMapByte0 * -> . `E15478 1 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux -> -> 2 `i `uc ]
+[; ;buttons.c: 74: buttonsMapByte0[BUTTON_X_ID] = 0x04;
 "74
-[e = *U + &U _buttonsMapByte0 * -> . `E15470 3 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux -> -> 8 `i `uc ]
-[; ;buttons.c: 75: buttonsMapByte0[BUTTON_ST_ID] = 0x10;
+[e = *U + &U _buttonsMapByte0 * -> . `E15478 2 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux -> -> 4 `i `uc ]
+[; ;buttons.c: 75: buttonsMapByte0[BUTTON_Y_ID] = 0x08;
 "75
-[e = *U + &U _buttonsMapByte0 * -> . `E15470 4 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux -> -> 16 `i `uc ]
-[; ;buttons.c: 77: buttonsMapByte1[BUTTON_DL_ID] = 0x01;
-"77
-[e = *U + &U _buttonsMapByte1 * -> . `E15470 5 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 1 `i `uc ]
-[; ;buttons.c: 78: buttonsMapByte1[BUTTON_DR_ID] = 0x02;
+[e = *U + &U _buttonsMapByte0 * -> . `E15478 3 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux -> -> 8 `i `uc ]
+[; ;buttons.c: 76: buttonsMapByte0[BUTTON_ST_ID] = 0x10;
+"76
+[e = *U + &U _buttonsMapByte0 * -> . `E15478 4 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux -> -> 16 `i `uc ]
+[; ;buttons.c: 78: buttonsMapByte1[BUTTON_DL_ID] = 0x01;
 "78
-[e = *U + &U _buttonsMapByte1 * -> . `E15470 6 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 2 `i `uc ]
-[; ;buttons.c: 79: buttonsMapByte1[BUTTON_DD_ID] = 0x04;
+[e = *U + &U _buttonsMapByte1 * -> . `E15478 5 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 1 `i `uc ]
+[; ;buttons.c: 79: buttonsMapByte1[BUTTON_DR_ID] = 0x02;
 "79
-[e = *U + &U _buttonsMapByte1 * -> . `E15470 7 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 4 `i `uc ]
-[; ;buttons.c: 80: buttonsMapByte1[BUTTON_DU_ID] = 0x08;
+[e = *U + &U _buttonsMapByte1 * -> . `E15478 6 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 2 `i `uc ]
+[; ;buttons.c: 80: buttonsMapByte1[BUTTON_DD_ID] = 0x04;
 "80
-[e = *U + &U _buttonsMapByte1 * -> . `E15470 8 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 8 `i `uc ]
-[; ;buttons.c: 81: buttonsMapByte1[BUTTON_Z_ID] = 0x10;
+[e = *U + &U _buttonsMapByte1 * -> . `E15478 7 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 4 `i `uc ]
+[; ;buttons.c: 81: buttonsMapByte1[BUTTON_DU_ID] = 0x08;
 "81
-[e = *U + &U _buttonsMapByte1 * -> . `E15470 9 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 16 `i `uc ]
-[; ;buttons.c: 82: buttonsMapByte1[BUTTON_RD_ID] = 0x20;
+[e = *U + &U _buttonsMapByte1 * -> . `E15478 8 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 8 `i `uc ]
+[; ;buttons.c: 82: buttonsMapByte1[BUTTON_Z_ID] = 0x10;
 "82
-[e = *U + &U _buttonsMapByte1 * -> . `E15470 10 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 32 `i `uc ]
-[; ;buttons.c: 83: buttonsMapByte1[BUTTON_LD_ID] = 0x40;
+[e = *U + &U _buttonsMapByte1 * -> . `E15478 9 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 16 `i `uc ]
+[; ;buttons.c: 83: buttonsMapByte1[BUTTON_RD_ID] = 0x20;
 "83
-[e = *U + &U _buttonsMapByte1 * -> . `E15470 11 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 64 `i `uc ]
-[; ;buttons.c: 84: }
+[e = *U + &U _buttonsMapByte1 * -> . `E15478 10 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 32 `i `uc ]
+[; ;buttons.c: 84: buttonsMapByte1[BUTTON_LD_ID] = 0x40;
 "84
-[e :UE 2148 ]
+[e = *U + &U _buttonsMapByte1 * -> . `E15478 11 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 64 `i `uc ]
+[; ;buttons.c: 85: }
+"85
+[e :UE 2149 ]
 }
-"86
+"87
 [v _buttonsUpdate `(v ~T0 @X0 1 ef ]
 {
-[; ;buttons.c: 86: void buttonsUpdate(void) {
+[; ;buttons.c: 87: void buttonsUpdate(void) {
 [e :U _buttonsUpdate ]
 [f ]
-"87
-[v _i `uc ~T0 @X0 1 a ]
 "88
+[v _i `uc ~T0 @X0 1 a ]
+"89
 [v _PA `uc ~T0 @X0 1 a ]
 [v _PB `uc ~T0 @X0 1 a ]
 [v _PC `uc ~T0 @X0 1 a ]
-"89
+"90
 [v _toggledButtons `S2142 ~T0 @X0 1 a ]
-[; ;buttons.c: 87: uint8_t i;
-[; ;buttons.c: 88: uint8_t PA, PB, PC;
-[; ;buttons.c: 89: inButtons_t toggledButtons;
-[; ;buttons.c: 92: PA = PORTA;
-"92
-[e = _PA _PORTA ]
-[; ;buttons.c: 93: PB = PORTB;
+[; ;buttons.c: 88: uint8_t i;
+[; ;buttons.c: 89: uint8_t PA, PB, PC;
+[; ;buttons.c: 90: inButtons_t toggledButtons;
+[; ;buttons.c: 93: PA = PORTA;
 "93
-[e = _PB _PORTB ]
-[; ;buttons.c: 94: PC = PORTC;
+[e = _PA _PORTA ]
+[; ;buttons.c: 94: PB = PORTB;
 "94
-[e = _PC _PORTC ]
-[; ;buttons.c: 95: toggledButtons.PORTA = (uint8_t)(PA ^ prevButtons.PORTA);
+[e = _PB _PORTB ]
+[; ;buttons.c: 95: PC = PORTC;
 "95
-[e = . . _toggledButtons 1 0 -> ^ -> _PA `i -> . . _prevButtons 1 0 `i `uc ]
-[; ;buttons.c: 96: toggledButtons.PORTB = (uint8_t)(PB ^ prevButtons.PORTB);
+[e = _PC _PORTC ]
+[; ;buttons.c: 96: toggledButtons.PORTA = (uint8_t)(PA ^ prevButtons.PORTA);
 "96
-[e = . . _toggledButtons 1 1 -> ^ -> _PB `i -> . . _prevButtons 1 1 `i `uc ]
-[; ;buttons.c: 97: toggledButtons.PORTC = (uint8_t)(PC ^ prevButtons.PORTC);
+[e = . . _toggledButtons 1 0 -> ^ -> _PA `i -> . . _prevButtons 1 0 `i `uc ]
+[; ;buttons.c: 97: toggledButtons.PORTB = (uint8_t)(PB ^ prevButtons.PORTB);
 "97
+[e = . . _toggledButtons 1 1 -> ^ -> _PB `i -> . . _prevButtons 1 1 `i `uc ]
+[; ;buttons.c: 98: toggledButtons.PORTC = (uint8_t)(PC ^ prevButtons.PORTC);
+"98
 [e = . . _toggledButtons 1 2 -> ^ -> _PC `i -> . . _prevButtons 1 2 `i `uc ]
-[; ;buttons.c: 99: prevButtons.PORTA = PA;
-"99
-[e = . . _prevButtons 1 0 _PA ]
-[; ;buttons.c: 100: prevButtons.PORTB = PB;
+[; ;buttons.c: 100: prevButtons.PORTA = PA;
 "100
-[e = . . _prevButtons 1 1 _PB ]
-[; ;buttons.c: 101: prevButtons.PORTC = PC;
+[e = . . _prevButtons 1 0 _PA ]
+[; ;buttons.c: 101: prevButtons.PORTB = PB;
 "101
+[e = . . _prevButtons 1 1 _PB ]
+[; ;buttons.c: 102: prevButtons.PORTC = PC;
+"102
 [e = . . _prevButtons 1 2 _PC ]
-[; ;buttons.c: 104: if (toggledButtons.A) buttonsTimers[BUTTON_A_ID] = 0;
-"104
-[e $ ! != -> . . _toggledButtons 0 18 `i -> -> -> 0 `i `uc `i 2150  ]
-[e = *U + &U _buttonsTimers * -> . `E15470 0 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
-[e :U 2150 ]
-[; ;buttons.c: 105: if (toggledButtons.B) buttonsTimers[BUTTON_B_ID] = 0;
+[; ;buttons.c: 105: if (toggledButtons.A) buttonsTimers[BUTTON_A_ID] = 0;
 "105
-[e $ ! != -> . . _toggledButtons 0 17 `i -> -> -> 0 `i `uc `i 2151  ]
-[e = *U + &U _buttonsTimers * -> . `E15470 1 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
+[e $ ! != -> . . _toggledButtons 0 18 `i -> -> -> 0 `i `uc `i 2151  ]
+[e = *U + &U _buttonsTimers * -> . `E15478 0 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2151 ]
-[; ;buttons.c: 106: if (toggledButtons.X) buttonsTimers[BUTTON_X_ID] = 0;
+[; ;buttons.c: 106: if (toggledButtons.B) buttonsTimers[BUTTON_B_ID] = 0;
 "106
-[e $ ! != -> . . _toggledButtons 0 10 `i -> -> -> 0 `i `uc `i 2152  ]
-[e = *U + &U _buttonsTimers * -> . `E15470 2 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
+[e $ ! != -> . . _toggledButtons 0 17 `i -> -> -> 0 `i `uc `i 2152  ]
+[e = *U + &U _buttonsTimers * -> . `E15478 1 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2152 ]
-[; ;buttons.c: 107: if (toggledButtons.Y) buttonsTimers[BUTTON_Y_ID] = 0;
+[; ;buttons.c: 107: if (toggledButtons.X) buttonsTimers[BUTTON_X_ID] = 0;
 "107
-[e $ ! != -> . . _toggledButtons 0 9 `i -> -> -> 0 `i `uc `i 2153  ]
-[e = *U + &U _buttonsTimers * -> . `E15470 3 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
+[e $ ! != -> . . _toggledButtons 0 10 `i -> -> -> 0 `i `uc `i 2153  ]
+[e = *U + &U _buttonsTimers * -> . `E15478 2 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2153 ]
-[; ;buttons.c: 108: if (toggledButtons.ST) buttonsTimers[BUTTON_ST_ID] = 0;
+[; ;buttons.c: 108: if (toggledButtons.Y) buttonsTimers[BUTTON_Y_ID] = 0;
 "108
-[e $ ! != -> . . _toggledButtons 0 5 `i -> -> -> 0 `i `uc `i 2154  ]
-[e = *U + &U _buttonsTimers * -> . `E15470 4 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
+[e $ ! != -> . . _toggledButtons 0 9 `i -> -> -> 0 `i `uc `i 2154  ]
+[e = *U + &U _buttonsTimers * -> . `E15478 3 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2154 ]
-[; ;buttons.c: 109: if (toggledButtons.DL) buttonsTimers[BUTTON_DL_ID] = 0;
+[; ;buttons.c: 109: if (toggledButtons.ST) buttonsTimers[BUTTON_ST_ID] = 0;
 "109
-[e $ ! != -> . . _toggledButtons 0 2 `i -> -> -> 0 `i `uc `i 2155  ]
-[e = *U + &U _buttonsTimers * -> . `E15470 5 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
+[e $ ! != -> . . _toggledButtons 0 5 `i -> -> -> 0 `i `uc `i 2155  ]
+[e = *U + &U _buttonsTimers * -> . `E15478 4 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2155 ]
-[; ;buttons.c: 110: if (toggledButtons.DR) buttonsTimers[BUTTON_DR_ID] = 0;
+[; ;buttons.c: 110: if (toggledButtons.DL) buttonsTimers[BUTTON_DL_ID] = 0;
 "110
-[e $ ! != -> . . _toggledButtons 0 4 `i -> -> -> 0 `i `uc `i 2156  ]
-[e = *U + &U _buttonsTimers * -> . `E15470 6 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
+[e $ ! != -> . . _toggledButtons 0 2 `i -> -> -> 0 `i `uc `i 2156  ]
+[e = *U + &U _buttonsTimers * -> . `E15478 5 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2156 ]
-[; ;buttons.c: 111: if (toggledButtons.DD) buttonsTimers[BUTTON_DD_ID] = 0;
+[; ;buttons.c: 111: if (toggledButtons.DR) buttonsTimers[BUTTON_DR_ID] = 0;
 "111
-[e $ ! != -> . . _toggledButtons 0 6 `i -> -> -> 0 `i `uc `i 2157  ]
-[e = *U + &U _buttonsTimers * -> . `E15470 7 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
+[e $ ! != -> . . _toggledButtons 0 4 `i -> -> -> 0 `i `uc `i 2157  ]
+[e = *U + &U _buttonsTimers * -> . `E15478 6 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2157 ]
-[; ;buttons.c: 112: if (toggledButtons.DU) buttonsTimers[BUTTON_DU_ID] = 0;
+[; ;buttons.c: 112: if (toggledButtons.DD) buttonsTimers[BUTTON_DD_ID] = 0;
 "112
-[e $ ! != -> . . _toggledButtons 0 3 `i -> -> -> 0 `i `uc `i 2158  ]
-[e = *U + &U _buttonsTimers * -> . `E15470 8 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
+[e $ ! != -> . . _toggledButtons 0 6 `i -> -> -> 0 `i `uc `i 2158  ]
+[e = *U + &U _buttonsTimers * -> . `E15478 7 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2158 ]
-[; ;buttons.c: 113: if (toggledButtons.Z) buttonsTimers[BUTTON_Z_ID] = 0;
+[; ;buttons.c: 113: if (toggledButtons.DU) buttonsTimers[BUTTON_DU_ID] = 0;
 "113
-[e $ ! != -> . . _toggledButtons 0 7 `i -> -> -> 0 `i `uc `i 2159  ]
-[e = *U + &U _buttonsTimers * -> . `E15470 9 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
+[e $ ! != -> . . _toggledButtons 0 3 `i -> -> -> 0 `i `uc `i 2159  ]
+[e = *U + &U _buttonsTimers * -> . `E15478 8 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2159 ]
-[; ;buttons.c: 114: if (toggledButtons.RD) buttonsTimers[BUTTON_RD_ID] = 0;
+[; ;buttons.c: 114: if (toggledButtons.Z) buttonsTimers[BUTTON_Z_ID] = 0;
 "114
-[e $ ! != -> . . _toggledButtons 0 8 `i -> -> -> 0 `i `uc `i 2160  ]
-[e = *U + &U _buttonsTimers * -> . `E15470 10 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
+[e $ ! != -> . . _toggledButtons 0 7 `i -> -> -> 0 `i `uc `i 2160  ]
+[e = *U + &U _buttonsTimers * -> . `E15478 9 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2160 ]
-[; ;buttons.c: 115: if (toggledButtons.LD) buttonsTimers[BUTTON_LD_ID] = 0;
+[; ;buttons.c: 115: if (toggledButtons.RD) buttonsTimers[BUTTON_RD_ID] = 0;
 "115
-[e $ ! != -> . . _toggledButtons 0 1 `i -> -> -> 0 `i `uc `i 2161  ]
-[e = *U + &U _buttonsTimers * -> . `E15470 11 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
+[e $ ! != -> . . _toggledButtons 0 8 `i -> -> -> 0 `i `uc `i 2161  ]
+[e = *U + &U _buttonsTimers * -> . `E15478 10 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2161 ]
-[; ;buttons.c: 116: if (toggledButtons.LA) buttonsTimers[BUTTON_LA_ID] = 0;
+[; ;buttons.c: 116: if (toggledButtons.LD) buttonsTimers[BUTTON_LD_ID] = 0;
 "116
-[e $ ! != -> . . _toggledButtons 0 14 `i -> -> -> 0 `i `uc `i 2162  ]
-[e = *U + &U _buttonsTimers * -> . `E15470 12 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
+[e $ ! != -> . . _toggledButtons 0 1 `i -> -> -> 0 `i `uc `i 2162  ]
+[e = *U + &U _buttonsTimers * -> . `E15478 11 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2162 ]
-[; ;buttons.c: 117: if (toggledButtons.RA) buttonsTimers[BUTTON_RA_ID] = 0;
+[; ;buttons.c: 117: if (toggledButtons.LA) buttonsTimers[BUTTON_LA_ID] = 0;
 "117
-[e $ ! != -> . . _toggledButtons 0 16 `i -> -> -> 0 `i `uc `i 2163  ]
-[e = *U + &U _buttonsTimers * -> . `E15470 13 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
+[e $ ! != -> . . _toggledButtons 0 14 `i -> -> -> 0 `i `uc `i 2163  ]
+[e = *U + &U _buttonsTimers * -> . `E15478 12 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2163 ]
-[; ;buttons.c: 118: if (toggledButtons.Z2) buttonsTimers[BUTTON_Z2_ID] = 0;
+[; ;buttons.c: 118: if (toggledButtons.RA) buttonsTimers[BUTTON_RA_ID] = 0;
 "118
-[e $ ! != -> . . _toggledButtons 0 12 `i -> -> -> 0 `i `uc `i 2164  ]
-[e = *U + &U _buttonsTimers * -> . `E15470 14 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
+[e $ ! != -> . . _toggledButtons 0 16 `i -> -> -> 0 `i `uc `i 2164  ]
+[e = *U + &U _buttonsTimers * -> . `E15478 13 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2164 ]
-[; ;buttons.c: 120: if (!TMR0IF) return;
-"120
-[e $ ! ! _TMR0IF 2165  ]
-[e $UE 2149  ]
+[; ;buttons.c: 119: if (toggledButtons.Z2) buttonsTimers[BUTTON_Z2_ID] = 0;
+"119
+[e $ ! != -> . . _toggledButtons 0 12 `i -> -> -> 0 `i `uc `i 2165  ]
+[e = *U + &U _buttonsTimers * -> . `E15478 14 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2165 ]
-[; ;buttons.c: 121: TMR0IF = 0;
+[; ;buttons.c: 121: if (!TMR0IF) return;
 "121
+[e $ ! ! _TMR0IF 2166  ]
+[e $UE 2150  ]
+[e :U 2166 ]
+[; ;buttons.c: 122: TMR0IF = 0;
+"122
 [e = _TMR0IF -> -> 0 `i `b ]
-[; ;buttons.c: 124: for (i = 0; i < N_BUTTONS; i++) {
-"124
+[; ;buttons.c: 125: for (i = 0; i < N_BUTTONS; i++) {
+"125
 {
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> . `E15470 15 `i 2166  ]
-[e $U 2167  ]
-[e :U 2166 ]
-{
-[; ;buttons.c: 125: buttonsTimers[i]++;
-"125
-[e ++ *U + &U _buttonsTimers * -> _i `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 1 `i `uc ]
-"126
-}
-"124
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> . `E15470 15 `i 2166  ]
+[e $ < -> _i `i -> . `E15478 15 `i 2167  ]
+[e $U 2168  ]
 [e :U 2167 ]
+{
+[; ;buttons.c: 126: buttonsTimers[i]++;
 "126
+[e ++ *U + &U _buttonsTimers * -> _i `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 1 `i `uc ]
+"127
 }
-[; ;buttons.c: 126: }
-[; ;buttons.c: 128: outButtons.byte0 = 0x00;
-"128
-[e = . . _outButtons 1 0 -> -> 0 `i `uc ]
-[; ;buttons.c: 129: outButtons.byte1 = 0x80;
+"125
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> . `E15478 15 `i 2167  ]
+[e :U 2168 ]
+"127
+}
+[; ;buttons.c: 127: }
+[; ;buttons.c: 129: outButtons.byte0 = 0x00;
 "129
+[e = . . _outButtons 1 0 -> -> 0 `i `uc ]
+[; ;buttons.c: 130: outButtons.byte1 = 0x80;
+"130
 [e = . . _outButtons 1 1 -> -> 128 `i `uc ]
-[; ;buttons.c: 131: if (buttonsTimers[BUTTON_A_ID] >= 10 && !prevButtons.A) { buttonsTimers[BUTTON_A_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_A_ID]; } if (buttonsTimers[BUTTON_A_ID] >= 10 && !prevButtons.A) { buttonsTimers[BUTTON_A_ID] = 10; outButtons.byte1
-"131
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 0 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 18 `i -> -> -> 0 `i `uc `i 2169  ]
+[; ;buttons.c: 132: if (buttonsTimers[BUTTON_A_ID] >= 10 && !prevButtons.A) { buttonsTimers[BUTTON_A_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_A_ID]; } if (buttonsTimers[BUTTON_A_ID] >= 10 && !prevButtons.A) { buttonsTimers[BUTTON_A_ID] = 10; outButtons.byte1
+"132
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 0 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 18 `i -> -> -> 0 `i `uc `i 2170  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 0 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15470 0 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
-}
-[e :U 2169 ]
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 0 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 18 `i -> -> -> 0 `i `uc `i 2170  ]
-{
-[e = *U + &U _buttonsTimers * -> . `E15470 0 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15470 0 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 0 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15478 0 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
 }
 [e :U 2170 ]
-[; ;buttons.c: 132: if (buttonsTimers[BUTTON_B_ID] >= 10 && !prevButtons.B) { buttonsTimers[BUTTON_B_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_B_ID]; } if (buttonsTimers[BUTTON_B_ID] >= 10 && !prevButtons.B) { buttonsTimers[BUTTON_B_ID] = 10; outButtons.byte1
-"132
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 1 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 17 `i -> -> -> 0 `i `uc `i 2171  ]
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 0 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 18 `i -> -> -> 0 `i `uc `i 2171  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 1 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15470 1 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 0 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 0 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2171 ]
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 1 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 17 `i -> -> -> 0 `i `uc `i 2172  ]
+[; ;buttons.c: 133: if (buttonsTimers[BUTTON_B_ID] >= 10 && !prevButtons.B) { buttonsTimers[BUTTON_B_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_B_ID]; } if (buttonsTimers[BUTTON_B_ID] >= 10 && !prevButtons.B) { buttonsTimers[BUTTON_B_ID] = 10; outButtons.byte1
+"133
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 1 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 17 `i -> -> -> 0 `i `uc `i 2172  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 1 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15470 1 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 1 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15478 1 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
 }
 [e :U 2172 ]
-[; ;buttons.c: 133: if (buttonsTimers[BUTTON_X_ID] >= 10 && !prevButtons.X) { buttonsTimers[BUTTON_X_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_X_ID]; } if (buttonsTimers[BUTTON_X_ID] >= 10 && !prevButtons.X) { buttonsTimers[BUTTON_X_ID] = 10; outButtons.byte1
-"133
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 2 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 10 `i -> -> -> 0 `i `uc `i 2173  ]
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 1 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 17 `i -> -> -> 0 `i `uc `i 2173  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 2 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15470 2 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 1 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 1 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2173 ]
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 2 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 10 `i -> -> -> 0 `i `uc `i 2174  ]
+[; ;buttons.c: 134: if (buttonsTimers[BUTTON_X_ID] >= 10 && !prevButtons.X) { buttonsTimers[BUTTON_X_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_X_ID]; } if (buttonsTimers[BUTTON_X_ID] >= 10 && !prevButtons.X) { buttonsTimers[BUTTON_X_ID] = 10; outButtons.byte1
+"134
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 2 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 10 `i -> -> -> 0 `i `uc `i 2174  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 2 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15470 2 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 2 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15478 2 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
 }
 [e :U 2174 ]
-[; ;buttons.c: 134: if (buttonsTimers[BUTTON_Y_ID] >= 10 && !prevButtons.Y) { buttonsTimers[BUTTON_Y_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_Y_ID]; } if (buttonsTimers[BUTTON_Y_ID] >= 10 && !prevButtons.Y) { buttonsTimers[BUTTON_Y_ID] = 10; outButtons.byte1
-"134
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 3 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 9 `i -> -> -> 0 `i `uc `i 2175  ]
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 2 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 10 `i -> -> -> 0 `i `uc `i 2175  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 3 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15470 3 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 2 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 2 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2175 ]
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 3 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 9 `i -> -> -> 0 `i `uc `i 2176  ]
+[; ;buttons.c: 135: if (buttonsTimers[BUTTON_Y_ID] >= 10 && !prevButtons.Y) { buttonsTimers[BUTTON_Y_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_Y_ID]; } if (buttonsTimers[BUTTON_Y_ID] >= 10 && !prevButtons.Y) { buttonsTimers[BUTTON_Y_ID] = 10; outButtons.byte1
+"135
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 3 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 9 `i -> -> -> 0 `i `uc `i 2176  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 3 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15470 3 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 3 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15478 3 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
 }
 [e :U 2176 ]
-[; ;buttons.c: 135: if (buttonsTimers[BUTTON_ST_ID] >= 10 && !prevButtons.ST) { buttonsTimers[BUTTON_ST_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_ST_ID]; } if (buttonsTimers[BUTTON_ST_ID] >= 10 && !prevButtons.ST) { buttonsTimers[BUTTON_ST_ID] = 10; outButton
-"135
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 4 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 5 `i -> -> -> 0 `i `uc `i 2177  ]
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 3 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 9 `i -> -> -> 0 `i `uc `i 2177  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 4 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15470 4 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 3 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 3 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2177 ]
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 4 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 5 `i -> -> -> 0 `i `uc `i 2178  ]
+[; ;buttons.c: 136: if (buttonsTimers[BUTTON_ST_ID] >= 10 && !prevButtons.ST) { buttonsTimers[BUTTON_ST_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_ST_ID]; } if (buttonsTimers[BUTTON_ST_ID] >= 10 && !prevButtons.ST) { buttonsTimers[BUTTON_ST_ID] = 10; outButton
+"136
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 4 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 5 `i -> -> -> 0 `i `uc `i 2178  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 4 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15470 4 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 4 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15478 4 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
 }
 [e :U 2178 ]
-[; ;buttons.c: 136: if (buttonsTimers[BUTTON_DL_ID] >= 10 && !prevButtons.DL) { buttonsTimers[BUTTON_DL_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_DL_ID]; } if (buttonsTimers[BUTTON_DL_ID] >= 10 && !prevButtons.DL) { buttonsTimers[BUTTON_DL_ID] = 10; outButton
-"136
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 5 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 2 `i -> -> -> 0 `i `uc `i 2179  ]
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 4 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 5 `i -> -> -> 0 `i `uc `i 2179  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 5 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15470 5 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 4 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 4 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2179 ]
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 5 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 2 `i -> -> -> 0 `i `uc `i 2180  ]
+[; ;buttons.c: 137: if (buttonsTimers[BUTTON_DL_ID] >= 10 && !prevButtons.DL) { buttonsTimers[BUTTON_DL_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_DL_ID]; } if (buttonsTimers[BUTTON_DL_ID] >= 10 && !prevButtons.DL) { buttonsTimers[BUTTON_DL_ID] = 10; outButton
+"137
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 5 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 2 `i -> -> -> 0 `i `uc `i 2180  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 5 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15470 5 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 5 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15478 5 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
 }
 [e :U 2180 ]
-[; ;buttons.c: 137: if (buttonsTimers[BUTTON_DR_ID] >= 10 && !prevButtons.DR) { buttonsTimers[BUTTON_DR_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_DR_ID]; } if (buttonsTimers[BUTTON_DR_ID] >= 10 && !prevButtons.DR) { buttonsTimers[BUTTON_DR_ID] = 10; outButton
-"137
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 6 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 4 `i -> -> -> 0 `i `uc `i 2181  ]
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 5 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 2 `i -> -> -> 0 `i `uc `i 2181  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 6 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15470 6 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 5 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 5 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2181 ]
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 6 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 4 `i -> -> -> 0 `i `uc `i 2182  ]
+[; ;buttons.c: 138: if (buttonsTimers[BUTTON_DR_ID] >= 10 && !prevButtons.DR) { buttonsTimers[BUTTON_DR_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_DR_ID]; } if (buttonsTimers[BUTTON_DR_ID] >= 10 && !prevButtons.DR) { buttonsTimers[BUTTON_DR_ID] = 10; outButton
+"138
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 6 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 4 `i -> -> -> 0 `i `uc `i 2182  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 6 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15470 6 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 6 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15478 6 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
 }
 [e :U 2182 ]
-[; ;buttons.c: 138: if (buttonsTimers[BUTTON_DD_ID] >= 10 && !prevButtons.DD) { buttonsTimers[BUTTON_DD_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_DD_ID]; } if (buttonsTimers[BUTTON_DD_ID] >= 10 && !prevButtons.DD) { buttonsTimers[BUTTON_DD_ID] = 10; outButton
-"138
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 7 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 6 `i -> -> -> 0 `i `uc `i 2183  ]
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 6 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 4 `i -> -> -> 0 `i `uc `i 2183  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 7 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15470 7 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 6 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 6 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2183 ]
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 7 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 6 `i -> -> -> 0 `i `uc `i 2184  ]
+[; ;buttons.c: 139: if (buttonsTimers[BUTTON_DD_ID] >= 10 && !prevButtons.DD) { buttonsTimers[BUTTON_DD_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_DD_ID]; } if (buttonsTimers[BUTTON_DD_ID] >= 10 && !prevButtons.DD) { buttonsTimers[BUTTON_DD_ID] = 10; outButton
+"139
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 7 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 6 `i -> -> -> 0 `i `uc `i 2184  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 7 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15470 7 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 7 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15478 7 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
 }
 [e :U 2184 ]
-[; ;buttons.c: 139: if (buttonsTimers[BUTTON_DU_ID] >= 10 && !prevButtons.DU) { buttonsTimers[BUTTON_DU_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_DU_ID]; } if (buttonsTimers[BUTTON_DU_ID] >= 10 && !prevButtons.DU) { buttonsTimers[BUTTON_DU_ID] = 10; outButton
-"139
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 8 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 3 `i -> -> -> 0 `i `uc `i 2185  ]
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 7 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 6 `i -> -> -> 0 `i `uc `i 2185  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 8 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15470 8 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 7 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 7 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2185 ]
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 8 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 3 `i -> -> -> 0 `i `uc `i 2186  ]
+[; ;buttons.c: 140: if (buttonsTimers[BUTTON_DU_ID] >= 10 && !prevButtons.DU) { buttonsTimers[BUTTON_DU_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_DU_ID]; } if (buttonsTimers[BUTTON_DU_ID] >= 10 && !prevButtons.DU) { buttonsTimers[BUTTON_DU_ID] = 10; outButton
+"140
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 8 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 3 `i -> -> -> 0 `i `uc `i 2186  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 8 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15470 8 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 8 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15478 8 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
 }
 [e :U 2186 ]
-[; ;buttons.c: 140: if (buttonsTimers[BUTTON_Z_ID] >= 10 && !prevButtons.Z) { buttonsTimers[BUTTON_Z_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_Z_ID]; } if (buttonsTimers[BUTTON_Z_ID] >= 10 && !prevButtons.Z) { buttonsTimers[BUTTON_Z_ID] = 10; outButtons.byte1
-"140
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 9 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 7 `i -> -> -> 0 `i `uc `i 2187  ]
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 8 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 3 `i -> -> -> 0 `i `uc `i 2187  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 9 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15470 9 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 8 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 8 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2187 ]
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 9 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 7 `i -> -> -> 0 `i `uc `i 2188  ]
+[; ;buttons.c: 141: if (buttonsTimers[BUTTON_Z_ID] >= 10 && !prevButtons.Z) { buttonsTimers[BUTTON_Z_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_Z_ID]; } if (buttonsTimers[BUTTON_Z_ID] >= 10 && !prevButtons.Z) { buttonsTimers[BUTTON_Z_ID] = 10; outButtons.byte1
+"141
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 9 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 7 `i -> -> -> 0 `i `uc `i 2188  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 9 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15470 9 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 9 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15478 9 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
 }
 [e :U 2188 ]
-[; ;buttons.c: 141: if (buttonsTimers[BUTTON_RD_ID] >= 10 && !prevButtons.RD) { buttonsTimers[BUTTON_RD_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_RD_ID]; } if (buttonsTimers[BUTTON_RD_ID] >= 10 && !prevButtons.RD) { buttonsTimers[BUTTON_RD_ID] = 10; outButton
-"141
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 10 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 8 `i -> -> -> 0 `i `uc `i 2189  ]
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 9 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 7 `i -> -> -> 0 `i `uc `i 2189  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 10 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15470 10 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 9 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 9 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2189 ]
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 10 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 8 `i -> -> -> 0 `i `uc `i 2190  ]
+[; ;buttons.c: 142: if (buttonsTimers[BUTTON_RD_ID] >= 10 && !prevButtons.RD) { buttonsTimers[BUTTON_RD_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_RD_ID]; } if (buttonsTimers[BUTTON_RD_ID] >= 10 && !prevButtons.RD) { buttonsTimers[BUTTON_RD_ID] = 10; outButton
+"142
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 10 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 8 `i -> -> -> 0 `i `uc `i 2190  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 10 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15470 10 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 10 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15478 10 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
 }
 [e :U 2190 ]
-[; ;buttons.c: 142: if (buttonsTimers[BUTTON_LD_ID] >= 10 && !prevButtons.LD) { buttonsTimers[BUTTON_LD_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_LD_ID]; } if (buttonsTimers[BUTTON_LD_ID] >= 10 && !prevButtons.LD) { buttonsTimers[BUTTON_LD_ID] = 10; outButton
-"142
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 11 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 1 `i -> -> -> 0 `i `uc `i 2191  ]
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 10 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 8 `i -> -> -> 0 `i `uc `i 2191  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 11 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15470 11 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 10 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 10 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2191 ]
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 11 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 1 `i -> -> -> 0 `i `uc `i 2192  ]
+[; ;buttons.c: 143: if (buttonsTimers[BUTTON_LD_ID] >= 10 && !prevButtons.LD) { buttonsTimers[BUTTON_LD_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_LD_ID]; } if (buttonsTimers[BUTTON_LD_ID] >= 10 && !prevButtons.LD) { buttonsTimers[BUTTON_LD_ID] = 10; outButton
+"143
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 11 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 1 `i -> -> -> 0 `i `uc `i 2192  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 11 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15470 11 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 11 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15478 11 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
 }
 [e :U 2192 ]
-[; ;buttons.c: 143: if (buttonsTimers[BUTTON_Z2_ID] >= 10 && !prevButtons.Z2) { buttonsTimers[BUTTON_Z2_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_Z2_ID]; } if (buttonsTimers[BUTTON_Z2_ID] >= 10 && !prevButtons.Z2) { buttonsTimers[BUTTON_Z2_ID] = 10; outButton
-"143
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 14 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 12 `i -> -> -> 0 `i `uc `i 2193  ]
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 11 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 1 `i -> -> -> 0 `i `uc `i 2193  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 14 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15470 14 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 11 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 11 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2193 ]
-[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15470 14 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 12 `i -> -> -> 0 `i `uc `i 2194  ]
+[; ;buttons.c: 144: if (buttonsTimers[BUTTON_Z2_ID] >= 10 && !prevButtons.Z2) { buttonsTimers[BUTTON_Z2_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_Z2_ID]; } if (buttonsTimers[BUTTON_Z2_ID] >= 10 && !prevButtons.Z2) { buttonsTimers[BUTTON_Z2_ID] = 10; outButton
+"144
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 14 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 12 `i -> -> -> 0 `i `uc `i 2194  ]
 {
-[e = *U + &U _buttonsTimers * -> . `E15470 14 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15470 14 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
+[e = *U + &U _buttonsTimers * -> . `E15478 14 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 0 *U + &U _buttonsMapByte0 * -> . `E15478 14 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
 }
 [e :U 2194 ]
-[; ;buttons.c: 145: if (buttonsTimers[BUTTON_LA_ID] >= 10) {
-"145
-[e $ ! >= -> *U + &U _buttonsTimers * -> . `E15470 12 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i 2195  ]
+[e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 14 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 12 `i -> -> -> 0 `i `uc `i 2195  ]
 {
-[; ;buttons.c: 146: buttonsTimers[BUTTON_LA_ID] = 10;
-"146
-[e = *U + &U _buttonsTimers * -> . `E15470 12 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[; ;buttons.c: 147: if (prevButtons.LA) {
-"147
-[e $ ! != -> . . _prevButtons 0 14 `i -> -> -> 0 `i `uc `i 2196  ]
-{
-[; ;buttons.c: 148: outButtons.LA = 0;
-"148
-[e = . . _outButtons 0 14 -> -> 0 `i `uc ]
-"149
-}
-[; ;buttons.c: 149: } else {
-[e $U 2197  ]
-[e :U 2196 ]
-{
-[; ;buttons.c: 150: outButtons.LA = 0xFF;
-"150
-[e = . . _outButtons 0 14 -> -> 255 `i `uc ]
-"151
-}
-[e :U 2197 ]
-"152
+[e = *U + &U _buttonsTimers * -> . `E15478 14 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 14 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2195 ]
-[; ;buttons.c: 151: }
-[; ;buttons.c: 152: }
-[; ;buttons.c: 153: if (buttonsTimers[BUTTON_RA_ID] >= 10) {
-"153
-[e $ ! >= -> *U + &U _buttonsTimers * -> . `E15470 13 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i 2198  ]
+[; ;buttons.c: 146: if (buttonsTimers[BUTTON_LA_ID] >= 10) {
+"146
+[e $ ! >= -> *U + &U _buttonsTimers * -> . `E15478 12 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i 2196  ]
 {
-[; ;buttons.c: 154: buttonsTimers[BUTTON_RA_ID] = 10;
-"154
-[e = *U + &U _buttonsTimers * -> . `E15470 13 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[; ;buttons.c: 155: if (prevButtons.RA) {
-"155
-[e $ ! != -> . . _prevButtons 0 16 `i -> -> -> 0 `i `uc `i 2199  ]
+[; ;buttons.c: 147: buttonsTimers[BUTTON_LA_ID] = 10;
+"147
+[e = *U + &U _buttonsTimers * -> . `E15478 12 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[; ;buttons.c: 148: if (prevButtons.LA) {
+"148
+[e $ ! != -> . . _prevButtons 0 14 `i -> -> -> 0 `i `uc `i 2197  ]
 {
-[; ;buttons.c: 156: outButtons.RA = 0;
-"156
-[e = . . _outButtons 0 15 -> -> 0 `i `uc ]
-"157
+[; ;buttons.c: 149: outButtons.LA = 0;
+"149
+[e = . . _outButtons 0 14 -> -> 0 `i `uc ]
+"150
 }
-[; ;buttons.c: 157: } else {
-[e $U 2200  ]
-[e :U 2199 ]
+[; ;buttons.c: 150: } else {
+[e $U 2198  ]
+[e :U 2197 ]
 {
-[; ;buttons.c: 158: outButtons.RA = 0xFF;
-"158
-[e = . . _outButtons 0 15 -> -> 255 `i `uc ]
-"159
-}
-[e :U 2200 ]
-"160
+[; ;buttons.c: 151: outButtons.LA = 0xFF;
+"151
+[e = . . _outButtons 0 14 -> -> 255 `i `uc ]
+"152
 }
 [e :U 2198 ]
-[; ;buttons.c: 159: }
+"153
+}
+[e :U 2196 ]
+[; ;buttons.c: 152: }
+[; ;buttons.c: 153: }
+[; ;buttons.c: 154: if (buttonsTimers[BUTTON_RA_ID] >= 10) {
+"154
+[e $ ! >= -> *U + &U _buttonsTimers * -> . `E15478 13 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i 2199  ]
+{
+[; ;buttons.c: 155: buttonsTimers[BUTTON_RA_ID] = 10;
+"155
+[e = *U + &U _buttonsTimers * -> . `E15478 13 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
+[; ;buttons.c: 156: if (prevButtons.RA) {
+"156
+[e $ ! != -> . . _prevButtons 0 16 `i -> -> -> 0 `i `uc `i 2200  ]
+{
+[; ;buttons.c: 157: outButtons.RA = 0;
+"157
+[e = . . _outButtons 0 15 -> -> 0 `i `uc ]
+"158
+}
+[; ;buttons.c: 158: } else {
+[e $U 2201  ]
+[e :U 2200 ]
+{
+[; ;buttons.c: 159: outButtons.RA = 0xFF;
+"159
+[e = . . _outButtons 0 15 -> -> 255 `i `uc ]
+"160
+}
+[e :U 2201 ]
+"161
+}
+[e :U 2199 ]
 [; ;buttons.c: 160: }
 [; ;buttons.c: 161: }
-"161
-[e :UE 2149 ]
+[; ;buttons.c: 162: }
+"162
+[e :UE 2150 ]
 }
-"163
+"164
 [v _buttonsGetMessage `(*uc ~T0 @X0 1 ef2`uc`uc ]
 {
-[; ;buttons.c: 163: uint8_t* buttonsGetMessage(uint8_t analogMode, uint8_t triggersMode) {
+[; ;buttons.c: 164: uint8_t* buttonsGetMessage(uint8_t analogMode, uint8_t triggersMode) {
 [e :U _buttonsGetMessage ]
 [v _analogMode `uc ~T0 @X0 1 r1 ]
 [v _triggersMode `uc ~T0 @X0 1 r2 ]
 [f ]
-[; ;buttons.c: 164: buttonsMessage[0] = outButtons.byte0;
-"164
-[e = *U + &U _buttonsMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux . . _outButtons 1 0 ]
-[; ;buttons.c: 165: buttonsMessage[1] = outButtons.byte1;
+[; ;buttons.c: 165: buttonsMessage[0] = outButtons.byte0;
 "165
-[e = *U + &U _buttonsMessage * -> -> -> 1 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux . . _outButtons 1 1 ]
-[; ;buttons.c: 166: buttonsMessage[2] = LUT_SX[ADCValues[0]];
+[e = *U + &U _buttonsMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux . . _outButtons 1 0 ]
+[; ;buttons.c: 166: buttonsMessage[1] = outButtons.byte1;
 "166
-[e = *U + &U _buttonsMessage * -> -> -> 2 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _LUT_SX * -> *U + &U _ADCValues * -> -> -> 0 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_SX `ui `ux ]
-[; ;buttons.c: 167: buttonsMessage[3] = LUT_SY[ADCValues[1]];
+[e = *U + &U _buttonsMessage * -> -> -> 1 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux . . _outButtons 1 1 ]
+[; ;buttons.c: 167: buttonsMessage[2] = LUT_SX[ADCValues[0]];
 "167
+[e = *U + &U _buttonsMessage * -> -> -> 2 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _LUT_SX * -> *U + &U _ADCValues * -> -> -> 0 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_SX `ui `ux ]
+[; ;buttons.c: 168: buttonsMessage[3] = LUT_SY[ADCValues[1]];
+"168
 [e = *U + &U _buttonsMessage * -> -> -> 3 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _LUT_SY * -> *U + &U _ADCValues * -> -> -> 1 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_SY `ui `ux ]
-"169
+"170
 [v _ra `uc ~T0 @X0 1 a ]
 [v _la `uc ~T0 @X0 1 a ]
-[; ;buttons.c: 169: uint8_t ra, la;
-[; ;buttons.c: 170: if (triggersMode == 0) {
-"170
-[e $ ! == -> _triggersMode `i -> 0 `i 2202  ]
-{
-[; ;buttons.c: 171: ra = outButtons.RA;
+[; ;buttons.c: 170: uint8_t ra, la;
+[; ;buttons.c: 171: if (triggersMode == 0) {
 "171
-[e = _ra . . _outButtons 0 15 ]
-[; ;buttons.c: 172: la = outButtons.LA;
+[e $ ! == -> _triggersMode `i -> 0 `i 2203  ]
+{
+[; ;buttons.c: 172: ra = outButtons.RA;
 "172
-[e = _la . . _outButtons 0 14 ]
+[e = _ra . . _outButtons 0 15 ]
+[; ;buttons.c: 173: la = outButtons.LA;
 "173
-}
-[; ;buttons.c: 173: } else {
-[e $U 2203  ]
-[e :U 2202 ]
-{
-[; ;buttons.c: 174: ra = ADCValues[4];
+[e = _la . . _outButtons 0 14 ]
 "174
-[e = _ra *U + &U _ADCValues * -> -> -> 4 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
-[; ;buttons.c: 175: la = ADCValues[5];
-"175
-[e = _la *U + &U _ADCValues * -> -> -> 5 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
-"176
 }
+[; ;buttons.c: 174: } else {
+[e $U 2204  ]
 [e :U 2203 ]
-[; ;buttons.c: 176: }
-[; ;buttons.c: 178: switch (analogMode) {
-"178
-[e $U 2205  ]
 {
-[; ;buttons.c: 179: case 0:
+[; ;buttons.c: 175: ra = ADCValues[4];
+"175
+[e = _ra *U + &U _ADCValues * -> -> -> 4 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
+[; ;buttons.c: 176: la = ADCValues[5];
+"176
+[e = _la *U + &U _ADCValues * -> -> -> 5 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
+"177
+}
+[e :U 2204 ]
+[; ;buttons.c: 177: }
+[; ;buttons.c: 179: switch (analogMode) {
 "179
-[e :U 2206 ]
+[e $U 2206  ]
+{
+[; ;buttons.c: 180: case 0:
 "180
 [e :U 2207 ]
 "181
 [e :U 2208 ]
 "182
 [e :U 2209 ]
-[; ;buttons.c: 180: case 5:
-[; ;buttons.c: 181: case 6:
-[; ;buttons.c: 182: case 7:
-[; ;buttons.c: 183: buttonsMessage[4] = LUT_CX[ADCValues[2]];
 "183
-[e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _LUT_CX * -> *U + &U _ADCValues * -> -> -> 2 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_CX `ui `ux ]
-[; ;buttons.c: 184: buttonsMessage[5] = LUT_CY[ADCValues[3]];
-"184
-[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _LUT_CY * -> *U + &U _ADCValues * -> -> -> 3 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_CY `ui `ux ]
-[; ;buttons.c: 186: buttonsMessage[6] = (uint8_t)((uint8_t)(la & 0xF0U) | (uint8_t)(ra >> 4U));
-"186
-[e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> | -> -> & -> _la `ui -> 240 `ui `uc `i -> -> >> -> _ra `i -> 4 `ui `uc `i `uc ]
-[; ;buttons.c: 187: buttonsMessage[7] = 0x00;
-"187
-[e = *U + &U _buttonsMessage * -> -> -> 7 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
-[; ;buttons.c: 188: break;
-"188
-[e $U 2204  ]
-[; ;buttons.c: 190: case 1:
-"190
 [e :U 2210 ]
-[; ;buttons.c: 191: buttonsMessage[4] = (uint8_t)((uint8_t)(LUT_CX[ADCValues[2]] & 0xF0U) | (uint8_t)(LUT_CY[ADCValues[3]] >> 4U));
+[; ;buttons.c: 181: case 5:
+[; ;buttons.c: 182: case 6:
+[; ;buttons.c: 183: case 7:
+[; ;buttons.c: 184: buttonsMessage[4] = LUT_CX[ADCValues[2]];
+"184
+[e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _LUT_CX * -> *U + &U _ADCValues * -> -> -> 2 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_CX `ui `ux ]
+[; ;buttons.c: 185: buttonsMessage[5] = LUT_CY[ADCValues[3]];
+"185
+[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _LUT_CY * -> *U + &U _ADCValues * -> -> -> 3 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_CY `ui `ux ]
+[; ;buttons.c: 187: buttonsMessage[6] = (uint8_t)((uint8_t)(la & 0xF0U) | (uint8_t)(ra >> 4U));
+"187
+[e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> | -> -> & -> _la `ui -> 240 `ui `uc `i -> -> >> -> _ra `i -> 4 `ui `uc `i `uc ]
+[; ;buttons.c: 188: buttonsMessage[7] = 0x00;
+"188
+[e = *U + &U _buttonsMessage * -> -> -> 7 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
+[; ;buttons.c: 189: break;
+"189
+[e $U 2205  ]
+[; ;buttons.c: 191: case 1:
 "191
-[e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> | -> -> & -> *U + &U _LUT_CX * -> *U + &U _ADCValues * -> -> -> 2 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_CX `ui `ux `ui -> 240 `ui `uc `i -> -> >> -> *U + &U _LUT_CY * -> *U + &U _ADCValues * -> -> -> 3 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_CY `ui `ux `i -> 4 `ui `uc `i `uc ]
-[; ;buttons.c: 192: buttonsMessage[5] = la;
-"192
-[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux _la ]
-[; ;buttons.c: 193: buttonsMessage[6] = ra;
-"193
-[e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux _ra ]
-[; ;buttons.c: 194: buttonsMessage[7] = 0x00;
-"194
-[e = *U + &U _buttonsMessage * -> -> -> 7 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
-[; ;buttons.c: 195: break;
-"195
-[e $U 2204  ]
-[; ;buttons.c: 197: case 2:
-"197
 [e :U 2211 ]
-[; ;buttons.c: 198: buttonsMessage[4] = (uint8_t)((uint8_t)(LUT_CX[ADCValues[2]] & 0xF0U) | (uint8_t)(LUT_CY[ADCValues[3]] >> 4U));
-"198
+[; ;buttons.c: 192: buttonsMessage[4] = (uint8_t)((uint8_t)(LUT_CX[ADCValues[2]] & 0xF0U) | (uint8_t)(LUT_CY[ADCValues[3]] >> 4U));
+"192
 [e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> | -> -> & -> *U + &U _LUT_CX * -> *U + &U _ADCValues * -> -> -> 2 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_CX `ui `ux `ui -> 240 `ui `uc `i -> -> >> -> *U + &U _LUT_CY * -> *U + &U _ADCValues * -> -> -> 3 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_CY `ui `ux `i -> 4 `ui `uc `i `uc ]
-[; ;buttons.c: 199: buttonsMessage[5] = (uint8_t)((uint8_t)(la & 0xF0U) | (uint8_t)(ra >> 4U));
-"199
-[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> | -> -> & -> _la `ui -> 240 `ui `uc `i -> -> >> -> _ra `i -> 4 `ui `uc `i `uc ]
-[; ;buttons.c: 200: buttonsMessage[6] = 0x00;
-"200
-[e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
-[; ;buttons.c: 201: buttonsMessage[7] = 0x00;
-"201
+[; ;buttons.c: 193: buttonsMessage[5] = la;
+"193
+[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux _la ]
+[; ;buttons.c: 194: buttonsMessage[6] = ra;
+"194
+[e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux _ra ]
+[; ;buttons.c: 195: buttonsMessage[7] = 0x00;
+"195
 [e = *U + &U _buttonsMessage * -> -> -> 7 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
-[; ;buttons.c: 202: break;
-"202
-[e $U 2204  ]
-[; ;buttons.c: 204: case 3:
-"204
+[; ;buttons.c: 196: break;
+"196
+[e $U 2205  ]
+[; ;buttons.c: 198: case 2:
+"198
 [e :U 2212 ]
-[; ;buttons.c: 205: buttonsMessage[4] = LUT_CX[ADCValues[2]];
-"205
-[e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _LUT_CX * -> *U + &U _ADCValues * -> -> -> 2 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_CX `ui `ux ]
-[; ;buttons.c: 206: buttonsMessage[5] = LUT_CY[ADCValues[3]];
-"206
-[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _LUT_CY * -> *U + &U _ADCValues * -> -> -> 3 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_CY `ui `ux ]
-[; ;buttons.c: 207: buttonsMessage[6] = la;
-"207
-[e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux _la ]
-[; ;buttons.c: 208: buttonsMessage[7] = ra;
-"208
-[e = *U + &U _buttonsMessage * -> -> -> 7 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux _ra ]
-[; ;buttons.c: 209: break;
-"209
-[e $U 2204  ]
-[; ;buttons.c: 211: case 4:
-"211
-[e :U 2213 ]
-[; ;buttons.c: 212: buttonsMessage[4] = LUT_CX[ADCValues[2]];
-"212
-[e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _LUT_CX * -> *U + &U _ADCValues * -> -> -> 2 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_CX `ui `ux ]
-[; ;buttons.c: 213: buttonsMessage[5] = LUT_CY[ADCValues[3]];
-"213
-[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _LUT_CY * -> *U + &U _ADCValues * -> -> -> 3 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_CY `ui `ux ]
-[; ;buttons.c: 214: buttonsMessage[6] = 0x00;
-"214
+[; ;buttons.c: 199: buttonsMessage[4] = (uint8_t)((uint8_t)(LUT_CX[ADCValues[2]] & 0xF0U) | (uint8_t)(LUT_CY[ADCValues[3]] >> 4U));
+"199
+[e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> | -> -> & -> *U + &U _LUT_CX * -> *U + &U _ADCValues * -> -> -> 2 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_CX `ui `ux `ui -> 240 `ui `uc `i -> -> >> -> *U + &U _LUT_CY * -> *U + &U _ADCValues * -> -> -> 3 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_CY `ui `ux `i -> 4 `ui `uc `i `uc ]
+[; ;buttons.c: 200: buttonsMessage[5] = (uint8_t)((uint8_t)(la & 0xF0U) | (uint8_t)(ra >> 4U));
+"200
+[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> | -> -> & -> _la `ui -> 240 `ui `uc `i -> -> >> -> _ra `i -> 4 `ui `uc `i `uc ]
+[; ;buttons.c: 201: buttonsMessage[6] = 0x00;
+"201
 [e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
-[; ;buttons.c: 215: buttonsMessage[7] = 0x00;
-"215
+[; ;buttons.c: 202: buttonsMessage[7] = 0x00;
+"202
 [e = *U + &U _buttonsMessage * -> -> -> 7 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
-[; ;buttons.c: 216: break;
+[; ;buttons.c: 203: break;
+"203
+[e $U 2205  ]
+[; ;buttons.c: 205: case 3:
+"205
+[e :U 2213 ]
+[; ;buttons.c: 206: buttonsMessage[4] = LUT_CX[ADCValues[2]];
+"206
+[e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _LUT_CX * -> *U + &U _ADCValues * -> -> -> 2 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_CX `ui `ux ]
+[; ;buttons.c: 207: buttonsMessage[5] = LUT_CY[ADCValues[3]];
+"207
+[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _LUT_CY * -> *U + &U _ADCValues * -> -> -> 3 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_CY `ui `ux ]
+[; ;buttons.c: 208: buttonsMessage[6] = la;
+"208
+[e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux _la ]
+[; ;buttons.c: 209: buttonsMessage[7] = ra;
+"209
+[e = *U + &U _buttonsMessage * -> -> -> 7 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux _ra ]
+[; ;buttons.c: 210: break;
+"210
+[e $U 2205  ]
+[; ;buttons.c: 212: case 4:
+"212
+[e :U 2214 ]
+[; ;buttons.c: 213: buttonsMessage[4] = LUT_CX[ADCValues[2]];
+"213
+[e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _LUT_CX * -> *U + &U _ADCValues * -> -> -> 2 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_CX `ui `ux ]
+[; ;buttons.c: 214: buttonsMessage[5] = LUT_CY[ADCValues[3]];
+"214
+[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _LUT_CY * -> *U + &U _ADCValues * -> -> -> 3 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_CY `ui `ux ]
+[; ;buttons.c: 215: buttonsMessage[6] = 0x00;
+"215
+[e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
+[; ;buttons.c: 216: buttonsMessage[7] = 0x00;
 "216
-[e $U 2204  ]
+[e = *U + &U _buttonsMessage * -> -> -> 7 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
+[; ;buttons.c: 217: break;
 "217
+[e $U 2205  ]
+"218
 }
-[; ;buttons.c: 217: }
-[e $U 2204  ]
-"178
+[; ;buttons.c: 218: }
+[e $U 2205  ]
+"179
+[e :U 2206 ]
+[e [\ _analogMode , $ -> -> 0 `i `uc 2207
+ , $ -> -> 5 `i `uc 2208
+ , $ -> -> 6 `i `uc 2209
+ , $ -> -> 7 `i `uc 2210
+ , $ -> -> 1 `i `uc 2211
+ , $ -> -> 2 `i `uc 2212
+ , $ -> -> 3 `i `uc 2213
+ , $ -> -> 4 `i `uc 2214
+ 2205 ]
+"218
 [e :U 2205 ]
-[e [\ _analogMode , $ -> -> 0 `i `uc 2206
- , $ -> -> 5 `i `uc 2207
- , $ -> -> 6 `i `uc 2208
- , $ -> -> 7 `i `uc 2209
- , $ -> -> 1 `i `uc 2210
- , $ -> -> 2 `i `uc 2211
- , $ -> -> 3 `i `uc 2212
- , $ -> -> 4 `i `uc 2213
- 2204 ]
-"217
-[e :U 2204 ]
-[; ;buttons.c: 219: return buttonsMessage;
-"219
-[e ) &U _buttonsMessage ]
-[e $UE 2201  ]
-[; ;buttons.c: 220: }
+[; ;buttons.c: 220: return buttonsMessage;
 "220
-[e :UE 2201 ]
+[e ) &U _buttonsMessage ]
+[e $UE 2202  ]
+[; ;buttons.c: 221: }
+"221
+[e :UE 2202 ]
 }
-"222
+"223
+[v _buttonsSetOrigins `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;buttons.c: 223: void buttonsSetOrigins(uint8_t triggersMode) {
+[e :U _buttonsSetOrigins ]
+[v _triggersMode `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;buttons.c: 224: origins.SX = LUT_SX[ADCValues[0]];
+"224
+[e = . _origins 0 *U + &U _LUT_SX * -> *U + &U _ADCValues * -> -> -> 0 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_SX `ui `ux ]
+[; ;buttons.c: 225: origins.SY = LUT_SY[ADCValues[1]];
+"225
+[e = . _origins 1 *U + &U _LUT_SY * -> *U + &U _ADCValues * -> -> -> 1 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_SY `ui `ux ]
+[; ;buttons.c: 226: origins.CX = LUT_CX[ADCValues[2]];
+"226
+[e = . _origins 2 *U + &U _LUT_CX * -> *U + &U _ADCValues * -> -> -> 2 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_CX `ui `ux ]
+[; ;buttons.c: 227: origins.CY = LUT_CY[ADCValues[3]];
+"227
+[e = . _origins 3 *U + &U _LUT_CY * -> *U + &U _ADCValues * -> -> -> 3 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ux -> -> # *U &U _LUT_CY `ui `ux ]
+[; ;buttons.c: 228: if (triggersMode == 0) {
+"228
+[e $ ! == -> _triggersMode `i -> 0 `i 2216  ]
+{
+[; ;buttons.c: 229: origins.L = outButtons.LA;
+"229
+[e = . _origins 4 . . _outButtons 0 14 ]
+[; ;buttons.c: 230: origins.R = outButtons.RA;
+"230
+[e = . _origins 5 . . _outButtons 0 15 ]
+"231
+}
+[; ;buttons.c: 231: } else {
+[e $U 2217  ]
+[e :U 2216 ]
+{
+[; ;buttons.c: 232: origins.L = ADCValues[5];
+"232
+[e = . _origins 4 *U + &U _ADCValues * -> -> -> 5 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
+[; ;buttons.c: 233: origins.R = ADCValues[4];
+"233
+[e = . _origins 5 *U + &U _ADCValues * -> -> -> 4 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
+"234
+}
+[e :U 2217 ]
+[; ;buttons.c: 234: }
+[; ;buttons.c: 235: }
+"235
+[e :UE 2215 ]
+}
+"237
+[v _buttonsGetOrigins `(*uc ~T0 @X0 1 ef ]
+{
+[; ;buttons.c: 237: uint8_t* buttonsGetOrigins(void) {
+[e :U _buttonsGetOrigins ]
+[f ]
+[; ;buttons.c: 238: buttonsMessage[0] = 0x00;
+"238
+[e = *U + &U _buttonsMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
+[; ;buttons.c: 239: buttonsMessage[1] = 0x00;
+"239
+[e = *U + &U _buttonsMessage * -> -> -> 1 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
+[; ;buttons.c: 240: buttonsMessage[2] = origins.SX;
+"240
+[e = *U + &U _buttonsMessage * -> -> -> 2 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux . _origins 0 ]
+[; ;buttons.c: 241: buttonsMessage[3] = origins.SY;
+"241
+[e = *U + &U _buttonsMessage * -> -> -> 3 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux . _origins 1 ]
+[; ;buttons.c: 242: buttonsMessage[4] = origins.CX;
+"242
+[e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux . _origins 2 ]
+[; ;buttons.c: 243: buttonsMessage[5] = origins.CY;
+"243
+[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux . _origins 3 ]
+[; ;buttons.c: 244: buttonsMessage[6] = origins.L;
+"244
+[e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux . _origins 4 ]
+[; ;buttons.c: 245: buttonsMessage[7] = origins.R;
+"245
+[e = *U + &U _buttonsMessage * -> -> -> 7 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux . _origins 5 ]
+[; ;buttons.c: 246: buttonsMessage[8] = 0x02;
+"246
+[e = *U + &U _buttonsMessage * -> -> -> 8 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 2 `i `uc ]
+[; ;buttons.c: 247: buttonsMessage[9] = 0x02;
+"247
+[e = *U + &U _buttonsMessage * -> -> -> 9 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 2 `i `uc ]
+[; ;buttons.c: 249: return buttonsMessage;
+"249
+[e ) &U _buttonsMessage ]
+[e $UE 2218  ]
+[; ;buttons.c: 250: }
+"250
+[e :UE 2218 ]
+}
+"252
 [v _buttonsSetMapByte0 `(v ~T0 @X0 1 ef1`*uc ]
 {
-[; ;buttons.c: 222: void buttonsSetMapByte0(uint8_t* map) {
+[; ;buttons.c: 252: void buttonsSetMapByte0(uint8_t* map) {
 [e :U _buttonsSetMapByte0 ]
 [v _map `*uc ~T0 @X0 1 r1 ]
 [f ]
-"223
+"253
 [v _i `uc ~T0 @X0 1 a ]
-[; ;buttons.c: 223: uint8_t i;
-[; ;buttons.c: 225: for (i = 0; i < N_BUTTONS; i++) {
-"225
+[; ;buttons.c: 253: uint8_t i;
+[; ;buttons.c: 255: for (i = 0; i < N_BUTTONS; i++) {
+"255
 {
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> . `E15470 15 `i 2215  ]
-[e $U 2216  ]
-[e :U 2215 ]
+[e $ < -> _i `i -> . `E15478 15 `i 2220  ]
+[e $U 2221  ]
+[e :U 2220 ]
 {
-[; ;buttons.c: 226: buttonsMapByte0[i] = map[i];
-"226
+[; ;buttons.c: 256: buttonsMapByte0[i] = map[i];
+"256
 [e = *U + &U _buttonsMapByte0 * -> _i `ux -> -> # *U &U _buttonsMapByte0 `ui `ux *U + _map * -> _i `ux -> -> # *U _map `ui `ux ]
-"227
+"257
 }
-"225
+"255
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> . `E15470 15 `i 2215  ]
-[e :U 2216 ]
-"227
+[e $ < -> _i `i -> . `E15478 15 `i 2220  ]
+[e :U 2221 ]
+"257
 }
-[; ;buttons.c: 227: }
-[; ;buttons.c: 228: }
-"228
-[e :UE 2214 ]
+[; ;buttons.c: 257: }
+[; ;buttons.c: 258: }
+"258
+[e :UE 2219 ]
 }
-"230
+"260
 [v _buttonsSetMapByte1 `(v ~T0 @X0 1 ef1`*uc ]
 {
-[; ;buttons.c: 230: void buttonsSetMapByte1(uint8_t* map) {
+[; ;buttons.c: 260: void buttonsSetMapByte1(uint8_t* map) {
 [e :U _buttonsSetMapByte1 ]
 [v _map `*uc ~T0 @X0 1 r1 ]
 [f ]
-"231
+"261
 [v _i `uc ~T0 @X0 1 a ]
-[; ;buttons.c: 231: uint8_t i;
-[; ;buttons.c: 233: for (i = 0; i < N_BUTTONS; i++) {
-"233
+[; ;buttons.c: 261: uint8_t i;
+[; ;buttons.c: 263: for (i = 0; i < N_BUTTONS; i++) {
+"263
 {
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> . `E15470 15 `i 2219  ]
-[e $U 2220  ]
-[e :U 2219 ]
+[e $ < -> _i `i -> . `E15478 15 `i 2224  ]
+[e $U 2225  ]
+[e :U 2224 ]
 {
-[; ;buttons.c: 234: buttonsMapByte1[i] = map[i];
-"234
+[; ;buttons.c: 264: buttonsMapByte1[i] = map[i];
+"264
 [e = *U + &U _buttonsMapByte1 * -> _i `ux -> -> # *U &U _buttonsMapByte1 `ui `ux *U + _map * -> _i `ux -> -> # *U _map `ui `ux ]
-"235
+"265
 }
-"233
+"263
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> . `E15470 15 `i 2219  ]
-[e :U 2220 ]
-"235
+[e $ < -> _i `i -> . `E15478 15 `i 2224  ]
+[e :U 2225 ]
+"265
 }
-[; ;buttons.c: 235: }
-[; ;buttons.c: 236: }
-"236
-[e :UE 2218 ]
+[; ;buttons.c: 265: }
+[; ;buttons.c: 266: }
+"266
+[e :UE 2223 ]
 }
-"238
+"268
 [v _buttonsGetMapByte0 `(*uc ~T0 @X0 1 ef ]
 {
-[; ;buttons.c: 238: uint8_t* buttonsGetMapByte0(void) {
+[; ;buttons.c: 268: uint8_t* buttonsGetMapByte0(void) {
 [e :U _buttonsGetMapByte0 ]
 [f ]
-"239
+"269
 [v _i `uc ~T0 @X0 1 a ]
-[; ;buttons.c: 239: uint8_t i;
-[; ;buttons.c: 241: for (i = 0; i < N_BUTTONS; i++) {
-"241
+[; ;buttons.c: 269: uint8_t i;
+[; ;buttons.c: 271: for (i = 0; i < N_BUTTONS; i++) {
+"271
 {
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> . `E15470 15 `i 2223  ]
-[e $U 2224  ]
-[e :U 2223 ]
+[e $ < -> _i `i -> . `E15478 15 `i 2228  ]
+[e $U 2229  ]
+[e :U 2228 ]
 {
-[; ;buttons.c: 242: buttonsMessage[i] = buttonsMapByte0[i];
-"242
+[; ;buttons.c: 272: buttonsMessage[i] = buttonsMapByte0[i];
+"272
 [e = *U + &U _buttonsMessage * -> _i `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _buttonsMapByte0 * -> _i `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
-"243
+"273
 }
-"241
+"271
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> . `E15470 15 `i 2223  ]
-[e :U 2224 ]
-"243
+[e $ < -> _i `i -> . `E15478 15 `i 2228  ]
+[e :U 2229 ]
+"273
 }
-[; ;buttons.c: 243: }
-[; ;buttons.c: 245: return buttonsMessage;
-"245
+[; ;buttons.c: 273: }
+[; ;buttons.c: 275: return buttonsMessage;
+"275
 [e ) &U _buttonsMessage ]
-[e $UE 2222  ]
-[; ;buttons.c: 246: }
-"246
-[e :UE 2222 ]
+[e $UE 2227  ]
+[; ;buttons.c: 276: }
+"276
+[e :UE 2227 ]
 }
-"248
+"278
 [v _buttonsGetMapByte1 `(*uc ~T0 @X0 1 ef ]
 {
-[; ;buttons.c: 248: uint8_t* buttonsGetMapByte1(void) {
+[; ;buttons.c: 278: uint8_t* buttonsGetMapByte1(void) {
 [e :U _buttonsGetMapByte1 ]
 [f ]
-"249
+"279
 [v _i `uc ~T0 @X0 1 a ]
-[; ;buttons.c: 249: uint8_t i;
-[; ;buttons.c: 251: for (i = 0; i < N_BUTTONS; i++) {
-"251
+[; ;buttons.c: 279: uint8_t i;
+[; ;buttons.c: 281: for (i = 0; i < N_BUTTONS; i++) {
+"281
 {
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> . `E15470 15 `i 2227  ]
-[e $U 2228  ]
-[e :U 2227 ]
+[e $ < -> _i `i -> . `E15478 15 `i 2232  ]
+[e $U 2233  ]
+[e :U 2232 ]
 {
-[; ;buttons.c: 252: buttonsMessage[i] = buttonsMapByte1[i];
-"252
+[; ;buttons.c: 282: buttonsMessage[i] = buttonsMapByte1[i];
+"282
 [e = *U + &U _buttonsMessage * -> _i `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _buttonsMapByte1 * -> _i `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
-"253
+"283
 }
-"251
+"281
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> . `E15470 15 `i 2227  ]
-[e :U 2228 ]
-"253
+[e $ < -> _i `i -> . `E15478 15 `i 2232  ]
+[e :U 2233 ]
+"283
 }
-[; ;buttons.c: 253: }
-[; ;buttons.c: 255: return buttonsMessage;
-"255
+[; ;buttons.c: 283: }
+[; ;buttons.c: 285: return buttonsMessage;
+"285
 [e ) &U _buttonsMessage ]
-[e $UE 2226  ]
-[; ;buttons.c: 256: }
-"256
-[e :UE 2226 ]
+[e $UE 2231  ]
+[; ;buttons.c: 286: }
+"286
+[e :UE 2231 ]
 }
-"258
+"288
 [v _buttonsBuildLUT `(v ~T0 @X0 1 ef7`*uc`uc`uc`uc`uc`uc`uc ]
 {
-[; ;buttons.c: 258: void buttonsBuildLUT(uint8_t* LUT, uint8_t minVal, uint8_t maxVal, uint8_t origin, uint8_t dz, uint8_t dzMode, uint8_t invert) {
+[; ;buttons.c: 288: void buttonsBuildLUT(uint8_t* LUT, uint8_t minVal, uint8_t maxVal, uint8_t origin, uint8_t dz, uint8_t dzMode, uint8_t invert) {
 [e :U _buttonsBuildLUT ]
 [v _LUT `*uc ~T0 @X0 1 r1 ]
 [v _minVal `uc ~T0 @X0 1 r2 ]
@@ -18404,129 +18513,129 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _dzMode `uc ~T0 @X0 1 r6 ]
 [v _invert `uc ~T0 @X0 1 r7 ]
 [f ]
-"259
+"289
 [v _i `i ~T0 @X0 1 a ]
-"260
+"290
 [v _range `i ~T0 @X0 1 a ]
-[; ;buttons.c: 259: int16_t i;
-[; ;buttons.c: 260: int16_t range = ((int16_t)maxVal - (int16_t)minVal) / 2;
+[; ;buttons.c: 289: int16_t i;
+[; ;buttons.c: 290: int16_t range = ((int16_t)maxVal - (int16_t)minVal) / 2;
 [e = _range / - -> _maxVal `i -> _minVal `i -> 2 `i ]
-[; ;buttons.c: 262: for (i = 0; i < 256; i++) {
-"262
+[; ;buttons.c: 292: for (i = 0; i < 256; i++) {
+"292
 {
 [e = _i -> 0 `i ]
-[e $ < _i -> 256 `i 2231  ]
-[e $U 2232  ]
-[e :U 2231 ]
-{
-"263
-[v _radius `i ~T0 @X0 1 a ]
-[; ;buttons.c: 263: int16_t radius = i - origin;
-[e = _radius - _i -> _origin `i ]
-[; ;buttons.c: 264: if (invert) radius = -radius;
-"264
-[e $ ! != -> _invert `i -> -> -> 0 `i `uc `i 2234  ]
-[e = _radius -U _radius ]
-[e :U 2234 ]
-[; ;buttons.c: 265: if (((radius >= 0) ? (radius) : (-radius)) < (int16_t)dz) {
-"265
-[e $ ! < ? >= _radius -> 0 `i : _radius -U _radius -> _dz `i 2235  ]
-{
-[; ;buttons.c: 266: LUT[i] = 0x80;
-"266
-[e = *U + _LUT * -> _i `x -> -> # *U _LUT `i `x -> -> 128 `i `uc ]
-"267
-}
-[; ;buttons.c: 267: } else {
-[e $U 2236  ]
-[e :U 2235 ]
-{
-"268
-[v _tempVal `i ~T0 @X0 1 a ]
-[; ;buttons.c: 268: int16_t tempVal;
-[; ;buttons.c: 269: if (dzMode == 0) {
-"269
-[e $ ! == -> _dzMode `i -> 0 `i 2237  ]
-{
-[; ;buttons.c: 270: tempVal = radius * 127 / range;
-"270
-[e = _tempVal / * _radius -> 127 `i _range ]
-"271
-}
-[; ;buttons.c: 271: } else {
-[e $U 2238  ]
-[e :U 2237 ]
-{
-[; ;buttons.c: 272: if (radius > 0)
-"272
-[e $ ! > _radius -> 0 `i 2239  ]
-[; ;buttons.c: 273: tempVal = (radius - dz) * 127 / (range - dz);
-"273
-[e = _tempVal / * - _radius -> _dz `i -> 127 `i - _range -> _dz `i ]
-[e $U 2240  ]
-"274
-[e :U 2239 ]
-[; ;buttons.c: 274: else
-[; ;buttons.c: 275: tempVal = (radius + dz) * 127 / (range - dz);
-"275
-[e = _tempVal / * + _radius -> _dz `i -> 127 `i - _range -> _dz `i ]
-[e :U 2240 ]
-"276
-}
-[e :U 2238 ]
-[; ;buttons.c: 276: }
-[; ;buttons.c: 277: tempVal += 128;
-"277
-[e =+ _tempVal -> 128 `i ]
-[; ;buttons.c: 278: if (tempVal < 0) tempVal = 0;
-"278
-[e $ ! < _tempVal -> 0 `i 2241  ]
-[e = _tempVal -> 0 `i ]
-[e :U 2241 ]
-[; ;buttons.c: 279: if (tempVal > 0xFF) tempVal = 0xFF;
-"279
-[e $ ! > _tempVal -> 255 `i 2242  ]
-[e = _tempVal -> 255 `i ]
-[e :U 2242 ]
-[; ;buttons.c: 280: LUT[i] = (uint8_t)tempVal & 0xFFU;
-"280
-[e = *U + _LUT * -> _i `x -> -> # *U _LUT `i `x -> & -> -> _tempVal `uc `ui -> 255 `ui `uc ]
-"281
-}
+[e $ < _i -> 256 `i 2236  ]
+[e $U 2237  ]
 [e :U 2236 ]
-"282
+{
+"293
+[v _radius `i ~T0 @X0 1 a ]
+[; ;buttons.c: 293: int16_t radius = i - origin;
+[e = _radius - _i -> _origin `i ]
+[; ;buttons.c: 294: if (invert) radius = -radius;
+"294
+[e $ ! != -> _invert `i -> -> -> 0 `i `uc `i 2239  ]
+[e = _radius -U _radius ]
+[e :U 2239 ]
+[; ;buttons.c: 295: if (((radius >= 0) ? (radius) : (-radius)) < (int16_t)dz) {
+"295
+[e $ ! < ? >= _radius -> 0 `i : _radius -U _radius -> _dz `i 2240  ]
+{
+[; ;buttons.c: 296: LUT[i] = 0x80;
+"296
+[e = *U + _LUT * -> _i `x -> -> # *U _LUT `i `x -> -> 128 `i `uc ]
+"297
 }
-"262
+[; ;buttons.c: 297: } else {
+[e $U 2241  ]
+[e :U 2240 ]
+{
+"298
+[v _tempVal `i ~T0 @X0 1 a ]
+[; ;buttons.c: 298: int16_t tempVal;
+[; ;buttons.c: 299: if (dzMode == 0) {
+"299
+[e $ ! == -> _dzMode `i -> 0 `i 2242  ]
+{
+[; ;buttons.c: 300: tempVal = radius * 127 / range;
+"300
+[e = _tempVal / * _radius -> 127 `i _range ]
+"301
+}
+[; ;buttons.c: 301: } else {
+[e $U 2243  ]
+[e :U 2242 ]
+{
+[; ;buttons.c: 302: if (radius > 0)
+"302
+[e $ ! > _radius -> 0 `i 2244  ]
+[; ;buttons.c: 303: tempVal = (radius - dz) * 127 / (range - dz);
+"303
+[e = _tempVal / * - _radius -> _dz `i -> 127 `i - _range -> _dz `i ]
+[e $U 2245  ]
+"304
+[e :U 2244 ]
+[; ;buttons.c: 304: else
+[; ;buttons.c: 305: tempVal = (radius + dz) * 127 / (range - dz);
+"305
+[e = _tempVal / * + _radius -> _dz `i -> 127 `i - _range -> _dz `i ]
+[e :U 2245 ]
+"306
+}
+[e :U 2243 ]
+[; ;buttons.c: 306: }
+[; ;buttons.c: 307: tempVal += 128;
+"307
+[e =+ _tempVal -> 128 `i ]
+[; ;buttons.c: 308: if (tempVal < 0) tempVal = 0;
+"308
+[e $ ! < _tempVal -> 0 `i 2246  ]
+[e = _tempVal -> 0 `i ]
+[e :U 2246 ]
+[; ;buttons.c: 309: if (tempVal > 0xFF) tempVal = 0xFF;
+"309
+[e $ ! > _tempVal -> 255 `i 2247  ]
+[e = _tempVal -> 255 `i ]
+[e :U 2247 ]
+[; ;buttons.c: 310: LUT[i] = (uint8_t)tempVal & 0xFFU;
+"310
+[e = *U + _LUT * -> _i `x -> -> # *U _LUT `i `x -> & -> -> _tempVal `uc `ui -> 255 `ui `uc ]
+"311
+}
+[e :U 2241 ]
+"312
+}
+"292
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 256 `i 2231  ]
-[e :U 2232 ]
-"282
+[e $ < _i -> 256 `i 2236  ]
+[e :U 2237 ]
+"312
 }
-[; ;buttons.c: 281: }
-[; ;buttons.c: 282: }
-[; ;buttons.c: 283: }
-"283
-[e :UE 2230 ]
+[; ;buttons.c: 311: }
+[; ;buttons.c: 312: }
+[; ;buttons.c: 313: }
+"313
+[e :UE 2235 ]
 }
-"285
+"315
 [v _buttonsBuildLUTs `(v ~T0 @X0 1 ef ]
 {
-[; ;buttons.c: 285: void buttonsBuildLUTs(void) {
+[; ;buttons.c: 315: void buttonsBuildLUTs(void) {
 [e :U _buttonsBuildLUTs ]
 [f ]
-[; ;buttons.c: 286: buttonsBuildLUT(LUT_SX, config.SXMin, config.SXMax, ADCValues[0], config.SDeadzone, config.deadzoneMode, config.SXInvert);
-"286
+[; ;buttons.c: 316: buttonsBuildLUT(LUT_SX, config.SXMin, config.SXMax, ADCValues[0], config.SDeadzone, config.deadzoneMode, config.SXInvert);
+"316
 [e ( _buttonsBuildLUT (4 , , , , , , &U _LUT_SX . _config 2 . _config 3 *U + &U _ADCValues * -> -> -> 0 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux . _config 15 . _config 17 . . . _config 14 0 0 ]
-[; ;buttons.c: 287: buttonsBuildLUT(LUT_SY, config.SYMin, config.SYMax, ADCValues[1], config.SDeadzone, config.deadzoneMode, config.SYInvert);
-"287
+[; ;buttons.c: 317: buttonsBuildLUT(LUT_SY, config.SYMin, config.SYMax, ADCValues[1], config.SDeadzone, config.deadzoneMode, config.SYInvert);
+"317
 [e ( _buttonsBuildLUT (4 , , , , , , &U _LUT_SY . _config 4 . _config 5 *U + &U _ADCValues * -> -> -> 1 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux . _config 15 . _config 17 . . . _config 14 0 1 ]
-[; ;buttons.c: 288: buttonsBuildLUT(LUT_CX, config.CXMin, config.CXMax, ADCValues[2], config.CDeadzone, config.deadzoneMode, config.CXInvert);
-"288
+[; ;buttons.c: 318: buttonsBuildLUT(LUT_CX, config.CXMin, config.CXMax, ADCValues[2], config.CDeadzone, config.deadzoneMode, config.CXInvert);
+"318
 [e ( _buttonsBuildLUT (4 , , , , , , &U _LUT_CX . _config 6 . _config 7 *U + &U _ADCValues * -> -> -> 2 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux . _config 16 . _config 17 . . . _config 14 0 2 ]
-[; ;buttons.c: 289: buttonsBuildLUT(LUT_CY, config.CYMin, config.CYMax, ADCValues[3], config.CDeadzone, config.deadzoneMode, config.CYInvert);
-"289
+[; ;buttons.c: 319: buttonsBuildLUT(LUT_CY, config.CYMin, config.CYMax, ADCValues[3], config.CDeadzone, config.deadzoneMode, config.CYInvert);
+"319
 [e ( _buttonsBuildLUT (4 , , , , , , &U _LUT_CY . _config 8 . _config 9 *U + &U _ADCValues * -> -> -> 3 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux . _config 16 . _config 17 . . . _config 14 0 3 ]
-[; ;buttons.c: 290: }
-"290
-[e :UE 2243 ]
+[; ;buttons.c: 320: }
+"320
+[e :UE 2248 ]
 }

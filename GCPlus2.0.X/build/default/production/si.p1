@@ -17801,9 +17801,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 2146  ]
 [e :U 2147 ]
 {
-[; ;si.c: 96: if (PORTBbits.RB2 == 0) {
+[; ;si.c: 96: if (PORTBbits.RB4 == 0) {
 "96
-[e $ ! == -> . . _PORTBbits 0 2 `i -> 0 `i 2149  ]
+[e $ ! == -> . . _PORTBbits 0 4 `i -> 0 `i 2149  ]
 {
 [; ;si.c: 97: T2TMR = 0x00;
 "97
@@ -18076,9 +18076,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 2152 ]
 [e $ ! != -> . . _SPI1STATUSbits 0 5 `i -> -> -> 0 `i `Vuc `i 2153  ]
 [e :U 2154 ]
-[; ;si.c: 208: TRISBbits.TRISB2 = 0;
+[; ;si.c: 208: TRISBbits.TRISB4 = 0;
 "208
-[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
+[e = . . _TRISBbits 0 4 -> -> 0 `i `uc ]
 [; ;si.c: 211: SIBitCounter = 0;
 "211
 [e = _SIBitCounter -> -> 0 `i `uc ]
@@ -18198,9 +18198,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;si.c: 248: SMT1CON1bits.GO = 1;
 "248
 [e = . . _SMT1CON1bits 0 3 -> -> 1 `i `uc ]
-[; ;si.c: 249: TRISBbits.TRISB2 = 1;
+[; ;si.c: 249: TRISBbits.TRISB4 = 1;
 "249
-[e = . . _TRISBbits 0 2 -> -> 1 `i `uc ]
+[e = . . _TRISBbits 0 4 -> -> 1 `i `uc ]
 [; ;si.c: 255: }
 "255
 [e :UE 2151 ]

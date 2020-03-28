@@ -3,8 +3,8 @@
 [d edition pro ]
 [d chip 18F25K42 ]
 [d frameptr 4065 ]
-"109 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.h
-[e E15470 . `uc
+"118 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.h
+[e E15478 . `uc
 BUTTON_A_ID 0
 BUTTON_B_ID 1
 BUTTON_X_ID 2
@@ -22,7 +22,7 @@ BUTTON_RA_ID 13
 BUTTON_Z2_ID 14
 N_BUTTONS 15
 ]
-[e E15470 . `uc
+[e E15478 . `uc
 BUTTON_A_ID 0
 BUTTON_B_ID 1
 BUTTON_X_ID 2
@@ -40,7 +40,7 @@ BUTTON_RA_ID 13
 BUTTON_Z2_ID 14
 N_BUTTONS 15
 ]
-[e E15470 . `uc
+[e E15478 . `uc
 BUTTON_A_ID 0
 BUTTON_B_ID 1
 BUTTON_X_ID 2
@@ -58,7 +58,7 @@ BUTTON_RA_ID 13
 BUTTON_Z2_ID 14
 N_BUTTONS 15
 ]
-[e E15470 . `uc
+[e E15478 . `uc
 BUTTON_A_ID 0
 BUTTON_B_ID 1
 BUTTON_X_ID 2
@@ -78,23 +78,27 @@ N_BUTTONS 15
 ]
 "41 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
 [v _ADCInit ADCInit `(v  1 e 1 0 ]
-"59 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+"60 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
 [v _buttonsInit buttonsInit `(v  1 e 1 0 ]
-"86
+"87
 [v _buttonsUpdate buttonsUpdate `(v  1 e 1 0 ]
-"163
+"164
 [v _buttonsGetMessage buttonsGetMessage `(*.39uc  1 e 2 0 ]
-"222
+"223
+[v _buttonsSetOrigins buttonsSetOrigins `(v  1 e 1 0 ]
+"237
+[v _buttonsGetOrigins buttonsGetOrigins `(*.39uc  1 e 2 0 ]
+"252
 [v _buttonsSetMapByte0 buttonsSetMapByte0 `(v  1 e 1 0 ]
-"230
+"260
 [v _buttonsSetMapByte1 buttonsSetMapByte1 `(v  1 e 1 0 ]
-"238
+"268
 [v _buttonsGetMapByte0 buttonsGetMapByte0 `(*.39uc  1 e 2 0 ]
-"248
+"278
 [v _buttonsGetMapByte1 buttonsGetMapByte1 `(*.39uc  1 e 2 0 ]
-"258
+"288
 [v _buttonsBuildLUT buttonsBuildLUT `(v  1 e 1 0 ]
-"285
+"315
 [v _buttonsBuildLUTs buttonsBuildLUTs `(v  1 e 1 0 ]
 "7 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
@@ -134,9 +138,9 @@ N_BUTTONS 15
 [v _configFlashAll configFlashAll `(v  1 e 1 0 ]
 "79 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"353
+"344
 [v _portsInit portsInit `(v  1 e 1 0 ]
-"394
+"385
 [v _bootBootloader bootBootloader `(v  1 e 1 0 ]
 "29 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
 [v _NVMUnlock NVMUnlock `(v  1 e 1 0 ]
@@ -185,7 +189,7 @@ N_BUTTONS 15
 [s S65 . 3 `uc 1 PORTA 1 0 `uc 1 PORTB 1 1 `uc 1 PORTC 1 2 ]
 [u S69 . 3 `S45 1 . 3 0 `S65 1 . 3 0 ]
 [v _prevButtons prevButtons `S69  1 e 3 0 ]
-[s S1252 . 4 `uc 1 A 1 0 :1:0 
+[s S1261 . 4 `uc 1 A 1 0 :1:0 
 `uc 1 B 1 0 :1:1 
 `uc 1 X 1 0 :1:2 
 `uc 1 Y 1 0 :1:3 
@@ -201,26 +205,29 @@ N_BUTTONS 15
 `uc 1 er 1 1 :1:7 
 `uc 1 LA 1 2 `uc 1 RA 1 3 ]
 "48
-[s S1269 . 4 `uc 1 byte0 1 0 `uc 1 byte1 1 1 `uc 1 byte6 1 2 `uc 1 byte7 1 3 ]
-[u S1274 . 4 `S1252 1 . 4 0 `S1269 1 . 4 0 ]
-[v _outButtons outButtons `S1274  1 e 4 0 ]
-"50
-[v _buttonsTimers buttonsTimers `[15]uc  1 e 15 0 ]
+[s S1278 . 4 `uc 1 byte0 1 0 `uc 1 byte1 1 1 `uc 1 byte6 1 2 `uc 1 byte7 1 3 ]
+[u S1283 . 4 `S1261 1 . 4 0 `S1278 1 . 4 0 ]
+[v _outButtons outButtons `S1283  1 e 4 0 ]
+[s S1286 . 6 `uc 1 SX 1 0 `uc 1 SY 1 1 `uc 1 CX 1 2 `uc 1 CY 1 3 `uc 1 L 1 4 `uc 1 R 1 5 ]
+"49
+[v _origins origins `S1286  1 e 6 0 ]
 "51
-[v _buttonsMessage buttonsMessage `[8]uc  1 e 8 0 ]
+[v _buttonsTimers buttonsTimers `[15]uc  1 e 15 0 ]
 "52
-[v _buttonsMapByte0 buttonsMapByte0 `[15]uc  1 e 15 0 ]
+[v _buttonsMessage buttonsMessage `[10]uc  1 e 10 0 ]
 "53
-[v _buttonsMapByte1 buttonsMapByte1 `[15]uc  1 e 15 0 ]
+[v _buttonsMapByte0 buttonsMapByte0 `[15]uc  1 e 15 0 ]
 "54
-[v _LUT_SX LUT_SX `[256]uc  1 e 256 0 ]
+[v _buttonsMapByte1 buttonsMapByte1 `[15]uc  1 e 15 0 ]
 "55
-[v _LUT_SY LUT_SY `[256]uc  1 e 256 0 ]
+[v _LUT_SX LUT_SX `[256]uc  1 e 256 0 ]
 "56
-[v _LUT_CX LUT_CX `[256]uc  1 e 256 0 ]
+[v _LUT_SY LUT_SY `[256]uc  1 e 256 0 ]
 "57
+[v _LUT_CX LUT_CX `[256]uc  1 e 256 0 ]
+"58
 [v _LUT_CY LUT_CY `[256]uc  1 e 256 0 ]
-[s S603 . 1 `uc 1 INT0IP 1 0 :1:0 
+[s S612 . 1 `uc 1 INT0IP 1 0 :1:0 
 `uc 1 ZCDIP 1 0 :1:1 
 `uc 1 ADIP 1 0 :1:2 
 `uc 1 ADTIP 1 0 :1:3 
@@ -230,15 +237,15 @@ N_BUTTONS 15
 `uc 1 SMT1PWAIP 1 0 :1:7 
 ]
 "2851 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f25k42.h
-[s S612 . 1 `uc 1 . 1 0 :4:0 
+[s S621 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IP 1 0 :1:4 
 `uc 1 RC1IP 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 PSPIP 1 0 :1:7 
 ]
-[u S618 . 1 `S603 1 . 1 0 `S612 1 . 1 0 ]
-[v _IPR1bits IPR1bits `VES618  1 e 1 @14721 ]
-[s S637 . 1 `uc 1 INT0IE 1 0 :1:0 
+[u S627 . 1 `S612 1 . 1 0 `S621 1 . 1 0 ]
+[v _IPR1bits IPR1bits `VES627  1 e 1 @14721 ]
+[s S646 . 1 `uc 1 INT0IE 1 0 :1:0 
 `uc 1 ZCDIE 1 0 :1:1 
 `uc 1 ADIE 1 0 :1:2 
 `uc 1 ADTIE 1 0 :1:3 
@@ -248,26 +255,26 @@ N_BUTTONS 15
 `uc 1 SMT1PWAIE 1 0 :1:7 
 ]
 "3502
-[s S646 . 1 `uc 1 . 1 0 :4:0 
+[s S655 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IE 1 0 :1:4 
 `uc 1 RC1IE 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 PSPIE 1 0 :1:7 
 ]
-[s S652 . 1 `uc 1 . 1 0 :4:0 
+[s S661 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TXIE 1 0 :1:4 
 ]
-[u S655 . 1 `S637 1 . 1 0 `S646 1 . 1 0 `S652 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES655  1 e 1 @14737 ]
-[s S479 . 1 `uc 1 TMR6IE 1 0 :1:0 
+[u S664 . 1 `S646 1 . 1 0 `S655 1 . 1 0 `S661 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES664  1 e 1 @14737 ]
+[s S488 . 1 `uc 1 TMR6IE 1 0 :1:0 
 `uc 1 CCP3IE 1 0 :1:1 
 `uc 1 CWG3IE 1 0 :1:2 
 `uc 1 CLC3IE 1 0 :1:3 
 ]
 "4014
-[u S484 . 1 `S479 1 . 1 0 ]
-[v _PIE9bits PIE9bits `VES484  1 e 1 @14745 ]
-[s S562 . 1 `uc 1 INT0IF 1 0 :1:0 
+[u S493 . 1 `S488 1 . 1 0 ]
+[v _PIE9bits PIE9bits `VES493  1 e 1 @14745 ]
+[s S571 . 1 `uc 1 INT0IF 1 0 :1:0 
 `uc 1 ZCDIF 1 0 :1:1 
 `uc 1 ADIF 1 0 :1:2 
 `uc 1 ADTIF 1 0 :1:3 
@@ -277,18 +284,18 @@ N_BUTTONS 15
 `uc 1 SMT1PWAIF 1 0 :1:7 
 ]
 "4155
-[s S571 . 1 `uc 1 . 1 0 :4:0 
+[s S580 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IF 1 0 :1:4 
 `uc 1 RC1IF 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 PSPIF 1 0 :1:7 
 ]
-[s S577 . 1 `uc 1 . 1 0 :4:0 
+[s S586 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TXIF 1 0 :1:4 
 ]
-[u S580 . 1 `S562 1 . 1 0 `S571 1 . 1 0 `S577 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES580  1 e 1 @14753 ]
-[s S497 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S589 . 1 `S571 1 . 1 0 `S580 1 . 1 0 `S586 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES589  1 e 1 @14753 ]
+[s S506 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR1GIF 1 0 :1:1 
 `uc 1 TMR2IF 1 0 :1:2 
 `uc 1 CCP1IF 1 0 :1:3 
@@ -298,23 +305,23 @@ N_BUTTONS 15
 `uc 1 CLC1IF 1 0 :1:7 
 ]
 "4386
-[u S506 . 1 `S497 1 . 1 0 ]
-[v _PIR4bits PIR4bits `VES506  1 e 1 @14756 ]
-[s S460 . 1 `uc 1 TMR6IF 1 0 :1:0 
+[u S515 . 1 `S506 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES515  1 e 1 @14756 ]
+[s S469 . 1 `uc 1 TMR6IF 1 0 :1:0 
 `uc 1 CCP3IF 1 0 :1:1 
 `uc 1 CWG3IF 1 0 :1:2 
 `uc 1 CLC3IF 1 0 :1:3 
 ]
 "4635
-[u S465 . 1 `S460 1 . 1 0 ]
-[v _PIR9bits PIR9bits `VES465  1 e 1 @14761 ]
+[u S474 . 1 `S469 1 . 1 0 ]
+[v _PIR9bits PIR9bits `VES474  1 e 1 @14761 ]
 "5734
 [v _NVMADRL NVMADRL `VEuc  1 e 1 @14816 ]
 "5862
 [v _NVMDAT NVMDAT `VEuc  1 e 1 @14819 ]
 "5990
 [v _NVMCON1 NVMCON1 `VEuc  1 e 1 @14821 ]
-[s S1548 . 1 `uc 1 RD 1 0 :1:0 
+[s S1574 . 1 `uc 1 RD 1 0 :1:0 
 `uc 1 WR 1 0 :1:1 
 `uc 1 WREN 1 0 :1:2 
 `uc 1 WRERR 1 0 :1:3 
@@ -323,19 +330,19 @@ N_BUTTONS 15
 `uc 1 REG 1 0 :2:6 
 ]
 "6020
-[s S1556 . 1 `uc 1 . 1 0 :6:0 
+[s S1582 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 REG0 1 0 :1:6 
 `uc 1 REG1 1 0 :1:7 
 ]
-[s S1560 . 1 `uc 1 . 1 0 :6:0 
+[s S1586 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 NVMREG 1 0 :2:6 
 ]
-[s S1563 . 1 `uc 1 . 1 0 :6:0 
+[s S1589 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 NVMREG0 1 0 :1:6 
 `uc 1 NVMREG1 1 0 :1:7 
 ]
-[u S1567 . 1 `S1548 1 . 1 0 `S1556 1 . 1 0 `S1560 1 . 1 0 `S1563 1 . 1 0 ]
-[v _NVMCON1bits NVMCON1bits `VES1567  1 e 1 @14821 ]
+[u S1593 . 1 `S1574 1 . 1 0 `S1582 1 . 1 0 `S1586 1 . 1 0 `S1589 1 . 1 0 ]
+[v _NVMCON1bits NVMCON1bits `VES1593  1 e 1 @14821 ]
 "6080
 [v _NVMCON2 NVMCON2 `VEuc  1 e 1 @14822 ]
 "7060
@@ -360,11 +367,11 @@ N_BUTTONS 15
 [v _ODCONC ODCONC `VEuc  1 e 1 @14946 ]
 "10113
 [v _PPSLOCK PPSLOCK `VEuc  1 e 1 @15039 ]
-[s S227 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
+[s S236 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
 ]
 "10123
-[u S229 . 1 `S227 1 . 1 0 ]
-[v _PPSLOCKbits PPSLOCKbits `VES229  1 e 1 @15039 ]
+[u S238 . 1 `S236 1 . 1 0 ]
+[v _PPSLOCKbits PPSLOCKbits `VES238  1 e 1 @15039 ]
 "10373
 [v _T6INPPS T6INPPS `VEuc  1 e 1 @15052 ]
 "10493
@@ -389,15 +396,15 @@ N_BUTTONS 15
 [v _DMA2SSAU DMA2SSAU `VEuc  1 e 1 @15323 ]
 "13205
 [v _DMA2CON0 DMA2CON0 `VEuc  1 e 1 @15324 ]
-[s S1094 . 1 `uc 1 SSTP 1 0 :1:0 
+[s S1103 . 1 `uc 1 SSTP 1 0 :1:0 
 `uc 1 SMODE 1 0 :2:1 
 `uc 1 SMR 1 0 :2:3 
 `uc 1 DSTP 1 0 :1:5 
 `uc 1 DMODE 1 0 :2:6 
 ]
 "13299
-[u S1100 . 1 `S1094 1 . 1 0 ]
-[v _DMA2CON1bits DMA2CON1bits `VES1100  1 e 1 @15325 ]
+[u S1109 . 1 `S1103 1 . 1 0 ]
+[v _DMA2CON1bits DMA2CON1bits `VES1109  1 e 1 @15325 ]
 "13445
 [v _DMA2SIRQ DMA2SIRQ `VEuc  1 e 1 @15327 ]
 "14174
@@ -420,7 +427,7 @@ N_BUTTONS 15
 [v _DMA1SSAU DMA1SSAU `VEuc  1 e 1 @15355 ]
 "15813
 [v _DMA1CON0 DMA1CON0 `VEuc  1 e 1 @15356 ]
-[s S1136 . 1 `uc 1 XIP 1 0 :1:0 
+[s S1145 . 1 `uc 1 XIP 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 AIRQEN 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -429,7 +436,7 @@ N_BUTTONS 15
 `uc 1 EN 1 0 :1:7 
 ]
 "15838
-[s S1144 . 1 `uc 1 DMA1XIP 1 0 :1:0 
+[s S1153 . 1 `uc 1 DMA1XIP 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 DMA1AIRQEN 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -437,10 +444,10 @@ N_BUTTONS 15
 `uc 1 DMA1SIRQEN 1 0 :1:6 
 `uc 1 DMA1EN 1 0 :1:7 
 ]
-[u S1152 . 1 `S1136 1 . 1 0 `S1144 1 . 1 0 ]
-[v _DMA1CON0bits DMA1CON0bits `VES1152  1 e 1 @15356 ]
+[u S1161 . 1 `S1145 1 . 1 0 `S1153 1 . 1 0 ]
+[v _DMA1CON0bits DMA1CON0bits `VES1161  1 e 1 @15356 ]
 "15907
-[v _DMA1CON1bits DMA1CON1bits `VES1100  1 e 1 @15357 ]
+[v _DMA1CON1bits DMA1CON1bits `VES1109  1 e 1 @15357 ]
 "16053
 [v _DMA1SIRQ DMA1SIRQ `VEuc  1 e 1 @15359 ]
 "16169
@@ -533,7 +540,7 @@ N_BUTTONS 15
 [v _SPI1CON1 SPI1CON1 `VEuc  1 e 1 @15637 ]
 "21802
 [v _SPI1CON2 SPI1CON2 `VEuc  1 e 1 @15638 ]
-[s S763 . 1 `uc 1 RXBF 1 0 :1:0 
+[s S772 . 1 `uc 1 RXBF 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 CLRBF 1 0 :1:2 
 `uc 1 RXRE 1 0 :1:3 
@@ -543,7 +550,7 @@ N_BUTTONS 15
 `uc 1 TXWE 1 0 :1:7 
 ]
 "21907
-[s S772 . 1 `uc 1 SPI1RXBF 1 0 :1:0 
+[s S781 . 1 `uc 1 SPI1RXBF 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 SPI1CLRBF 1 0 :1:2 
 `uc 1 SPI1RXRE 1 0 :1:3 
@@ -552,13 +559,13 @@ N_BUTTONS 15
 `uc 1 . 1 0 :1:6 
 `uc 1 SPI1TXWE 1 0 :1:7 
 ]
-[u S781 . 1 `S763 1 . 1 0 `S772 1 . 1 0 ]
-[v _SPI1STATUSbits SPI1STATUSbits `VES781  1 e 1 @15639 ]
+[u S790 . 1 `S772 1 . 1 0 `S781 1 . 1 0 ]
+[v _SPI1STATUSbits SPI1STATUSbits `VES790  1 e 1 @15639 ]
 "21962
 [v _SPI1TWIDTH SPI1TWIDTH `VEuc  1 e 1 @15640 ]
 "22002
 [v _SPI1BAUD SPI1BAUD `VEuc  1 e 1 @15641 ]
-[s S825 . 1 `uc 1 . 1 0 :1:0 
+[s S834 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 TXUIF 1 0 :1:1 
 `uc 1 RXOIF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -568,7 +575,7 @@ N_BUTTONS 15
 `uc 1 SRMTIF 1 0 :1:7 
 ]
 "22099
-[s S834 . 1 `uc 1 . 1 0 :1:0 
+[s S843 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 SPI1TXUIF 1 0 :1:1 
 `uc 1 SPI1RXOIF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -577,24 +584,24 @@ N_BUTTONS 15
 `uc 1 SPI1TCZIF 1 0 :1:6 
 `uc 1 SPI1SRMTIF 1 0 :1:7 
 ]
-[u S843 . 1 `S825 1 . 1 0 `S834 1 . 1 0 ]
-[v _SPI1INTFbits SPI1INTFbits `VES843  1 e 1 @15642 ]
+[u S852 . 1 `S834 1 . 1 0 `S843 1 . 1 0 ]
+[v _SPI1INTFbits SPI1INTFbits `VES852  1 e 1 @15642 ]
 "22256
 [v _SPI1CLK SPI1CLK `VEuc  1 e 1 @15644 ]
-[s S1054 . 1 `uc 1 CPRDY 1 0 :1:0 
+[s S1063 . 1 `uc 1 CPRDY 1 0 :1:0 
 `uc 1 . 1 0 :6:1 
 `uc 1 ON 1 0 :1:7 
 ]
 "27369
-[s S1058 . 1 `uc 1 ADCPRDY 1 0 :1:0 
+[s S1067 . 1 `uc 1 ADCPRDY 1 0 :1:0 
 `uc 1 . 1 0 :6:1 
 `uc 1 CPON 1 0 :1:7 
 ]
-[s S1062 . 1 `uc 1 . 1 0 :7:0 
+[s S1071 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 ADCPON 1 0 :1:7 
 ]
-[u S1065 . 1 `S1054 1 . 1 0 `S1058 1 . 1 0 `S1062 1 . 1 0 ]
-[v _ADCPbits ADCPbits `VES1065  1 e 1 @16087 ]
+[u S1074 . 1 `S1063 1 . 1 0 `S1067 1 . 1 0 `S1071 1 . 1 0 ]
+[v _ADCPbits ADCPbits `VES1074  1 e 1 @16087 ]
 "28458
 [v _ADFLTRL ADFLTRL `VEuc  1 e 1 @16102 ]
 "29235
@@ -609,13 +616,13 @@ N_BUTTONS 15
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @16121 ]
 "30647
 [v _ADCON2 ADCON2 `VEuc  1 e 1 @16122 ]
-[s S971 . 1 `uc 1 MODE 1 0 :3:0 
+[s S980 . 1 `uc 1 MODE 1 0 :3:0 
 `uc 1 ACLR 1 0 :1:3 
 `uc 1 CRS 1 0 :3:4 
 `uc 1 PSIS 1 0 :1:7 
 ]
 "30695
-[s S976 . 1 `uc 1 ADMD0 1 0 :1:0 
+[s S985 . 1 `uc 1 ADMD0 1 0 :1:0 
 `uc 1 ADMD1 1 0 :1:1 
 `uc 1 ADMD2 1 0 :1:2 
 `uc 1 ADACLR 1 0 :1:3 
@@ -624,11 +631,11 @@ N_BUTTONS 15
 `uc 1 ADCRS2 1 0 :1:6 
 `uc 1 ADPSIS 1 0 :1:7 
 ]
-[s S985 . 1 `uc 1 ADMD 1 0 :3:0 
+[s S994 . 1 `uc 1 ADMD 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 ADCRS 1 0 :3:4 
 ]
-[s S989 . 1 `uc 1 MODE0 1 0 :1:0 
+[s S998 . 1 `uc 1 MODE0 1 0 :1:0 
 `uc 1 MODE1 1 0 :1:1 
 `uc 1 MODE2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -636,16 +643,16 @@ N_BUTTONS 15
 `uc 1 CRS1 1 0 :1:5 
 `uc 1 CRS2 1 0 :1:6 
 ]
-[s S997 . 1 `uc 1 MD 1 0 :3:0 
+[s S1006 . 1 `uc 1 MD 1 0 :3:0 
 ]
-[s S999 . 1 `uc 1 MD0 1 0 :1:0 
+[s S1008 . 1 `uc 1 MD0 1 0 :1:0 
 `uc 1 MD1 1 0 :1:1 
 `uc 1 MD2 1 0 :1:2 
 ]
-[s S1003 . 1 `uc 1 ADMODE 1 0 :3:0 
+[s S1012 . 1 `uc 1 ADMODE 1 0 :3:0 
 ]
-[u S1005 . 1 `S971 1 . 1 0 `S976 1 . 1 0 `S985 1 . 1 0 `S989 1 . 1 0 `S997 1 . 1 0 `S999 1 . 1 0 `S1003 1 . 1 0 ]
-[v _ADCON2bits ADCON2bits `VES1005  1 e 1 @16122 ]
+[u S1014 . 1 `S980 1 . 1 0 `S985 1 . 1 0 `S994 1 . 1 0 `S998 1 . 1 0 `S1006 1 . 1 0 `S1008 1 . 1 0 `S1012 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES1014  1 e 1 @16122 ]
 "30825
 [v _ADCON3 ADCON3 `VEuc  1 e 1 @16123 ]
 "31080
@@ -672,13 +679,13 @@ N_BUTTONS 15
 [v _SMT1CON0 SMT1CON0 `VEuc  1 e 1 @16158 ]
 "33048
 [v _SMT1CON1 SMT1CON1 `VEuc  1 e 1 @16159 ]
-[s S678 . 1 `uc 1 MODE 1 0 :4:0 
+[s S687 . 1 `uc 1 MODE 1 0 :4:0 
 `uc 1 . 1 0 :2:4 
 `uc 1 REPEAT 1 0 :1:6 
 `uc 1 GO 1 0 :1:7 
 ]
 "33073
-[s S683 . 1 `uc 1 MODE0 1 0 :1:0 
+[s S692 . 1 `uc 1 MODE0 1 0 :1:0 
 `uc 1 MODE1 1 0 :1:1 
 `uc 1 MODE2 1 0 :1:2 
 `uc 1 MODE3 1 0 :1:3 
@@ -687,13 +694,13 @@ N_BUTTONS 15
 `uc 1 SMT1GO 1 0 :1:7 
 ]
 "33073
-[s S691 . 1 `uc 1 SMT1MODE 1 0 :4:0 
+[s S700 . 1 `uc 1 SMT1MODE 1 0 :4:0 
 ]
 "33073
-[u S693 . 1 `S678 1 . 1 0 `S683 1 . 1 0 `S691 1 . 1 0 ]
+[u S702 . 1 `S687 1 . 1 0 `S692 1 . 1 0 `S700 1 . 1 0 ]
 "33073
 "33073
-[v _SMT1CON1bits SMT1CON1bits `VES693  1 e 1 @16159 ]
+[v _SMT1CON1bits SMT1CON1bits `VES702  1 e 1 @16159 ]
 "33227
 [v _SMT1CLK SMT1CLK `VEuc  1 e 1 @16161 ]
 "33295
@@ -748,7 +755,7 @@ N_BUTTONS 15
 [v _TRISA TRISA `VEuc  1 e 1 @16322 ]
 "44588
 [v _TRISB TRISB `VEuc  1 e 1 @16323 ]
-[s S803 . 1 `uc 1 TRISB0 1 0 :1:0 
+[s S812 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -758,17 +765,17 @@ N_BUTTONS 15
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "44605
-[u S812 . 1 `S803 1 . 1 0 ]
+[u S821 . 1 `S812 1 . 1 0 ]
 "44605
 "44605
-[v _TRISBbits TRISBbits `VES812  1 e 1 @16323 ]
+[v _TRISBbits TRISBbits `VES821  1 e 1 @16323 ]
 "44650
 [v _TRISC TRISC `VEuc  1 e 1 @16324 ]
 "44712
 [v _PORTA PORTA `VEuc  1 e 1 @16330 ]
 "44796
 [v _PORTB PORTB `VEuc  1 e 1 @16331 ]
-[s S518 . 1 `uc 1 RB0 1 0 :1:0 
+[s S527 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -778,19 +785,19 @@ N_BUTTONS 15
 `uc 1 RB7 1 0 :1:7 
 ]
 "44817
-[s S527 . 1 `uc 1 . 1 0 :3:0 
+[s S536 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CCP2_PA2 1 0 :1:3 
 ]
 "44817
-[u S530 . 1 `S518 1 . 1 0 `S527 1 . 1 0 ]
+[u S539 . 1 `S527 1 . 1 0 `S536 1 . 1 0 ]
 "44817
 "44817
-[v _PORTBbits PORTBbits `VES530  1 e 1 @16331 ]
+[v _PORTBbits PORTBbits `VES539  1 e 1 @16331 ]
 "44867
 [v _PORTC PORTC `VEuc  1 e 1 @16332 ]
 "44992
 [v _INTCON0 INTCON0 `VEuc  1 e 1 @16338 ]
-[s S1521 . 1 `uc 1 INT0EDG 1 0 :1:0 
+[s S1547 . 1 `uc 1 INT0EDG 1 0 :1:0 
 `uc 1 INT1EDG 1 0 :1:1 
 `uc 1 INT2EDG 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -799,14 +806,14 @@ N_BUTTONS 15
 `uc 1 GIE 1 0 :1:7 
 ]
 "45012
-[s S1529 . 1 `uc 1 . 1 0 :7:0 
+[s S1555 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 GIEH 1 0 :1:7 
 ]
 "45012
-[u S1532 . 1 `S1521 1 . 1 0 `S1529 1 . 1 0 ]
+[u S1558 . 1 `S1547 1 . 1 0 `S1555 1 . 1 0 ]
 "45012
 "45012
-[v _INTCON0bits INTCON0bits `VES1532  1 e 1 @16338 ]
+[v _INTCON0bits INTCON0bits `VES1558  1 e 1 @16338 ]
 "45088
 [v _IVTLOCK IVTLOCK `VEuc  1 e 1 @16340 ]
 "45109
@@ -855,14 +862,14 @@ N_BUTTONS 15
 "79 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"236
+"227
 [v main@len len `uc  1 a 1 77 ]
-"320
-[v main@btnMsg_320 btnMsg `*.39uc  1 a 2 39 ]
-"306
-[v main@btnMsg btnMsg `*.39uc  1 a 2 37 ]
+"311
+[v main@btnMsg_329 btnMsg `*.39uc  1 a 2 75 ]
+"297
+[v main@btnMsg btnMsg `*.39uc  1 a 2 73 ]
 "83
-[v main@msgAnswer msgAnswer `[36]uc  1 a 36 41 ]
+[v main@msgAnswer msgAnswer `[36]uc  1 a 36 37 ]
 "82
 [v main@cmd cmd `[36]uc  1 a 36 0 ]
 [s S45 . 3 `uc 1 . 1 0 :2:0 
@@ -899,14 +906,14 @@ N_BUTTONS 15
 [v main@cmdLen cmdLen `uc  1 a 1 80 ]
 "89
 [v main@flashBufferIdx flashBufferIdx `uc  1 a 1 36 ]
-"351
+"342
 } 0
-"353
+"344
 [v _portsInit portsInit `(v  1 e 1 0 ]
 {
-"355
+"346
 [v portsInit@state state `uc  1 a 1 0 ]
-"392
+"383
 } 0
 "31 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
 [v _configInit configInit `(v  1 e 1 0 ]
@@ -953,7 +960,7 @@ N_BUTTONS 15
 [v EEPROMReadByte@address address `uc  1 a 1 0 ]
 "42
 } 0
-"86 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+"87 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
 [v _buttonsUpdate buttonsUpdate `(v  1 e 1 0 ]
 {
 [s S45 . 3 `uc 1 . 1 0 :2:0 
@@ -976,40 +983,48 @@ N_BUTTONS 15
 `uc 1 B 1 2 :1:6 
 `uc 1 A 1 2 :1:7 
 ]
-"89
+"90
 [s S65 . 3 `uc 1 PORTA 1 0 `uc 1 PORTB 1 1 `uc 1 PORTC 1 2 ]
 [u S69 . 3 `S45 1 . 3 0 `S65 1 . 3 0 ]
 [v buttonsUpdate@toggledButtons toggledButtons `S69  1 a 3 4 ]
-"87
-[v buttonsUpdate@i i `uc  1 a 1 3 ]
 "88
+[v buttonsUpdate@i i `uc  1 a 1 3 ]
+"89
 [v buttonsUpdate@PC PC `uc  1 a 1 2 ]
 [v buttonsUpdate@PB PB `uc  1 a 1 1 ]
 [v buttonsUpdate@PA PA `uc  1 a 1 0 ]
-"161
+"162
 } 0
-"230
+"223
+[v _buttonsSetOrigins buttonsSetOrigins `(v  1 e 1 0 ]
+{
+[v buttonsSetOrigins@triggersMode triggersMode `uc  1 a 1 wreg ]
+[v buttonsSetOrigins@triggersMode triggersMode `uc  1 a 1 wreg ]
+[v buttonsSetOrigins@triggersMode triggersMode `uc  1 a 1 0 ]
+"235
+} 0
+"260
 [v _buttonsSetMapByte1 buttonsSetMapByte1 `(v  1 e 1 0 ]
 {
-"231
+"261
 [v buttonsSetMapByte1@i i `uc  1 a 1 2 ]
-"230
+"260
 [v buttonsSetMapByte1@map map `*.39uc  1 p 2 0 ]
-"236
+"266
 } 0
-"222
+"252
 [v _buttonsSetMapByte0 buttonsSetMapByte0 `(v  1 e 1 0 ]
 {
-"223
+"253
 [v buttonsSetMapByte0@i i `uc  1 a 1 2 ]
-"222
+"252
 [v buttonsSetMapByte0@map map `*.39uc  1 p 2 0 ]
-"228
+"258
 } 0
-"59
+"60
 [v _buttonsInit buttonsInit `(v  1 e 1 0 ]
 {
-"84
+"85
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
 [v _memset memset `(*.39v  1 e 2 0 ]
@@ -1022,50 +1037,55 @@ N_BUTTONS 15
 [v memset@n n `ui  1 p 2 4 ]
 "22
 } 0
-"163 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+"237 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+[v _buttonsGetOrigins buttonsGetOrigins `(*.39uc  1 e 2 0 ]
+{
+"250
+} 0
+"164
 [v _buttonsGetMessage buttonsGetMessage `(*.39uc  1 e 2 0 ]
 {
 [v buttonsGetMessage@analogMode analogMode `uc  1 a 1 wreg ]
-"169
+"170
 [v buttonsGetMessage@la la `uc  1 a 1 5 ]
 [v buttonsGetMessage@ra ra `uc  1 a 1 4 ]
-"163
+"164
 [v buttonsGetMessage@analogMode analogMode `uc  1 a 1 wreg ]
 [v buttonsGetMessage@triggersMode triggersMode `uc  1 p 1 0 ]
 [v buttonsGetMessage@analogMode analogMode `uc  1 a 1 3 ]
-"220
+"221
 } 0
-"248
+"278
 [v _buttonsGetMapByte1 buttonsGetMapByte1 `(*.39uc  1 e 2 0 ]
 {
-"249
+"279
 [v buttonsGetMapByte1@i i `uc  1 a 1 2 ]
-"256
+"286
 } 0
-"238
+"268
 [v _buttonsGetMapByte0 buttonsGetMapByte0 `(*.39uc  1 e 2 0 ]
 {
-"239
+"269
 [v buttonsGetMapByte0@i i `uc  1 a 1 2 ]
-"246
+"276
 } 0
-"285
+"315
 [v _buttonsBuildLUTs buttonsBuildLUTs `(v  1 e 1 0 ]
 {
-"290
+"320
 } 0
-"258
+"288
 [v _buttonsBuildLUT buttonsBuildLUT `(v  1 e 1 0 ]
 {
-"268
+"298
 [v buttonsBuildLUT@tempVal tempVal `i  1 a 2 29 ]
-"263
+"293
 [v buttonsBuildLUT@radius radius `i  1 a 2 33 ]
-"259
+"289
 [v buttonsBuildLUT@i i `i  1 a 2 31 ]
-"260
+"290
 [v buttonsBuildLUT@range range `i  1 a 2 27 ]
-"258
+"288
 [v buttonsBuildLUT@LUT LUT `*.39uc  1 p 2 14 ]
 [v buttonsBuildLUT@minVal minVal `uc  1 p 1 16 ]
 [v buttonsBuildLUT@maxVal maxVal `uc  1 p 1 17 ]
@@ -1073,7 +1093,7 @@ N_BUTTONS 15
 [v buttonsBuildLUT@dz dz `uc  1 p 1 19 ]
 [v buttonsBuildLUT@dzMode dzMode `uc  1 p 1 20 ]
 [v buttonsBuildLUT@invert invert `uc  1 p 1 21 ]
-"283
+"313
 } 0
 "15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
@@ -1098,10 +1118,10 @@ N_BUTTONS 15
 [v ___awdiv@divisor divisor `i  1 p 2 8 ]
 "41
 } 0
-"394 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+"385 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
 [v _bootBootloader bootBootloader `(v  1 e 1 0 ]
 {
-"411
+"402
 } 0
 "194 C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
 [v _SISendMessage SISendMessage `(v  1 e 1 0 ]

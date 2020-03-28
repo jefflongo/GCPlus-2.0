@@ -26492,6 +26492,15 @@ uint8_t byte7;
 };
 } outButtons_t;
 
+typedef struct {
+uint8_t SX;
+uint8_t SY;
+uint8_t CX;
+uint8_t CY;
+uint8_t L;
+uint8_t R;
+} origins_t;
+
 enum {
 BUTTON_A_ID = 0,
 BUTTON_B_ID,
@@ -26514,12 +26523,14 @@ N_BUTTONS
 void buttonsInit(void);
 void buttonsUpdate(void);
 uint8_t* buttonsGetMessage(uint8_t analogMode, uint8_t triggersMode);
+void buttonsSetOrigins(uint8_t triggersMode);
+uint8_t* buttonsGetOrigins(void);
 void buttonsSetMapByte0(uint8_t* map);
 void buttonsSetMapByte1(uint8_t* map);
 uint8_t* buttonsGetMapByte0(void);
 uint8_t* buttonsGetMapByte1(void);
 
-# 129
+# 140
 void buttonsBuildLUT(uint8_t* LUT, uint8_t minVal, uint8_t maxVal, uint8_t origin, uint8_t dz, uint8_t dzMode, uint8_t invert);
 
 void buttonsBuildLUTs(void);
@@ -26542,6 +26553,7 @@ void bootPayload(void);
 # 52 "buttons.c"
 inButtons_t prevButtons;
 outButtons_t outButtons;
+origins_t origins;
 
 uint8_t buttonsTimers[N_BUTTONS];
 uint8_t buttonsMessage[8];
@@ -26664,7 +26676,7 @@ buttonsMessage[3] = LUT_SY[ADCValues[1]];
 
 uint8_t ra, la;
 
-# 183
+# 184
 ra = 0x00;
 la = 0x00;
 
@@ -26708,6 +26720,35 @@ buttonsMessage[6] = 0x00;
 buttonsMessage[7] = 0x00;
 break;
 }
+
+return buttonsMessage;
+}
+
+void buttonsSetOrigins(uint8_t triggersMode) {
+origins.SX = LUT_SX[ADCValues[0]];
+origins.SY = LUT_SY[ADCValues[1]];
+origins.CX = LUT_CX[ADCValues[2]];
+origins.CY = LUT_CY[ADCValues[3]];
+if (triggersMode == 0) {
+origins.L = outButtons.LA;
+origins.R = outButtons.RA;
+} else {
+origins.L = ADCValues[5];
+origins.R = ADCValues[4];
+}
+}
+
+uint8_t* buttonsGetOrigins(void) {
+buttonsMessage[0] = 0x00;
+buttonsMessage[1] = 0x00;
+buttonsMessage[2] = origins.SX;
+buttonsMessage[3] = origins.SY;
+buttonsMessage[4] = origins.CX;
+buttonsMessage[5] = origins.CY;
+buttonsMessage[6] = origins.L;
+buttonsMessage[7] = origins.R;
+buttonsMessage[8] = 0x02;
+buttonsMessage[9] = 0x02;
 
 return buttonsMessage;
 }

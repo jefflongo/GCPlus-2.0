@@ -26492,6 +26492,15 @@ uint8_t byte7;
 };
 } outButtons_t;
 
+typedef struct {
+uint8_t SX;
+uint8_t SY;
+uint8_t CX;
+uint8_t CY;
+uint8_t L;
+uint8_t R;
+} origins_t;
+
 enum {
 BUTTON_A_ID = 0,
 BUTTON_B_ID,
@@ -26514,12 +26523,14 @@ N_BUTTONS
 void buttonsInit(void);
 void buttonsUpdate(void);
 uint8_t* buttonsGetMessage(uint8_t analogMode, uint8_t triggersMode);
+void buttonsSetOrigins(uint8_t triggersMode);
+uint8_t* buttonsGetOrigins(void);
 void buttonsSetMapByte0(uint8_t* map);
 void buttonsSetMapByte1(uint8_t* map);
 uint8_t* buttonsGetMapByte0(void);
 uint8_t* buttonsGetMapByte1(void);
 
-# 129
+# 140
 void buttonsBuildLUT(uint8_t* LUT, uint8_t minVal, uint8_t maxVal, uint8_t origin, uint8_t dz, uint8_t dzMode, uint8_t invert);
 
 void buttonsBuildLUTs(void);

@@ -26372,7 +26372,7 @@ T2PR = 125;
 PIR4bits.TMR2IF = 0;
 T2CON = 0xF0;
 while(!PIR4bits.TMR2IF) {
-if (PORTBbits.RB2 == 0) {
+if (PORTBbits.RB4 == 0) {
 T2TMR = 0x00;
 }
 }
@@ -26477,7 +26477,7 @@ SMT1CON1bits.GO = 0;
 while (!SPI1STATUSbits.TXBE);
 
 
-TRISBbits.TRISB2 = 0;
+TRISBbits.TRISB4 = 0;
 
 
 SIBitCounter = 0;
@@ -26518,7 +26518,7 @@ SPI1INTFbits.SRMTIF = 0;
 
 
 SMT1CON1bits.GO = 1;
-TRISBbits.TRISB2 = 1;
+TRISBbits.TRISB4 = 1;
 
 # 255
 }

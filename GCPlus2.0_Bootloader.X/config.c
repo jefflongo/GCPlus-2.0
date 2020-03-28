@@ -61,10 +61,10 @@ void configSetDefault(void) {
     config.CXMax = 0xFF;
     config.CYMin = 0x00;
     config.CYMax = 0xFF;
-    config.SXChan = 0x02;
-    config.SYChan = 0x03;
-    config.CXChan = 0x00;
-    config.CYChan = 0x01;
+    config.SXChan = 0x11;
+    config.SYChan = 0x12;
+    config.CXChan = 0x13;
+    config.CYChan = 0x14;
     config.axInvert = 0x00;
     config.SDeadzone = 0x18;
     config.CDeadzone = 0x18;
@@ -74,7 +74,7 @@ void configSetDefault(void) {
     config.rumbleIntensity = 0xFF;
 
     //Triggers mode
-    config.triggersMode = TRIG_MODE_DIGITAL;
+    config.triggersMode = TRIG_MODE_ANALOG;
 }
 
 void configFlashAll(void) {

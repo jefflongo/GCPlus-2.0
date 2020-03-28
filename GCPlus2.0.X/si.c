@@ -93,7 +93,7 @@ void SIInit(void) {
     PIR4bits.TMR2IF = 0;
     T2CON = 0xF0; //T2ON = 0. Prescaler = 1:128. Postscaler = 1:1
     while(!PIR4bits.TMR2IF) {
-        if (PORTBbits.RB2 == 0) {
+        if (PORTBbits.RB4 == 0) {
             T2TMR = 0x00;
         }
     }
@@ -205,7 +205,7 @@ void SISendMessage(uint8_t* msg, uint8_t len) {
     while (!SPI1STATUSbits.TXBE);
 
     //Let the PIC drive the GCC data line
-    TRISBbits.TRISB2 = 0;
+    TRISBbits.TRISB4 = 0;
 
     //Reset incoming data
     SIBitCounter = 0;
@@ -246,7 +246,7 @@ void SISendMessage(uint8_t* msg, uint8_t len) {
 
     //Release the GCC data line
     SMT1CON1bits.GO = 1;
-    TRISBbits.TRISB2 = 1;
+    TRISBbits.TRISB4 = 1;
 
     //T6TMR = 0x00;
     //T6CON = 0x80;

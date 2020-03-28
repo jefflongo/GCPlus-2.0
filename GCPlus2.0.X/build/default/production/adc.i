@@ -26309,7 +26309,7 @@ void ADCInit(uint8_t sxCh, uint8_t syCh, uint8_t cxCh, uint8_t cyCh);
 # 32 "adc.c"
 uint8_t ADCChannels[6] = {
 
-0x02, 0x03, 0x00, 0x01, 0x13, 0x14
+0x11, 0x12, 0x13, 0x14, 0x15, 0x10
 };
 
 uint8_t ADCValues[6] = {

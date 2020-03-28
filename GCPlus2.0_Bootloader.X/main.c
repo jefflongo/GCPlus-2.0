@@ -122,7 +122,7 @@ void main(void) {
 
     configInit();
     if (config.triggersMode == TRIG_MODE_ANALOG) {
-        ANSELC |= 0x18; //Enable analog on triggers
+        ANSELC |= 0x21; //Enable analog on triggers
     }
 
     ADCInit(config.SXChan, config.SYChan, config.CXChan, config.CYChan);
@@ -137,6 +137,7 @@ void main(void) {
     }
 
     buttonsBuildLUTs();
+    buttonsSetOrigins(config.triggersMode);
 
     INTCON0 = 0x80; //Interrupts enabled with no priority
 
@@ -183,17 +184,7 @@ void main(void) {
 
                 case SI_CMD_ORIGINS:
                 case SI_CMD_CALIB:
-                    msgAnswer[0] = 0x00;
-                    msgAnswer[1] = 0x80;
-                    msgAnswer[2] = 0x80;
-                    msgAnswer[3] = 0x80;
-                    msgAnswer[4] = 0x80;
-                    msgAnswer[5] = 0x80;
-                    msgAnswer[6] = 0x00;
-                    msgAnswer[7] = 0x00;
-                    msgAnswer[8] = 0x00;
-                    msgAnswer[9] = 0x00;
-                    SISendMessage(msgAnswer, 10);
+                    SISendMessage(buttonsGetOrigins(), 10);
                 break;
 
                 case GCP_CMD_LOCKUNLOCK:

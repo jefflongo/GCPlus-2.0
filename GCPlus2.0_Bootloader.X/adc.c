@@ -31,7 +31,7 @@ adc.c: Implements automatic scanning of ADC channels through DMA
 
 uint8_t ADCChannels[ADC_NCHANNELS] = {
     //SX, SY,   CX,   CY,   R,   L
-    0x02, 0x03, 0x00, 0x01, 0x13, 0x14
+    0x11, 0x12, 0x13, 0x14, 0x15, 0x10
 };
 
 uint8_t ADCValues[ADC_NCHANNELS] = {
