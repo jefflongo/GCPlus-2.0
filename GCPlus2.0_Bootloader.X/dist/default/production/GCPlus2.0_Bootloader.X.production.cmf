@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\jeffa\AppData\Local\Temp\sc84.o
+$C:\Users\jeffa\AppData\Local\Temp\s4po.o
 idloc IDLOC 0 200000 200000 10 1
 init CODE 0 1A 1A 4 1
 reset_vec CODE 0 0 0 4 1
@@ -833,82 +833,82 @@ F8 text0 CODE >149:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\ma
 54A text0 CODE >157:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\main.c
 5D2 text0 CODE >452:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\main.c
 5D6 text0 CODE >453:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0_Bootloader.X\main.c
-FA2 cinit CODE >9165:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FA2 cinit CODE >9167:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FA2 cinit CODE >9170:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FA2 cinit CODE >9259:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FA4 cinit CODE >9260:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FA6 cinit CODE >9261:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FA8 cinit CODE >9262:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FAA cinit CODE >9263:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FAC cinit CODE >9264:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FAE cinit CODE >9265:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FB2 cinit CODE >9266:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FB6 cinit CODE >9267:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FB6 cinit CODE >9268:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FB8 cinit CODE >9269:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FBE cinit CODE >9270:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FC0 cinit CODE >9271:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FC2 cinit CODE >9272:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FC4 cinit CODE >9276:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FC8 cinit CODE >9277:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FCC cinit CODE >9278:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FCC cinit CODE >9279:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FCE cinit CODE >9280:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FD0 cinit CODE >9281:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FD2 cinit CODE >9282:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FD4 cinit CODE >9283:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FD6 cinit CODE >9284:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FD8 cinit CODE >9287:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FDC cinit CODE >9288:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FE0 cinit CODE >9289:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FE0 cinit CODE >9290:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FE2 cinit CODE >9291:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FE4 cinit CODE >9292:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FE6 cinit CODE >9293:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FE8 cinit CODE >9294:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FEA cinit CODE >9295:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FEC cinit CODE >9298:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FF0 cinit CODE >9299:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FF4 cinit CODE >9300:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FF4 cinit CODE >9301:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FF6 cinit CODE >9302:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FF8 cinit CODE >9303:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FFA cinit CODE >9304:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FFC cinit CODE >9305:C:\Users\jeffa\AppData\Local\Temp\sc84.
-FFE cinit CODE >9306:C:\Users\jeffa\AppData\Local\Temp\sc84.
-1000 cinit CODE >9309:C:\Users\jeffa\AppData\Local\Temp\sc84.
-1004 cinit CODE >9310:C:\Users\jeffa\AppData\Local\Temp\sc84.
-1008 cinit CODE >9311:C:\Users\jeffa\AppData\Local\Temp\sc84.
-1008 cinit CODE >9312:C:\Users\jeffa\AppData\Local\Temp\sc84.
-100A cinit CODE >9313:C:\Users\jeffa\AppData\Local\Temp\sc84.
-100C cinit CODE >9314:C:\Users\jeffa\AppData\Local\Temp\sc84.
-100E cinit CODE >9315:C:\Users\jeffa\AppData\Local\Temp\sc84.
-1010 cinit CODE >9316:C:\Users\jeffa\AppData\Local\Temp\sc84.
-1012 cinit CODE >9317:C:\Users\jeffa\AppData\Local\Temp\sc84.
-1014 cinit CODE >9320:C:\Users\jeffa\AppData\Local\Temp\sc84.
-1018 cinit CODE >9321:C:\Users\jeffa\AppData\Local\Temp\sc84.
-101A cinit CODE >9322:C:\Users\jeffa\AppData\Local\Temp\sc84.
-101A cinit CODE >9323:C:\Users\jeffa\AppData\Local\Temp\sc84.
-101C cinit CODE >9324:C:\Users\jeffa\AppData\Local\Temp\sc84.
-101E cinit CODE >9325:C:\Users\jeffa\AppData\Local\Temp\sc84.
-1020 cinit CODE >9328:C:\Users\jeffa\AppData\Local\Temp\sc84.
-1024 cinit CODE >9329:C:\Users\jeffa\AppData\Local\Temp\sc84.
-1026 cinit CODE >9330:C:\Users\jeffa\AppData\Local\Temp\sc84.
-1026 cinit CODE >9331:C:\Users\jeffa\AppData\Local\Temp\sc84.
-1028 cinit CODE >9332:C:\Users\jeffa\AppData\Local\Temp\sc84.
-102A cinit CODE >9333:C:\Users\jeffa\AppData\Local\Temp\sc84.
-102C cinit CODE >9341:C:\Users\jeffa\AppData\Local\Temp\sc84.
-102E cinit CODE >9342:C:\Users\jeffa\AppData\Local\Temp\sc84.
-1030 cinit CODE >9343:C:\Users\jeffa\AppData\Local\Temp\sc84.
-1032 cinit CODE >9344:C:\Users\jeffa\AppData\Local\Temp\sc84.
-1034 cinit CODE >9345:C:\Users\jeffa\AppData\Local\Temp\sc84.
-1036 cinit CODE >9346:C:\Users\jeffa\AppData\Local\Temp\sc84.
-1038 cinit CODE >9352:C:\Users\jeffa\AppData\Local\Temp\sc84.
-1038 cinit CODE >9355:C:\Users\jeffa\AppData\Local\Temp\sc84.
-103A cinit CODE >9356:C:\Users\jeffa\AppData\Local\Temp\sc84.
-103C cinit CODE >9357:C:\Users\jeffa\AppData\Local\Temp\sc84.
-103E cinit CODE >9358:C:\Users\jeffa\AppData\Local\Temp\sc84.
+FA2 cinit CODE >9165:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FA2 cinit CODE >9167:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FA2 cinit CODE >9170:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FA2 cinit CODE >9259:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FA4 cinit CODE >9260:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FA6 cinit CODE >9261:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FA8 cinit CODE >9262:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FAA cinit CODE >9263:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FAC cinit CODE >9264:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FAE cinit CODE >9265:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FB2 cinit CODE >9266:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FB6 cinit CODE >9267:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FB6 cinit CODE >9268:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FB8 cinit CODE >9269:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FBE cinit CODE >9270:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FC0 cinit CODE >9271:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FC2 cinit CODE >9272:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FC4 cinit CODE >9276:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FC8 cinit CODE >9277:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FCC cinit CODE >9278:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FCC cinit CODE >9279:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FCE cinit CODE >9280:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FD0 cinit CODE >9281:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FD2 cinit CODE >9282:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FD4 cinit CODE >9283:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FD6 cinit CODE >9284:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FD8 cinit CODE >9287:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FDC cinit CODE >9288:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FE0 cinit CODE >9289:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FE0 cinit CODE >9290:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FE2 cinit CODE >9291:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FE4 cinit CODE >9292:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FE6 cinit CODE >9293:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FE8 cinit CODE >9294:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FEA cinit CODE >9295:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FEC cinit CODE >9298:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FF0 cinit CODE >9299:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FF4 cinit CODE >9300:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FF4 cinit CODE >9301:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FF6 cinit CODE >9302:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FF8 cinit CODE >9303:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FFA cinit CODE >9304:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FFC cinit CODE >9305:C:\Users\jeffa\AppData\Local\Temp\s4po.
+FFE cinit CODE >9306:C:\Users\jeffa\AppData\Local\Temp\s4po.
+1000 cinit CODE >9309:C:\Users\jeffa\AppData\Local\Temp\s4po.
+1004 cinit CODE >9310:C:\Users\jeffa\AppData\Local\Temp\s4po.
+1008 cinit CODE >9311:C:\Users\jeffa\AppData\Local\Temp\s4po.
+1008 cinit CODE >9312:C:\Users\jeffa\AppData\Local\Temp\s4po.
+100A cinit CODE >9313:C:\Users\jeffa\AppData\Local\Temp\s4po.
+100C cinit CODE >9314:C:\Users\jeffa\AppData\Local\Temp\s4po.
+100E cinit CODE >9315:C:\Users\jeffa\AppData\Local\Temp\s4po.
+1010 cinit CODE >9316:C:\Users\jeffa\AppData\Local\Temp\s4po.
+1012 cinit CODE >9317:C:\Users\jeffa\AppData\Local\Temp\s4po.
+1014 cinit CODE >9320:C:\Users\jeffa\AppData\Local\Temp\s4po.
+1018 cinit CODE >9321:C:\Users\jeffa\AppData\Local\Temp\s4po.
+101A cinit CODE >9322:C:\Users\jeffa\AppData\Local\Temp\s4po.
+101A cinit CODE >9323:C:\Users\jeffa\AppData\Local\Temp\s4po.
+101C cinit CODE >9324:C:\Users\jeffa\AppData\Local\Temp\s4po.
+101E cinit CODE >9325:C:\Users\jeffa\AppData\Local\Temp\s4po.
+1020 cinit CODE >9328:C:\Users\jeffa\AppData\Local\Temp\s4po.
+1024 cinit CODE >9329:C:\Users\jeffa\AppData\Local\Temp\s4po.
+1026 cinit CODE >9330:C:\Users\jeffa\AppData\Local\Temp\s4po.
+1026 cinit CODE >9331:C:\Users\jeffa\AppData\Local\Temp\s4po.
+1028 cinit CODE >9332:C:\Users\jeffa\AppData\Local\Temp\s4po.
+102A cinit CODE >9333:C:\Users\jeffa\AppData\Local\Temp\s4po.
+102C cinit CODE >9341:C:\Users\jeffa\AppData\Local\Temp\s4po.
+102E cinit CODE >9342:C:\Users\jeffa\AppData\Local\Temp\s4po.
+1030 cinit CODE >9343:C:\Users\jeffa\AppData\Local\Temp\s4po.
+1032 cinit CODE >9344:C:\Users\jeffa\AppData\Local\Temp\s4po.
+1034 cinit CODE >9345:C:\Users\jeffa\AppData\Local\Temp\s4po.
+1036 cinit CODE >9346:C:\Users\jeffa\AppData\Local\Temp\s4po.
+1038 cinit CODE >9352:C:\Users\jeffa\AppData\Local\Temp\s4po.
+1038 cinit CODE >9355:C:\Users\jeffa\AppData\Local\Temp\s4po.
+103A cinit CODE >9356:C:\Users\jeffa\AppData\Local\Temp\s4po.
+103C cinit CODE >9357:C:\Users\jeffa\AppData\Local\Temp\s4po.
+103E cinit CODE >9358:C:\Users\jeffa\AppData\Local\Temp\s4po.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -948,7 +948,7 @@ _PWM5CON 3F6E 0 ABS 0 - dist/default/production\GCPlus2.0_Bootloader.X.productio
 _PWM5DCH 3F6D 0 ABS 0 - dist/default/production\GCPlus2.0_Bootloader.X.production.o
 _PWM5DCL 3F6C 0 ABS 0 - dist/default/production\GCPlus2.0_Bootloader.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\GCPlus2.0_Bootloader.X.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\jeffa\AppData\Local\Temp\sc84.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\jeffa\AppData\Local\Temp\s4po.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\GCPlus2.0_Bootloader.X.production.o
 _NCO1ACCL 3F38 0 ABS 0 - dist/default/production\GCPlus2.0_Bootloader.X.production.o
 _TBLPTRH 3FF7 0 ABS 0 - dist/default/production\GCPlus2.0_Bootloader.X.production.o
@@ -964,11 +964,11 @@ _T6PR 3F93 0 ABS 0 - dist/default/production\GCPlus2.0_Bootloader.X.production.o
 _WPUA 3A41 0 ABS 0 - dist/default/production\GCPlus2.0_Bootloader.X.production.o
 _WPUB 3A51 0 ABS 0 - dist/default/production\GCPlus2.0_Bootloader.X.production.o
 _WPUC 3A61 0 ABS 0 - dist/default/production\GCPlus2.0_Bootloader.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\jeffa\AppData\Local\Temp\sc84.o
+___sp 0 0 STACK 2 stack C:\Users\jeffa\AppData\Local\Temp\s4po.o
 _main 1E 0 CODE 0 text0 dist/default/production\GCPlus2.0_Bootloader.X.production.o
 __end_of_buttonsInit 1256 0 CODE 0 text11 dist/default/production\GCPlus2.0_Bootloader.X.production.o
 EEPROMWriteByte@address 2B 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0_Bootloader.X.production.o
-start 1A 0 CODE 0 init C:\Users\jeffa\AppData\Local\Temp\sc84.o
+start 1A 0 CODE 0 init C:\Users\jeffa\AppData\Local\Temp\s4po.o
 main@msgAnswer C8 0 BANK0 1 cstackBANK0 dist/default/production\GCPlus2.0_Bootloader.X.production.o
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\GCPlus2.0_Bootloader.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\GCPlus2.0_Bootloader.X.production.o
@@ -984,11 +984,11 @@ __end_of_SIInit 10CC 0 CODE 0 text23 dist/default/production\GCPlus2.0_Bootloade
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\GCPlus2.0_Bootloader.X.production.o
 ADCInit@i 32 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0_Bootloader.X.production.o
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\GCPlus2.0_Bootloader.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\jeffa\AppData\Local\Temp\sc84.o
-intlevel0 0 0 CODE 0 text C:\Users\jeffa\AppData\Local\Temp\sc84.o
-intlevel1 0 0 CODE 0 text C:\Users\jeffa\AppData\Local\Temp\sc84.o
-intlevel2 0 0 CODE 0 text C:\Users\jeffa\AppData\Local\Temp\sc84.o
-intlevel3 0 0 CODE 0 text C:\Users\jeffa\AppData\Local\Temp\sc84.o
+__accesstop 60 0 ABS 0 - C:\Users\jeffa\AppData\Local\Temp\s4po.o
+intlevel0 0 0 CODE 0 text C:\Users\jeffa\AppData\Local\Temp\s4po.o
+intlevel1 0 0 CODE 0 text C:\Users\jeffa\AppData\Local\Temp\s4po.o
+intlevel2 0 0 CODE 0 text C:\Users\jeffa\AppData\Local\Temp\s4po.o
+intlevel3 0 0 CODE 0 text C:\Users\jeffa\AppData\Local\Temp\s4po.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\GCPlus2.0_Bootloader.X.production.o
 _buttonsBuildLUT$1169 43 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0_Bootloader.X.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\GCPlus2.0_Bootloader.X.production.o
@@ -1021,8 +1021,8 @@ _ANSELB 3A50 0 ABS 0 - dist/default/production\GCPlus2.0_Bootloader.X.production
 _ANSELC 3A60 0 ABS 0 - dist/default/production\GCPlus2.0_Bootloader.X.production.o
 __size_of_SIGetCommand 0 0 ABS 0 - dist/default/production\GCPlus2.0_Bootloader.X.production.o
 ___awdiv@dividend 30 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0_Bootloader.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\jeffa\AppData\Local\Temp\sc84.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\jeffa\AppData\Local\Temp\sc84.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\jeffa\AppData\Local\Temp\s4po.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\jeffa\AppData\Local\Temp\s4po.o
 _SIByteCounter 1F 0 COMRAM 1 bssCOMRAM dist/default/production\GCPlus2.0_Bootloader.X.production.o
 _configFlashAll 16B0 0 CODE 0 text4 dist/default/production\GCPlus2.0_Bootloader.X.production.o
 __size_of_SISendMessage 0 0 ABS 0 - dist/default/production\GCPlus2.0_Bootloader.X.production.o
@@ -1139,7 +1139,7 @@ _NVMCON1 39E5 0 ABS 0 - dist/default/production\GCPlus2.0_Bootloader.X.productio
 _NVMCON2 39E6 0 ABS 0 - dist/default/production\GCPlus2.0_Bootloader.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\GCPlus2.0_Bootloader.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\GCPlus2.0_Bootloader.X.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\jeffa\AppData\Local\Temp\sc84.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\jeffa\AppData\Local\Temp\s4po.o
 __end_of_portsInit 1412 0 CODE 0 text1 dist/default/production\GCPlus2.0_Bootloader.X.production.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\GCPlus2.0_Bootloader.X.production.o
 __Hconfig 30000A 0 CONFIG 0 config dist/default/production\GCPlus2.0_Bootloader.X.production.o
@@ -1365,8 +1365,8 @@ __Lfardata 0 0 FARRAM 0 fardata dist/default/production\GCPlus2.0_Bootloader.X.p
 __size_of_hi_int 0 0 ABS 0 - dist/default/production\GCPlus2.0_Bootloader.X.production.o
 _buttonsGetOrigins 156A 0 CODE 0 text13 dist/default/production\GCPlus2.0_Bootloader.X.production.o
 __end_of_buttonsSetOrigins 1476 0 CODE 0 text8 dist/default/production\GCPlus2.0_Bootloader.X.production.o
-stackhi 7FF 0 ABS 0 - C:\Users\jeffa\AppData\Local\Temp\sc84.o
-stacklo 600 0 ABS 0 - C:\Users\jeffa\AppData\Local\Temp\sc84.o
+stackhi 7FF 0 ABS 0 - C:\Users\jeffa\AppData\Local\Temp\s4po.o
+stacklo 600 0 ABS 0 - C:\Users\jeffa\AppData\Local\Temp\s4po.o
 _ButtonsID 21 0 COMRAM 1 bssCOMRAM dist/default/production\GCPlus2.0_Bootloader.X.production.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\GCPlus2.0_Bootloader.X.production.o
 _DMA1CON0 3BFC 0 ABS 0 - dist/default/production\GCPlus2.0_Bootloader.X.production.o
@@ -1484,7 +1484,7 @@ __Ltext31 0 0 ABS 0 text31 dist/default/production\GCPlus2.0_Bootloader.X.produc
 __Ltext32 0 0 ABS 0 text32 dist/default/production\GCPlus2.0_Bootloader.X.production.o
 __Ltext33 0 0 ABS 0 text33 dist/default/production\GCPlus2.0_Bootloader.X.production.o
 __end_of_configInit 14CE 0 CODE 0 text2 dist/default/production\GCPlus2.0_Bootloader.X.production.o
-__ramtop 800 0 RAM 0 ramtop C:\Users\jeffa\AppData\Local\Temp\sc84.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\jeffa\AppData\Local\Temp\s4po.o
 _SMT1SIGPPS 3AD2 0 ABS 0 - dist/default/production\GCPlus2.0_Bootloader.X.production.o
 _SIConfigureCLC C52 0 CODE 0 text24 dist/default/production\GCPlus2.0_Bootloader.X.production.o
 __size_of_ADCInit 0 0 ABS 0 - dist/default/production\GCPlus2.0_Bootloader.X.production.o

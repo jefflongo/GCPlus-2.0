@@ -6,7 +6,7 @@ Linker command line:
   -pivt0x8=08h -cs \
   -h+dist/default/production\GCPlus2.0_Bootloader.X.production.sym \
   --cmf=dist/default/production\GCPlus2.0_Bootloader.X.production.cmf -z \
-  -Q18F25K42 -oC:\Users\jeffa\AppData\Local\Temp\sc84.2 \
+  -Q18F25K42 -oC:\Users\jeffa\AppData\Local\Temp\s4po.2 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/GCPlus2.0_Bootloader.X.production.map -E1 \
   -ver=XC8 -ASTACK=0600h-07FFh -pstack=STACK -ACODE=00h-01FFFh \
@@ -24,7 +24,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\jeffa\AppData\Local\Temp\sc84.o \
+  C:\Users\jeffa\AppData\Local\Temp\s4po.o \
   dist/default/production\GCPlus2.0_Bootloader.X.production.o 
 
 Object code version is 3.11
@@ -37,7 +37,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\jeffa\AppData\Local\Temp\sc84.o
+C:\Users\jeffa\AppData\Local\Temp\s4po.o
                 init                                 1A       1A        4        4       0
                 reset_vec                             0        0        4        0       0
                 idloc                            200000   200000       10   200000       0

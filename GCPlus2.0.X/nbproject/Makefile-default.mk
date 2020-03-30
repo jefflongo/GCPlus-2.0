@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c config.c si.c adc.c buttons.c nvm.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c config.c si.c adc.c buttons.c nvm.c sticks_lut.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.p1 ${OBJECTDIR}/config.p1 ${OBJECTDIR}/si.p1 ${OBJECTDIR}/adc.p1 ${OBJECTDIR}/buttons.p1 ${OBJECTDIR}/nvm.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.p1.d ${OBJECTDIR}/config.p1.d ${OBJECTDIR}/si.p1.d ${OBJECTDIR}/adc.p1.d ${OBJECTDIR}/buttons.p1.d ${OBJECTDIR}/nvm.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.p1 ${OBJECTDIR}/config.p1 ${OBJECTDIR}/si.p1 ${OBJECTDIR}/adc.p1 ${OBJECTDIR}/buttons.p1 ${OBJECTDIR}/nvm.p1 ${OBJECTDIR}/sticks_lut.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.p1.d ${OBJECTDIR}/config.p1.d ${OBJECTDIR}/si.p1.d ${OBJECTDIR}/adc.p1.d ${OBJECTDIR}/buttons.p1.d ${OBJECTDIR}/nvm.p1.d ${OBJECTDIR}/sticks_lut.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.p1 ${OBJECTDIR}/config.p1 ${OBJECTDIR}/si.p1 ${OBJECTDIR}/adc.p1 ${OBJECTDIR}/buttons.p1 ${OBJECTDIR}/nvm.p1
+OBJECTFILES=${OBJECTDIR}/main.p1 ${OBJECTDIR}/config.p1 ${OBJECTDIR}/si.p1 ${OBJECTDIR}/adc.p1 ${OBJECTDIR}/buttons.p1 ${OBJECTDIR}/nvm.p1 ${OBJECTDIR}/sticks_lut.p1
 
 # Source Files
-SOURCEFILES=main.c config.c si.c adc.c buttons.c nvm.c
+SOURCEFILES=main.c config.c si.c adc.c buttons.c nvm.c sticks_lut.c
 
 
 CFLAGS=
@@ -141,6 +141,14 @@ ${OBJECTDIR}/nvm.p1: nvm.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/nvm.d ${OBJECTDIR}/nvm.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/nvm.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/sticks_lut.p1: sticks_lut.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/sticks_lut.p1.d 
+	@${RM} ${OBJECTDIR}/sticks_lut.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fno-short-double -fno-short-float -memi=wordwrite -mrom=default,-0-2003 -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file --fill=0x4347,0x322B@0x2000:0x2003 -mcodeoffset=2004  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/sticks_lut.p1 sticks_lut.c 
+	@-${MV} ${OBJECTDIR}/sticks_lut.d ${OBJECTDIR}/sticks_lut.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/sticks_lut.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -189,6 +197,14 @@ ${OBJECTDIR}/nvm.p1: nvm.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -memi=wordwrite -mrom=default,-0-2003 -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file --fill=0x4347,0x322B@0x2000:0x2003 -mcodeoffset=2004  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/nvm.p1 nvm.c 
 	@-${MV} ${OBJECTDIR}/nvm.d ${OBJECTDIR}/nvm.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/nvm.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/sticks_lut.p1: sticks_lut.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/sticks_lut.p1.d 
+	@${RM} ${OBJECTDIR}/sticks_lut.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -memi=wordwrite -mrom=default,-0-2003 -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file --fill=0x4347,0x322B@0x2000:0x2003 -mcodeoffset=2004  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c90 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/sticks_lut.p1 sticks_lut.c 
+	@-${MV} ${OBJECTDIR}/sticks_lut.d ${OBJECTDIR}/sticks_lut.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/sticks_lut.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

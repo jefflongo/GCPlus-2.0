@@ -26515,18 +26515,13 @@ N_BUTTONS
 
 void buttonsInit(void);
 void buttonsUpdate(void);
-uint8_t* buttonsGetMessage(uint8_t analogMode, uint8_t triggersMode);
-void buttonsSetOrigins(uint8_t triggersMode);
+uint8_t* buttonsGetMessage(uint8_t analogMode);
+void buttonsSetOrigins();
 uint8_t* buttonsGetOrigins(void);
 void buttonsSetMapByte0(uint8_t* map);
 void buttonsSetMapByte1(uint8_t* map);
 uint8_t* buttonsGetMapByte0(void);
 uint8_t* buttonsGetMapByte1(void);
-
-# 140
-void buttonsBuildLUT(uint8_t* LUT, uint8_t minVal, uint8_t maxVal, uint8_t origin, uint8_t dz, uint8_t dzMode, uint8_t invert);
-
-void buttonsBuildLUTs(void);
 
 # 69 "si.h"
 void SIInit(void);
@@ -26543,7 +26538,10 @@ void portsInit(void);
 # 62
 void bootBootloader(void);
 
-# 47 "buttons.c"
+# 28 "sticks_lut.h"
+extern const uint8_t sticks_lut[128][128];
+
+# 48 "buttons.c"
 inButtons_t prevButtons;
 outButtons_t outButtons;
 origins_t origins;
@@ -26552,10 +26550,6 @@ uint8_t buttonsTimers[N_BUTTONS];
 uint8_t buttonsMessage[10];
 uint8_t buttonsMapByte0[N_BUTTONS];
 uint8_t buttonsMapByte1[N_BUTTONS];
-uint8_t LUT_SX[0x100];
-uint8_t LUT_SY[0x100];
-uint8_t LUT_CX[0x100];
-uint8_t LUT_CY[0x100];
 
 void buttonsInit(void) {
 
@@ -26661,19 +26655,37 @@ outButtons.RA = 0xFF;
 }
 }
 
-uint8_t* buttonsGetMessage(uint8_t analogMode, uint8_t triggersMode) {
+uint8_t* buttonsGetMessage(uint8_t analogMode) {
+uint8_t correction_type;
+uint8_t cx, cy;
 buttonsMessage[0] = outButtons.byte0;
 buttonsMessage[1] = outButtons.byte1;
-buttonsMessage[2] = LUT_SX[ADCValues[0]];
-buttonsMessage[3] = LUT_SY[ADCValues[1]];
 
-uint8_t ra, la;
-if (triggersMode == 0) {
-ra = outButtons.RA;
-la = outButtons.LA;
+correction_type = sticks_lut[ADCValues[0] + 0x7F][ADCValues[1] + 0x7F];
+
+if (correction_type & 0x01) {
+buttonsMessage[2] = ADCValues[0] >= 0x80 ? 204 : -204;
+buttonsMessage[3] = ADCValues[1] >= 0x80 ? 204 : -204;
+} else if (correction_type & 0x02) {
+buttonsMessage[2] = ADCValues[0] >= 0x80 ? 204 : -204;
+buttonsMessage[3] = ADCValues[1] >= 0x80 ? 204 : -204;
+} else if (correction_type & 0x04) {
+buttonsMessage[2] = ADCValues[0] >= 0x80 ? 183 : -183;
+buttonsMessage[3] = ADCValues[1] >= 0x80 ? 183 : -183;
 } else {
-ra = ADCValues[4];
-la = ADCValues[5];
+buttonsMessage[2] = ADCValues[0];
+buttonsMessage[3] = ADCValues[1];
+}
+
+if (correction_type & 0x40) {
+cx = ADCValues[2] >= 0x80 ? 255 : -255;
+cy = 0;
+} else if (correction_type & 0x80) {
+cx = 255;
+cy = ADCValues[3] >= 0x80 ? 0 : -0;
+} else {
+cx = ADCValues[2];
+cy = ADCValues[3];
 }
 
 switch (analogMode) {
@@ -26681,37 +26693,37 @@ case 0:
 case 5:
 case 6:
 case 7:
-buttonsMessage[4] = LUT_CX[ADCValues[2]];
-buttonsMessage[5] = LUT_CY[ADCValues[3]];
+buttonsMessage[4] = cx;
+buttonsMessage[5] = cy;
 
-buttonsMessage[6] = (uint8_t)((uint8_t)(la & 0xF0U) | (uint8_t)(ra >> 4U));
+buttonsMessage[6] = (uint8_t)((uint8_t)(ADCValues[5] & 0xF0U) | (uint8_t)(ADCValues[4] >> 4U));
 buttonsMessage[7] = 0x00;
 break;
 
 case 1:
-buttonsMessage[4] = (uint8_t)((uint8_t)(LUT_CX[ADCValues[2]] & 0xF0U) | (uint8_t)(LUT_CY[ADCValues[3]] >> 4U));
-buttonsMessage[5] = la;
-buttonsMessage[6] = ra;
+buttonsMessage[4] = (uint8_t)((uint8_t)(cx & 0xF0U) | (uint8_t)(cy >> 4U));
+buttonsMessage[5] = ADCValues[5];
+buttonsMessage[6] = ADCValues[4];
 buttonsMessage[7] = 0x00;
 break;
 
 case 2:
-buttonsMessage[4] = (uint8_t)((uint8_t)(LUT_CX[ADCValues[2]] & 0xF0U) | (uint8_t)(LUT_CY[ADCValues[3]] >> 4U));
-buttonsMessage[5] = (uint8_t)((uint8_t)(la & 0xF0U) | (uint8_t)(ra >> 4U));
+buttonsMessage[4] = (uint8_t)((uint8_t)(cx & 0xF0U) | (uint8_t)(cy >> 4U));
+buttonsMessage[5] = (uint8_t)((uint8_t)(ADCValues[5] & 0xF0U) | (uint8_t)(ADCValues[4] >> 4U));
 buttonsMessage[6] = 0x00;
 buttonsMessage[7] = 0x00;
 break;
 
 case 3:
-buttonsMessage[4] = LUT_CX[ADCValues[2]];
-buttonsMessage[5] = LUT_CY[ADCValues[3]];
-buttonsMessage[6] = la;
-buttonsMessage[7] = ra;
+buttonsMessage[4] = cx;
+buttonsMessage[5] = cy;
+buttonsMessage[6] = ADCValues[5];
+buttonsMessage[7] = ADCValues[4];
 break;
 
 case 4:
-buttonsMessage[4] = LUT_CX[ADCValues[2]];
-buttonsMessage[5] = LUT_CY[ADCValues[3]];
+buttonsMessage[4] = cx;
+buttonsMessage[5] = cy;
 buttonsMessage[6] = 0x00;
 buttonsMessage[7] = 0x00;
 break;
@@ -26720,18 +26732,13 @@ break;
 return buttonsMessage;
 }
 
-void buttonsSetOrigins(uint8_t triggersMode) {
-origins.SX = LUT_SX[ADCValues[0]];
-origins.SY = LUT_SY[ADCValues[1]];
-origins.CX = LUT_CX[ADCValues[2]];
-origins.CY = LUT_CY[ADCValues[3]];
-if (triggersMode == 0) {
-origins.L = outButtons.LA;
-origins.R = outButtons.RA;
-} else {
+void buttonsSetOrigins(void) {
+origins.SX = ADCValues[0];
+origins.SY = ADCValues[1];
+origins.CX = ADCValues[2];
+origins.CY = ADCValues[3];
 origins.L = ADCValues[5];
 origins.R = ADCValues[4];
-}
 }
 
 uint8_t* buttonsGetOrigins(void) {
@@ -26783,38 +26790,4 @@ buttonsMessage[i] = buttonsMapByte1[i];
 }
 
 return buttonsMessage;
-}
-
-void buttonsBuildLUT(uint8_t* LUT, uint8_t minVal, uint8_t maxVal, uint8_t origin, uint8_t dz, uint8_t dzMode, uint8_t invert) {
-int16_t i;
-int16_t range = ((int16_t)maxVal - (int16_t)minVal) / 2;
-
-for (i = 0; i < 256; i++) {
-int16_t radius = i - origin;
-if (invert) radius = -radius;
-if (((radius >= 0) ? (radius) : (-radius)) < (int16_t)dz) {
-LUT[i] = 0x80;
-} else {
-int16_t tempVal;
-if (dzMode == 0) {
-tempVal = radius * 127 / range;
-} else {
-if (radius > 0)
-tempVal = (radius - dz) * 127 / (range - dz);
-else
-tempVal = (radius + dz) * 127 / (range - dz);
-}
-tempVal += 128;
-if (tempVal < 0) tempVal = 0;
-if (tempVal > 0xFF) tempVal = 0xFF;
-LUT[i] = (uint8_t)tempVal & 0xFFU;
-}
-}
-}
-
-void buttonsBuildLUTs(void) {
-buttonsBuildLUT(LUT_SX, config.SXMin, config.SXMax, ADCValues[0], config.SDeadzone, config.deadzoneMode, config.SXInvert);
-buttonsBuildLUT(LUT_SY, config.SYMin, config.SYMax, ADCValues[1], config.SDeadzone, config.deadzoneMode, config.SYInvert);
-buttonsBuildLUT(LUT_CX, config.CXMin, config.CXMax, ADCValues[2], config.CDeadzone, config.deadzoneMode, config.CXInvert);
-buttonsBuildLUT(LUT_CY, config.CYMin, config.CYMax, ADCValues[3], config.CDeadzone, config.deadzoneMode, config.CYInvert);
 }

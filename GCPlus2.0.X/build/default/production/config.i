@@ -26515,18 +26515,13 @@ N_BUTTONS
 
 void buttonsInit(void);
 void buttonsUpdate(void);
-uint8_t* buttonsGetMessage(uint8_t analogMode, uint8_t triggersMode);
-void buttonsSetOrigins(uint8_t triggersMode);
+uint8_t* buttonsGetMessage(uint8_t analogMode);
+void buttonsSetOrigins();
 uint8_t* buttonsGetOrigins(void);
 void buttonsSetMapByte0(uint8_t* map);
 void buttonsSetMapByte1(uint8_t* map);
 uint8_t* buttonsGetMapByte0(void);
 uint8_t* buttonsGetMapByte1(void);
-
-# 140
-void buttonsBuildLUT(uint8_t* LUT, uint8_t minVal, uint8_t maxVal, uint8_t origin, uint8_t dz, uint8_t dzMode, uint8_t invert);
-
-void buttonsBuildLUTs(void);
 
 # 69 "si.h"
 void SIInit(void);

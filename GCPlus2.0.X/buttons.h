@@ -119,26 +119,12 @@ enum {
 
 void buttonsInit(void);
 void buttonsUpdate(void);
-uint8_t* buttonsGetMessage(uint8_t analogMode, uint8_t triggersMode);
-void buttonsSetOrigins(uint8_t triggersMode);
+uint8_t* buttonsGetMessage(uint8_t analogMode);
+void buttonsSetOrigins();
 uint8_t* buttonsGetOrigins(void);
 void buttonsSetMapByte0(uint8_t* map);
 void buttonsSetMapByte1(uint8_t* map);
 uint8_t* buttonsGetMapByte0(void);
 uint8_t* buttonsGetMapByte1(void);
-
-/*! \fn void buttonsBuildLUT(uint8_t* LUT, uint8_t minVal, uint8_t maxVal, uint8_t origin, uint8_t dz, uint8_t invert);
-    \brief builds a 256 bytes LUT for analog inputs scaling
-    \param LUT the destination address
-    \param minVal the minimum value of the input range
-    \param maxVal the maximum value of the input range
-    \param origin the center position of the input value
-    \param dz the deadzone radius of the input range
-    \param dzMode the deadzone mode from configuration EEPROM
-    \param invert a flag to invert the axis
-*/
-void buttonsBuildLUT(uint8_t* LUT, uint8_t minVal, uint8_t maxVal, uint8_t origin, uint8_t dz, uint8_t dzMode, uint8_t invert);
-
-void buttonsBuildLUTs(void);
 
 #endif

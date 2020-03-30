@@ -123,8 +123,7 @@ void main(void) {
         configFlashAll();
     }
 
-    buttonsBuildLUTs();
-    buttonsSetOrigins(config.triggersMode);
+    buttonsSetOrigins();
 
     INTCON0 = 0x80; //Interrupts enabled with no priority
 
@@ -165,7 +164,7 @@ void main(void) {
                         break;
                     }
                     //Answer
-                    SISendMessage(buttonsGetMessage(cmd[1], config.triggersMode), 8);
+                    SISendMessage(buttonsGetMessage(cmd[1]), 8);
                 break;
 
                 case SI_CMD_ORIGINS:
@@ -322,7 +321,6 @@ void main(void) {
 
                 case GCP_CMD_REBUILDLUT:
                     if (!gcpLocked) {
-                        buttonsBuildLUTs();
                         msgAnswer[0] = GCP_ERR_NONE;
                         SISendMessage(msgAnswer, 1);
                     } else {

@@ -45,10 +45,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _configSetDefault `(v ~T0 @X0 0 ef ]
 "81
 [v _configFlashAll `(v ~T0 @X0 0 ef ]
-"142 buttons.h
-[v _buttonsBuildLUTs `(v ~T0 @X0 0 ef ]
-"123
-[v _buttonsSetOrigins `(v ~T0 @X0 0 ef1`uc ]
+"123 buttons.h
+[v _buttonsSetOrigins `(v ~T0 @X0 0 ef ]
 "44992 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic18f25k42.h
 [v _INTCON0 `Vuc ~T0 @X0 0 e@16338 ]
 "121 buttons.h
@@ -58,7 +56,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "71
 [v _SISendMessage `(v ~T0 @X0 0 ef2`*uc`uc ]
 "122 buttons.h
-[v _buttonsGetMessage `(*uc ~T0 @X0 0 ef2`uc`uc ]
+[v _buttonsGetMessage `(*uc ~T0 @X0 0 ef1`uc ]
 "124
 [v _buttonsGetOrigins `(*uc ~T0 @X0 0 ef ]
 "32 nvm.h
@@ -17715,15 +17713,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;buttons.h: 118: } ButtonsID;
 [; ;buttons.h: 120: void buttonsInit(void);
 [; ;buttons.h: 121: void buttonsUpdate(void);
-[; ;buttons.h: 122: uint8_t* buttonsGetMessage(uint8_t analogMode, uint8_t triggersMode);
-[; ;buttons.h: 123: void buttonsSetOrigins(uint8_t triggersMode);
+[; ;buttons.h: 122: uint8_t* buttonsGetMessage(uint8_t analogMode);
+[; ;buttons.h: 123: void buttonsSetOrigins();
 [; ;buttons.h: 124: uint8_t* buttonsGetOrigins(void);
 [; ;buttons.h: 125: void buttonsSetMapByte0(uint8_t* map);
 [; ;buttons.h: 126: void buttonsSetMapByte1(uint8_t* map);
 [; ;buttons.h: 127: uint8_t* buttonsGetMapByte0(void);
 [; ;buttons.h: 128: uint8_t* buttonsGetMapByte1(void);
-[; ;buttons.h: 140: void buttonsBuildLUT(uint8_t* LUT, uint8_t minVal, uint8_t maxVal, uint8_t origin, uint8_t dz, uint8_t dzMode, uint8_t invert);
-[; ;buttons.h: 142: void buttonsBuildLUTs(void);
 [; ;si.h: 69: void SIInit(void);
 [; ;si.h: 70: void SIConfigureCLC(void);
 [; ;si.h: 71: void SISendMessage(uint8_t* msg, uint8_t len);
@@ -17819,705 +17815,699 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 [e :U 2151 ]
 [; ;main.c: 124: }
-[; ;main.c: 126: buttonsBuildLUTs();
+[; ;main.c: 126: buttonsSetOrigins();
 "126
-[e ( _buttonsBuildLUTs ..  ]
-[; ;main.c: 127: buttonsSetOrigins(config.triggersMode);
-"127
-[e ( _buttonsSetOrigins (1 . _config 19 ]
-[; ;main.c: 129: INTCON0 = 0x80;
-"129
+[e ( _buttonsSetOrigins ..  ]
+[; ;main.c: 128: INTCON0 = 0x80;
+"128
 [e = _INTCON0 -> -> 128 `i `uc ]
-[; ;main.c: 131: while (1) {
-"131
+[; ;main.c: 130: while (1) {
+"130
 [e :U 2153 ]
 {
-[; ;main.c: 132: inBut.PORTA = PORTA;
-"132
+[; ;main.c: 131: inBut.PORTA = PORTA;
+"131
 [e = . . _inBut 1 0 _PORTA ]
-[; ;main.c: 133: inBut.PORTB = PORTB;
-"133
+[; ;main.c: 132: inBut.PORTB = PORTB;
+"132
 [e = . . _inBut 1 1 _PORTB ]
-[; ;main.c: 134: inBut.PORTC = PORTC;
-"134
+[; ;main.c: 133: inBut.PORTC = PORTC;
+"133
 [e = . . _inBut 1 2 _PORTC ]
-[; ;main.c: 136: if (inBut.X || inBut.Y || inBut.ST) {
-"136
+[; ;main.c: 135: if (inBut.X || inBut.Y || inBut.ST) {
+"135
 [e $ ! || || != -> . . _inBut 0 10 `i -> -> -> 0 `i `uc `i != -> . . _inBut 0 9 `i -> -> -> 0 `i `uc `i != -> . . _inBut 0 5 `i -> -> -> 0 `i `uc `i 2155  ]
 {
-[; ;main.c: 137: asm("clrwdt");
-"137
+[; ;main.c: 136: asm("clrwdt");
+"136
 [; <" clrwdt ;# ">
-"138
+"137
 }
 [e :U 2155 ]
-[; ;main.c: 138: }
-[; ;main.c: 139: buttonsUpdate();
-"139
+[; ;main.c: 137: }
+[; ;main.c: 138: buttonsUpdate();
+"138
 [e ( _buttonsUpdate ..  ]
-[; ;main.c: 140: cmdLen = SIGetCommand(cmd);
-"140
+[; ;main.c: 139: cmdLen = SIGetCommand(cmd);
+"139
 [e = _cmdLen ( _SIGetCommand (1 &U _cmd ]
-[; ;main.c: 142: if (cmdLen > 0) {
-"142
+[; ;main.c: 141: if (cmdLen > 0) {
+"141
 [e $ ! > -> _cmdLen `i -> 0 `i 2156  ]
 {
-[; ;main.c: 143: switch(cmd[0]) {
-"143
+[; ;main.c: 142: switch(cmd[0]) {
+"142
 [e $U 2158  ]
 {
-[; ;main.c: 144: case 0x00:
-"144
+[; ;main.c: 143: case 0x00:
+"143
 [e :U 2159 ]
-"145
+"144
 [e :U 2160 ]
-[; ;main.c: 145: case 0xFF:
-[; ;main.c: 146: msgAnswer[0] = 0x09;
-"146
+[; ;main.c: 144: case 0xFF:
+[; ;main.c: 145: msgAnswer[0] = 0x09;
+"145
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 9 `i `uc ]
-[; ;main.c: 147: msgAnswer[1] = 0x00;
-"147
+[; ;main.c: 146: msgAnswer[1] = 0x00;
+"146
 [e = *U + &U _msgAnswer * -> -> -> 1 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 148: msgAnswer[2] = 0x03;
-"148
+[; ;main.c: 147: msgAnswer[2] = 0x03;
+"147
 [e = *U + &U _msgAnswer * -> -> -> 2 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 3 `i `uc ]
-[; ;main.c: 149: SISendMessage(msgAnswer, 3);
-"149
+[; ;main.c: 148: SISendMessage(msgAnswer, 3);
+"148
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 3 `i `uc ]
-[; ;main.c: 150: break;
-"150
+[; ;main.c: 149: break;
+"149
 [e $U 2157  ]
-[; ;main.c: 152: case 0x40:
-"152
+[; ;main.c: 151: case 0x40:
+"151
 [e :U 2161 ]
-[; ;main.c: 154: switch (cmd[2]) {
-"154
+[; ;main.c: 153: switch (cmd[2]) {
+"153
 [e $U 2163  ]
 {
-[; ;main.c: 155: case 1:
-"155
-[e :U 2164 ]
-[; ;main.c: 157: break;
-"157
-[e $U 2162  ]
-[; ;main.c: 159: case 2:
-"159
-[e :U 2165 ]
-[; ;main.c: 161: break;
-"161
-[e $U 2162  ]
-[; ;main.c: 163: default:
-"163
-[e :U 2166 ]
-[; ;main.c: 165: break;
-"165
-[e $U 2162  ]
-"166
-}
-[; ;main.c: 166: }
-[e $U 2162  ]
+[; ;main.c: 154: case 1:
 "154
+[e :U 2164 ]
+[; ;main.c: 156: break;
+"156
+[e $U 2162  ]
+[; ;main.c: 158: case 2:
+"158
+[e :U 2165 ]
+[; ;main.c: 160: break;
+"160
+[e $U 2162  ]
+[; ;main.c: 162: default:
+"162
+[e :U 2166 ]
+[; ;main.c: 164: break;
+"164
+[e $U 2162  ]
+"165
+}
+[; ;main.c: 165: }
+[e $U 2162  ]
+"153
 [e :U 2163 ]
 [e [\ *U + &U _cmd * -> -> -> 2 `i `ui `ux -> -> # *U &U _cmd `ui `ux , $ -> -> 1 `i `uc 2164
  , $ -> -> 2 `i `uc 2165
  2166 ]
-"166
+"165
 [e :U 2162 ]
-[; ;main.c: 168: SISendMessage(buttonsGetMessage(cmd[1], config.triggersMode), 8);
+[; ;main.c: 167: SISendMessage(buttonsGetMessage(cmd[1]), 8);
+"167
+[e ( _SISendMessage (2 , ( _buttonsGetMessage (1 *U + &U _cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _cmd `ui `ux -> -> 8 `i `uc ]
+[; ;main.c: 168: break;
 "168
-[e ( _SISendMessage (2 , ( _buttonsGetMessage (2 , *U + &U _cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _cmd `ui `ux . _config 19 -> -> 8 `i `uc ]
-[; ;main.c: 169: break;
-"169
 [e $U 2157  ]
-[; ;main.c: 171: case 0x41:
-"171
+[; ;main.c: 170: case 0x41:
+"170
 [e :U 2167 ]
-"172
+"171
 [e :U 2168 ]
-[; ;main.c: 172: case 0x42:
-[; ;main.c: 173: SISendMessage(buttonsGetOrigins(), 10);
-"173
+[; ;main.c: 171: case 0x42:
+[; ;main.c: 172: SISendMessage(buttonsGetOrigins(), 10);
+"172
 [e ( _SISendMessage (2 , ( _buttonsGetOrigins ..  -> -> 10 `i `uc ]
-[; ;main.c: 174: break;
-"174
+[; ;main.c: 173: break;
+"173
 [e $U 2157  ]
-[; ;main.c: 176: case 0x10:
-"176
+[; ;main.c: 175: case 0x10:
+"175
 [e :U 2169 ]
-[; ;main.c: 177: if ((cmd[1] == 0x47) && (cmd[2] == 0x43) && (cmd[3] == 0x2B) && (cmd[4] == 0x32) && cmdLen == 5) {
-"177
+[; ;main.c: 176: if ((cmd[1] == 0x47) && (cmd[2] == 0x43) && (cmd[3] == 0x2B) && (cmd[4] == 0x32) && cmdLen == 5) {
+"176
 [e $ ! && && && && == -> *U + &U _cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _cmd `ui `ux `i -> 71 `i == -> *U + &U _cmd * -> -> -> 2 `i `ui `ux -> -> # *U &U _cmd `ui `ux `i -> 67 `i == -> *U + &U _cmd * -> -> -> 3 `i `ui `ux -> -> # *U &U _cmd `ui `ux `i -> 43 `i == -> *U + &U _cmd * -> -> -> 4 `i `ui `ux -> -> # *U &U _cmd `ui `ux `i -> 50 `i == -> _cmdLen `i -> 5 `i 2170  ]
 {
-[; ;main.c: 178: gcpLocked = 0;
-"178
+[; ;main.c: 177: gcpLocked = 0;
+"177
 [e = _gcpLocked -> -> 0 `i `uc ]
-"179
+"178
 }
-[; ;main.c: 179: } else {
+[; ;main.c: 178: } else {
 [e $U 2171  ]
 [e :U 2170 ]
 {
-[; ;main.c: 180: gcpLocked = 1;
-"180
+[; ;main.c: 179: gcpLocked = 1;
+"179
 [e = _gcpLocked -> -> 1 `i `uc ]
-"181
+"180
 }
 [e :U 2171 ]
-[; ;main.c: 181: }
-[; ;main.c: 182: msgAnswer[0] = 0x00;
-"182
+[; ;main.c: 180: }
+[; ;main.c: 181: msgAnswer[0] = 0x00;
+"181
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 183: SISendMessage(msgAnswer, 1);
-"183
+[; ;main.c: 182: SISendMessage(msgAnswer, 1);
+"182
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 1 `i `uc ]
-[; ;main.c: 184: break;
-"184
+[; ;main.c: 183: break;
+"183
 [e $U 2157  ]
-[; ;main.c: 186: case 0x11:
-"186
+[; ;main.c: 185: case 0x11:
+"185
 [e :U 2172 ]
-[; ;main.c: 187: if (!gcpLocked) {
-"187
+[; ;main.c: 186: if (!gcpLocked) {
+"186
 [e $ ! ! != -> _gcpLocked `i -> -> -> 0 `i `uc `i 2173  ]
 {
-[; ;main.c: 188: msgAnswer[0] = 0x02;
-"188
+[; ;main.c: 187: msgAnswer[0] = 0x02;
+"187
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 2 `i `uc ]
-[; ;main.c: 189: msgAnswer[1] = (((2U & 0x1FFF) << 3) | (0U & 0x0007)) & 0xFFUL;
-"189
+[; ;main.c: 188: msgAnswer[1] = (((2U & 0x1FFF) << 3) | (0U & 0x0007)) & 0xFFUL;
+"188
 [e = *U + &U _msgAnswer * -> -> -> 1 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> & -> | << & -> 2 `ui -> -> 8191 `i `ui -> 3 `i & -> 0 `ui -> -> 7 `i `ui `ul -> 255 `ul `uc ]
-[; ;main.c: 190: msgAnswer[2] = ((((2U & 0x1FFF) << 3) | (0U & 0x0007)) >> 8) & 0xFF;
-"190
+[; ;main.c: 189: msgAnswer[2] = ((((2U & 0x1FFF) << 3) | (0U & 0x0007)) >> 8) & 0xFF;
+"189
 [e = *U + &U _msgAnswer * -> -> -> 2 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> & >> | << & -> 2 `ui -> -> 8191 `i `ui -> 3 `i & -> 0 `ui -> -> 7 `i `ui -> 8 `i -> -> 255 `i `ui `uc ]
-[; ;main.c: 191: msgAnswer[3] = (((2U & 0x1FFF) << 3) | (0U & 0x0007)) & 0xFFUL;
-"191
+[; ;main.c: 190: msgAnswer[3] = (((2U & 0x1FFF) << 3) | (0U & 0x0007)) & 0xFFUL;
+"190
 [e = *U + &U _msgAnswer * -> -> -> 3 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> & -> | << & -> 2 `ui -> -> 8191 `i `ui -> 3 `i & -> 0 `ui -> -> 7 `i `ui `ul -> 255 `ul `uc ]
-[; ;main.c: 192: msgAnswer[4] = ((((2U & 0x1FFF) << 3) | (0U & 0x0007)) >> 8) & 0xFF;
-"192
+[; ;main.c: 191: msgAnswer[4] = ((((2U & 0x1FFF) << 3) | (0U & 0x0007)) >> 8) & 0xFF;
+"191
 [e = *U + &U _msgAnswer * -> -> -> 4 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> & >> | << & -> 2 `ui -> -> 8191 `i `ui -> 3 `i & -> 0 `ui -> -> 7 `i `ui -> 8 `i -> -> 255 `i `ui `uc ]
-[; ;main.c: 193: SISendMessage(msgAnswer, 5);
-"193
+[; ;main.c: 192: SISendMessage(msgAnswer, 5);
+"192
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 5 `i `uc ]
-"194
+"193
 }
-[; ;main.c: 194: } else {
+[; ;main.c: 193: } else {
 [e $U 2174  ]
 [e :U 2173 ]
 {
-[; ;main.c: 195: msgAnswer[0] = 0xFF;
-"195
+[; ;main.c: 194: msgAnswer[0] = 0xFF;
+"194
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 255 `i `uc ]
-[; ;main.c: 196: SISendMessage(msgAnswer, 1);
-"196
+[; ;main.c: 195: SISendMessage(msgAnswer, 1);
+"195
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 1 `i `uc ]
-"197
+"196
 }
 [e :U 2174 ]
-[; ;main.c: 197: }
-[; ;main.c: 198: break;
-"198
+[; ;main.c: 196: }
+[; ;main.c: 197: break;
+"197
 [e $U 2157  ]
-[; ;main.c: 200: case 0x12:
-"200
+[; ;main.c: 199: case 0x12:
+"199
 [e :U 2175 ]
-[; ;main.c: 201: if (!gcpLocked) {
-"201
+[; ;main.c: 200: if (!gcpLocked) {
+"200
 [e $ ! ! != -> _gcpLocked `i -> -> -> 0 `i `uc `i 2176  ]
 {
-[; ;main.c: 202: if (cmdLen > 3) {
-"202
+[; ;main.c: 201: if (cmdLen > 3) {
+"201
 [e $ ! > -> _cmdLen `i -> 3 `i 2177  ]
 {
-[; ;main.c: 203: addr = cmd[2];
-"203
+[; ;main.c: 202: addr = cmd[2];
+"202
 [e = _addr -> *U + &U _cmd * -> -> -> 2 `i `ui `ux -> -> # *U &U _cmd `ui `ux `ui ]
-[; ;main.c: 204: addr = addr << 8;
-"204
+[; ;main.c: 203: addr = addr << 8;
+"203
 [e = _addr << _addr -> 8 `i ]
-[; ;main.c: 205: addr |= cmd[1];
-"205
+[; ;main.c: 204: addr |= cmd[1];
+"204
 [e =| _addr -> *U + &U _cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _cmd `ui `ux `ui ]
-[; ;main.c: 206: for (i = 3; i < cmdLen; i++) {
-"206
+[; ;main.c: 205: for (i = 3; i < cmdLen; i++) {
+"205
 {
 [e = _i -> -> 3 `i `uc ]
 [e $U 2181  ]
 [e :U 2178 ]
 {
-[; ;main.c: 207: EEPROMWriteByte(addr++, cmd[i]);
-"207
-[e ( _EEPROMWriteByte (2 , -> ++ _addr -> -> 1 `i `ui `uc *U + &U _cmd * -> _i `ux -> -> # *U &U _cmd `ui `ux ]
-"208
-}
+[; ;main.c: 206: EEPROMWriteByte(addr++, cmd[i]);
 "206
+[e ( _EEPROMWriteByte (2 , -> ++ _addr -> -> 1 `i `ui `uc *U + &U _cmd * -> _i `ux -> -> # *U &U _cmd `ui `ux ]
+"207
+}
+"205
 [e ++ _i -> -> 1 `i `uc ]
 [e :U 2181 ]
 [e $ < -> _i `i -> _cmdLen `i 2178  ]
 [e :U 2179 ]
+"207
+}
+[; ;main.c: 207: }
+[; ;main.c: 208: msgAnswer[0] = 0x00;
 "208
-}
-[; ;main.c: 208: }
-[; ;main.c: 209: msgAnswer[0] = 0x00;
-"209
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 210: SISendMessage(msgAnswer, 1);
-"210
+[; ;main.c: 209: SISendMessage(msgAnswer, 1);
+"209
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 1 `i `uc ]
-"211
+"210
 }
-[; ;main.c: 211: } else {
+[; ;main.c: 210: } else {
 [e $U 2182  ]
 [e :U 2177 ]
 {
-[; ;main.c: 212: msgAnswer[0] = 0xFE;
-"212
+[; ;main.c: 211: msgAnswer[0] = 0xFE;
+"211
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 254 `i `uc ]
-[; ;main.c: 213: SISendMessage(msgAnswer, 1);
-"213
+[; ;main.c: 212: SISendMessage(msgAnswer, 1);
+"212
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 1 `i `uc ]
-"214
+"213
 }
 [e :U 2182 ]
-"215
+"214
 }
-[; ;main.c: 214: }
-[; ;main.c: 215: } else {
+[; ;main.c: 213: }
+[; ;main.c: 214: } else {
 [e $U 2183  ]
 [e :U 2176 ]
 {
-[; ;main.c: 216: msgAnswer[0] = 0xFF;
-"216
+[; ;main.c: 215: msgAnswer[0] = 0xFF;
+"215
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 255 `i `uc ]
-[; ;main.c: 217: SISendMessage(msgAnswer, 1);
-"217
+[; ;main.c: 216: SISendMessage(msgAnswer, 1);
+"216
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 1 `i `uc ]
-"218
+"217
 }
 [e :U 2183 ]
-[; ;main.c: 218: }
-[; ;main.c: 219: break;
-"219
+[; ;main.c: 217: }
+[; ;main.c: 218: break;
+"218
 [e $U 2157  ]
-[; ;main.c: 221: case 0x13:
-"221
+[; ;main.c: 220: case 0x13:
+"220
 [e :U 2184 ]
-[; ;main.c: 222: if (!gcpLocked) {
-"222
+[; ;main.c: 221: if (!gcpLocked) {
+"221
 [e $ ! ! != -> _gcpLocked `i -> -> -> 0 `i `uc `i 2185  ]
 {
-[; ;main.c: 223: if (cmdLen == 4) {
-"223
+[; ;main.c: 222: if (cmdLen == 4) {
+"222
 [e $ ! == -> _cmdLen `i -> 4 `i 2186  ]
 {
-[; ;main.c: 224: addr = cmd[2];
-"224
+[; ;main.c: 223: addr = cmd[2];
+"223
 [e = _addr -> *U + &U _cmd * -> -> -> 2 `i `ui `ux -> -> # *U &U _cmd `ui `ux `ui ]
-[; ;main.c: 225: addr = addr << 8;
-"225
+[; ;main.c: 224: addr = addr << 8;
+"224
 [e = _addr << _addr -> 8 `i ]
-[; ;main.c: 226: addr |= cmd[1];
-"226
+[; ;main.c: 225: addr |= cmd[1];
+"225
 [e =| _addr -> *U + &U _cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _cmd `ui `ux `ui ]
-"227
+"226
 [v _len `uc ~T0 @X0 1 a ]
-[; ;main.c: 227: uint8_t len = cmd[3];
+[; ;main.c: 226: uint8_t len = cmd[3];
 [e = _len *U + &U _cmd * -> -> -> 3 `i `ui `ux -> -> # *U &U _cmd `ui `ux ]
-[; ;main.c: 228: if (len == 0) {
-"228
+[; ;main.c: 227: if (len == 0) {
+"227
 [e $ ! == -> _len `i -> 0 `i 2187  ]
 {
-[; ;main.c: 229: msgAnswer[0] = 0xFE;
-"229
+[; ;main.c: 228: msgAnswer[0] = 0xFE;
+"228
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 254 `i `uc ]
-[; ;main.c: 230: SISendMessage(msgAnswer, 1);
-"230
+[; ;main.c: 229: SISendMessage(msgAnswer, 1);
+"229
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 1 `i `uc ]
-"231
+"230
 }
-[; ;main.c: 231: } else {
+[; ;main.c: 230: } else {
 [e $U 2188  ]
 [e :U 2187 ]
 {
-[; ;main.c: 232: msgAnswer[0] = 0x00;
-"232
+[; ;main.c: 231: msgAnswer[0] = 0x00;
+"231
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 233: for (i = 0; i < len && i < 0x20; i++) {
-"233
+[; ;main.c: 232: for (i = 0; i < len && i < 0x20; i++) {
+"232
 {
 [e = _i -> -> 0 `i `uc ]
 [e $U 2192  ]
 [e :U 2189 ]
 {
-[; ;main.c: 234: msgAnswer[i + 1] = EEPROMReadByte(addr++);
-"234
-[e = *U + &U _msgAnswer * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux ( _EEPROMReadByte (1 -> ++ _addr -> -> 1 `i `ui `uc ]
-"235
-}
+[; ;main.c: 233: msgAnswer[i + 1] = EEPROMReadByte(addr++);
 "233
+[e = *U + &U _msgAnswer * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux ( _EEPROMReadByte (1 -> ++ _addr -> -> 1 `i `ui `uc ]
+"234
+}
+"232
 [e ++ _i -> -> 1 `i `uc ]
 [e :U 2192 ]
 [e $ && < -> _i `i -> _len `i < -> _i `i -> 32 `i 2189  ]
 [e :U 2190 ]
-"235
+"234
 }
-[; ;main.c: 235: }
-[; ;main.c: 236: SISendMessage(msgAnswer, len + 1);
-"236
+[; ;main.c: 234: }
+[; ;main.c: 235: SISendMessage(msgAnswer, len + 1);
+"235
 [e ( _SISendMessage (2 , &U _msgAnswer -> + -> _len `i -> 1 `i `uc ]
-"237
+"236
 }
 [e :U 2188 ]
-"238
+"237
 }
-[; ;main.c: 237: }
-[; ;main.c: 238: } else {
+[; ;main.c: 236: }
+[; ;main.c: 237: } else {
 [e $U 2193  ]
 [e :U 2186 ]
 {
-[; ;main.c: 239: msgAnswer[0] = 0xFE;
-"239
+[; ;main.c: 238: msgAnswer[0] = 0xFE;
+"238
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 254 `i `uc ]
-[; ;main.c: 240: SISendMessage(msgAnswer, 1);
-"240
+[; ;main.c: 239: SISendMessage(msgAnswer, 1);
+"239
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 1 `i `uc ]
-"241
+"240
 }
 [e :U 2193 ]
-"242
+"241
 }
-[; ;main.c: 241: }
-[; ;main.c: 242: } else {
+[; ;main.c: 240: }
+[; ;main.c: 241: } else {
 [e $U 2194  ]
 [e :U 2185 ]
 {
-[; ;main.c: 243: msgAnswer[0] = 0xFF;
-"243
+[; ;main.c: 242: msgAnswer[0] = 0xFF;
+"242
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 255 `i `uc ]
-[; ;main.c: 244: SISendMessage(msgAnswer, 1);
-"244
+[; ;main.c: 243: SISendMessage(msgAnswer, 1);
+"243
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 1 `i `uc ]
-"245
+"244
 }
 [e :U 2194 ]
-[; ;main.c: 245: }
-[; ;main.c: 246: break;
-"246
+[; ;main.c: 244: }
+[; ;main.c: 245: break;
+"245
 [e $U 2157  ]
-[; ;main.c: 248: case 0x14:
-"248
+[; ;main.c: 247: case 0x14:
+"247
 [e :U 2195 ]
-[; ;main.c: 249: asm("reset");
-"249
+[; ;main.c: 248: asm("reset");
+"248
 [; <" reset ;# ">
-[; ;main.c: 250: break;
-"250
+[; ;main.c: 249: break;
+"249
 [e $U 2157  ]
-[; ;main.c: 252: case 0x15:
-"252
+[; ;main.c: 251: case 0x15:
+"251
 [e :U 2196 ]
-[; ;main.c: 253: if (!gcpLocked) {
-"253
+[; ;main.c: 252: if (!gcpLocked) {
+"252
 [e $ ! ! != -> _gcpLocked `i -> -> -> 0 `i `uc `i 2197  ]
 {
-[; ;main.c: 254: msgAnswer[0] = 0x00;
-"254
+[; ;main.c: 253: msgAnswer[0] = 0x00;
+"253
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 255: SISendMessage(msgAnswer, 1);
-"255
+[; ;main.c: 254: SISendMessage(msgAnswer, 1);
+"254
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 1 `i `uc ]
-[; ;main.c: 256: bootBootloader();
-"256
+[; ;main.c: 255: bootBootloader();
+"255
 [e ( _bootBootloader ..  ]
-"257
+"256
 }
-[; ;main.c: 257: } else {
+[; ;main.c: 256: } else {
 [e $U 2198  ]
 [e :U 2197 ]
 {
-[; ;main.c: 258: msgAnswer[0] = 0xFF;
-"258
+[; ;main.c: 257: msgAnswer[0] = 0xFF;
+"257
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 255 `i `uc ]
-[; ;main.c: 259: SISendMessage(msgAnswer, 1);
-"259
+[; ;main.c: 258: SISendMessage(msgAnswer, 1);
+"258
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 1 `i `uc ]
-"260
+"259
 }
 [e :U 2198 ]
-[; ;main.c: 260: }
-[; ;main.c: 261: break;
-"261
+[; ;main.c: 259: }
+[; ;main.c: 260: break;
+"260
 [e $U 2157  ]
-[; ;main.c: 263: case 0x16:
-"263
+[; ;main.c: 262: case 0x16:
+"262
 [e :U 2199 ]
-[; ;main.c: 264: if (!gcpLocked) {
-"264
+[; ;main.c: 263: if (!gcpLocked) {
+"263
 [e $ ! ! != -> _gcpLocked `i -> -> -> 0 `i `uc `i 2200  ]
 {
-[; ;main.c: 265: if (cmdLen == (N_BUTTONS + 1)) {
-"265
+[; ;main.c: 264: if (cmdLen == (N_BUTTONS + 1)) {
+"264
 [e $ ! == -> _cmdLen `i + -> . `E15478 15 `i -> 1 `i 2201  ]
 {
-[; ;main.c: 266: buttonsSetMapByte0(&cmd[1]);
-"266
+[; ;main.c: 265: buttonsSetMapByte0(&cmd[1]);
+"265
 [e ( _buttonsSetMapByte0 (1 &U *U + &U _cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _cmd `ui `ux ]
-[; ;main.c: 267: msgAnswer[0] = 0x00;
-"267
+[; ;main.c: 266: msgAnswer[0] = 0x00;
+"266
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 268: SISendMessage(msgAnswer, 1);
-"268
+[; ;main.c: 267: SISendMessage(msgAnswer, 1);
+"267
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 1 `i `uc ]
-"269
+"268
 }
-[; ;main.c: 269: } else {
+[; ;main.c: 268: } else {
 [e $U 2202  ]
 [e :U 2201 ]
 {
-[; ;main.c: 270: msgAnswer[0] = 0xFE;
-"270
+[; ;main.c: 269: msgAnswer[0] = 0xFE;
+"269
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 254 `i `uc ]
-[; ;main.c: 271: SISendMessage(msgAnswer, 1);
-"271
+[; ;main.c: 270: SISendMessage(msgAnswer, 1);
+"270
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 1 `i `uc ]
-"272
+"271
 }
 [e :U 2202 ]
-"273
+"272
 }
-[; ;main.c: 272: }
-[; ;main.c: 273: } else {
+[; ;main.c: 271: }
+[; ;main.c: 272: } else {
 [e $U 2203  ]
 [e :U 2200 ]
 {
-[; ;main.c: 274: msgAnswer[0] = 0xFF;
-"274
+[; ;main.c: 273: msgAnswer[0] = 0xFF;
+"273
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 255 `i `uc ]
-[; ;main.c: 275: SISendMessage(msgAnswer, 1);
-"275
+[; ;main.c: 274: SISendMessage(msgAnswer, 1);
+"274
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 1 `i `uc ]
-"276
+"275
 }
 [e :U 2203 ]
-[; ;main.c: 276: }
-[; ;main.c: 277: break;
-"277
+[; ;main.c: 275: }
+[; ;main.c: 276: break;
+"276
 [e $U 2157  ]
-[; ;main.c: 279: case 0x17:
-"279
+[; ;main.c: 278: case 0x17:
+"278
 [e :U 2204 ]
-[; ;main.c: 280: if (!gcpLocked) {
-"280
+[; ;main.c: 279: if (!gcpLocked) {
+"279
 [e $ ! ! != -> _gcpLocked `i -> -> -> 0 `i `uc `i 2205  ]
 {
-[; ;main.c: 281: if (cmdLen == (N_BUTTONS + 1)) {
-"281
+[; ;main.c: 280: if (cmdLen == (N_BUTTONS + 1)) {
+"280
 [e $ ! == -> _cmdLen `i + -> . `E15478 15 `i -> 1 `i 2206  ]
 {
-[; ;main.c: 282: buttonsSetMapByte1(&cmd[1]);
-"282
+[; ;main.c: 281: buttonsSetMapByte1(&cmd[1]);
+"281
 [e ( _buttonsSetMapByte1 (1 &U *U + &U _cmd * -> -> -> 1 `i `ui `ux -> -> # *U &U _cmd `ui `ux ]
-[; ;main.c: 283: msgAnswer[0] = 0x00;
-"283
+[; ;main.c: 282: msgAnswer[0] = 0x00;
+"282
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 284: SISendMessage(msgAnswer, 1);
-"284
+[; ;main.c: 283: SISendMessage(msgAnswer, 1);
+"283
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 1 `i `uc ]
-"285
+"284
 }
-[; ;main.c: 285: } else {
+[; ;main.c: 284: } else {
 [e $U 2207  ]
 [e :U 2206 ]
 {
-[; ;main.c: 286: msgAnswer[0] = 0xFE;
-"286
+[; ;main.c: 285: msgAnswer[0] = 0xFE;
+"285
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 254 `i `uc ]
-[; ;main.c: 287: SISendMessage(msgAnswer, 1);
-"287
+[; ;main.c: 286: SISendMessage(msgAnswer, 1);
+"286
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 1 `i `uc ]
-"288
+"287
 }
 [e :U 2207 ]
-"289
+"288
 }
-[; ;main.c: 288: }
-[; ;main.c: 289: } else {
+[; ;main.c: 287: }
+[; ;main.c: 288: } else {
 [e $U 2208  ]
 [e :U 2205 ]
 {
-[; ;main.c: 290: msgAnswer[0] = 0xFF;
-"290
+[; ;main.c: 289: msgAnswer[0] = 0xFF;
+"289
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 255 `i `uc ]
-[; ;main.c: 291: SISendMessage(msgAnswer, 1);
-"291
+[; ;main.c: 290: SISendMessage(msgAnswer, 1);
+"290
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 1 `i `uc ]
-"292
+"291
 }
 [e :U 2208 ]
-[; ;main.c: 292: }
-[; ;main.c: 293: break;
-"293
+[; ;main.c: 291: }
+[; ;main.c: 292: break;
+"292
 [e $U 2157  ]
-[; ;main.c: 295: case 0x18:
-"295
+[; ;main.c: 294: case 0x18:
+"294
 [e :U 2209 ]
-[; ;main.c: 296: if (!gcpLocked) {
-"296
+[; ;main.c: 295: if (!gcpLocked) {
+"295
 [e $ ! ! != -> _gcpLocked `i -> -> -> 0 `i `uc `i 2210  ]
 {
-"297
+"296
 [v _btnMsg `*uc ~T0 @X0 1 a ]
-[; ;main.c: 297: uint8_t* btnMsg = buttonsGetMapByte0();
+[; ;main.c: 296: uint8_t* btnMsg = buttonsGetMapByte0();
 [e = _btnMsg ( _buttonsGetMapByte0 ..  ]
-[; ;main.c: 298: msgAnswer[0] = 0x00;
-"298
+[; ;main.c: 297: msgAnswer[0] = 0x00;
+"297
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 299: for (i = 0; i < N_BUTTONS; i++) {
-"299
+[; ;main.c: 298: for (i = 0; i < N_BUTTONS; i++) {
+"298
 {
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> . `E15478 15 `i 2211  ]
 [e $U 2212  ]
 [e :U 2211 ]
 {
-[; ;main.c: 300: msgAnswer[i + 1] = btnMsg[i];
-"300
-[e = *U + &U _msgAnswer * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux *U + _btnMsg * -> _i `ux -> -> # *U _btnMsg `ui `ux ]
-"301
-}
+[; ;main.c: 299: msgAnswer[i + 1] = btnMsg[i];
 "299
+[e = *U + &U _msgAnswer * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux *U + _btnMsg * -> _i `ux -> -> # *U _btnMsg `ui `ux ]
+"300
+}
+"298
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> . `E15478 15 `i 2211  ]
 [e :U 2212 ]
+"300
+}
+[; ;main.c: 300: }
+[; ;main.c: 301: SISendMessage(msgAnswer, N_BUTTONS + 1);
 "301
-}
-[; ;main.c: 301: }
-[; ;main.c: 302: SISendMessage(msgAnswer, N_BUTTONS + 1);
-"302
 [e ( _SISendMessage (2 , &U _msgAnswer -> + -> . `E15478 15 `i -> 1 `i `uc ]
-"303
+"302
 }
-[; ;main.c: 303: } else {
+[; ;main.c: 302: } else {
 [e $U 2214  ]
 [e :U 2210 ]
 {
-[; ;main.c: 304: msgAnswer[0] = 0xFF;
-"304
+[; ;main.c: 303: msgAnswer[0] = 0xFF;
+"303
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 255 `i `uc ]
-[; ;main.c: 305: SISendMessage(msgAnswer, 1);
-"305
+[; ;main.c: 304: SISendMessage(msgAnswer, 1);
+"304
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 1 `i `uc ]
-"306
+"305
 }
 [e :U 2214 ]
-[; ;main.c: 306: }
-[; ;main.c: 307: break;
-"307
+[; ;main.c: 305: }
+[; ;main.c: 306: break;
+"306
 [e $U 2157  ]
-[; ;main.c: 309: case 0x19:
-"309
+[; ;main.c: 308: case 0x19:
+"308
 [e :U 2215 ]
-[; ;main.c: 310: if (!gcpLocked) {
-"310
+[; ;main.c: 309: if (!gcpLocked) {
+"309
 [e $ ! ! != -> _gcpLocked `i -> -> -> 0 `i `uc `i 2216  ]
 {
-"311
+"310
 [v _btnMsg `*uc ~T0 @X0 1 a ]
-[; ;main.c: 311: uint8_t* btnMsg = buttonsGetMapByte1();
+[; ;main.c: 310: uint8_t* btnMsg = buttonsGetMapByte1();
 [e = _btnMsg ( _buttonsGetMapByte1 ..  ]
-[; ;main.c: 312: msgAnswer[0] = 0x00;
-"312
+[; ;main.c: 311: msgAnswer[0] = 0x00;
+"311
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 313: for (i = 0; i < N_BUTTONS; i++) {
-"313
+[; ;main.c: 312: for (i = 0; i < N_BUTTONS; i++) {
+"312
 {
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> . `E15478 15 `i 2217  ]
 [e $U 2218  ]
 [e :U 2217 ]
 {
-[; ;main.c: 314: msgAnswer[i + 1] = btnMsg[i];
-"314
-[e = *U + &U _msgAnswer * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux *U + _btnMsg * -> _i `ux -> -> # *U _btnMsg `ui `ux ]
-"315
-}
+[; ;main.c: 313: msgAnswer[i + 1] = btnMsg[i];
 "313
+[e = *U + &U _msgAnswer * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux *U + _btnMsg * -> _i `ux -> -> # *U _btnMsg `ui `ux ]
+"314
+}
+"312
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> . `E15478 15 `i 2217  ]
 [e :U 2218 ]
+"314
+}
+[; ;main.c: 314: }
+[; ;main.c: 315: SISendMessage(msgAnswer, N_BUTTONS + 1);
 "315
-}
-[; ;main.c: 315: }
-[; ;main.c: 316: SISendMessage(msgAnswer, N_BUTTONS + 1);
-"316
 [e ( _SISendMessage (2 , &U _msgAnswer -> + -> . `E15478 15 `i -> 1 `i `uc ]
-"317
+"316
 }
-[; ;main.c: 317: } else {
+[; ;main.c: 316: } else {
 [e $U 2220  ]
 [e :U 2216 ]
 {
-[; ;main.c: 318: msgAnswer[0] = 0xFF;
-"318
+[; ;main.c: 317: msgAnswer[0] = 0xFF;
+"317
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 255 `i `uc ]
-[; ;main.c: 319: SISendMessage(msgAnswer, 1);
-"319
+[; ;main.c: 318: SISendMessage(msgAnswer, 1);
+"318
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 1 `i `uc ]
-"320
+"319
 }
 [e :U 2220 ]
-[; ;main.c: 320: }
-[; ;main.c: 321: break;
-"321
+[; ;main.c: 319: }
+[; ;main.c: 320: break;
+"320
 [e $U 2157  ]
-[; ;main.c: 323: case 0x20:
-"323
+[; ;main.c: 322: case 0x20:
+"322
 [e :U 2221 ]
-[; ;main.c: 324: if (!gcpLocked) {
-"324
+[; ;main.c: 323: if (!gcpLocked) {
+"323
 [e $ ! ! != -> _gcpLocked `i -> -> -> 0 `i `uc `i 2222  ]
 {
-[; ;main.c: 325: buttonsBuildLUTs();
-"325
-[e ( _buttonsBuildLUTs ..  ]
-[; ;main.c: 326: msgAnswer[0] = 0x00;
-"326
+[; ;main.c: 324: msgAnswer[0] = 0x00;
+"324
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 327: SISendMessage(msgAnswer, 1);
-"327
+[; ;main.c: 325: SISendMessage(msgAnswer, 1);
+"325
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 1 `i `uc ]
-"328
+"326
 }
-[; ;main.c: 328: } else {
+[; ;main.c: 326: } else {
 [e $U 2223  ]
 [e :U 2222 ]
 {
-[; ;main.c: 329: msgAnswer[0] = 0xFF;
-"329
+[; ;main.c: 327: msgAnswer[0] = 0xFF;
+"327
 [e = *U + &U _msgAnswer * -> -> -> 0 `i `ui `ux -> -> # *U &U _msgAnswer `ui `ux -> -> 255 `i `uc ]
-[; ;main.c: 330: SISendMessage(msgAnswer, 1);
-"330
+[; ;main.c: 328: SISendMessage(msgAnswer, 1);
+"328
 [e ( _SISendMessage (2 , &U _msgAnswer -> -> 1 `i `uc ]
-"331
+"329
 }
 [e :U 2223 ]
-[; ;main.c: 331: }
-[; ;main.c: 332: break;
+[; ;main.c: 329: }
+[; ;main.c: 330: break;
+"330
+[e $U 2157  ]
+[; ;main.c: 332: default:
 "332
-[e $U 2157  ]
-[; ;main.c: 334: default:
-"334
 [e :U 2224 ]
-[; ;main.c: 335: SIClear();
-"335
+[; ;main.c: 333: SIClear();
+"333
 [e ( _SIClear ..  ]
-[; ;main.c: 336: break;
-"336
+[; ;main.c: 334: break;
+"334
 [e $U 2157  ]
-"337
+"335
 }
-[; ;main.c: 337: }
+[; ;main.c: 335: }
 [e $U 2157  ]
-"143
+"142
 [e :U 2158 ]
 [e [\ *U + &U _cmd * -> -> -> 0 `i `ui `ux -> -> # *U &U _cmd `ui `ux , $ -> -> 0 `i `uc 2159
  , $ -> -> 255 `i `uc 2160
@@ -18536,164 +18526,164 @@ Version 3.2 HI-TECH Software Intermediate Code
  , $ -> -> 25 `i `uc 2215
  , $ -> -> 32 `i `uc 2221
  2224 ]
-"337
+"335
 [e :U 2157 ]
-"338
+"336
 }
 [e :U 2156 ]
-"339
+"337
 }
 [e :U 2152 ]
-"131
+"130
 [e $U 2153  ]
 [e :U 2154 ]
-[; ;main.c: 338: }
-[; ;main.c: 339: }
-[; ;main.c: 341: return;
-"341
+[; ;main.c: 336: }
+[; ;main.c: 337: }
+[; ;main.c: 339: return;
+"339
 [e $UE 2149  ]
-[; ;main.c: 342: }
-"342
+[; ;main.c: 340: }
+"340
 [e :UE 2149 ]
 }
-"344
+"342
 [v _portsInit `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 344: void portsInit(void) {
+[; ;main.c: 342: void portsInit(void) {
 [e :U _portsInit ]
 [f ]
-"346
+"344
 [v _state `uc ~T0 @X0 1 a ]
-[; ;main.c: 346: bool state = (unsigned char)GIE;
+[; ;main.c: 344: bool state = (unsigned char)GIE;
 [e = _state -> -> _GIE `i `uc ]
-[; ;main.c: 347: GIE = 0;
-"347
+[; ;main.c: 345: GIE = 0;
+"345
 [e = _GIE -> -> 0 `i `b ]
-[; ;main.c: 348: PPSLOCK = 0x55;
+[; ;main.c: 346: PPSLOCK = 0x55;
+"346
+[e = _PPSLOCK -> -> 85 `i `uc ]
+[; ;main.c: 347: PPSLOCK = 0xAA;
+"347
+[e = _PPSLOCK -> -> 170 `i `uc ]
+[; ;main.c: 348: PPSLOCKbits.PPSLOCKED = 0x00;
 "348
-[e = _PPSLOCK -> -> 85 `i `uc ]
-[; ;main.c: 349: PPSLOCK = 0xAA;
-"349
-[e = _PPSLOCK -> -> 170 `i `uc ]
-[; ;main.c: 350: PPSLOCKbits.PPSLOCKED = 0x00;
-"350
 [e = . . _PPSLOCKbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 354: T6INPPS = 0x0C;
-"354
+[; ;main.c: 352: T6INPPS = 0x0C;
+"352
 [e = _T6INPPS -> -> 12 `i `uc ]
-[; ;main.c: 355: SMT1SIGPPS = 0x0C;
-"355
+[; ;main.c: 353: SMT1SIGPPS = 0x0C;
+"353
 [e = _SMT1SIGPPS -> -> 12 `i `uc ]
-[; ;main.c: 358: RB4PPS = 0x04;
-"358
+[; ;main.c: 356: RB4PPS = 0x04;
+"356
 [e = _RB4PPS -> -> 4 `i `uc ]
-[; ;main.c: 363: PPSLOCK = 0x55;
-"363
+[; ;main.c: 361: PPSLOCK = 0x55;
+"361
 [e = _PPSLOCK -> -> 85 `i `uc ]
-[; ;main.c: 364: PPSLOCK = 0xAA;
-"364
+[; ;main.c: 362: PPSLOCK = 0xAA;
+"362
 [e = _PPSLOCK -> -> 170 `i `uc ]
-[; ;main.c: 365: PPSLOCKbits.PPSLOCKED = 0x01;
-"365
+[; ;main.c: 363: PPSLOCKbits.PPSLOCKED = 0x01;
+"363
 [e = . . _PPSLOCKbits 0 0 -> -> 1 `i `uc ]
-[; ;main.c: 366: GIE = state;
-"366
+[; ;main.c: 364: GIE = state;
+"364
 [e = _GIE -> _state `b ]
-[; ;main.c: 368: LATB = 0xFF;
-"368
+[; ;main.c: 366: LATB = 0xFF;
+"366
 [e = _LATB -> -> 255 `i `uc ]
-[; ;main.c: 371: TRISA = 0xFF;
-"371
+[; ;main.c: 369: TRISA = 0xFF;
+"369
 [e = _TRISA -> -> 255 `i `uc ]
-[; ;main.c: 372: TRISB = 0xFF;
-"372
+[; ;main.c: 370: TRISB = 0xFF;
+"370
 [e = _TRISB -> -> 255 `i `uc ]
-[; ;main.c: 373: TRISC = 0xFF;
-"373
+[; ;main.c: 371: TRISC = 0xFF;
+"371
 [e = _TRISC -> -> 255 `i `uc ]
-[; ;main.c: 374: ANSELA = 0x03;
-"374
+[; ;main.c: 372: ANSELA = 0x03;
+"372
 [e = _ANSELA -> -> 3 `i `uc ]
-[; ;main.c: 375: ANSELB = 0x00;
-"375
+[; ;main.c: 373: ANSELB = 0x00;
+"373
 [e = _ANSELB -> -> 0 `i `uc ]
-[; ;main.c: 376: ANSELC = 0x1E;
-"376
+[; ;main.c: 374: ANSELC = 0x1E;
+"374
 [e = _ANSELC -> -> 30 `i `uc ]
-[; ;main.c: 377: WPUA = 0xFC;
-"377
+[; ;main.c: 375: WPUA = 0xFC;
+"375
 [e = _WPUA -> -> 252 `i `uc ]
-[; ;main.c: 378: WPUB = 0x3F;
-"378
+[; ;main.c: 376: WPUB = 0x3F;
+"376
 [e = _WPUB -> -> 63 `i `uc ]
-[; ;main.c: 379: WPUC = 0xE1;
-"379
+[; ;main.c: 377: WPUC = 0xE1;
+"377
 [e = _WPUC -> -> 225 `i `uc ]
-[; ;main.c: 380: ODCONA = 0x00;
-"380
+[; ;main.c: 378: ODCONA = 0x00;
+"378
 [e = _ODCONA -> -> 0 `i `uc ]
-[; ;main.c: 381: ODCONB = 0x10;
-"381
+[; ;main.c: 379: ODCONB = 0x10;
+"379
 [e = _ODCONB -> -> 16 `i `uc ]
-[; ;main.c: 382: ODCONC = 0x00;
-"382
+[; ;main.c: 380: ODCONC = 0x00;
+"380
 [e = _ODCONC -> -> 0 `i `uc ]
-[; ;main.c: 383: }
-"383
+[; ;main.c: 381: }
+"381
 [e :UE 2225 ]
 }
-"385
+"383
 [v _bootBootloader `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 385: void bootBootloader(void) {
+[; ;main.c: 383: void bootBootloader(void) {
 [e :U _bootBootloader ]
 [f ]
-[; ;main.c: 386: INTCON0 = 0x00;
-"386
+[; ;main.c: 384: INTCON0 = 0x00;
+"384
 [e = _INTCON0 -> -> 0 `i `uc ]
-[; ;main.c: 387: NCO1ACCL = 0x01;
-"387
+[; ;main.c: 385: NCO1ACCL = 0x01;
+"385
 [e = _NCO1ACCL -> -> 1 `i `uc ]
-[; ;main.c: 388: STKPTR = 0x00;
-"388
+[; ;main.c: 386: STKPTR = 0x00;
+"386
 [e = _STKPTR -> -> 0 `i `uc ]
-[; ;main.c: 389: IVTLOCK = 0x55;
+[; ;main.c: 387: IVTLOCK = 0x55;
+"387
+[e = _IVTLOCK -> -> 85 `i `uc ]
+[; ;main.c: 388: IVTLOCK = 0xAA;
+"388
+[e = _IVTLOCK -> -> 170 `i `uc ]
+[; ;main.c: 389: IVTLOCK = 0;
 "389
-[e = _IVTLOCK -> -> 85 `i `uc ]
-[; ;main.c: 390: IVTLOCK = 0xAA;
-"390
-[e = _IVTLOCK -> -> 170 `i `uc ]
-[; ;main.c: 391: IVTLOCK = 0;
-"391
 [e = _IVTLOCK -> -> 0 `i `uc ]
-[; ;main.c: 392: IVTLOCKED = 0;
-"392
+[; ;main.c: 390: IVTLOCKED = 0;
+"390
 [e = _IVTLOCKED -> -> 0 `i `b ]
-[; ;main.c: 393: IVTBASE = 8;
-"393
+[; ;main.c: 391: IVTBASE = 8;
+"391
 [e = _IVTBASE -> -> -> 8 `i `m `um ]
-[; ;main.c: 394: IVTLOCK = 0x55;
-"394
+[; ;main.c: 392: IVTLOCK = 0x55;
+"392
 [e = _IVTLOCK -> -> 85 `i `uc ]
-[; ;main.c: 395: IVTLOCK = 0xAA;
-"395
+[; ;main.c: 393: IVTLOCK = 0xAA;
+"393
 [e = _IVTLOCK -> -> 170 `i `uc ]
-[; ;main.c: 396: IVTLOCK = 1;
-"396
+[; ;main.c: 394: IVTLOCK = 1;
+"394
 [e = _IVTLOCK -> -> 1 `i `uc ]
-[; ;main.c: 397: IVTLOCKED = 1;
-"397
+[; ;main.c: 395: IVTLOCKED = 1;
+"395
 [e = _IVTLOCKED -> -> 1 `i `b ]
-[; ;main.c: 399: PCLATU = 0x00;
-"399
+[; ;main.c: 397: PCLATU = 0x00;
+"397
 [e = _PCLATU -> -> 0 `i `uc ]
-[; ;main.c: 400: PCLATH = 0x00;
-"400
+[; ;main.c: 398: PCLATH = 0x00;
+"398
 [e = _PCLATH -> -> 0 `i `uc ]
-[; ;main.c: 401: PCL = 0x00;
-"401
+[; ;main.c: 399: PCL = 0x00;
+"399
 [e = _PCL -> -> 0 `i `uc ]
-[; ;main.c: 402: }
-"402
+[; ;main.c: 400: }
+"400
 [e :UE 2226 ]
 }
