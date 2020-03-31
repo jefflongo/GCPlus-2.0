@@ -18,7 +18,7 @@ MAP_C_VERT = 0x80
 
 
 def cart2pol(x, y):
-    mag = np.sqrt(x ** 2 + y ** 2) / 128
+    mag = np.sqrt(x ** 2 + y ** 2)
     ang = np.degrees(np.arctan2(y, x))
     return (mag, ang)
 
@@ -53,14 +53,14 @@ if __name__ == "__main__":
         for y in range(128):
             mag, ang = cart2pol(x, y)
             color = "white"
-            if (mag >= 0.9375):
-                if (6 <= ang <= 19):
+            if (mag >= 70):
+                if (6 <= ang <= 30):
                     map[x, y] |= MAP_ANGLE_HORIZ
                     color = "green"
-                elif (90 - 19 <= ang <= 90 - 6):
+                elif (90 - 30 <= ang <= 90 - 6):
                     map[x, y] |= MAP_ANGLE_VERT
                     color = "blue"
-            if (mag >= 0.25):
+            if (mag >= 23):
                 if (ang <= 60):
                     map[x, y] |= MAP_C_HORIZ
                 elif (ang > 60):

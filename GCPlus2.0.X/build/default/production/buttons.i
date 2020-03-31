@@ -26538,10 +26538,10 @@ void portsInit(void);
 # 62
 void bootBootloader(void);
 
-# 28 "sticks_lut.h"
+# 32 "sticks_lut.h"
 extern const uint8_t sticks_lut[128][128];
 
-# 48 "buttons.c"
+# 50 "buttons.c"
 inButtons_t prevButtons;
 outButtons_t outButtons;
 origins_t origins;
@@ -26661,33 +26661,25 @@ uint8_t cx, cy;
 buttonsMessage[0] = outButtons.byte0;
 buttonsMessage[1] = outButtons.byte1;
 
-correction_type = sticks_lut[ADCValues[0] + 0x7F][ADCValues[1] + 0x7F];
+correction_type = sticks_lut[(ADCValues[0] <= 0x7F ? ~ADCValues[0] & 0x7FU : ADCValues[0] & 0x7FU)][(ADCValues[1] <= 0x7F ? ~ADCValues[1] & 0x7FU : ADCValues[1] & 0x7FU)];
 
 if (correction_type & 0x01) {
-buttonsMessage[2] = ADCValues[0] >= 0x80 ? 204 : -204;
-buttonsMessage[3] = ADCValues[1] >= 0x80 ? 204 : -204;
+buttonsMessage[2] = ADCValues[0] >= 0x80 ? 204 : 52;
+buttonsMessage[3] = ADCValues[1] >= 0x80 ? 151 : 105;
 } else if (correction_type & 0x02) {
-buttonsMessage[2] = ADCValues[0] >= 0x80 ? 204 : -204;
-buttonsMessage[3] = ADCValues[1] >= 0x80 ? 204 : -204;
-} else if (correction_type & 0x04) {
-buttonsMessage[2] = ADCValues[0] >= 0x80 ? 183 : -183;
-buttonsMessage[3] = ADCValues[1] >= 0x80 ? 183 : -183;
+buttonsMessage[2] = ADCValues[0] >= 0x80 ? 151 : 105;
+buttonsMessage[3] = ADCValues[1] >= 0x80 ? 204 : 52;
+
+
+
 } else {
 buttonsMessage[2] = ADCValues[0];
 buttonsMessage[3] = ADCValues[1];
 }
-
-if (correction_type & 0x40) {
-cx = ADCValues[2] >= 0x80 ? 255 : -255;
-cy = 0;
-} else if (correction_type & 0x80) {
-cx = 255;
-cy = ADCValues[3] >= 0x80 ? 0 : -0;
-} else {
 cx = ADCValues[2];
 cy = ADCValues[3];
-}
 
+# 198
 switch (analogMode) {
 case 0:
 case 5:
@@ -26744,10 +26736,10 @@ origins.R = ADCValues[4];
 uint8_t* buttonsGetOrigins(void) {
 buttonsMessage[0] = 0x00;
 buttonsMessage[1] = 0x00;
-buttonsMessage[2] = origins.SX;
-buttonsMessage[3] = origins.SY;
-buttonsMessage[4] = origins.CX;
-buttonsMessage[5] = origins.CY;
+buttonsMessage[2] = 0x80;
+buttonsMessage[3] = 0x80;
+buttonsMessage[4] = 0x80;
+buttonsMessage[5] = 0x80;
 buttonsMessage[6] = origins.L;
 buttonsMessage[7] = origins.R;
 buttonsMessage[8] = 0x02;

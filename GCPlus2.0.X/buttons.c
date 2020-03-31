@@ -45,6 +45,8 @@ buttons.c: Handles buttons input and debouncing. Also generates the correct answ
 #define CHECK_DEBOUNCE(b) CHECK_DEBOUNCE_BYTE0(b) \
     CHECK_DEBOUNCE_BYTE1(b)
 
+#define MAP_Q1(x) (x <= 0x7F ? ~x & 0x7FU : x & 0x7FU)
+
 inButtons_t prevButtons;
 outButtons_t outButtons;
 origins_t origins;
@@ -164,32 +166,31 @@ uint8_t* buttonsGetMessage(uint8_t analogMode) {
     buttonsMessage[0] = outButtons.byte0;
     buttonsMessage[1] = outButtons.byte1;
     // Convert to first quadrant only
-    correction_type = sticks_lut[ADC_SX + 0x7F][ADC_SY + 0x7F];
+    correction_type = sticks_lut[MAP_Q1(ADC_SX)][MAP_Q1(ADC_SY)];
     // Correct main stick
     if (correction_type & MAP_ANGLE_HORIZ) {
-        buttonsMessage[2] = ADC_SX >= 0x80 ? ANGLE_HORIZ_X : -ANGLE_HORIZ_X;
-        buttonsMessage[3] = ADC_SY >= 0x80 ? ANGLE_HORIZ_Y : -ANGLE_HORIZ_Y;
+        buttonsMessage[2] = ADC_SX >= 0x80 ? ANGLE_HORIZ_X_POS : ANGLE_HORIZ_X_NEG;
+        buttonsMessage[3] = ADC_SY >= 0x80 ? ANGLE_HORIZ_Y_POS : ANGLE_HORIZ_Y_NEG;
     } else if (correction_type & MAP_ANGLE_VERT) {
-        buttonsMessage[2] = ADC_SX >= 0x80 ? ANGLE_VERT_X : -ANGLE_VERT_X;
-        buttonsMessage[3] = ADC_SY >= 0x80 ? ANGLE_VERT_Y : -ANGLE_VERT_Y;
-    } else if (correction_type & MAP_SHIELD_DROP) {
-        buttonsMessage[2] = ADC_SX >= 0x80 ? SHIELD_DROP_X : -SHIELD_DROP_X;
-        buttonsMessage[3] = ADC_SY >= 0x80 ? SHIELD_DROP_Y : -SHIELD_DROP_Y;
+        buttonsMessage[2] = ADC_SX >= 0x80 ? ANGLE_VERT_X_POS : ANGLE_VERT_X_NEG;
+        buttonsMessage[3] = ADC_SY >= 0x80 ? ANGLE_VERT_Y_POS : ANGLE_VERT_Y_NEG;
     } else {
         buttonsMessage[2] = ADC_SX;
         buttonsMessage[3] = ADC_SY;
     }
+    cx = ADC_CX;
+    cy = ADC_CY;
     // Correct c-stick
-    if (correction_type & MAP_C_HORIZ) {
-        cx = ADC_CX >= 0x80 ? C_HORIZ_X : -C_HORIZ_X;
-        cy = C_HORIZ_Y;
-    } else if (correction_type & MAP_C_VERT) {
-        cx = C_HORIZ_X;
-        cy = ADC_CY >= 0x80 ? C_HORIZ_Y : -C_HORIZ_Y;
-    } else {
-        cx = ADC_CX;
-        cy = ADC_CY;
-    }
+//    if (correction_type & MAP_C_HORIZ) {
+//        cx = ADC_CX >= 0x80 ? C_HORIZ_X : -C_HORIZ_X;
+//        cy = C_HORIZ_Y;
+//    } else if (correction_type & MAP_C_VERT) {
+//        cx = C_HORIZ_X;
+//        cy = ADC_CY >= 0x80 ? C_HORIZ_Y : -C_HORIZ_Y;
+//    } else {
+//        cx = ADC_CX;
+//        cy = ADC_CY;
+//    }
 
     switch (analogMode) {
         case 0:
@@ -247,10 +248,10 @@ void buttonsSetOrigins(void) {
 uint8_t* buttonsGetOrigins(void) {
     buttonsMessage[0] = 0x00;
     buttonsMessage[1] = 0x00;
-    buttonsMessage[2] = origins.SX;
-    buttonsMessage[3] = origins.SY;
-    buttonsMessage[4] = origins.CX;
-    buttonsMessage[5] = origins.CY;
+    buttonsMessage[2] = 0x80; // origins.SX;
+    buttonsMessage[3] = 0x80; // origins.SY;
+    buttonsMessage[4] = 0x80; // origins.CX;
+    buttonsMessage[5] = 0x80; // origins.CY;
     buttonsMessage[6] = origins.L;
     buttonsMessage[7] = origins.R;
     buttonsMessage[8] = 0x02;

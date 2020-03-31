@@ -40,7 +40,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "44867
 [v _PORTC `Vuc ~T0 @X0 0 e@16332 ]
 [v F15533 `Cuc ~T0 @X0 -> 128 `i t ]
-"28 sticks_lut.h
+"32 sticks_lut.h
 [v _sticks_lut `F15533 ~T0 @X0 -> 0 `x e ]
 "32 adc.h
 [v _ADCValues `uc ~T0 @X0 -> 0 `x e ]
@@ -17576,250 +17576,250 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;si.h: 75: void SIClear(void);
 [; ;main.h: 57: void portsInit(void);
 [; ;main.h: 62: void bootBootloader(void);
-[; ;sticks_lut.h: 28: extern const uint8_t sticks_lut[128][128];
-"48 buttons.c
+[; ;sticks_lut.h: 32: extern const uint8_t sticks_lut[128][128];
+"50 buttons.c
 [v _prevButtons `S2142 ~T0 @X0 1 e ]
-[; ;buttons.c: 48: inButtons_t prevButtons;
-"49
+[; ;buttons.c: 50: inButtons_t prevButtons;
+"51
 [v _outButtons `S2145 ~T0 @X0 1 e ]
-[; ;buttons.c: 49: outButtons_t outButtons;
-"50
-[v _origins `S2148 ~T0 @X0 1 e ]
-[; ;buttons.c: 50: origins_t origins;
+[; ;buttons.c: 51: outButtons_t outButtons;
 "52
-[v _buttonsTimers `uc ~T0 @X0 . `E15478 15 e ]
-[; ;buttons.c: 52: uint8_t buttonsTimers[N_BUTTONS];
-"53
-[v _buttonsMessage `uc ~T0 @X0 -> 10 `i e ]
-[; ;buttons.c: 53: uint8_t buttonsMessage[10];
+[v _origins `S2148 ~T0 @X0 1 e ]
+[; ;buttons.c: 52: origins_t origins;
 "54
-[v _buttonsMapByte0 `uc ~T0 @X0 . `E15478 15 e ]
-[; ;buttons.c: 54: uint8_t buttonsMapByte0[N_BUTTONS];
+[v _buttonsTimers `uc ~T0 @X0 . `E15478 15 e ]
+[; ;buttons.c: 54: uint8_t buttonsTimers[N_BUTTONS];
 "55
-[v _buttonsMapByte1 `uc ~T0 @X0 . `E15478 15 e ]
-[; ;buttons.c: 55: uint8_t buttonsMapByte1[N_BUTTONS];
+[v _buttonsMessage `uc ~T0 @X0 -> 10 `i e ]
+[; ;buttons.c: 55: uint8_t buttonsMessage[10];
+"56
+[v _buttonsMapByte0 `uc ~T0 @X0 . `E15478 15 e ]
+[; ;buttons.c: 56: uint8_t buttonsMapByte0[N_BUTTONS];
 "57
+[v _buttonsMapByte1 `uc ~T0 @X0 . `E15478 15 e ]
+[; ;buttons.c: 57: uint8_t buttonsMapByte1[N_BUTTONS];
+"59
 [v _buttonsInit `(v ~T0 @X0 1 ef ]
 {
-[; ;buttons.c: 57: void buttonsInit(void) {
+[; ;buttons.c: 59: void buttonsInit(void) {
 [e :U _buttonsInit ]
 [f ]
-[; ;buttons.c: 59: T0CON0 = 0x00;
-"59
-[e = _T0CON0 -> -> 0 `i `uc ]
-[; ;buttons.c: 60: T0CON1 = 0x47;
-"60
-[e = _T0CON1 -> -> 71 `i `uc ]
-[; ;buttons.c: 61: TMR0H = 124;
+[; ;buttons.c: 61: T0CON0 = 0x00;
 "61
-[e = _TMR0H -> -> 124 `i `uc ]
-[; ;buttons.c: 62: TMR0IF = 0;
+[e = _T0CON0 -> -> 0 `i `uc ]
+[; ;buttons.c: 62: T0CON1 = 0x47;
 "62
-[e = _TMR0IF -> -> 0 `i `b ]
-[; ;buttons.c: 63: T0CON0 = 0x80;
+[e = _T0CON1 -> -> 71 `i `uc ]
+[; ;buttons.c: 63: TMR0H = 124;
 "63
+[e = _TMR0H -> -> 124 `i `uc ]
+[; ;buttons.c: 64: TMR0IF = 0;
+"64
+[e = _TMR0IF -> -> 0 `i `b ]
+[; ;buttons.c: 65: T0CON0 = 0x80;
+"65
 [e = _T0CON0 -> -> 128 `i `uc ]
-[; ;buttons.c: 66: memset(buttonsMapByte0, 0, N_BUTTONS);
-"66
+[; ;buttons.c: 68: memset(buttonsMapByte0, 0, N_BUTTONS);
+"68
 [e ( _memset (3 , , -> &U _buttonsMapByte0 `*v -> 0 `i -> . `E15478 15 `ui ]
-[; ;buttons.c: 67: memset(buttonsMapByte1, 0, N_BUTTONS);
-"67
-[e ( _memset (3 , , -> &U _buttonsMapByte1 `*v -> 0 `i -> . `E15478 15 `ui ]
-[; ;buttons.c: 69: buttonsMapByte0[BUTTON_A_ID] = 0x01;
+[; ;buttons.c: 69: memset(buttonsMapByte1, 0, N_BUTTONS);
 "69
-[e = *U + &U _buttonsMapByte0 * -> . `E15478 0 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux -> -> 1 `i `uc ]
-[; ;buttons.c: 70: buttonsMapByte0[BUTTON_B_ID] = 0x02;
-"70
-[e = *U + &U _buttonsMapByte0 * -> . `E15478 1 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux -> -> 2 `i `uc ]
-[; ;buttons.c: 71: buttonsMapByte0[BUTTON_X_ID] = 0x04;
+[e ( _memset (3 , , -> &U _buttonsMapByte1 `*v -> 0 `i -> . `E15478 15 `ui ]
+[; ;buttons.c: 71: buttonsMapByte0[BUTTON_A_ID] = 0x01;
 "71
-[e = *U + &U _buttonsMapByte0 * -> . `E15478 2 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux -> -> 4 `i `uc ]
-[; ;buttons.c: 72: buttonsMapByte0[BUTTON_Y_ID] = 0x08;
+[e = *U + &U _buttonsMapByte0 * -> . `E15478 0 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux -> -> 1 `i `uc ]
+[; ;buttons.c: 72: buttonsMapByte0[BUTTON_B_ID] = 0x02;
 "72
-[e = *U + &U _buttonsMapByte0 * -> . `E15478 3 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux -> -> 8 `i `uc ]
-[; ;buttons.c: 73: buttonsMapByte0[BUTTON_ST_ID] = 0x10;
+[e = *U + &U _buttonsMapByte0 * -> . `E15478 1 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux -> -> 2 `i `uc ]
+[; ;buttons.c: 73: buttonsMapByte0[BUTTON_X_ID] = 0x04;
 "73
-[e = *U + &U _buttonsMapByte0 * -> . `E15478 4 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux -> -> 16 `i `uc ]
-[; ;buttons.c: 75: buttonsMapByte1[BUTTON_DL_ID] = 0x01;
+[e = *U + &U _buttonsMapByte0 * -> . `E15478 2 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux -> -> 4 `i `uc ]
+[; ;buttons.c: 74: buttonsMapByte0[BUTTON_Y_ID] = 0x08;
+"74
+[e = *U + &U _buttonsMapByte0 * -> . `E15478 3 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux -> -> 8 `i `uc ]
+[; ;buttons.c: 75: buttonsMapByte0[BUTTON_ST_ID] = 0x10;
 "75
-[e = *U + &U _buttonsMapByte1 * -> . `E15478 5 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 1 `i `uc ]
-[; ;buttons.c: 76: buttonsMapByte1[BUTTON_DR_ID] = 0x02;
-"76
-[e = *U + &U _buttonsMapByte1 * -> . `E15478 6 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 2 `i `uc ]
-[; ;buttons.c: 77: buttonsMapByte1[BUTTON_DD_ID] = 0x04;
+[e = *U + &U _buttonsMapByte0 * -> . `E15478 4 `ux -> -> # *U &U _buttonsMapByte0 `ui `ux -> -> 16 `i `uc ]
+[; ;buttons.c: 77: buttonsMapByte1[BUTTON_DL_ID] = 0x01;
 "77
-[e = *U + &U _buttonsMapByte1 * -> . `E15478 7 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 4 `i `uc ]
-[; ;buttons.c: 78: buttonsMapByte1[BUTTON_DU_ID] = 0x08;
+[e = *U + &U _buttonsMapByte1 * -> . `E15478 5 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 1 `i `uc ]
+[; ;buttons.c: 78: buttonsMapByte1[BUTTON_DR_ID] = 0x02;
 "78
-[e = *U + &U _buttonsMapByte1 * -> . `E15478 8 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 8 `i `uc ]
-[; ;buttons.c: 79: buttonsMapByte1[BUTTON_Z_ID] = 0x10;
+[e = *U + &U _buttonsMapByte1 * -> . `E15478 6 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 2 `i `uc ]
+[; ;buttons.c: 79: buttonsMapByte1[BUTTON_DD_ID] = 0x04;
 "79
-[e = *U + &U _buttonsMapByte1 * -> . `E15478 9 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 16 `i `uc ]
-[; ;buttons.c: 80: buttonsMapByte1[BUTTON_RD_ID] = 0x20;
+[e = *U + &U _buttonsMapByte1 * -> . `E15478 7 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 4 `i `uc ]
+[; ;buttons.c: 80: buttonsMapByte1[BUTTON_DU_ID] = 0x08;
 "80
-[e = *U + &U _buttonsMapByte1 * -> . `E15478 10 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 32 `i `uc ]
-[; ;buttons.c: 81: buttonsMapByte1[BUTTON_LD_ID] = 0x40;
+[e = *U + &U _buttonsMapByte1 * -> . `E15478 8 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 8 `i `uc ]
+[; ;buttons.c: 81: buttonsMapByte1[BUTTON_Z_ID] = 0x10;
 "81
-[e = *U + &U _buttonsMapByte1 * -> . `E15478 11 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 64 `i `uc ]
-[; ;buttons.c: 82: }
+[e = *U + &U _buttonsMapByte1 * -> . `E15478 9 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 16 `i `uc ]
+[; ;buttons.c: 82: buttonsMapByte1[BUTTON_RD_ID] = 0x20;
 "82
+[e = *U + &U _buttonsMapByte1 * -> . `E15478 10 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 32 `i `uc ]
+[; ;buttons.c: 83: buttonsMapByte1[BUTTON_LD_ID] = 0x40;
+"83
+[e = *U + &U _buttonsMapByte1 * -> . `E15478 11 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux -> -> 64 `i `uc ]
+[; ;buttons.c: 84: }
+"84
 [e :UE 2149 ]
 }
-"84
+"86
 [v _buttonsUpdate `(v ~T0 @X0 1 ef ]
 {
-[; ;buttons.c: 84: void buttonsUpdate(void) {
+[; ;buttons.c: 86: void buttonsUpdate(void) {
 [e :U _buttonsUpdate ]
 [f ]
-"85
+"87
 [v _i `uc ~T0 @X0 1 a ]
-"86
+"88
 [v _PA `uc ~T0 @X0 1 a ]
 [v _PB `uc ~T0 @X0 1 a ]
 [v _PC `uc ~T0 @X0 1 a ]
-"87
+"89
 [v _toggledButtons `S2142 ~T0 @X0 1 a ]
-[; ;buttons.c: 85: uint8_t i;
-[; ;buttons.c: 86: uint8_t PA, PB, PC;
-[; ;buttons.c: 87: inButtons_t toggledButtons;
-[; ;buttons.c: 90: PA = PORTA;
-"90
-[e = _PA _PORTA ]
-[; ;buttons.c: 91: PB = PORTB;
-"91
-[e = _PB _PORTB ]
-[; ;buttons.c: 92: PC = PORTC;
+[; ;buttons.c: 87: uint8_t i;
+[; ;buttons.c: 88: uint8_t PA, PB, PC;
+[; ;buttons.c: 89: inButtons_t toggledButtons;
+[; ;buttons.c: 92: PA = PORTA;
 "92
-[e = _PC _PORTC ]
-[; ;buttons.c: 93: toggledButtons.PORTA = (uint8_t)(PA ^ prevButtons.PORTA);
+[e = _PA _PORTA ]
+[; ;buttons.c: 93: PB = PORTB;
 "93
-[e = . . _toggledButtons 1 0 -> ^ -> _PA `i -> . . _prevButtons 1 0 `i `uc ]
-[; ;buttons.c: 94: toggledButtons.PORTB = (uint8_t)(PB ^ prevButtons.PORTB);
+[e = _PB _PORTB ]
+[; ;buttons.c: 94: PC = PORTC;
 "94
-[e = . . _toggledButtons 1 1 -> ^ -> _PB `i -> . . _prevButtons 1 1 `i `uc ]
-[; ;buttons.c: 95: toggledButtons.PORTC = (uint8_t)(PC ^ prevButtons.PORTC);
+[e = _PC _PORTC ]
+[; ;buttons.c: 95: toggledButtons.PORTA = (uint8_t)(PA ^ prevButtons.PORTA);
 "95
-[e = . . _toggledButtons 1 2 -> ^ -> _PC `i -> . . _prevButtons 1 2 `i `uc ]
-[; ;buttons.c: 97: prevButtons.PORTA = PA;
+[e = . . _toggledButtons 1 0 -> ^ -> _PA `i -> . . _prevButtons 1 0 `i `uc ]
+[; ;buttons.c: 96: toggledButtons.PORTB = (uint8_t)(PB ^ prevButtons.PORTB);
+"96
+[e = . . _toggledButtons 1 1 -> ^ -> _PB `i -> . . _prevButtons 1 1 `i `uc ]
+[; ;buttons.c: 97: toggledButtons.PORTC = (uint8_t)(PC ^ prevButtons.PORTC);
 "97
-[e = . . _prevButtons 1 0 _PA ]
-[; ;buttons.c: 98: prevButtons.PORTB = PB;
-"98
-[e = . . _prevButtons 1 1 _PB ]
-[; ;buttons.c: 99: prevButtons.PORTC = PC;
+[e = . . _toggledButtons 1 2 -> ^ -> _PC `i -> . . _prevButtons 1 2 `i `uc ]
+[; ;buttons.c: 99: prevButtons.PORTA = PA;
 "99
+[e = . . _prevButtons 1 0 _PA ]
+[; ;buttons.c: 100: prevButtons.PORTB = PB;
+"100
+[e = . . _prevButtons 1 1 _PB ]
+[; ;buttons.c: 101: prevButtons.PORTC = PC;
+"101
 [e = . . _prevButtons 1 2 _PC ]
-[; ;buttons.c: 102: if (toggledButtons.A) buttonsTimers[BUTTON_A_ID] = 0;
-"102
+[; ;buttons.c: 104: if (toggledButtons.A) buttonsTimers[BUTTON_A_ID] = 0;
+"104
 [e $ ! != -> . . _toggledButtons 0 18 `i -> -> -> 0 `i `uc `i 2151  ]
 [e = *U + &U _buttonsTimers * -> . `E15478 0 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2151 ]
-[; ;buttons.c: 103: if (toggledButtons.B) buttonsTimers[BUTTON_B_ID] = 0;
-"103
+[; ;buttons.c: 105: if (toggledButtons.B) buttonsTimers[BUTTON_B_ID] = 0;
+"105
 [e $ ! != -> . . _toggledButtons 0 17 `i -> -> -> 0 `i `uc `i 2152  ]
 [e = *U + &U _buttonsTimers * -> . `E15478 1 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2152 ]
-[; ;buttons.c: 104: if (toggledButtons.X) buttonsTimers[BUTTON_X_ID] = 0;
-"104
+[; ;buttons.c: 106: if (toggledButtons.X) buttonsTimers[BUTTON_X_ID] = 0;
+"106
 [e $ ! != -> . . _toggledButtons 0 10 `i -> -> -> 0 `i `uc `i 2153  ]
 [e = *U + &U _buttonsTimers * -> . `E15478 2 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2153 ]
-[; ;buttons.c: 105: if (toggledButtons.Y) buttonsTimers[BUTTON_Y_ID] = 0;
-"105
+[; ;buttons.c: 107: if (toggledButtons.Y) buttonsTimers[BUTTON_Y_ID] = 0;
+"107
 [e $ ! != -> . . _toggledButtons 0 9 `i -> -> -> 0 `i `uc `i 2154  ]
 [e = *U + &U _buttonsTimers * -> . `E15478 3 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2154 ]
-[; ;buttons.c: 106: if (toggledButtons.ST) buttonsTimers[BUTTON_ST_ID] = 0;
-"106
+[; ;buttons.c: 108: if (toggledButtons.ST) buttonsTimers[BUTTON_ST_ID] = 0;
+"108
 [e $ ! != -> . . _toggledButtons 0 5 `i -> -> -> 0 `i `uc `i 2155  ]
 [e = *U + &U _buttonsTimers * -> . `E15478 4 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2155 ]
-[; ;buttons.c: 107: if (toggledButtons.DL) buttonsTimers[BUTTON_DL_ID] = 0;
-"107
+[; ;buttons.c: 109: if (toggledButtons.DL) buttonsTimers[BUTTON_DL_ID] = 0;
+"109
 [e $ ! != -> . . _toggledButtons 0 2 `i -> -> -> 0 `i `uc `i 2156  ]
 [e = *U + &U _buttonsTimers * -> . `E15478 5 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2156 ]
-[; ;buttons.c: 108: if (toggledButtons.DR) buttonsTimers[BUTTON_DR_ID] = 0;
-"108
+[; ;buttons.c: 110: if (toggledButtons.DR) buttonsTimers[BUTTON_DR_ID] = 0;
+"110
 [e $ ! != -> . . _toggledButtons 0 4 `i -> -> -> 0 `i `uc `i 2157  ]
 [e = *U + &U _buttonsTimers * -> . `E15478 6 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2157 ]
-[; ;buttons.c: 109: if (toggledButtons.DD) buttonsTimers[BUTTON_DD_ID] = 0;
-"109
+[; ;buttons.c: 111: if (toggledButtons.DD) buttonsTimers[BUTTON_DD_ID] = 0;
+"111
 [e $ ! != -> . . _toggledButtons 0 6 `i -> -> -> 0 `i `uc `i 2158  ]
 [e = *U + &U _buttonsTimers * -> . `E15478 7 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2158 ]
-[; ;buttons.c: 110: if (toggledButtons.DU) buttonsTimers[BUTTON_DU_ID] = 0;
-"110
+[; ;buttons.c: 112: if (toggledButtons.DU) buttonsTimers[BUTTON_DU_ID] = 0;
+"112
 [e $ ! != -> . . _toggledButtons 0 3 `i -> -> -> 0 `i `uc `i 2159  ]
 [e = *U + &U _buttonsTimers * -> . `E15478 8 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2159 ]
-[; ;buttons.c: 111: if (toggledButtons.Z) buttonsTimers[BUTTON_Z_ID] = 0;
-"111
+[; ;buttons.c: 113: if (toggledButtons.Z) buttonsTimers[BUTTON_Z_ID] = 0;
+"113
 [e $ ! != -> . . _toggledButtons 0 7 `i -> -> -> 0 `i `uc `i 2160  ]
 [e = *U + &U _buttonsTimers * -> . `E15478 9 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2160 ]
-[; ;buttons.c: 112: if (toggledButtons.RD) buttonsTimers[BUTTON_RD_ID] = 0;
-"112
+[; ;buttons.c: 114: if (toggledButtons.RD) buttonsTimers[BUTTON_RD_ID] = 0;
+"114
 [e $ ! != -> . . _toggledButtons 0 8 `i -> -> -> 0 `i `uc `i 2161  ]
 [e = *U + &U _buttonsTimers * -> . `E15478 10 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2161 ]
-[; ;buttons.c: 113: if (toggledButtons.LD) buttonsTimers[BUTTON_LD_ID] = 0;
-"113
+[; ;buttons.c: 115: if (toggledButtons.LD) buttonsTimers[BUTTON_LD_ID] = 0;
+"115
 [e $ ! != -> . . _toggledButtons 0 1 `i -> -> -> 0 `i `uc `i 2162  ]
 [e = *U + &U _buttonsTimers * -> . `E15478 11 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2162 ]
-[; ;buttons.c: 114: if (toggledButtons.LA) buttonsTimers[BUTTON_LA_ID] = 0;
-"114
+[; ;buttons.c: 116: if (toggledButtons.LA) buttonsTimers[BUTTON_LA_ID] = 0;
+"116
 [e $ ! != -> . . _toggledButtons 0 14 `i -> -> -> 0 `i `uc `i 2163  ]
 [e = *U + &U _buttonsTimers * -> . `E15478 12 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2163 ]
-[; ;buttons.c: 115: if (toggledButtons.RA) buttonsTimers[BUTTON_RA_ID] = 0;
-"115
+[; ;buttons.c: 117: if (toggledButtons.RA) buttonsTimers[BUTTON_RA_ID] = 0;
+"117
 [e $ ! != -> . . _toggledButtons 0 16 `i -> -> -> 0 `i `uc `i 2164  ]
 [e = *U + &U _buttonsTimers * -> . `E15478 13 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2164 ]
-[; ;buttons.c: 116: if (toggledButtons.Z2) buttonsTimers[BUTTON_Z2_ID] = 0;
-"116
+[; ;buttons.c: 118: if (toggledButtons.Z2) buttonsTimers[BUTTON_Z2_ID] = 0;
+"118
 [e $ ! != -> . . _toggledButtons 0 12 `i -> -> -> 0 `i `uc `i 2165  ]
 [e = *U + &U _buttonsTimers * -> . `E15478 14 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 0 `i `uc ]
 [e :U 2165 ]
-[; ;buttons.c: 118: if (!TMR0IF) return;
-"118
+[; ;buttons.c: 120: if (!TMR0IF) return;
+"120
 [e $ ! ! _TMR0IF 2166  ]
 [e $UE 2150  ]
 [e :U 2166 ]
-[; ;buttons.c: 119: TMR0IF = 0;
-"119
+[; ;buttons.c: 121: TMR0IF = 0;
+"121
 [e = _TMR0IF -> -> 0 `i `b ]
-[; ;buttons.c: 122: for (i = 0; i < N_BUTTONS; i++) {
-"122
+[; ;buttons.c: 124: for (i = 0; i < N_BUTTONS; i++) {
+"124
 {
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> . `E15478 15 `i 2167  ]
 [e $U 2168  ]
 [e :U 2167 ]
 {
-[; ;buttons.c: 123: buttonsTimers[i]++;
-"123
+[; ;buttons.c: 125: buttonsTimers[i]++;
+"125
 [e ++ *U + &U _buttonsTimers * -> _i `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 1 `i `uc ]
-"124
+"126
 }
-"122
+"124
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> . `E15478 15 `i 2167  ]
 [e :U 2168 ]
-"124
-}
-[; ;buttons.c: 124: }
-[; ;buttons.c: 126: outButtons.byte0 = 0x00;
 "126
+}
+[; ;buttons.c: 126: }
+[; ;buttons.c: 128: outButtons.byte0 = 0x00;
+"128
 [e = . . _outButtons 1 0 -> -> 0 `i `uc ]
-[; ;buttons.c: 127: outButtons.byte1 = 0x80;
-"127
-[e = . . _outButtons 1 1 -> -> 128 `i `uc ]
-[; ;buttons.c: 129: if (buttonsTimers[BUTTON_A_ID] >= 10 && !prevButtons.A) { buttonsTimers[BUTTON_A_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_A_ID]; } if (buttonsTimers[BUTTON_A_ID] >= 10 && !prevButtons.A) { buttonsTimers[BUTTON_A_ID] = 10; outButtons.byte1
+[; ;buttons.c: 129: outButtons.byte1 = 0x80;
 "129
+[e = . . _outButtons 1 1 -> -> 128 `i `uc ]
+[; ;buttons.c: 131: if (buttonsTimers[BUTTON_A_ID] >= 10 && !prevButtons.A) { buttonsTimers[BUTTON_A_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_A_ID]; } if (buttonsTimers[BUTTON_A_ID] >= 10 && !prevButtons.A) { buttonsTimers[BUTTON_A_ID] = 10; outButtons.byte1
+"131
 [e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 0 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 18 `i -> -> -> 0 `i `uc `i 2170  ]
 {
 [e = *U + &U _buttonsTimers * -> . `E15478 0 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
@@ -17832,8 +17832,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 0 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2171 ]
-[; ;buttons.c: 130: if (buttonsTimers[BUTTON_B_ID] >= 10 && !prevButtons.B) { buttonsTimers[BUTTON_B_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_B_ID]; } if (buttonsTimers[BUTTON_B_ID] >= 10 && !prevButtons.B) { buttonsTimers[BUTTON_B_ID] = 10; outButtons.byte1
-"130
+[; ;buttons.c: 132: if (buttonsTimers[BUTTON_B_ID] >= 10 && !prevButtons.B) { buttonsTimers[BUTTON_B_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_B_ID]; } if (buttonsTimers[BUTTON_B_ID] >= 10 && !prevButtons.B) { buttonsTimers[BUTTON_B_ID] = 10; outButtons.byte1
+"132
 [e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 1 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 17 `i -> -> -> 0 `i `uc `i 2172  ]
 {
 [e = *U + &U _buttonsTimers * -> . `E15478 1 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
@@ -17846,8 +17846,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 1 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2173 ]
-[; ;buttons.c: 131: if (buttonsTimers[BUTTON_X_ID] >= 10 && !prevButtons.X) { buttonsTimers[BUTTON_X_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_X_ID]; } if (buttonsTimers[BUTTON_X_ID] >= 10 && !prevButtons.X) { buttonsTimers[BUTTON_X_ID] = 10; outButtons.byte1
-"131
+[; ;buttons.c: 133: if (buttonsTimers[BUTTON_X_ID] >= 10 && !prevButtons.X) { buttonsTimers[BUTTON_X_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_X_ID]; } if (buttonsTimers[BUTTON_X_ID] >= 10 && !prevButtons.X) { buttonsTimers[BUTTON_X_ID] = 10; outButtons.byte1
+"133
 [e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 2 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 10 `i -> -> -> 0 `i `uc `i 2174  ]
 {
 [e = *U + &U _buttonsTimers * -> . `E15478 2 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
@@ -17860,8 +17860,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 2 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2175 ]
-[; ;buttons.c: 132: if (buttonsTimers[BUTTON_Y_ID] >= 10 && !prevButtons.Y) { buttonsTimers[BUTTON_Y_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_Y_ID]; } if (buttonsTimers[BUTTON_Y_ID] >= 10 && !prevButtons.Y) { buttonsTimers[BUTTON_Y_ID] = 10; outButtons.byte1
-"132
+[; ;buttons.c: 134: if (buttonsTimers[BUTTON_Y_ID] >= 10 && !prevButtons.Y) { buttonsTimers[BUTTON_Y_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_Y_ID]; } if (buttonsTimers[BUTTON_Y_ID] >= 10 && !prevButtons.Y) { buttonsTimers[BUTTON_Y_ID] = 10; outButtons.byte1
+"134
 [e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 3 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 9 `i -> -> -> 0 `i `uc `i 2176  ]
 {
 [e = *U + &U _buttonsTimers * -> . `E15478 3 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
@@ -17874,8 +17874,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 3 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2177 ]
-[; ;buttons.c: 133: if (buttonsTimers[BUTTON_ST_ID] >= 10 && !prevButtons.ST) { buttonsTimers[BUTTON_ST_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_ST_ID]; } if (buttonsTimers[BUTTON_ST_ID] >= 10 && !prevButtons.ST) { buttonsTimers[BUTTON_ST_ID] = 10; outButton
-"133
+[; ;buttons.c: 135: if (buttonsTimers[BUTTON_ST_ID] >= 10 && !prevButtons.ST) { buttonsTimers[BUTTON_ST_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_ST_ID]; } if (buttonsTimers[BUTTON_ST_ID] >= 10 && !prevButtons.ST) { buttonsTimers[BUTTON_ST_ID] = 10; outButton
+"135
 [e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 4 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 5 `i -> -> -> 0 `i `uc `i 2178  ]
 {
 [e = *U + &U _buttonsTimers * -> . `E15478 4 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
@@ -17888,8 +17888,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 4 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2179 ]
-[; ;buttons.c: 134: if (buttonsTimers[BUTTON_DL_ID] >= 10 && !prevButtons.DL) { buttonsTimers[BUTTON_DL_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_DL_ID]; } if (buttonsTimers[BUTTON_DL_ID] >= 10 && !prevButtons.DL) { buttonsTimers[BUTTON_DL_ID] = 10; outButton
-"134
+[; ;buttons.c: 136: if (buttonsTimers[BUTTON_DL_ID] >= 10 && !prevButtons.DL) { buttonsTimers[BUTTON_DL_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_DL_ID]; } if (buttonsTimers[BUTTON_DL_ID] >= 10 && !prevButtons.DL) { buttonsTimers[BUTTON_DL_ID] = 10; outButton
+"136
 [e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 5 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 2 `i -> -> -> 0 `i `uc `i 2180  ]
 {
 [e = *U + &U _buttonsTimers * -> . `E15478 5 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
@@ -17902,8 +17902,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 5 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2181 ]
-[; ;buttons.c: 135: if (buttonsTimers[BUTTON_DR_ID] >= 10 && !prevButtons.DR) { buttonsTimers[BUTTON_DR_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_DR_ID]; } if (buttonsTimers[BUTTON_DR_ID] >= 10 && !prevButtons.DR) { buttonsTimers[BUTTON_DR_ID] = 10; outButton
-"135
+[; ;buttons.c: 137: if (buttonsTimers[BUTTON_DR_ID] >= 10 && !prevButtons.DR) { buttonsTimers[BUTTON_DR_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_DR_ID]; } if (buttonsTimers[BUTTON_DR_ID] >= 10 && !prevButtons.DR) { buttonsTimers[BUTTON_DR_ID] = 10; outButton
+"137
 [e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 6 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 4 `i -> -> -> 0 `i `uc `i 2182  ]
 {
 [e = *U + &U _buttonsTimers * -> . `E15478 6 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
@@ -17916,8 +17916,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 6 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2183 ]
-[; ;buttons.c: 136: if (buttonsTimers[BUTTON_DD_ID] >= 10 && !prevButtons.DD) { buttonsTimers[BUTTON_DD_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_DD_ID]; } if (buttonsTimers[BUTTON_DD_ID] >= 10 && !prevButtons.DD) { buttonsTimers[BUTTON_DD_ID] = 10; outButton
-"136
+[; ;buttons.c: 138: if (buttonsTimers[BUTTON_DD_ID] >= 10 && !prevButtons.DD) { buttonsTimers[BUTTON_DD_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_DD_ID]; } if (buttonsTimers[BUTTON_DD_ID] >= 10 && !prevButtons.DD) { buttonsTimers[BUTTON_DD_ID] = 10; outButton
+"138
 [e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 7 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 6 `i -> -> -> 0 `i `uc `i 2184  ]
 {
 [e = *U + &U _buttonsTimers * -> . `E15478 7 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
@@ -17930,8 +17930,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 7 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2185 ]
-[; ;buttons.c: 137: if (buttonsTimers[BUTTON_DU_ID] >= 10 && !prevButtons.DU) { buttonsTimers[BUTTON_DU_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_DU_ID]; } if (buttonsTimers[BUTTON_DU_ID] >= 10 && !prevButtons.DU) { buttonsTimers[BUTTON_DU_ID] = 10; outButton
-"137
+[; ;buttons.c: 139: if (buttonsTimers[BUTTON_DU_ID] >= 10 && !prevButtons.DU) { buttonsTimers[BUTTON_DU_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_DU_ID]; } if (buttonsTimers[BUTTON_DU_ID] >= 10 && !prevButtons.DU) { buttonsTimers[BUTTON_DU_ID] = 10; outButton
+"139
 [e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 8 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 3 `i -> -> -> 0 `i `uc `i 2186  ]
 {
 [e = *U + &U _buttonsTimers * -> . `E15478 8 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
@@ -17944,8 +17944,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 8 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2187 ]
-[; ;buttons.c: 138: if (buttonsTimers[BUTTON_Z_ID] >= 10 && !prevButtons.Z) { buttonsTimers[BUTTON_Z_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_Z_ID]; } if (buttonsTimers[BUTTON_Z_ID] >= 10 && !prevButtons.Z) { buttonsTimers[BUTTON_Z_ID] = 10; outButtons.byte1
-"138
+[; ;buttons.c: 140: if (buttonsTimers[BUTTON_Z_ID] >= 10 && !prevButtons.Z) { buttonsTimers[BUTTON_Z_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_Z_ID]; } if (buttonsTimers[BUTTON_Z_ID] >= 10 && !prevButtons.Z) { buttonsTimers[BUTTON_Z_ID] = 10; outButtons.byte1
+"140
 [e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 9 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 7 `i -> -> -> 0 `i `uc `i 2188  ]
 {
 [e = *U + &U _buttonsTimers * -> . `E15478 9 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
@@ -17958,8 +17958,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 9 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2189 ]
-[; ;buttons.c: 139: if (buttonsTimers[BUTTON_RD_ID] >= 10 && !prevButtons.RD) { buttonsTimers[BUTTON_RD_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_RD_ID]; } if (buttonsTimers[BUTTON_RD_ID] >= 10 && !prevButtons.RD) { buttonsTimers[BUTTON_RD_ID] = 10; outButton
-"139
+[; ;buttons.c: 141: if (buttonsTimers[BUTTON_RD_ID] >= 10 && !prevButtons.RD) { buttonsTimers[BUTTON_RD_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_RD_ID]; } if (buttonsTimers[BUTTON_RD_ID] >= 10 && !prevButtons.RD) { buttonsTimers[BUTTON_RD_ID] = 10; outButton
+"141
 [e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 10 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 8 `i -> -> -> 0 `i `uc `i 2190  ]
 {
 [e = *U + &U _buttonsTimers * -> . `E15478 10 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
@@ -17972,8 +17972,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 10 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2191 ]
-[; ;buttons.c: 140: if (buttonsTimers[BUTTON_LD_ID] >= 10 && !prevButtons.LD) { buttonsTimers[BUTTON_LD_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_LD_ID]; } if (buttonsTimers[BUTTON_LD_ID] >= 10 && !prevButtons.LD) { buttonsTimers[BUTTON_LD_ID] = 10; outButton
-"140
+[; ;buttons.c: 142: if (buttonsTimers[BUTTON_LD_ID] >= 10 && !prevButtons.LD) { buttonsTimers[BUTTON_LD_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_LD_ID]; } if (buttonsTimers[BUTTON_LD_ID] >= 10 && !prevButtons.LD) { buttonsTimers[BUTTON_LD_ID] = 10; outButton
+"142
 [e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 11 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 1 `i -> -> -> 0 `i `uc `i 2192  ]
 {
 [e = *U + &U _buttonsTimers * -> . `E15478 11 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
@@ -17986,8 +17986,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 11 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2193 ]
-[; ;buttons.c: 141: if (buttonsTimers[BUTTON_Z2_ID] >= 10 && !prevButtons.Z2) { buttonsTimers[BUTTON_Z2_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_Z2_ID]; } if (buttonsTimers[BUTTON_Z2_ID] >= 10 && !prevButtons.Z2) { buttonsTimers[BUTTON_Z2_ID] = 10; outButton
-"141
+[; ;buttons.c: 143: if (buttonsTimers[BUTTON_Z2_ID] >= 10 && !prevButtons.Z2) { buttonsTimers[BUTTON_Z2_ID] = 10; outButtons.byte0 |= buttonsMapByte0[BUTTON_Z2_ID]; } if (buttonsTimers[BUTTON_Z2_ID] >= 10 && !prevButtons.Z2) { buttonsTimers[BUTTON_Z2_ID] = 10; outButton
+"143
 [e $ ! && >= -> *U + &U _buttonsTimers * -> . `E15478 14 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i ! != -> . . _prevButtons 0 12 `i -> -> -> 0 `i `uc `i 2194  ]
 {
 [e = *U + &U _buttonsTimers * -> . `E15478 14 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
@@ -18000,528 +18000,480 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e =| . . _outButtons 1 1 *U + &U _buttonsMapByte1 * -> . `E15478 14 `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
 }
 [e :U 2195 ]
-[; ;buttons.c: 143: if (buttonsTimers[BUTTON_LA_ID] >= 10) {
-"143
+[; ;buttons.c: 145: if (buttonsTimers[BUTTON_LA_ID] >= 10) {
+"145
 [e $ ! >= -> *U + &U _buttonsTimers * -> . `E15478 12 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i 2196  ]
 {
-[; ;buttons.c: 144: buttonsTimers[BUTTON_LA_ID] = 10;
-"144
+[; ;buttons.c: 146: buttonsTimers[BUTTON_LA_ID] = 10;
+"146
 [e = *U + &U _buttonsTimers * -> . `E15478 12 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[; ;buttons.c: 145: if (prevButtons.LA) {
-"145
+[; ;buttons.c: 147: if (prevButtons.LA) {
+"147
 [e $ ! != -> . . _prevButtons 0 14 `i -> -> -> 0 `i `uc `i 2197  ]
 {
-[; ;buttons.c: 146: outButtons.LA = 0;
-"146
+[; ;buttons.c: 148: outButtons.LA = 0;
+"148
 [e = . . _outButtons 0 14 -> -> 0 `i `uc ]
-"147
+"149
 }
-[; ;buttons.c: 147: } else {
+[; ;buttons.c: 149: } else {
 [e $U 2198  ]
 [e :U 2197 ]
 {
-[; ;buttons.c: 148: outButtons.LA = 0xFF;
-"148
+[; ;buttons.c: 150: outButtons.LA = 0xFF;
+"150
 [e = . . _outButtons 0 14 -> -> 255 `i `uc ]
-"149
+"151
 }
 [e :U 2198 ]
-"150
+"152
 }
 [e :U 2196 ]
-[; ;buttons.c: 149: }
-[; ;buttons.c: 150: }
-[; ;buttons.c: 151: if (buttonsTimers[BUTTON_RA_ID] >= 10) {
-"151
+[; ;buttons.c: 151: }
+[; ;buttons.c: 152: }
+[; ;buttons.c: 153: if (buttonsTimers[BUTTON_RA_ID] >= 10) {
+"153
 [e $ ! >= -> *U + &U _buttonsTimers * -> . `E15478 13 `ux -> -> # *U &U _buttonsTimers `ui `ux `i -> 10 `i 2199  ]
 {
-[; ;buttons.c: 152: buttonsTimers[BUTTON_RA_ID] = 10;
-"152
+[; ;buttons.c: 154: buttonsTimers[BUTTON_RA_ID] = 10;
+"154
 [e = *U + &U _buttonsTimers * -> . `E15478 13 `ux -> -> # *U &U _buttonsTimers `ui `ux -> -> 10 `i `uc ]
-[; ;buttons.c: 153: if (prevButtons.RA) {
-"153
+[; ;buttons.c: 155: if (prevButtons.RA) {
+"155
 [e $ ! != -> . . _prevButtons 0 16 `i -> -> -> 0 `i `uc `i 2200  ]
 {
-[; ;buttons.c: 154: outButtons.RA = 0;
-"154
+[; ;buttons.c: 156: outButtons.RA = 0;
+"156
 [e = . . _outButtons 0 15 -> -> 0 `i `uc ]
-"155
+"157
 }
-[; ;buttons.c: 155: } else {
+[; ;buttons.c: 157: } else {
 [e $U 2201  ]
 [e :U 2200 ]
 {
-[; ;buttons.c: 156: outButtons.RA = 0xFF;
-"156
+[; ;buttons.c: 158: outButtons.RA = 0xFF;
+"158
 [e = . . _outButtons 0 15 -> -> 255 `i `uc ]
-"157
+"159
 }
 [e :U 2201 ]
-"158
+"160
 }
 [e :U 2199 ]
-[; ;buttons.c: 157: }
-[; ;buttons.c: 158: }
 [; ;buttons.c: 159: }
-"159
+[; ;buttons.c: 160: }
+[; ;buttons.c: 161: }
+"161
 [e :UE 2150 ]
 }
-"161
+"163
 [v _buttonsGetMessage `(*uc ~T0 @X0 1 ef1`uc ]
 {
-[; ;buttons.c: 161: uint8_t* buttonsGetMessage(uint8_t analogMode) {
+[; ;buttons.c: 163: uint8_t* buttonsGetMessage(uint8_t analogMode) {
 [e :U _buttonsGetMessage ]
 [v _analogMode `uc ~T0 @X0 1 r1 ]
 [f ]
-"162
+"164
 [v _correction_type `uc ~T0 @X0 1 a ]
-"163
+"165
 [v _cx `uc ~T0 @X0 1 a ]
 [v _cy `uc ~T0 @X0 1 a ]
-[; ;buttons.c: 162: uint8_t correction_type;
-[; ;buttons.c: 163: uint8_t cx, cy;
-[; ;buttons.c: 164: buttonsMessage[0] = outButtons.byte0;
-"164
+[; ;buttons.c: 164: uint8_t correction_type;
+[; ;buttons.c: 165: uint8_t cx, cy;
+[; ;buttons.c: 166: buttonsMessage[0] = outButtons.byte0;
+"166
 [e = *U + &U _buttonsMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux . . _outButtons 1 0 ]
-[; ;buttons.c: 165: buttonsMessage[1] = outButtons.byte1;
-"165
-[e = *U + &U _buttonsMessage * -> -> -> 1 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux . . _outButtons 1 1 ]
-[; ;buttons.c: 167: correction_type = sticks_lut[ADCValues[0] + 0x7F][ADCValues[1] + 0x7F];
+[; ;buttons.c: 167: buttonsMessage[1] = outButtons.byte1;
 "167
-[e = _correction_type *U + &U *U + &U _sticks_lut * -> -> + -> *U + &U _ADCValues * -> -> -> 0 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 127 `i `ui `ux -> * -> # *U &U *U &U _sticks_lut `ui -> -> 128 `i `ui `ux * -> -> + -> *U + &U _ADCValues * -> -> -> 1 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 127 `i `ui `ux -> -> # *U &U *U + &U _sticks_lut * -> -> + -> *U + &U _ADCValues * -> -> -> 0 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 127 `i `ui `ux -> * -> # *U &U *U &U _sticks_lut `ui -> -> 128 `i `ui `ux `ui `ux ]
-[; ;buttons.c: 169: if (correction_type & 0x01) {
+[e = *U + &U _buttonsMessage * -> -> -> 1 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux . . _outButtons 1 1 ]
+[; ;buttons.c: 169: correction_type = sticks_lut[(ADCValues[0] <= 0x7F ? ~ADCValues[0] & 0x7FU : ADCValues[0] & 0x7FU)][(ADCValues[1] <= 0x7F ? ~ADCValues[1] & 0x7FU : ADCValues[1] & 0x7FU)];
 "169
+[e = _correction_type *U + &U *U + &U _sticks_lut * -> ? <= -> *U + &U _ADCValues * -> -> -> 0 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 127 `i : & -> ~ -> *U + &U _ADCValues * -> -> -> 0 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i `ui -> 127 `ui & -> *U + &U _ADCValues * -> -> -> 0 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ui -> 127 `ui `ux -> * -> # *U &U *U &U _sticks_lut `ui -> -> 128 `i `ui `ux * -> ? <= -> *U + &U _ADCValues * -> -> -> 1 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 127 `i : & -> ~ -> *U + &U _ADCValues * -> -> -> 1 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i `ui -> 127 `ui & -> *U + &U _ADCValues * -> -> -> 1 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ui -> 127 `ui `ux -> -> # *U &U *U + &U _sticks_lut * -> ? <= -> *U + &U _ADCValues * -> -> -> 0 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 127 `i : & -> ~ -> *U + &U _ADCValues * -> -> -> 0 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i `ui -> 127 `ui & -> *U + &U _ADCValues * -> -> -> 0 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ui -> 127 `ui `ux -> * -> # *U &U *U &U _sticks_lut `ui -> -> 128 `i `ui `ux `ui `ux ]
+[; ;buttons.c: 171: if (correction_type & 0x01) {
+"171
 [e $ ! != & -> _correction_type `i -> 1 `i -> 0 `i 2203  ]
 {
-[; ;buttons.c: 170: buttonsMessage[2] = ADCValues[0] >= 0x80 ? 204 : -204;
-"170
-[e = *U + &U _buttonsMessage * -> -> -> 2 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> ? >= -> *U + &U _ADCValues * -> -> -> 0 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 128 `i : -> 204 `i -U -> 204 `i `uc ]
-[; ;buttons.c: 171: buttonsMessage[3] = ADCValues[1] >= 0x80 ? 204 : -204;
-"171
-[e = *U + &U _buttonsMessage * -> -> -> 3 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> ? >= -> *U + &U _ADCValues * -> -> -> 1 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 128 `i : -> 204 `i -U -> 204 `i `uc ]
+[; ;buttons.c: 172: buttonsMessage[2] = ADCValues[0] >= 0x80 ? 204 : 52;
 "172
+[e = *U + &U _buttonsMessage * -> -> -> 2 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> ? >= -> *U + &U _ADCValues * -> -> -> 0 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 128 `i : -> 204 `i -> 52 `i `uc ]
+[; ;buttons.c: 173: buttonsMessage[3] = ADCValues[1] >= 0x80 ? 151 : 105;
+"173
+[e = *U + &U _buttonsMessage * -> -> -> 3 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> ? >= -> *U + &U _ADCValues * -> -> -> 1 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 128 `i : -> 151 `i -> 105 `i `uc ]
+"174
 }
-[; ;buttons.c: 172: } else if (correction_type & 0x02) {
+[; ;buttons.c: 174: } else if (correction_type & 0x02) {
 [e $U 2204  ]
 [e :U 2203 ]
 [e $ ! != & -> _correction_type `i -> 2 `i -> 0 `i 2205  ]
 {
-[; ;buttons.c: 173: buttonsMessage[2] = ADCValues[0] >= 0x80 ? 204 : -204;
-"173
-[e = *U + &U _buttonsMessage * -> -> -> 2 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> ? >= -> *U + &U _ADCValues * -> -> -> 0 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 128 `i : -> 204 `i -U -> 204 `i `uc ]
-[; ;buttons.c: 174: buttonsMessage[3] = ADCValues[1] >= 0x80 ? 204 : -204;
-"174
-[e = *U + &U _buttonsMessage * -> -> -> 3 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> ? >= -> *U + &U _ADCValues * -> -> -> 1 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 128 `i : -> 204 `i -U -> 204 `i `uc ]
+[; ;buttons.c: 175: buttonsMessage[2] = ADCValues[0] >= 0x80 ? 151 : 105;
 "175
+[e = *U + &U _buttonsMessage * -> -> -> 2 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> ? >= -> *U + &U _ADCValues * -> -> -> 0 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 128 `i : -> 151 `i -> 105 `i `uc ]
+[; ;buttons.c: 176: buttonsMessage[3] = ADCValues[1] >= 0x80 ? 204 : 52;
+"176
+[e = *U + &U _buttonsMessage * -> -> -> 3 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> ? >= -> *U + &U _ADCValues * -> -> -> 1 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 128 `i : -> 204 `i -> 52 `i `uc ]
+"180
 }
-[; ;buttons.c: 175: } else if (correction_type & 0x04) {
+[; ;buttons.c: 180: } else {
 [e $U 2206  ]
 [e :U 2205 ]
-[e $ ! != & -> _correction_type `i -> 4 `i -> 0 `i 2207  ]
 {
-[; ;buttons.c: 176: buttonsMessage[2] = ADCValues[0] >= 0x80 ? 183 : -183;
-"176
-[e = *U + &U _buttonsMessage * -> -> -> 2 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> ? >= -> *U + &U _ADCValues * -> -> -> 0 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 128 `i : -> 183 `i -U -> 183 `i `uc ]
-[; ;buttons.c: 177: buttonsMessage[3] = ADCValues[1] >= 0x80 ? 183 : -183;
-"177
-[e = *U + &U _buttonsMessage * -> -> -> 3 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> ? >= -> *U + &U _ADCValues * -> -> -> 1 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 128 `i : -> 183 `i -U -> 183 `i `uc ]
-"178
-}
-[; ;buttons.c: 178: } else {
-[e $U 2208  ]
-[e :U 2207 ]
-{
-[; ;buttons.c: 179: buttonsMessage[2] = ADCValues[0];
-"179
-[e = *U + &U _buttonsMessage * -> -> -> 2 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _ADCValues * -> -> -> 0 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
-[; ;buttons.c: 180: buttonsMessage[3] = ADCValues[1];
-"180
-[e = *U + &U _buttonsMessage * -> -> -> 3 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _ADCValues * -> -> -> 1 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
+[; ;buttons.c: 181: buttonsMessage[2] = ADCValues[0];
 "181
+[e = *U + &U _buttonsMessage * -> -> -> 2 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _ADCValues * -> -> -> 0 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
+[; ;buttons.c: 182: buttonsMessage[3] = ADCValues[1];
+"182
+[e = *U + &U _buttonsMessage * -> -> -> 3 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _ADCValues * -> -> -> 1 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
+"183
 }
-[e :U 2208 ]
 [e :U 2206 ]
 [e :U 2204 ]
-[; ;buttons.c: 181: }
-[; ;buttons.c: 183: if (correction_type & 0x40) {
-"183
-[e $ ! != & -> _correction_type `i -> 64 `i -> 0 `i 2209  ]
-{
-[; ;buttons.c: 184: cx = ADCValues[2] >= 0x80 ? 255 : -255;
+[; ;buttons.c: 183: }
+[; ;buttons.c: 184: cx = ADCValues[2];
 "184
-[e = _cx -> ? >= -> *U + &U _ADCValues * -> -> -> 2 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 128 `i : -> 255 `i -U -> 255 `i `uc ]
-[; ;buttons.c: 185: cy = 0;
-"185
-[e = _cy -> -> 0 `i `uc ]
-"186
-}
-[; ;buttons.c: 186: } else if (correction_type & 0x80) {
-[e $U 2210  ]
-[e :U 2209 ]
-[e $ ! != & -> _correction_type `i -> 128 `i -> 0 `i 2211  ]
-{
-[; ;buttons.c: 187: cx = 255;
-"187
-[e = _cx -> -> 255 `i `uc ]
-[; ;buttons.c: 188: cy = ADCValues[3] >= 0x80 ? 0 : -0;
-"188
-[e = _cy -> ? >= -> *U + &U _ADCValues * -> -> -> 3 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 128 `i : -> 0 `i -U -> 0 `i `uc ]
-"189
-}
-[; ;buttons.c: 189: } else {
-[e $U 2212  ]
-[e :U 2211 ]
-{
-[; ;buttons.c: 190: cx = ADCValues[2];
-"190
 [e = _cx *U + &U _ADCValues * -> -> -> 2 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
-[; ;buttons.c: 191: cy = ADCValues[3];
-"191
+[; ;buttons.c: 185: cy = ADCValues[3];
+"185
 [e = _cy *U + &U _ADCValues * -> -> -> 3 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
-"192
-}
-[e :U 2212 ]
-[e :U 2210 ]
-[; ;buttons.c: 192: }
-[; ;buttons.c: 194: switch (analogMode) {
-"194
-[e $U 2214  ]
-{
-[; ;buttons.c: 195: case 0:
-"195
-[e :U 2215 ]
-"196
-[e :U 2216 ]
-"197
-[e :U 2217 ]
+[; ;buttons.c: 198: switch (analogMode) {
 "198
-[e :U 2218 ]
-[; ;buttons.c: 196: case 5:
-[; ;buttons.c: 197: case 6:
-[; ;buttons.c: 198: case 7:
-[; ;buttons.c: 199: buttonsMessage[4] = cx;
+[e $U 2208  ]
+{
+[; ;buttons.c: 199: case 0:
 "199
-[e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux _cx ]
-[; ;buttons.c: 200: buttonsMessage[5] = cy;
+[e :U 2209 ]
 "200
-[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux _cy ]
-[; ;buttons.c: 202: buttonsMessage[6] = (uint8_t)((uint8_t)(ADCValues[5] & 0xF0U) | (uint8_t)(ADCValues[4] >> 4U));
+[e :U 2210 ]
+"201
+[e :U 2211 ]
 "202
-[e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> | -> -> & -> *U + &U _ADCValues * -> -> -> 5 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ui -> 240 `ui `uc `i -> -> >> -> *U + &U _ADCValues * -> -> -> 4 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 4 `ui `uc `i `uc ]
-[; ;buttons.c: 203: buttonsMessage[7] = 0x00;
+[e :U 2212 ]
+[; ;buttons.c: 200: case 5:
+[; ;buttons.c: 201: case 6:
+[; ;buttons.c: 202: case 7:
+[; ;buttons.c: 203: buttonsMessage[4] = cx;
 "203
-[e = *U + &U _buttonsMessage * -> -> -> 7 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
-[; ;buttons.c: 204: break;
+[e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux _cx ]
+[; ;buttons.c: 204: buttonsMessage[5] = cy;
 "204
-[e $U 2213  ]
-[; ;buttons.c: 206: case 1:
+[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux _cy ]
+[; ;buttons.c: 206: buttonsMessage[6] = (uint8_t)((uint8_t)(ADCValues[5] & 0xF0U) | (uint8_t)(ADCValues[4] >> 4U));
 "206
-[e :U 2219 ]
-[; ;buttons.c: 207: buttonsMessage[4] = (uint8_t)((uint8_t)(cx & 0xF0U) | (uint8_t)(cy >> 4U));
+[e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> | -> -> & -> *U + &U _ADCValues * -> -> -> 5 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ui -> 240 `ui `uc `i -> -> >> -> *U + &U _ADCValues * -> -> -> 4 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 4 `ui `uc `i `uc ]
+[; ;buttons.c: 207: buttonsMessage[7] = 0x00;
 "207
-[e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> | -> -> & -> _cx `ui -> 240 `ui `uc `i -> -> >> -> _cy `i -> 4 `ui `uc `i `uc ]
-[; ;buttons.c: 208: buttonsMessage[5] = ADCValues[5];
+[e = *U + &U _buttonsMessage * -> -> -> 7 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
+[; ;buttons.c: 208: break;
 "208
-[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _ADCValues * -> -> -> 5 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
-[; ;buttons.c: 209: buttonsMessage[6] = ADCValues[4];
-"209
-[e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _ADCValues * -> -> -> 4 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
-[; ;buttons.c: 210: buttonsMessage[7] = 0x00;
+[e $U 2207  ]
+[; ;buttons.c: 210: case 1:
 "210
-[e = *U + &U _buttonsMessage * -> -> -> 7 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
-[; ;buttons.c: 211: break;
-"211
-[e $U 2213  ]
-[; ;buttons.c: 213: case 2:
-"213
-[e :U 2220 ]
-[; ;buttons.c: 214: buttonsMessage[4] = (uint8_t)((uint8_t)(cx & 0xF0U) | (uint8_t)(cy >> 4U));
-"214
-[e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> | -> -> & -> _cx `ui -> 240 `ui `uc `i -> -> >> -> _cy `i -> 4 `ui `uc `i `uc ]
-[; ;buttons.c: 215: buttonsMessage[5] = (uint8_t)((uint8_t)(ADCValues[5] & 0xF0U) | (uint8_t)(ADCValues[4] >> 4U));
-"215
-[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> | -> -> & -> *U + &U _ADCValues * -> -> -> 5 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ui -> 240 `ui `uc `i -> -> >> -> *U + &U _ADCValues * -> -> -> 4 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 4 `ui `uc `i `uc ]
-[; ;buttons.c: 216: buttonsMessage[6] = 0x00;
-"216
-[e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
-[; ;buttons.c: 217: buttonsMessage[7] = 0x00;
-"217
-[e = *U + &U _buttonsMessage * -> -> -> 7 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
-[; ;buttons.c: 218: break;
-"218
-[e $U 2213  ]
-[; ;buttons.c: 220: case 3:
-"220
-[e :U 2221 ]
-[; ;buttons.c: 221: buttonsMessage[4] = cx;
-"221
-[e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux _cx ]
-[; ;buttons.c: 222: buttonsMessage[5] = cy;
-"222
-[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux _cy ]
-[; ;buttons.c: 223: buttonsMessage[6] = ADCValues[5];
-"223
-[e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _ADCValues * -> -> -> 5 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
-[; ;buttons.c: 224: buttonsMessage[7] = ADCValues[4];
-"224
-[e = *U + &U _buttonsMessage * -> -> -> 7 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _ADCValues * -> -> -> 4 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
-[; ;buttons.c: 225: break;
-"225
-[e $U 2213  ]
-[; ;buttons.c: 227: case 4:
-"227
-[e :U 2222 ]
-[; ;buttons.c: 228: buttonsMessage[4] = cx;
-"228
-[e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux _cx ]
-[; ;buttons.c: 229: buttonsMessage[5] = cy;
-"229
-[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux _cy ]
-[; ;buttons.c: 230: buttonsMessage[6] = 0x00;
-"230
-[e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
-[; ;buttons.c: 231: buttonsMessage[7] = 0x00;
-"231
-[e = *U + &U _buttonsMessage * -> -> -> 7 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
-[; ;buttons.c: 232: break;
-"232
-[e $U 2213  ]
-"233
-}
-[; ;buttons.c: 233: }
-[e $U 2213  ]
-"194
-[e :U 2214 ]
-[e [\ _analogMode , $ -> -> 0 `i `uc 2215
- , $ -> -> 5 `i `uc 2216
- , $ -> -> 6 `i `uc 2217
- , $ -> -> 7 `i `uc 2218
- , $ -> -> 1 `i `uc 2219
- , $ -> -> 2 `i `uc 2220
- , $ -> -> 3 `i `uc 2221
- , $ -> -> 4 `i `uc 2222
- 2213 ]
-"233
 [e :U 2213 ]
-[; ;buttons.c: 235: return buttonsMessage;
+[; ;buttons.c: 211: buttonsMessage[4] = (uint8_t)((uint8_t)(cx & 0xF0U) | (uint8_t)(cy >> 4U));
+"211
+[e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> | -> -> & -> _cx `ui -> 240 `ui `uc `i -> -> >> -> _cy `i -> 4 `ui `uc `i `uc ]
+[; ;buttons.c: 212: buttonsMessage[5] = ADCValues[5];
+"212
+[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _ADCValues * -> -> -> 5 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
+[; ;buttons.c: 213: buttonsMessage[6] = ADCValues[4];
+"213
+[e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _ADCValues * -> -> -> 4 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
+[; ;buttons.c: 214: buttonsMessage[7] = 0x00;
+"214
+[e = *U + &U _buttonsMessage * -> -> -> 7 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
+[; ;buttons.c: 215: break;
+"215
+[e $U 2207  ]
+[; ;buttons.c: 217: case 2:
+"217
+[e :U 2214 ]
+[; ;buttons.c: 218: buttonsMessage[4] = (uint8_t)((uint8_t)(cx & 0xF0U) | (uint8_t)(cy >> 4U));
+"218
+[e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> | -> -> & -> _cx `ui -> 240 `ui `uc `i -> -> >> -> _cy `i -> 4 `ui `uc `i `uc ]
+[; ;buttons.c: 219: buttonsMessage[5] = (uint8_t)((uint8_t)(ADCValues[5] & 0xF0U) | (uint8_t)(ADCValues[4] >> 4U));
+"219
+[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> | -> -> & -> *U + &U _ADCValues * -> -> -> 5 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `ui -> 240 `ui `uc `i -> -> >> -> *U + &U _ADCValues * -> -> -> 4 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux `i -> 4 `ui `uc `i `uc ]
+[; ;buttons.c: 220: buttonsMessage[6] = 0x00;
+"220
+[e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
+[; ;buttons.c: 221: buttonsMessage[7] = 0x00;
+"221
+[e = *U + &U _buttonsMessage * -> -> -> 7 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
+[; ;buttons.c: 222: break;
+"222
+[e $U 2207  ]
+[; ;buttons.c: 224: case 3:
+"224
+[e :U 2215 ]
+[; ;buttons.c: 225: buttonsMessage[4] = cx;
+"225
+[e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux _cx ]
+[; ;buttons.c: 226: buttonsMessage[5] = cy;
+"226
+[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux _cy ]
+[; ;buttons.c: 227: buttonsMessage[6] = ADCValues[5];
+"227
+[e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _ADCValues * -> -> -> 5 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
+[; ;buttons.c: 228: buttonsMessage[7] = ADCValues[4];
+"228
+[e = *U + &U _buttonsMessage * -> -> -> 7 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _ADCValues * -> -> -> 4 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
+[; ;buttons.c: 229: break;
+"229
+[e $U 2207  ]
+[; ;buttons.c: 231: case 4:
+"231
+[e :U 2216 ]
+[; ;buttons.c: 232: buttonsMessage[4] = cx;
+"232
+[e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux _cx ]
+[; ;buttons.c: 233: buttonsMessage[5] = cy;
+"233
+[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux _cy ]
+[; ;buttons.c: 234: buttonsMessage[6] = 0x00;
+"234
+[e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
+[; ;buttons.c: 235: buttonsMessage[7] = 0x00;
 "235
+[e = *U + &U _buttonsMessage * -> -> -> 7 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
+[; ;buttons.c: 236: break;
+"236
+[e $U 2207  ]
+"237
+}
+[; ;buttons.c: 237: }
+[e $U 2207  ]
+"198
+[e :U 2208 ]
+[e [\ _analogMode , $ -> -> 0 `i `uc 2209
+ , $ -> -> 5 `i `uc 2210
+ , $ -> -> 6 `i `uc 2211
+ , $ -> -> 7 `i `uc 2212
+ , $ -> -> 1 `i `uc 2213
+ , $ -> -> 2 `i `uc 2214
+ , $ -> -> 3 `i `uc 2215
+ , $ -> -> 4 `i `uc 2216
+ 2207 ]
+"237
+[e :U 2207 ]
+[; ;buttons.c: 239: return buttonsMessage;
+"239
 [e ) &U _buttonsMessage ]
 [e $UE 2202  ]
-[; ;buttons.c: 236: }
-"236
+[; ;buttons.c: 240: }
+"240
 [e :UE 2202 ]
 }
-"238
+"242
 [v _buttonsSetOrigins `(v ~T0 @X0 1 ef ]
 {
-[; ;buttons.c: 238: void buttonsSetOrigins(void) {
+[; ;buttons.c: 242: void buttonsSetOrigins(void) {
 [e :U _buttonsSetOrigins ]
 [f ]
-[; ;buttons.c: 239: origins.SX = ADCValues[0];
-"239
-[e = . _origins 0 *U + &U _ADCValues * -> -> -> 0 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
-[; ;buttons.c: 240: origins.SY = ADCValues[1];
-"240
-[e = . _origins 1 *U + &U _ADCValues * -> -> -> 1 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
-[; ;buttons.c: 241: origins.CX = ADCValues[2];
-"241
-[e = . _origins 2 *U + &U _ADCValues * -> -> -> 2 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
-[; ;buttons.c: 242: origins.CY = ADCValues[3];
-"242
-[e = . _origins 3 *U + &U _ADCValues * -> -> -> 3 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
-[; ;buttons.c: 243: origins.L = ADCValues[5];
+[; ;buttons.c: 243: origins.SX = ADCValues[0];
 "243
-[e = . _origins 4 *U + &U _ADCValues * -> -> -> 5 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
-[; ;buttons.c: 244: origins.R = ADCValues[4];
+[e = . _origins 0 *U + &U _ADCValues * -> -> -> 0 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
+[; ;buttons.c: 244: origins.SY = ADCValues[1];
 "244
-[e = . _origins 5 *U + &U _ADCValues * -> -> -> 4 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
-[; ;buttons.c: 245: }
+[e = . _origins 1 *U + &U _ADCValues * -> -> -> 1 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
+[; ;buttons.c: 245: origins.CX = ADCValues[2];
 "245
-[e :UE 2223 ]
-}
+[e = . _origins 2 *U + &U _ADCValues * -> -> -> 2 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
+[; ;buttons.c: 246: origins.CY = ADCValues[3];
+"246
+[e = . _origins 3 *U + &U _ADCValues * -> -> -> 3 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
+[; ;buttons.c: 247: origins.L = ADCValues[5];
 "247
+[e = . _origins 4 *U + &U _ADCValues * -> -> -> 5 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
+[; ;buttons.c: 248: origins.R = ADCValues[4];
+"248
+[e = . _origins 5 *U + &U _ADCValues * -> -> -> 4 `i `ui `ux -> -> # *U &U _ADCValues `ui `ux ]
+[; ;buttons.c: 249: }
+"249
+[e :UE 2217 ]
+}
+"251
 [v _buttonsGetOrigins `(*uc ~T0 @X0 1 ef ]
 {
-[; ;buttons.c: 247: uint8_t* buttonsGetOrigins(void) {
+[; ;buttons.c: 251: uint8_t* buttonsGetOrigins(void) {
 [e :U _buttonsGetOrigins ]
 [f ]
-[; ;buttons.c: 248: buttonsMessage[0] = 0x00;
-"248
-[e = *U + &U _buttonsMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
-[; ;buttons.c: 249: buttonsMessage[1] = 0x00;
-"249
-[e = *U + &U _buttonsMessage * -> -> -> 1 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
-[; ;buttons.c: 250: buttonsMessage[2] = origins.SX;
-"250
-[e = *U + &U _buttonsMessage * -> -> -> 2 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux . _origins 0 ]
-[; ;buttons.c: 251: buttonsMessage[3] = origins.SY;
-"251
-[e = *U + &U _buttonsMessage * -> -> -> 3 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux . _origins 1 ]
-[; ;buttons.c: 252: buttonsMessage[4] = origins.CX;
+[; ;buttons.c: 252: buttonsMessage[0] = 0x00;
 "252
-[e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux . _origins 2 ]
-[; ;buttons.c: 253: buttonsMessage[5] = origins.CY;
+[e = *U + &U _buttonsMessage * -> -> -> 0 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
+[; ;buttons.c: 253: buttonsMessage[1] = 0x00;
 "253
-[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux . _origins 3 ]
-[; ;buttons.c: 254: buttonsMessage[6] = origins.L;
+[e = *U + &U _buttonsMessage * -> -> -> 1 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 0 `i `uc ]
+[; ;buttons.c: 254: buttonsMessage[2] = 0x80;
 "254
-[e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux . _origins 4 ]
-[; ;buttons.c: 255: buttonsMessage[7] = origins.R;
+[e = *U + &U _buttonsMessage * -> -> -> 2 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 128 `i `uc ]
+[; ;buttons.c: 255: buttonsMessage[3] = 0x80;
 "255
-[e = *U + &U _buttonsMessage * -> -> -> 7 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux . _origins 5 ]
-[; ;buttons.c: 256: buttonsMessage[8] = 0x02;
+[e = *U + &U _buttonsMessage * -> -> -> 3 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 128 `i `uc ]
+[; ;buttons.c: 256: buttonsMessage[4] = 0x80;
 "256
-[e = *U + &U _buttonsMessage * -> -> -> 8 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 2 `i `uc ]
-[; ;buttons.c: 257: buttonsMessage[9] = 0x02;
+[e = *U + &U _buttonsMessage * -> -> -> 4 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 128 `i `uc ]
+[; ;buttons.c: 257: buttonsMessage[5] = 0x80;
 "257
-[e = *U + &U _buttonsMessage * -> -> -> 9 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 2 `i `uc ]
-[; ;buttons.c: 259: return buttonsMessage;
+[e = *U + &U _buttonsMessage * -> -> -> 5 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 128 `i `uc ]
+[; ;buttons.c: 258: buttonsMessage[6] = origins.L;
+"258
+[e = *U + &U _buttonsMessage * -> -> -> 6 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux . _origins 4 ]
+[; ;buttons.c: 259: buttonsMessage[7] = origins.R;
 "259
-[e ) &U _buttonsMessage ]
-[e $UE 2224  ]
-[; ;buttons.c: 260: }
+[e = *U + &U _buttonsMessage * -> -> -> 7 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux . _origins 5 ]
+[; ;buttons.c: 260: buttonsMessage[8] = 0x02;
 "260
-[e :UE 2224 ]
+[e = *U + &U _buttonsMessage * -> -> -> 8 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 2 `i `uc ]
+[; ;buttons.c: 261: buttonsMessage[9] = 0x02;
+"261
+[e = *U + &U _buttonsMessage * -> -> -> 9 `i `ui `ux -> -> # *U &U _buttonsMessage `ui `ux -> -> 2 `i `uc ]
+[; ;buttons.c: 263: return buttonsMessage;
+"263
+[e ) &U _buttonsMessage ]
+[e $UE 2218  ]
+[; ;buttons.c: 264: }
+"264
+[e :UE 2218 ]
 }
-"262
+"266
 [v _buttonsSetMapByte0 `(v ~T0 @X0 1 ef1`*uc ]
 {
-[; ;buttons.c: 262: void buttonsSetMapByte0(uint8_t* map) {
+[; ;buttons.c: 266: void buttonsSetMapByte0(uint8_t* map) {
 [e :U _buttonsSetMapByte0 ]
 [v _map `*uc ~T0 @X0 1 r1 ]
 [f ]
-"263
+"267
 [v _i `uc ~T0 @X0 1 a ]
-[; ;buttons.c: 263: uint8_t i;
-[; ;buttons.c: 265: for (i = 0; i < N_BUTTONS; i++) {
-"265
+[; ;buttons.c: 267: uint8_t i;
+[; ;buttons.c: 269: for (i = 0; i < N_BUTTONS; i++) {
+"269
 {
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> . `E15478 15 `i 2226  ]
-[e $U 2227  ]
-[e :U 2226 ]
+[e $ < -> _i `i -> . `E15478 15 `i 2220  ]
+[e $U 2221  ]
+[e :U 2220 ]
 {
-[; ;buttons.c: 266: buttonsMapByte0[i] = map[i];
-"266
-[e = *U + &U _buttonsMapByte0 * -> _i `ux -> -> # *U &U _buttonsMapByte0 `ui `ux *U + _map * -> _i `ux -> -> # *U _map `ui `ux ]
-"267
-}
-"265
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> . `E15478 15 `i 2226  ]
-[e :U 2227 ]
-"267
-}
-[; ;buttons.c: 267: }
-[; ;buttons.c: 268: }
-"268
-[e :UE 2225 ]
-}
+[; ;buttons.c: 270: buttonsMapByte0[i] = map[i];
 "270
+[e = *U + &U _buttonsMapByte0 * -> _i `ux -> -> # *U &U _buttonsMapByte0 `ui `ux *U + _map * -> _i `ux -> -> # *U _map `ui `ux ]
+"271
+}
+"269
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> . `E15478 15 `i 2220  ]
+[e :U 2221 ]
+"271
+}
+[; ;buttons.c: 271: }
+[; ;buttons.c: 272: }
+"272
+[e :UE 2219 ]
+}
+"274
 [v _buttonsSetMapByte1 `(v ~T0 @X0 1 ef1`*uc ]
 {
-[; ;buttons.c: 270: void buttonsSetMapByte1(uint8_t* map) {
+[; ;buttons.c: 274: void buttonsSetMapByte1(uint8_t* map) {
 [e :U _buttonsSetMapByte1 ]
 [v _map `*uc ~T0 @X0 1 r1 ]
 [f ]
-"271
+"275
 [v _i `uc ~T0 @X0 1 a ]
-[; ;buttons.c: 271: uint8_t i;
-[; ;buttons.c: 273: for (i = 0; i < N_BUTTONS; i++) {
-"273
+[; ;buttons.c: 275: uint8_t i;
+[; ;buttons.c: 277: for (i = 0; i < N_BUTTONS; i++) {
+"277
 {
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> . `E15478 15 `i 2230  ]
-[e $U 2231  ]
-[e :U 2230 ]
+[e $ < -> _i `i -> . `E15478 15 `i 2224  ]
+[e $U 2225  ]
+[e :U 2224 ]
 {
-[; ;buttons.c: 274: buttonsMapByte1[i] = map[i];
-"274
-[e = *U + &U _buttonsMapByte1 * -> _i `ux -> -> # *U &U _buttonsMapByte1 `ui `ux *U + _map * -> _i `ux -> -> # *U _map `ui `ux ]
-"275
-}
-"273
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> . `E15478 15 `i 2230  ]
-[e :U 2231 ]
-"275
-}
-[; ;buttons.c: 275: }
-[; ;buttons.c: 276: }
-"276
-[e :UE 2229 ]
-}
+[; ;buttons.c: 278: buttonsMapByte1[i] = map[i];
 "278
+[e = *U + &U _buttonsMapByte1 * -> _i `ux -> -> # *U &U _buttonsMapByte1 `ui `ux *U + _map * -> _i `ux -> -> # *U _map `ui `ux ]
+"279
+}
+"277
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> . `E15478 15 `i 2224  ]
+[e :U 2225 ]
+"279
+}
+[; ;buttons.c: 279: }
+[; ;buttons.c: 280: }
+"280
+[e :UE 2223 ]
+}
+"282
 [v _buttonsGetMapByte0 `(*uc ~T0 @X0 1 ef ]
 {
-[; ;buttons.c: 278: uint8_t* buttonsGetMapByte0(void) {
+[; ;buttons.c: 282: uint8_t* buttonsGetMapByte0(void) {
 [e :U _buttonsGetMapByte0 ]
 [f ]
-"279
+"283
 [v _i `uc ~T0 @X0 1 a ]
-[; ;buttons.c: 279: uint8_t i;
-[; ;buttons.c: 281: for (i = 0; i < N_BUTTONS; i++) {
-"281
+[; ;buttons.c: 283: uint8_t i;
+[; ;buttons.c: 285: for (i = 0; i < N_BUTTONS; i++) {
+"285
 {
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> . `E15478 15 `i 2234  ]
-[e $U 2235  ]
-[e :U 2234 ]
+[e $ < -> _i `i -> . `E15478 15 `i 2228  ]
+[e $U 2229  ]
+[e :U 2228 ]
 {
-[; ;buttons.c: 282: buttonsMessage[i] = buttonsMapByte0[i];
-"282
-[e = *U + &U _buttonsMessage * -> _i `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _buttonsMapByte0 * -> _i `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
-"283
-}
-"281
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> . `E15478 15 `i 2234  ]
-[e :U 2235 ]
-"283
-}
-[; ;buttons.c: 283: }
-[; ;buttons.c: 285: return buttonsMessage;
-"285
-[e ) &U _buttonsMessage ]
-[e $UE 2233  ]
-[; ;buttons.c: 286: }
+[; ;buttons.c: 286: buttonsMessage[i] = buttonsMapByte0[i];
 "286
-[e :UE 2233 ]
+[e = *U + &U _buttonsMessage * -> _i `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _buttonsMapByte0 * -> _i `ux -> -> # *U &U _buttonsMapByte0 `ui `ux ]
+"287
 }
-"288
+"285
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> . `E15478 15 `i 2228  ]
+[e :U 2229 ]
+"287
+}
+[; ;buttons.c: 287: }
+[; ;buttons.c: 289: return buttonsMessage;
+"289
+[e ) &U _buttonsMessage ]
+[e $UE 2227  ]
+[; ;buttons.c: 290: }
+"290
+[e :UE 2227 ]
+}
+"292
 [v _buttonsGetMapByte1 `(*uc ~T0 @X0 1 ef ]
 {
-[; ;buttons.c: 288: uint8_t* buttonsGetMapByte1(void) {
+[; ;buttons.c: 292: uint8_t* buttonsGetMapByte1(void) {
 [e :U _buttonsGetMapByte1 ]
 [f ]
-"289
+"293
 [v _i `uc ~T0 @X0 1 a ]
-[; ;buttons.c: 289: uint8_t i;
-[; ;buttons.c: 291: for (i = 0; i < N_BUTTONS; i++) {
-"291
+[; ;buttons.c: 293: uint8_t i;
+[; ;buttons.c: 295: for (i = 0; i < N_BUTTONS; i++) {
+"295
 {
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> . `E15478 15 `i 2238  ]
-[e $U 2239  ]
-[e :U 2238 ]
+[e $ < -> _i `i -> . `E15478 15 `i 2232  ]
+[e $U 2233  ]
+[e :U 2232 ]
 {
-[; ;buttons.c: 292: buttonsMessage[i] = buttonsMapByte1[i];
-"292
-[e = *U + &U _buttonsMessage * -> _i `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _buttonsMapByte1 * -> _i `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
-"293
-}
-"291
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> . `E15478 15 `i 2238  ]
-[e :U 2239 ]
-"293
-}
-[; ;buttons.c: 293: }
-[; ;buttons.c: 295: return buttonsMessage;
-"295
-[e ) &U _buttonsMessage ]
-[e $UE 2237  ]
-[; ;buttons.c: 296: }
+[; ;buttons.c: 296: buttonsMessage[i] = buttonsMapByte1[i];
 "296
-[e :UE 2237 ]
+[e = *U + &U _buttonsMessage * -> _i `ux -> -> # *U &U _buttonsMessage `ui `ux *U + &U _buttonsMapByte1 * -> _i `ux -> -> # *U &U _buttonsMapByte1 `ui `ux ]
+"297
+}
+"295
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> . `E15478 15 `i 2232  ]
+[e :U 2233 ]
+"297
+}
+[; ;buttons.c: 297: }
+[; ;buttons.c: 299: return buttonsMessage;
+"299
+[e ) &U _buttonsMessage ]
+[e $UE 2231  ]
+[; ;buttons.c: 300: }
+"300
+[e :UE 2231 ]
 }

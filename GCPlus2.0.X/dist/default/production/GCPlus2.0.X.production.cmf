@@ -11,46 +11,46 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\jeffa\AppData\Local\Temp\s7uk.o
+$C:\Users\jeffa\AppData\Local\Temp\scqg.o
 idloc IDLOC 0 200000 200000 10 1
 init CODE 0 201E 201E 4 1
 reset_vec CODE 0 2004 2004 4 1
 config CONFIG 0 300000 300000 A 1
 $dist/default/production\GCPlus2.0.X.production.o
-cinit CODE 0 6F0E 6F0E 5C 1
+cinit CODE 0 6ED4 6ED4 5C 1
 text0 CODE 0 6024 6024 3DE 1
-text1 CODE 0 6EA8 6EA8 66 1
-text2 CODE 0 6F6A 6F6A 58 1
-text3 CODE 0 6DC8 6DC8 76 1
-text4 CODE 0 711E 711E 2C 1
-text5 CODE 0 71C8 71C8 24 1
-text6 CODE 0 7200 7200 12 1
-text7 CODE 0 71EC 71EC 14 1
+text1 CODE 0 6E6E 6E6E 66 1
+text2 CODE 0 6F30 6F30 58 1
+text3 CODE 0 6D8E 6D8E 76 1
+text4 CODE 0 70DC 70DC 2C 1
+text5 CODE 0 7186 7186 24 1
+text6 CODE 0 71BE 71BE 12 1
+text7 CODE 0 71AA 71AA 14 1
 text8 CODE 0 6402 6402 30E 1
-text9 CODE 0 71A2 71A2 26 1
-text10 CODE 0 714A 714A 2C 1
-text11 CODE 0 7176 7176 2C 1
-text12 CODE 0 6D48 6D48 80 1
-text13 CODE 0 7080 7080 36 1
-text14 CODE 0 7006 7006 3E 1
-text15 CODE 0 6710 6710 23C 1
-text16 CODE 0 70B6 70B6 34 1
-text17 CODE 0 70EA 70EA 34 1
-text18 CODE 0 6FC2 6FC2 44 1
-text19 CODE 0 6BE6 6BE6 D8 1
-text20 CODE 0 6CBE 6CBE 8A 1
-text21 CODE 0 6B04 6B04 E2 1
-text22 CODE 0 7044 7044 3C 1
-text23 CODE 0 7212 7212 12 1
-text24 CODE 0 694C 694C 1B8 1
-text25 CODE 0 6E3E 6E3E 6A 1
-text26 CODE 0 7224 7224 12 1
-idataCOMRAM CODE 0 7236 7236 C 1
-cstackCOMRAM COMRAM 1 2C 2C 28 1
+text9 CODE 0 7160 7160 26 1
+text10 CODE 0 7108 7108 2C 1
+text11 CODE 0 7134 7134 2C 1
+text12 CODE 0 6D0E 6D0E 80 1
+text13 CODE 0 7008 7008 36 1
+text14 CODE 0 703E 703E 36 1
+text15 CODE 0 6710 6710 202 1
+text16 CODE 0 7074 7074 34 1
+text17 CODE 0 70A8 70A8 34 1
+text18 CODE 0 6F88 6F88 44 1
+text19 CODE 0 6BAC 6BAC D8 1
+text20 CODE 0 6C84 6C84 8A 1
+text21 CODE 0 6ACA 6ACA E2 1
+text22 CODE 0 6FCC 6FCC 3C 1
+text23 CODE 0 71D0 71D0 12 1
+text24 CODE 0 6912 6912 1B8 1
+text25 CODE 0 6E04 6E04 6A 1
+text26 CODE 0 71E2 71E2 12 1
+idataCOMRAM CODE 0 71F4 71F4 C 1
+cstackCOMRAM COMRAM 1 2C 2C 22 1
 cstackBANK0 BANK0 1 60 60 56 1
 bssBANK0 BANK0 1 B6 B6 36 1
 bssBANK1 BANK1 1 100 100 24 1
-dataCOMRAM COMRAM 1 54 54 C 1
+dataCOMRAM COMRAM 1 4E 4E C 1
 bssCOMRAM COMRAM 1 1 1 2B 1
 mediumconst MEDIUMCONST 0 2022 2022 4002 1
 ivt0x200C CODE 0 200C 200C 12 1
@@ -72,18 +72,20 @@ BANK5 500-5FF 1
 BANK6 600-6FF 1
 BANK7 700-7FF 1
 CONST 2008-200B 1
-CONST 7242-7FFF 1
+CONST 7200-7FFF 1
 STACK 124-7FF 1
 SMALLCONST 2008-200B 1
-SMALLCONST 7242-7FFF 1
+SMALLCONST 7200-7FFF 1
 CODE 2008-200B 1
-CODE 7242-7FFF 1
+CODE 7200-7FFF 1
+BIGRAM 5A-5F 1
 BIGRAM EC-FF 1
 BIGRAM 124-7FF 1
+COMRAM 5A-5F 1
 EEDATA 310000-3100FF 1
 FARRAM 0-0 1
 MEDIUMCONST 2008-200B 1
-MEDIUMCONST 7242-7FFF 1
+MEDIUMCONST 7200-7FFF 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -98,669 +100,661 @@ MEDIUMCONST 7242-7FFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\GCPlus2.0.X.production.o
-7224 text26 CODE >283:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-7224 text26 CODE >285:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-7228 text26 CODE >286:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-722C text26 CODE >287:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-7230 text26 CODE >288:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-7234 text26 CODE >289:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6E3E text25 CODE >38:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6E3E text25 CODE >40:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6E46 text25 CODE >42:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6E48 text25 CODE >44:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6E4C text25 CODE >45:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6E5E text25 CODE >48:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6E62 text25 CODE >49:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6E66 text25 CODE >52:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6E68 text25 CODE >53:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6E70 text25 CODE >54:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6E82 text25 CODE >55:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6E86 text25 CODE >56:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6E8A text25 CODE >57:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6E8C text25 CODE >65:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6E92 text25 CODE >66:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6E98 text25 CODE >67:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6E9C text25 CODE >68:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6E9E text25 CODE >69:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6EA2 text25 CODE >71:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6EA6 text25 CODE >73:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-694C text24 CODE >41:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-694E text24 CODE >45:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6954 text24 CODE >47:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6958 text24 CODE >48:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-695C text24 CODE >49:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6964 text24 CODE >50:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6968 text24 CODE >51:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-696C text24 CODE >52:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6970 text24 CODE >53:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6972 text24 CODE >55:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6976 text24 CODE >56:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-697A text24 CODE >59:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-697C text24 CODE >60:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6980 text24 CODE >62:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6986 text24 CODE >63:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-698C text24 CODE >64:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6992 text24 CODE >65:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6998 text24 CODE >68:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-699C text24 CODE >69:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-69A0 text24 CODE >70:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-69B2 text24 CODE >71:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-69B8 text24 CODE >72:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-69BA text24 CODE >73:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-69CC text24 CODE >69:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-69D4 text24 CODE >77:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-69D6 text24 CODE >78:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-69D8 text24 CODE >79:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-69DA text24 CODE >80:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-69DC text24 CODE >81:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-69DE text24 CODE >82:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-69E0 text24 CODE >85:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6A04 text24 CODE >86:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6A28 text24 CODE >87:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6A2C text24 CODE >88:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6A50 text24 CODE >89:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6A54 text24 CODE >90:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6A58 text24 CODE >91:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6A5C text24 CODE >92:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6A60 text24 CODE >93:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6A64 text24 CODE >94:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6A68 text24 CODE >95:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6A6C text24 CODE >96:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6A6E text24 CODE >97:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6A72 text24 CODE >98:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6A7A text24 CODE >99:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6A7C text24 CODE >100:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6A80 text24 CODE >103:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6A84 text24 CODE >104:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6AA8 text24 CODE >105:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6AAC text24 CODE >106:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6AD0 text24 CODE >107:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6AD4 text24 CODE >108:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6AD8 text24 CODE >109:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6ADC text24 CODE >110:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6AE0 text24 CODE >111:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6AE4 text24 CODE >112:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6AE8 text24 CODE >113:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6AF0 text24 CODE >114:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6AF2 text24 CODE >115:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6AF6 text24 CODE >116:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6AFA text24 CODE >117:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6AFC text24 CODE >118:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6B00 text24 CODE >120:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-6B02 text24 CODE >121:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
-7212 text23 CODE >283:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-7212 text23 CODE >285:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-7216 text23 CODE >286:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-721A text23 CODE >287:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-721E text23 CODE >288:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-7222 text23 CODE >289:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-7044 text22 CODE >257:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-7044 text22 CODE >259:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-704A text22 CODE >260:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-704E text22 CODE >262:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-7054 text22 CODE >263:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-7072 text22 CODE >262:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-707C text22 CODE >266:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-707E text22 CODE >267:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B04 text21 CODE >129:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B04 text21 CODE >130:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B08 text21 CODE >131:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B0C text21 CODE >132:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B10 text21 CODE >133:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B14 text21 CODE >134:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B18 text21 CODE >135:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B1C text21 CODE >136:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B20 text21 CODE >139:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B24 text21 CODE >140:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B28 text21 CODE >141:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B2C text21 CODE >143:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B32 text21 CODE >144:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B36 text21 CODE >145:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B3A text21 CODE >146:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B3E text21 CODE >147:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B42 text21 CODE >148:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B46 text21 CODE >149:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B4A text21 CODE >150:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B4E text21 CODE >151:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B52 text21 CODE >152:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B56 text21 CODE >154:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B5A text21 CODE >155:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B5E text21 CODE >156:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B62 text21 CODE >157:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B66 text21 CODE >158:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B6A text21 CODE >159:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B6E text21 CODE >160:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B72 text21 CODE >161:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B76 text21 CODE >162:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B7A text21 CODE >163:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B7E text21 CODE >165:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B82 text21 CODE >166:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B86 text21 CODE >167:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B8A text21 CODE >168:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B8E text21 CODE >169:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B92 text21 CODE >170:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B96 text21 CODE >171:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B9A text21 CODE >172:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6B9E text21 CODE >173:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BA2 text21 CODE >174:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BA6 text21 CODE >176:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BAA text21 CODE >177:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BAE text21 CODE >178:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BB2 text21 CODE >179:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BB6 text21 CODE >180:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BBA text21 CODE >181:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BBE text21 CODE >182:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BC2 text21 CODE >183:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BC6 text21 CODE >184:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BCA text21 CODE >185:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BCE text21 CODE >187:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BD4 text21 CODE >188:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BD8 text21 CODE >189:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BDC text21 CODE >190:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BE0 text21 CODE >191:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BE4 text21 CODE >192:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CBE text20 CODE >75:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CBE text20 CODE >77:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CC2 text20 CODE >78:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CC6 text20 CODE >79:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CCA text20 CODE >80:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CCE text20 CODE >81:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CD2 text20 CODE >82:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CD6 text20 CODE >83:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CDA text20 CODE >84:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CDC text20 CODE >88:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CE0 text20 CODE >89:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CE4 text20 CODE >90:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CE8 text20 CODE >91:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CEC text20 CODE >92:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CF0 text20 CODE >93:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CF2 text20 CODE >94:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CF6 text20 CODE >95:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CF8 text20 CODE >96:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CFC text20 CODE >97:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6D00 text20 CODE >95:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6D04 text20 CODE >101:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6D0A text20 CODE >103:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6D0E text20 CODE >105:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6D12 text20 CODE >111:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6D16 text20 CODE >112:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6D18 text20 CODE >113:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6D1A text20 CODE >114:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6D1E text20 CODE >115:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6D22 text20 CODE >116:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6D26 text20 CODE >117:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6D2A text20 CODE >118:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6D2E text20 CODE >119:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6D32 text20 CODE >120:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6D36 text20 CODE >121:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6D3A text20 CODE >123:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6D3E text20 CODE >124:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6D40 text20 CODE >125:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6D42 text20 CODE >126:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6D46 text20 CODE >127:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BE6 text19 CODE >194:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BE6 text19 CODE >203:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BEA text19 CODE >205:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BF0 text19 CODE >208:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BF2 text19 CODE >211:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BF6 text19 CODE >212:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BFA text19 CODE >213:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6BFE text19 CODE >214:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6C02 text19 CODE >216:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6C06 text19 CODE >218:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6C0A text19 CODE >219:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6C0C text19 CODE >220:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6C12 text19 CODE >222:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6C18 text19 CODE >223:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6C28 text19 CODE >224:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6C2C text19 CODE >225:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6C2E text19 CODE >226:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6C3E text19 CODE >227:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6C4E text19 CODE >228:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6C54 text19 CODE >229:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6C58 text19 CODE >231:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6C5A text19 CODE >232:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6C88 text19 CODE >233:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6C8E text19 CODE >234:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6C92 text19 CODE >235:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6C94 text19 CODE >236:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CA6 text19 CODE >238:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CA8 text19 CODE >231:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CAC text19 CODE >243:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CB0 text19 CODE >244:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CB4 text19 CODE >245:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CB6 text19 CODE >248:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CBA text19 CODE >249:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6CBC text19 CODE >255:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
-6FC2 text18 CODE >383:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6FC2 text18 CODE >384:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6FC6 text18 CODE >385:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6FCC text18 CODE >386:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6FD0 text18 CODE >387:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6FD4 text18 CODE >388:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6FD8 text18 CODE >389:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6FDC text18 CODE >390:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6FDE text18 CODE >391:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6FEA text18 CODE >392:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6FEE text18 CODE >393:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6FF2 text18 CODE >394:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6FF6 text18 CODE >395:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6FF8 text18 CODE >397:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6FFC text18 CODE >398:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-7000 text18 CODE >399:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-7004 text18 CODE >400:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-70EA text17 CODE >278:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-70EA text17 CODE >281:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-70EE text17 CODE >282:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-710C text17 CODE >281:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-7114 text17 CODE >285:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-711C text17 CODE >286:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-70B6 text16 CODE >288:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-70B6 text16 CODE >291:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-70BA text16 CODE >292:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-70D8 text16 CODE >291:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-70E0 text16 CODE >295:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-70E8 text16 CODE >296:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6710 text15 CODE >161:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6712 text15 CODE >164:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6718 text15 CODE >165:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-671E text15 CODE >167:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-676C text15 CODE >169:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6770 text15 CODE >170:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-678C text15 CODE >171:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-67A8 text15 CODE >172:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-67AE text15 CODE >173:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-67CA text15 CODE >174:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-67E6 text15 CODE >175:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-67EC text15 CODE >176:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6808 text15 CODE >177:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6824 text15 CODE >178:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6826 text15 CODE >179:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-682C text15 CODE >180:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6832 text15 CODE >181:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6832 text15 CODE >183:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6836 text15 CODE >184:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6854 text15 CODE >186:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6858 text15 CODE >187:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-685A text15 CODE >188:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-685E text15 CODE >189:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6860 text15 CODE >190:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6866 text15 CODE >191:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-686E text15 CODE >198:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-686E text15 CODE >199:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6874 text15 CODE >200:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-687A text15 CODE >202:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-688E text15 CODE >203:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6892 text15 CODE >204:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6894 text15 CODE >207:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-68A8 text15 CODE >208:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-68AE text15 CODE >209:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-68B6 text15 CODE >214:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-68CA text15 CODE >215:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-68DE text15 CODE >216:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-68E4 text15 CODE >220:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-68E4 text15 CODE >221:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-68EA text15 CODE >222:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-68F0 text15 CODE >223:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-68F6 text15 CODE >224:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-68FC text15 CODE >225:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-68FE text15 CODE >227:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-68FE text15 CODE >228:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6904 text15 CODE >229:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-690A text15 CODE >230:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6910 text15 CODE >194:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6942 text15 CODE >235:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-694A text15 CODE >236:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-7006 text14 CODE >247:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-7006 text14 CODE >248:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-700A text14 CODE >249:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-700E text14 CODE >250:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-7014 text14 CODE >251:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-701A text14 CODE >252:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-7020 text14 CODE >253:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-7026 text14 CODE >254:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-702C text14 CODE >255:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-7032 text14 CODE >256:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-7036 text14 CODE >257:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-703A text14 CODE >259:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-7042 text14 CODE >260:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-7080 text13 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
-7080 text13 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
-708C text13 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
-708E text13 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
-70A4 text13 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
-6D48 text12 CODE >57:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6D48 text12 CODE >59:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6D4C text12 CODE >60:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6D50 text12 CODE >61:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6D54 text12 CODE >62:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6D58 text12 CODE >63:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6D5C text12 CODE >66:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6D78 text12 CODE >67:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6D94 text12 CODE >69:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6D9A text12 CODE >70:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6D9E text12 CODE >71:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6DA2 text12 CODE >72:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6DA6 text12 CODE >73:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6DAA text12 CODE >75:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6DAE text12 CODE >76:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6DB2 text12 CODE >77:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6DB6 text12 CODE >78:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6DBA text12 CODE >79:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6DBE text12 CODE >80:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6DC2 text12 CODE >81:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6DC6 text12 CODE >82:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-7176 text11 CODE >262:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-7176 text11 CODE >265:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-717A text11 CODE >266:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-7198 text11 CODE >265:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-714A text10 CODE >270:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-714A text10 CODE >273:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-714E text10 CODE >274:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-716C text10 CODE >273:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-71A2 text9 CODE >238:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-71A2 text9 CODE >239:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-71A8 text9 CODE >240:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-71AE text9 CODE >241:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-71B4 text9 CODE >242:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-71BA text9 CODE >243:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-71C0 text9 CODE >244:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-71C6 text9 CODE >245:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6402 text8 CODE >84:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6402 text8 CODE >90:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6408 text8 CODE >91:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-640E text8 CODE >92:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6414 text8 CODE >93:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-641A text8 CODE >94:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6420 text8 CODE >95:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6426 text8 CODE >97:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-642C text8 CODE >98:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6432 text8 CODE >99:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6438 text8 CODE >102:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6440 text8 CODE >103:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6448 text8 CODE >104:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6450 text8 CODE >105:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6458 text8 CODE >106:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6460 text8 CODE >107:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6468 text8 CODE >108:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6470 text8 CODE >109:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6478 text8 CODE >110:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6480 text8 CODE >111:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6488 text8 CODE >112:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6490 text8 CODE >113:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6498 text8 CODE >114:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-64A0 text8 CODE >115:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-64A8 text8 CODE >116:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-64B0 text8 CODE >118:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-64B6 text8 CODE >119:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-64B8 text8 CODE >122:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-64BC text8 CODE >123:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-64CA text8 CODE >122:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-64D2 text8 CODE >126:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-64D6 text8 CODE >127:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-64DA text8 CODE >129:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6502 text8 CODE >130:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-652A text8 CODE >131:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6552 text8 CODE >132:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-657A text8 CODE >133:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-65A2 text8 CODE >134:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-65CA text8 CODE >135:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-65F2 text8 CODE >136:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-661A text8 CODE >137:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6642 text8 CODE >138:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-666A text8 CODE >139:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6692 text8 CODE >140:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-66BA text8 CODE >141:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-66E2 text8 CODE >143:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-66E8 text8 CODE >144:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-66EC text8 CODE >145:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-66F0 text8 CODE >146:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-66F4 text8 CODE >147:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-66F6 text8 CODE >148:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-66F8 text8 CODE >151:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-66FE text8 CODE >152:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6702 text8 CODE >153:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-6706 text8 CODE >154:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-670A text8 CODE >155:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-670C text8 CODE >156:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-670E text8 CODE >159:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
-71EC text7 CODE >37:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-71EE text7 CODE >38:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-71F4 text7 CODE >39:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-71FA text7 CODE >40:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-71FC text7 CODE >41:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-71FE text7 CODE >42:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-7200 text6 CODE >29:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-7200 text6 CODE >30:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-7202 text6 CODE >31:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-7208 text6 CODE >32:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-720C text6 CODE >33:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-720E text6 CODE >34:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-7210 text6 CODE >35:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-71C8 text5 CODE >44:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-71CA text5 CODE >45:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-71D0 text5 CODE >46:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-71D6 text5 CODE >47:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-71DC text5 CODE >48:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-71DE text5 CODE >49:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-71E2 text5 CODE >50:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-71E8 text5 CODE >51:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-71EA text5 CODE >52:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
-711E text4 CODE >80:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-711E text4 CODE >82:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-7126 text4 CODE >83:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-712A text4 CODE >84:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-7140 text4 CODE >83:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6DC8 text3 CODE >47:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6DC8 text3 CODE >49:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6DE4 text3 CODE >52:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6DF6 text3 CODE >53:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6DFE text3 CODE >56:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6E02 text3 CODE >57:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6E04 text3 CODE >58:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6E08 text3 CODE >59:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6E0A text3 CODE >60:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6E0E text3 CODE >61:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6E10 text3 CODE >62:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6E14 text3 CODE >63:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6E16 text3 CODE >64:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6E1A text3 CODE >65:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6E1E text3 CODE >66:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6E22 text3 CODE >67:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6E26 text3 CODE >68:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6E2A text3 CODE >69:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6E2E text3 CODE >70:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6E32 text3 CODE >71:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6E36 text3 CODE >74:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6E38 text3 CODE >77:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6E3C text3 CODE >78:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6F6A text2 CODE >31:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6F6A text2 CODE >32:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6F72 text2 CODE >34:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6F76 text2 CODE >35:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6F78 text2 CODE >36:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6F8C text2 CODE >39:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6FB0 text2 CODE >41:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6FB4 text2 CODE >42:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6FB8 text2 CODE >34:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
-6EA8 text1 CODE >342:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6EA8 text1 CODE >344:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6EB0 text1 CODE >345:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6EB2 text1 CODE >346:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6EB8 text1 CODE >347:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6EBC text1 CODE >348:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6EBE text1 CODE >352:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6EC2 text1 CODE >353:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6EC6 text1 CODE >356:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6ECA text1 CODE >361:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6ECE text1 CODE >362:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6ED2 text1 CODE >363:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6ED4 text1 CODE >364:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6EDE text1 CODE >366:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6EE0 text1 CODE >369:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6EE2 text1 CODE >370:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6EE4 text1 CODE >371:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6EE6 text1 CODE >372:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6EEC text1 CODE >373:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6EF0 text1 CODE >374:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6EF4 text1 CODE >375:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6EF8 text1 CODE >376:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6EFC text1 CODE >377:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6F00 text1 CODE >378:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6F04 text1 CODE >379:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6F08 text1 CODE >380:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6F0C text1 CODE >381:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6024 text0 CODE >79:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6024 text0 CODE >84:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-602A text0 CODE >89:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-602E text0 CODE >103:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6032 text0 CODE >107:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6038 text0 CODE >108:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-603E text0 CODE >109:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6044 text0 CODE >111:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6048 text0 CODE >112:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6050 text0 CODE >113:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6056 text0 CODE >116:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6070 text0 CODE >117:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6074 text0 CODE >118:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6078 text0 CODE >121:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6084 text0 CODE >122:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6088 text0 CODE >123:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-608C text0 CODE >126:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6090 text0 CODE >128:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6094 text0 CODE >131:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-609A text0 CODE >132:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-60A0 text0 CODE >133:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-60A6 text0 CODE >135:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-60B0 text0 CODE >136:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-60B2 text0 CODE >138:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-60B6 text0 CODE >139:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-60C6 text0 CODE >141:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-60CE text0 CODE >145:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-60D2 text0 CODE >146:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-60D6 text0 CODE >147:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-60DA text0 CODE >148:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-60EA text0 CODE >149:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-60EC text0 CODE >153:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-60F4 text0 CODE >167:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-610E text0 CODE >168:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6110 text0 CODE >172:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6128 text0 CODE >173:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-612A text0 CODE >176:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6152 text0 CODE >177:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6156 text0 CODE >179:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-615A text0 CODE >180:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-615A text0 CODE >181:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6160 text0 CODE >182:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6170 text0 CODE >183:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6172 text0 CODE >186:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6178 text0 CODE >187:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-617C text0 CODE >188:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6180 text0 CODE >189:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6184 text0 CODE >190:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6188 text0 CODE >191:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-618C text0 CODE >192:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-619C text0 CODE >193:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-619E text0 CODE >194:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-61A2 text0 CODE >200:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-61A8 text0 CODE >201:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-61AE text0 CODE >202:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-61B6 text0 CODE >203:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-61BC text0 CODE >204:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-61C0 text0 CODE >205:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-61C6 text0 CODE >206:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-61E2 text0 CODE >205:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-61EE text0 CODE >211:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-61F2 text0 CODE >221:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-61F8 text0 CODE >222:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6200 text0 CODE >223:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6208 text0 CODE >224:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-620E text0 CODE >225:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6212 text0 CODE >226:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6218 text0 CODE >227:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-621E text0 CODE >231:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6222 text0 CODE >232:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6228 text0 CODE >233:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6250 text0 CODE >232:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6260 text0 CODE >235:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6272 text0 CODE >247:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6272 text0 CODE >248:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6274 text0 CODE >249:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6276 text0 CODE >252:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-627C text0 CODE >253:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6280 text0 CODE >254:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6290 text0 CODE >255:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6294 text0 CODE >256:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6296 text0 CODE >263:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-629C text0 CODE >264:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-62A4 text0 CODE >265:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-62B2 text0 CODE >279:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-62B8 text0 CODE >280:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-62C0 text0 CODE >281:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-62CE text0 CODE >295:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-62D4 text0 CODE >296:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-62E4 text0 CODE >297:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-62EA text0 CODE >298:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-62F6 text0 CODE >299:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6322 text0 CODE >298:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6326 text0 CODE >301:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6336 text0 CODE >302:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6338 text0 CODE >309:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-633E text0 CODE >310:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-634E text0 CODE >311:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6354 text0 CODE >312:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6360 text0 CODE >313:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-638C text0 CODE >312:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6390 text0 CODE >323:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6398 text0 CODE >333:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-639C text0 CODE >334:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-639E text0 CODE >142:C:\Users\jeffa\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
-6F0E cinit CODE >25539:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F0E cinit CODE >25541:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F0E cinit CODE >25544:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F0E cinit CODE >25612:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F10 cinit CODE >25613:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F12 cinit CODE >25614:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F14 cinit CODE >25615:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F16 cinit CODE >25616:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F18 cinit CODE >25617:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F1A cinit CODE >25618:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F1E cinit CODE >25619:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F22 cinit CODE >25620:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F22 cinit CODE >25621:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F24 cinit CODE >25622:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F2A cinit CODE >25623:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F2C cinit CODE >25624:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F2E cinit CODE >25625:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F30 cinit CODE >25629:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F34 cinit CODE >25630:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F36 cinit CODE >25631:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F36 cinit CODE >25632:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F38 cinit CODE >25633:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F3A cinit CODE >25634:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F3C cinit CODE >25637:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F40 cinit CODE >25638:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F42 cinit CODE >25639:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F42 cinit CODE >25640:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F44 cinit CODE >25641:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F46 cinit CODE >25642:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F48 cinit CODE >25645:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F4C cinit CODE >25646:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F4E cinit CODE >25647:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F4E cinit CODE >25648:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F50 cinit CODE >25649:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F52 cinit CODE >25650:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F54 cinit CODE >25658:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F56 cinit CODE >25659:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F58 cinit CODE >25660:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F5A cinit CODE >25661:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F5C cinit CODE >25662:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F5E cinit CODE >25663:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F60 cinit CODE >25669:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F60 cinit CODE >25672:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F62 cinit CODE >25673:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F64 cinit CODE >25674:C:\Users\jeffa\AppData\Local\Temp\s7uk.
-6F66 cinit CODE >25675:C:\Users\jeffa\AppData\Local\Temp\s7uk.
+71E2 text26 CODE >283:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+71E2 text26 CODE >285:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+71E6 text26 CODE >286:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+71EA text26 CODE >287:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+71EE text26 CODE >288:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+71F2 text26 CODE >289:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6E04 text25 CODE >38:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6E04 text25 CODE >40:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6E0C text25 CODE >42:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6E0E text25 CODE >44:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6E12 text25 CODE >45:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6E24 text25 CODE >48:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6E28 text25 CODE >49:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6E2C text25 CODE >52:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6E2E text25 CODE >53:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6E36 text25 CODE >54:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6E48 text25 CODE >55:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6E4C text25 CODE >56:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6E50 text25 CODE >57:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6E52 text25 CODE >65:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6E58 text25 CODE >66:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6E5E text25 CODE >67:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6E62 text25 CODE >68:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6E64 text25 CODE >69:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6E68 text25 CODE >71:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6E6C text25 CODE >73:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6912 text24 CODE >41:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6914 text24 CODE >45:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+691A text24 CODE >47:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+691E text24 CODE >48:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6922 text24 CODE >49:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+692A text24 CODE >50:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+692E text24 CODE >51:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6932 text24 CODE >52:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6936 text24 CODE >53:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6938 text24 CODE >55:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+693C text24 CODE >56:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6940 text24 CODE >59:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6942 text24 CODE >60:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6946 text24 CODE >62:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+694C text24 CODE >63:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6952 text24 CODE >64:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6958 text24 CODE >65:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+695E text24 CODE >68:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6962 text24 CODE >69:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6966 text24 CODE >70:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6978 text24 CODE >71:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+697E text24 CODE >72:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6980 text24 CODE >73:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6992 text24 CODE >69:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+699A text24 CODE >77:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+699C text24 CODE >78:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+699E text24 CODE >79:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+69A0 text24 CODE >80:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+69A2 text24 CODE >81:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+69A4 text24 CODE >82:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+69A6 text24 CODE >85:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+69CA text24 CODE >86:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+69EE text24 CODE >87:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+69F2 text24 CODE >88:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6A16 text24 CODE >89:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6A1A text24 CODE >90:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6A1E text24 CODE >91:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6A22 text24 CODE >92:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6A26 text24 CODE >93:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6A2A text24 CODE >94:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6A2E text24 CODE >95:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6A32 text24 CODE >96:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6A34 text24 CODE >97:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6A38 text24 CODE >98:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6A40 text24 CODE >99:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6A42 text24 CODE >100:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6A46 text24 CODE >103:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6A4A text24 CODE >104:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6A6E text24 CODE >105:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6A72 text24 CODE >106:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6A96 text24 CODE >107:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6A9A text24 CODE >108:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6A9E text24 CODE >109:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6AA2 text24 CODE >110:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6AA6 text24 CODE >111:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6AAA text24 CODE >112:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6AAE text24 CODE >113:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6AB6 text24 CODE >114:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6AB8 text24 CODE >115:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6ABC text24 CODE >116:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6AC0 text24 CODE >117:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6AC2 text24 CODE >118:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6AC6 text24 CODE >120:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+6AC8 text24 CODE >121:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\adc.c
+71D0 text23 CODE >283:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+71D0 text23 CODE >285:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+71D4 text23 CODE >286:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+71D8 text23 CODE >287:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+71DC text23 CODE >288:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+71E0 text23 CODE >289:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6FCC text22 CODE >257:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6FCC text22 CODE >259:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6FD2 text22 CODE >260:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6FD6 text22 CODE >262:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6FDC text22 CODE >263:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6FFA text22 CODE >262:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+7004 text22 CODE >266:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+7006 text22 CODE >267:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6ACA text21 CODE >129:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6ACA text21 CODE >130:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6ACE text21 CODE >131:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6AD2 text21 CODE >132:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6AD6 text21 CODE >133:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6ADA text21 CODE >134:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6ADE text21 CODE >135:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6AE2 text21 CODE >136:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6AE6 text21 CODE >139:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6AEA text21 CODE >140:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6AEE text21 CODE >141:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6AF2 text21 CODE >143:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6AF8 text21 CODE >144:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6AFC text21 CODE >145:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B00 text21 CODE >146:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B04 text21 CODE >147:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B08 text21 CODE >148:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B0C text21 CODE >149:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B10 text21 CODE >150:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B14 text21 CODE >151:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B18 text21 CODE >152:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B1C text21 CODE >154:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B20 text21 CODE >155:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B24 text21 CODE >156:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B28 text21 CODE >157:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B2C text21 CODE >158:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B30 text21 CODE >159:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B34 text21 CODE >160:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B38 text21 CODE >161:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B3C text21 CODE >162:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B40 text21 CODE >163:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B44 text21 CODE >165:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B48 text21 CODE >166:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B4C text21 CODE >167:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B50 text21 CODE >168:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B54 text21 CODE >169:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B58 text21 CODE >170:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B5C text21 CODE >171:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B60 text21 CODE >172:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B64 text21 CODE >173:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B68 text21 CODE >174:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B6C text21 CODE >176:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B70 text21 CODE >177:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B74 text21 CODE >178:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B78 text21 CODE >179:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B7C text21 CODE >180:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B80 text21 CODE >181:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B84 text21 CODE >182:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B88 text21 CODE >183:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B8C text21 CODE >184:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B90 text21 CODE >185:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B94 text21 CODE >187:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B9A text21 CODE >188:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6B9E text21 CODE >189:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6BA2 text21 CODE >190:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6BA6 text21 CODE >191:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6BAA text21 CODE >192:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C84 text20 CODE >75:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C84 text20 CODE >77:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C88 text20 CODE >78:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C8C text20 CODE >79:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C90 text20 CODE >80:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C94 text20 CODE >81:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C98 text20 CODE >82:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C9C text20 CODE >83:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CA0 text20 CODE >84:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CA2 text20 CODE >88:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CA6 text20 CODE >89:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CAA text20 CODE >90:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CAE text20 CODE >91:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CB2 text20 CODE >92:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CB6 text20 CODE >93:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CB8 text20 CODE >94:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CBC text20 CODE >95:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CBE text20 CODE >96:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CC2 text20 CODE >97:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CC6 text20 CODE >95:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CCA text20 CODE >101:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CD0 text20 CODE >103:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CD4 text20 CODE >105:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CD8 text20 CODE >111:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CDC text20 CODE >112:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CDE text20 CODE >113:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CE0 text20 CODE >114:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CE4 text20 CODE >115:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CE8 text20 CODE >116:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CEC text20 CODE >117:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CF0 text20 CODE >118:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CF4 text20 CODE >119:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CF8 text20 CODE >120:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6CFC text20 CODE >121:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6D00 text20 CODE >123:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6D04 text20 CODE >124:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6D06 text20 CODE >125:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6D08 text20 CODE >126:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6D0C text20 CODE >127:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6BAC text19 CODE >194:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6BAC text19 CODE >203:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6BB0 text19 CODE >205:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6BB6 text19 CODE >208:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6BB8 text19 CODE >211:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6BBC text19 CODE >212:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6BC0 text19 CODE >213:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6BC4 text19 CODE >214:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6BC8 text19 CODE >216:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6BCC text19 CODE >218:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6BD0 text19 CODE >219:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6BD2 text19 CODE >220:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6BD8 text19 CODE >222:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6BDE text19 CODE >223:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6BEE text19 CODE >224:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6BF2 text19 CODE >225:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6BF4 text19 CODE >226:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C04 text19 CODE >227:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C14 text19 CODE >228:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C1A text19 CODE >229:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C1E text19 CODE >231:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C20 text19 CODE >232:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C4E text19 CODE >233:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C54 text19 CODE >234:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C58 text19 CODE >235:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C5A text19 CODE >236:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C6C text19 CODE >238:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C6E text19 CODE >231:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C72 text19 CODE >243:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C76 text19 CODE >244:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C7A text19 CODE >245:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C7C text19 CODE >248:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C80 text19 CODE >249:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6C82 text19 CODE >255:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\si.c
+6F88 text18 CODE >383:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6F88 text18 CODE >384:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6F8C text18 CODE >385:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6F92 text18 CODE >386:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6F96 text18 CODE >387:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6F9A text18 CODE >388:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6F9E text18 CODE >389:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6FA2 text18 CODE >390:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6FA4 text18 CODE >391:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6FB0 text18 CODE >392:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6FB4 text18 CODE >393:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6FB8 text18 CODE >394:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6FBC text18 CODE >395:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6FBE text18 CODE >397:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6FC2 text18 CODE >398:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6FC6 text18 CODE >399:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6FCA text18 CODE >400:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+70A8 text17 CODE >282:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+70A8 text17 CODE >285:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+70AC text17 CODE >286:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+70CA text17 CODE >285:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+70D2 text17 CODE >289:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+70DA text17 CODE >290:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7074 text16 CODE >292:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7074 text16 CODE >295:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7078 text16 CODE >296:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7096 text16 CODE >295:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+709E text16 CODE >299:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+70A6 text16 CODE >300:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6710 text15 CODE >163:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6712 text15 CODE >166:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6718 text15 CODE >167:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+671E text15 CODE >169:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+679E text15 CODE >171:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+67A2 text15 CODE >172:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+67BE text15 CODE >173:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+67DA text15 CODE >174:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+67E0 text15 CODE >175:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+67FC text15 CODE >176:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6818 text15 CODE >180:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+681A text15 CODE >181:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6820 text15 CODE >182:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6826 text15 CODE >183:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6826 text15 CODE >184:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+682C text15 CODE >185:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6832 text15 CODE >198:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6834 text15 CODE >202:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6834 text15 CODE >203:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+683A text15 CODE >204:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6840 text15 CODE >206:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6854 text15 CODE >207:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6858 text15 CODE >208:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+685A text15 CODE >211:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+686E text15 CODE >212:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6874 text15 CODE >213:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+687C text15 CODE >218:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6890 text15 CODE >219:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+68A4 text15 CODE >220:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+68AA text15 CODE >224:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+68AA text15 CODE >225:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+68B0 text15 CODE >226:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+68B6 text15 CODE >227:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+68BC text15 CODE >228:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+68C2 text15 CODE >229:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+68C4 text15 CODE >231:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+68C4 text15 CODE >232:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+68CA text15 CODE >233:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+68D0 text15 CODE >234:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+68D6 text15 CODE >198:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6908 text15 CODE >239:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6910 text15 CODE >240:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+703E text14 CODE >251:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+703E text14 CODE >252:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7042 text14 CODE >253:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7046 text14 CODE >254:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+704A text14 CODE >255:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+704E text14 CODE >256:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7052 text14 CODE >257:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7056 text14 CODE >258:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+705C text14 CODE >259:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7062 text14 CODE >260:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7066 text14 CODE >261:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+706A text14 CODE >263:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7072 text14 CODE >264:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7008 text13 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
+7008 text13 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
+7014 text13 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
+7016 text13 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
+702C text13 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
+6D0E text12 CODE >59:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6D0E text12 CODE >61:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6D12 text12 CODE >62:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6D16 text12 CODE >63:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6D1A text12 CODE >64:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6D1E text12 CODE >65:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6D22 text12 CODE >68:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6D3E text12 CODE >69:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6D5A text12 CODE >71:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6D60 text12 CODE >72:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6D64 text12 CODE >73:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6D68 text12 CODE >74:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6D6C text12 CODE >75:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6D70 text12 CODE >77:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6D74 text12 CODE >78:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6D78 text12 CODE >79:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6D7C text12 CODE >80:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6D80 text12 CODE >81:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6D84 text12 CODE >82:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6D88 text12 CODE >83:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6D8C text12 CODE >84:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7134 text11 CODE >266:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7134 text11 CODE >269:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7138 text11 CODE >270:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7156 text11 CODE >269:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7108 text10 CODE >274:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7108 text10 CODE >277:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+710C text10 CODE >278:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+712A text10 CODE >277:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7160 text9 CODE >242:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7160 text9 CODE >243:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7166 text9 CODE >244:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+716C text9 CODE >245:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7172 text9 CODE >246:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7178 text9 CODE >247:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+717E text9 CODE >248:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+7184 text9 CODE >249:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6402 text8 CODE >86:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6402 text8 CODE >92:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6408 text8 CODE >93:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+640E text8 CODE >94:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6414 text8 CODE >95:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+641A text8 CODE >96:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6420 text8 CODE >97:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6426 text8 CODE >99:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+642C text8 CODE >100:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6432 text8 CODE >101:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6438 text8 CODE >104:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6440 text8 CODE >105:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6448 text8 CODE >106:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6450 text8 CODE >107:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6458 text8 CODE >108:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6460 text8 CODE >109:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6468 text8 CODE >110:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6470 text8 CODE >111:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6478 text8 CODE >112:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6480 text8 CODE >113:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6488 text8 CODE >114:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6490 text8 CODE >115:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6498 text8 CODE >116:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+64A0 text8 CODE >117:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+64A8 text8 CODE >118:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+64B0 text8 CODE >120:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+64B6 text8 CODE >121:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+64B8 text8 CODE >124:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+64BC text8 CODE >125:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+64CA text8 CODE >124:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+64D2 text8 CODE >128:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+64D6 text8 CODE >129:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+64DA text8 CODE >131:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6502 text8 CODE >132:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+652A text8 CODE >133:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6552 text8 CODE >134:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+657A text8 CODE >135:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+65A2 text8 CODE >136:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+65CA text8 CODE >137:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+65F2 text8 CODE >138:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+661A text8 CODE >139:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6642 text8 CODE >140:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+666A text8 CODE >141:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6692 text8 CODE >142:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+66BA text8 CODE >143:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+66E2 text8 CODE >145:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+66E8 text8 CODE >146:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+66EC text8 CODE >147:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+66F0 text8 CODE >148:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+66F4 text8 CODE >149:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+66F6 text8 CODE >150:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+66F8 text8 CODE >153:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+66FE text8 CODE >154:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6702 text8 CODE >155:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+6706 text8 CODE >156:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+670A text8 CODE >157:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+670C text8 CODE >158:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+670E text8 CODE >161:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\buttons.c
+71AA text7 CODE >37:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+71AC text7 CODE >38:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+71B2 text7 CODE >39:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+71B8 text7 CODE >40:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+71BA text7 CODE >41:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+71BC text7 CODE >42:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+71BE text6 CODE >29:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+71BE text6 CODE >30:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+71C0 text6 CODE >31:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+71C6 text6 CODE >32:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+71CA text6 CODE >33:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+71CC text6 CODE >34:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+71CE text6 CODE >35:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+7186 text5 CODE >44:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+7188 text5 CODE >45:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+718E text5 CODE >46:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+7194 text5 CODE >47:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+719A text5 CODE >48:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+719C text5 CODE >49:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+71A0 text5 CODE >50:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+71A6 text5 CODE >51:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+71A8 text5 CODE >52:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\nvm.c
+70DC text4 CODE >80:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+70DC text4 CODE >82:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+70E4 text4 CODE >83:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+70E8 text4 CODE >84:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+70FE text4 CODE >83:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6D8E text3 CODE >47:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6D8E text3 CODE >49:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6DAA text3 CODE >52:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6DBC text3 CODE >53:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6DC4 text3 CODE >56:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6DC8 text3 CODE >57:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6DCA text3 CODE >58:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6DCE text3 CODE >59:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6DD0 text3 CODE >60:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6DD4 text3 CODE >61:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6DD6 text3 CODE >62:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6DDA text3 CODE >63:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6DDC text3 CODE >64:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6DE0 text3 CODE >65:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6DE4 text3 CODE >66:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6DE8 text3 CODE >67:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6DEC text3 CODE >68:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6DF0 text3 CODE >69:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6DF4 text3 CODE >70:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6DF8 text3 CODE >71:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6DFC text3 CODE >74:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6DFE text3 CODE >77:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6E02 text3 CODE >78:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6F30 text2 CODE >31:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6F30 text2 CODE >32:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6F38 text2 CODE >34:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6F3C text2 CODE >35:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6F3E text2 CODE >36:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6F52 text2 CODE >39:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6F76 text2 CODE >41:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6F7A text2 CODE >42:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6F7E text2 CODE >34:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\config.c
+6E6E text1 CODE >342:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6E6E text1 CODE >344:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6E76 text1 CODE >345:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6E78 text1 CODE >346:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6E7E text1 CODE >347:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6E82 text1 CODE >348:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6E84 text1 CODE >352:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6E88 text1 CODE >353:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6E8C text1 CODE >356:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6E90 text1 CODE >361:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6E94 text1 CODE >362:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6E98 text1 CODE >363:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6E9A text1 CODE >364:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6EA4 text1 CODE >366:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6EA6 text1 CODE >369:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6EA8 text1 CODE >370:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6EAA text1 CODE >371:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6EAC text1 CODE >372:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6EB2 text1 CODE >373:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6EB6 text1 CODE >374:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6EBA text1 CODE >375:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6EBE text1 CODE >376:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6EC2 text1 CODE >377:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6EC6 text1 CODE >378:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6ECA text1 CODE >379:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6ECE text1 CODE >380:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6ED2 text1 CODE >381:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6024 text0 CODE >79:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6024 text0 CODE >84:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+602A text0 CODE >89:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+602E text0 CODE >103:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6032 text0 CODE >107:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6038 text0 CODE >108:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+603E text0 CODE >109:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6044 text0 CODE >111:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6048 text0 CODE >112:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6050 text0 CODE >113:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6056 text0 CODE >116:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6070 text0 CODE >117:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6074 text0 CODE >118:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6078 text0 CODE >121:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6084 text0 CODE >122:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6088 text0 CODE >123:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+608C text0 CODE >126:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6090 text0 CODE >128:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6094 text0 CODE >131:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+609A text0 CODE >132:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+60A0 text0 CODE >133:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+60A6 text0 CODE >135:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+60B0 text0 CODE >136:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+60B2 text0 CODE >138:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+60B6 text0 CODE >139:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+60C6 text0 CODE >141:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+60CE text0 CODE >145:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+60D2 text0 CODE >146:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+60D6 text0 CODE >147:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+60DA text0 CODE >148:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+60EA text0 CODE >149:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+60EC text0 CODE >153:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+60F4 text0 CODE >167:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+610E text0 CODE >168:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6110 text0 CODE >172:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6128 text0 CODE >173:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+612A text0 CODE >176:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6152 text0 CODE >177:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6156 text0 CODE >179:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+615A text0 CODE >180:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+615A text0 CODE >181:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6160 text0 CODE >182:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6170 text0 CODE >183:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6172 text0 CODE >186:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6178 text0 CODE >187:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+617C text0 CODE >188:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6180 text0 CODE >189:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6184 text0 CODE >190:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6188 text0 CODE >191:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+618C text0 CODE >192:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+619C text0 CODE >193:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+619E text0 CODE >194:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+61A2 text0 CODE >200:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+61A8 text0 CODE >201:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+61AE text0 CODE >202:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+61B6 text0 CODE >203:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+61BC text0 CODE >204:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+61C0 text0 CODE >205:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+61C6 text0 CODE >206:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+61E2 text0 CODE >205:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+61EE text0 CODE >211:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+61F2 text0 CODE >221:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+61F8 text0 CODE >222:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6200 text0 CODE >223:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6208 text0 CODE >224:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+620E text0 CODE >225:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6212 text0 CODE >226:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6218 text0 CODE >227:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+621E text0 CODE >231:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6222 text0 CODE >232:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6228 text0 CODE >233:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6250 text0 CODE >232:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6260 text0 CODE >235:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6272 text0 CODE >247:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6272 text0 CODE >248:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6274 text0 CODE >249:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6276 text0 CODE >252:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+627C text0 CODE >253:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6280 text0 CODE >254:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6290 text0 CODE >255:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6294 text0 CODE >256:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6296 text0 CODE >263:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+629C text0 CODE >264:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+62A4 text0 CODE >265:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+62B2 text0 CODE >279:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+62B8 text0 CODE >280:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+62C0 text0 CODE >281:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+62CE text0 CODE >295:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+62D4 text0 CODE >296:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+62E4 text0 CODE >297:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+62EA text0 CODE >298:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+62F6 text0 CODE >299:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6322 text0 CODE >298:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6326 text0 CODE >301:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6336 text0 CODE >302:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6338 text0 CODE >309:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+633E text0 CODE >310:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+634E text0 CODE >311:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6354 text0 CODE >312:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6360 text0 CODE >313:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+638C text0 CODE >312:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6390 text0 CODE >323:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6398 text0 CODE >333:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+639C text0 CODE >334:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+639E text0 CODE >142:D:\Libraries\Documents\GCPlus-2.0\GCPlus2.0.X\main.c
+6ED4 cinit CODE >25539:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6ED4 cinit CODE >25541:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6ED4 cinit CODE >25544:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6ED4 cinit CODE >25612:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6ED6 cinit CODE >25613:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6ED8 cinit CODE >25614:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6EDA cinit CODE >25615:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6EDC cinit CODE >25616:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6EDE cinit CODE >25617:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6EE0 cinit CODE >25618:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6EE4 cinit CODE >25619:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6EE8 cinit CODE >25620:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6EE8 cinit CODE >25621:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6EEA cinit CODE >25622:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6EF0 cinit CODE >25623:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6EF2 cinit CODE >25624:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6EF4 cinit CODE >25625:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6EF6 cinit CODE >25629:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6EFA cinit CODE >25630:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6EFC cinit CODE >25631:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6EFC cinit CODE >25632:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6EFE cinit CODE >25633:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F00 cinit CODE >25634:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F02 cinit CODE >25637:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F06 cinit CODE >25638:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F08 cinit CODE >25639:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F08 cinit CODE >25640:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F0A cinit CODE >25641:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F0C cinit CODE >25642:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F0E cinit CODE >25645:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F12 cinit CODE >25646:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F14 cinit CODE >25647:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F14 cinit CODE >25648:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F16 cinit CODE >25649:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F18 cinit CODE >25650:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F1A cinit CODE >25658:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F1C cinit CODE >25659:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F1E cinit CODE >25660:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F20 cinit CODE >25661:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F22 cinit CODE >25662:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F24 cinit CODE >25663:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F26 cinit CODE >25669:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F26 cinit CODE >25672:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F28 cinit CODE >25673:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F2A cinit CODE >25674:C:\Users\jeffa\AppData\Local\Temp\scqg.
+6F2C cinit CODE >25675:C:\Users\jeffa\AppData\Local\Temp\scqg.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -775,7 +769,7 @@ $dist/default/production\GCPlus2.0.X.production.o
 %SYMTAB
 __CFG_BBSIZE$BBSIZE_4096 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __Lmediumconst 2022 0 MEDIUMCONST 0 mediumconst dist/default/production\GCPlus2.0.X.production.o
-_SISendMessage 6BE6 0 CODE 0 text19 dist/default/production\GCPlus2.0.X.production.o
+_SISendMessage 6BAC 0 CODE 0 text19 dist/default/production\GCPlus2.0.X.production.o
 __Hspace_0 30000A 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __Hspace_1 124 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
@@ -787,16 +781,16 @@ _CLC3CON 3C60 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _CLC3POL 3C61 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _CLC4CON 3C56 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _CLC4POL 3C57 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-_configSetDefault 6DC8 0 CODE 0 text3 dist/default/production\GCPlus2.0.X.production.o
+_configSetDefault 6D8E 0 CODE 0 text3 dist/default/production\GCPlus2.0.X.production.o
 _SPI1TWIDTH 3D18 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 ?_buttonsGetOrigins 2C 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
-_buttonsGetMapByte0 70EA 0 CODE 0 text17 dist/default/production\GCPlus2.0.X.production.o
-_buttonsGetMapByte1 70B6 0 CODE 0 text16 dist/default/production\GCPlus2.0.X.production.o
+_buttonsGetMapByte0 70A8 0 CODE 0 text17 dist/default/production\GCPlus2.0.X.production.o
+_buttonsGetMapByte1 7074 0 CODE 0 text16 dist/default/production\GCPlus2.0.X.production.o
 _PWM5CON 3F6E 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _PWM5DCH 3F6D 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _PWM5DCL 3F6C 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\GCPlus2.0.X.production.o
-__mediumconst 2022 0 MEDIUMCONST 0 mediumconst C:\Users\jeffa\AppData\Local\Temp\s7uk.o
+__mediumconst 2022 0 MEDIUMCONST 0 mediumconst C:\Users\jeffa\AppData\Local\Temp\scqg.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\GCPlus2.0.X.production.o
 _NCO1ACCL 3F38 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __CFG_RSTOSC$HFINTOSC_64MHZ 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
@@ -808,11 +802,11 @@ _T6PR 3F93 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _WPUA 3A41 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _WPUB 3A51 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _WPUC 3A61 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\jeffa\AppData\Local\Temp\s7uk.o
+___sp 0 0 STACK 2 stack C:\Users\jeffa\AppData\Local\Temp\scqg.o
 _main 6024 0 CODE 0 text0 dist/default/production\GCPlus2.0.X.production.o
-__end_of_buttonsInit 6DC8 0 CODE 0 text12 dist/default/production\GCPlus2.0.X.production.o
+__end_of_buttonsInit 6D8E 0 CODE 0 text12 dist/default/production\GCPlus2.0.X.production.o
 EEPROMWriteByte@address 2D 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
-start 201E 0 CODE 0 init C:\Users\jeffa\AppData\Local\Temp\s7uk.o
+start 201E 0 CODE 0 init C:\Users\jeffa\AppData\Local\Temp\scqg.o
 main@msgAnswer 85 0 BANK0 1 cstackBANK0 dist/default/production\GCPlus2.0.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\GCPlus2.0.X.production.o
@@ -820,30 +814,30 @@ __CFG_DEBUG$OFF 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _DMA2CON1bits 3BDD 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 configFlashAll@data 2E 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
 __size_of_configInit 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-_SIGetCommand 7044 0 CODE 0 text22 dist/default/production\GCPlus2.0.X.production.o
-__end_of_SIInit 6D48 0 CODE 0 text20 dist/default/production\GCPlus2.0.X.production.o
+_SIGetCommand 6FCC 0 CODE 0 text22 dist/default/production\GCPlus2.0.X.production.o
+__end_of_SIInit 6D0E 0 CODE 0 text20 dist/default/production\GCPlus2.0.X.production.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\GCPlus2.0.X.production.o
 ADCInit@i 34 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\GCPlus2.0.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\jeffa\AppData\Local\Temp\s7uk.o
-intlevel0 0 0 CODE 0 text C:\Users\jeffa\AppData\Local\Temp\s7uk.o
-intlevel1 0 0 CODE 0 text C:\Users\jeffa\AppData\Local\Temp\s7uk.o
-intlevel2 0 0 CODE 0 text C:\Users\jeffa\AppData\Local\Temp\s7uk.o
-intlevel3 0 0 CODE 0 text C:\Users\jeffa\AppData\Local\Temp\s7uk.o
+__accesstop 60 0 ABS 0 - C:\Users\jeffa\AppData\Local\Temp\scqg.o
+intlevel0 0 0 CODE 0 text C:\Users\jeffa\AppData\Local\Temp\scqg.o
+intlevel1 0 0 CODE 0 text C:\Users\jeffa\AppData\Local\Temp\scqg.o
+intlevel2 0 0 CODE 0 text C:\Users\jeffa\AppData\Local\Temp\scqg.o
+intlevel3 0 0 CODE 0 text C:\Users\jeffa\AppData\Local\Temp\scqg.o
 ivt0x200C_base 200C 0 CODE 0 ivt0x200C dist/default/production\GCPlus2.0.X.production.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\GCPlus2.0.X.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\GCPlus2.0.X.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\GCPlus2.0.X.production.o
 _buttonsMapByte0 DD 0 BANK0 1 bssBANK0 dist/default/production\GCPlus2.0.X.production.o
 _buttonsMapByte1 CE 0 BANK0 1 bssBANK0 dist/default/production\GCPlus2.0.X.production.o
-buttonsGetMessage@analogMode 34 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
+buttonsGetMessage@analogMode 32 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
 __Hivt0x200C 201E 0 CODE 0 ivt0x200C dist/default/production\GCPlus2.0.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\GCPlus2.0.X.production.o
-__pidataCOMRAM 7236 0 CODE 0 idataCOMRAM dist/default/production\GCPlus2.0.X.production.o
+__pidataCOMRAM 71F4 0 CODE 0 idataCOMRAM dist/default/production\GCPlus2.0.X.production.o
 buttonsUpdate@toggledButtons 30 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
-__end_of_buttonsSetMapByte0 71A2 0 CODE 0 text11 dist/default/production\GCPlus2.0.X.production.o
-__end_of_buttonsSetMapByte1 7176 0 CODE 0 text10 dist/default/production\GCPlus2.0.X.production.o
-__end_of_configSetDefault 6E3E 0 CODE 0 text3 dist/default/production\GCPlus2.0.X.production.o
+__end_of_buttonsSetMapByte0 7160 0 CODE 0 text11 dist/default/production\GCPlus2.0.X.production.o
+__end_of_buttonsSetMapByte1 7134 0 CODE 0 text10 dist/default/production\GCPlus2.0.X.production.o
+__end_of_configSetDefault 6E04 0 CODE 0 text3 dist/default/production\GCPlus2.0.X.production.o
 _ADACQL 3EF3 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _ADCON0 3EF8 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _ADCON1 3EF9 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
@@ -853,10 +847,10 @@ _ANSELA 3A40 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _ANSELB 3A50 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _ANSELC 3A60 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __size_of_SIGetCommand 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\jeffa\AppData\Local\Temp\s7uk.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\jeffa\AppData\Local\Temp\s7uk.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\jeffa\AppData\Local\Temp\scqg.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\jeffa\AppData\Local\Temp\scqg.o
 _SIByteCounter 1F 0 COMRAM 1 bssCOMRAM dist/default/production\GCPlus2.0.X.production.o
-_configFlashAll 711E 0 CODE 0 text4 dist/default/production\GCPlus2.0.X.production.o
+_configFlashAll 70DC 0 CODE 0 text4 dist/default/production\GCPlus2.0.X.production.o
 __size_of_SISendMessage 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\GCPlus2.0.X.production.o
 __CFG_IVT1WAY$OFF 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
@@ -874,41 +868,41 @@ __Hmediumconst 6024 0 MEDIUMCONST 0 mediumconst dist/default/production\GCPlus2.
 __size_of_SIClear 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __size_of_buttonsGetOrigins 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __CFG_FEXTOSC$OFF 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-__end_of_SIGetCommand 7080 0 CODE 0 text22 dist/default/production\GCPlus2.0.X.production.o
+__end_of_SIGetCommand 7008 0 CODE 0 text22 dist/default/production\GCPlus2.0.X.production.o
 _SPI1STATUSbits 3D17 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _SMT1PWAIE 1CC8F 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _SMT1PWAIF 1CD0F 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _IVTLOCKED 1FEA0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-_buttonsSetMapByte0 7176 0 CODE 0 text11 dist/default/production\GCPlus2.0.X.production.o
-_buttonsSetMapByte1 714A 0 CODE 0 text10 dist/default/production\GCPlus2.0.X.production.o
+_buttonsSetMapByte0 7134 0 CODE 0 text11 dist/default/production\GCPlus2.0.X.production.o
+_buttonsSetMapByte1 7108 0 CODE 0 text10 dist/default/production\GCPlus2.0.X.production.o
 buttonsUpdate@i 2F 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
-__end_of_SISendMessage 6CBE 0 CODE 0 text19 dist/default/production\GCPlus2.0.X.production.o
+__end_of_SISendMessage 6C84 0 CODE 0 text19 dist/default/production\GCPlus2.0.X.production.o
 __LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\GCPlus2.0.X.production.o
 buttonsSetMapByte0@i 2E 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
 buttonsSetMapByte1@i 2E 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
 ?_buttonsGetMessage 2C 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
-__end_of_hi_int 6EA8 0 CODE 0 text25 dist/default/production\GCPlus2.0.X.production.o
+__end_of_hi_int 6E6E 0 CODE 0 text25 dist/default/production\GCPlus2.0.X.production.o
 _INTCON0bits 3FD2 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __CFG_PPS1WAY$OFF 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _NVMDAT 39E3 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-start_initialization 6F0E 0 CODE 0 cinit dist/default/production\GCPlus2.0.X.production.o
+start_initialization 6ED4 0 CODE 0 cinit dist/default/production\GCPlus2.0.X.production.o
 _ODCONA 3A42 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _ODCONB 3A52 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _ODCONC 3A62 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-__end_of_configFlashAll 714A 0 CODE 0 text4 dist/default/production\GCPlus2.0.X.production.o
+__end_of_configFlashAll 7108 0 CODE 0 text4 dist/default/production\GCPlus2.0.X.production.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\GCPlus2.0.X.production.o
 _PCLATH 3FFA 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _PCLATU 3FFB 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __size_of_buttonsInit 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __CFG_WDTCPS$WDTCPS_12 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _TRISBbits 3FC3 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-_ADCInit 694C 0 CODE 0 text24 dist/default/production\GCPlus2.0.X.production.o
+_ADCInit 6912 0 CODE 0 text24 dist/default/production\GCPlus2.0.X.production.o
 _ADFLTRL 3EE6 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __size_of_SIConfigureCLC 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 ___rparam_used 1 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _RB4PPS 3A0C 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-__end_of_memset 70B6 0 CODE 0 text13 dist/default/production\GCPlus2.0.X.production.o
-_SIInit 6CBE 0 CODE 0 text20 dist/default/production\GCPlus2.0.X.production.o
+__end_of_memset 703E 0 CODE 0 text13 dist/default/production\GCPlus2.0.X.production.o
+_SIInit 6C84 0 CODE 0 text20 dist/default/production\GCPlus2.0.X.production.o
 __pcstackBANK0 60 0 BANK0 1 cstackBANK0 dist/default/production\GCPlus2.0.X.production.o
 _T0CON0 3FB8 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _T0CON1 3FB9 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
@@ -921,12 +915,12 @@ main@gcpLocked B1 0 BANK0 1 cstackBANK0 dist/default/production\GCPlus2.0.X.prod
 __size_of_bootBootloader 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __size_of_buttonsGetMapByte0 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __size_of_buttonsGetMapByte1 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-SISendMessage@leftToSend 51 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
+SISendMessage@leftToSend 4B 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
 configFlashAll@i 30 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
 _outButtons 16 0 COMRAM 1 bssCOMRAM dist/default/production\GCPlus2.0.X.production.o
-SISendMessage@idx 50 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
-SISendMessage@len 4A 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
-SISendMessage@msg 48 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
+SISendMessage@idx 4A 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
+SISendMessage@len 44 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
+SISendMessage@msg 42 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
 __Hbank0 0 0 ABS 0 bank0 dist/default/production\GCPlus2.0.X.production.o
 __Hbank1 0 0 ABS 0 bank1 dist/default/production\GCPlus2.0.X.production.o
 __Hbank2 0 0 ABS 0 bank2 dist/default/production\GCPlus2.0.X.production.o
@@ -954,27 +948,26 @@ __Htext6 0 0 ABS 0 text6 dist/default/production\GCPlus2.0.X.production.o
 __Htext7 0 0 ABS 0 text7 dist/default/production\GCPlus2.0.X.production.o
 __Htext8 0 0 ABS 0 text8 dist/default/production\GCPlus2.0.X.production.o
 __Htext9 0 0 ABS 0 text9 dist/default/production\GCPlus2.0.X.production.o
-buttonsGetMessage@correction_type 45 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
+buttonsGetMessage@correction_type 3F 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
 _NVMADRL 39E0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _NVMCON1 39E5 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _NVMCON2 39E6 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\GCPlus2.0.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\GCPlus2.0.X.production.o
-_buttonsGetMessage$1458 35 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
-_buttonsGetMessage$1459 37 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
-_buttonsGetMessage$1460 39 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
-_buttonsGetMessage$1461 3B 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
-_buttonsGetMessage$1462 3D 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
-_buttonsGetMessage$1463 3F 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
-_buttonsGetMessage$1464 41 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\jeffa\AppData\Local\Temp\s7uk.o
-__end_of_portsInit 6F0E 0 CODE 0 text1 dist/default/production\GCPlus2.0.X.production.o
+_buttonsGetMessage$1458 33 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
+_buttonsGetMessage$1459 35 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
+_buttonsGetMessage$1460 37 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
+_buttonsGetMessage$1461 39 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
+_buttonsGetMessage$1462 3B 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
+_buttonsGetMessage$1463 3D 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\jeffa\AppData\Local\Temp\scqg.o
+__end_of_portsInit 6ED4 0 CODE 0 text1 dist/default/production\GCPlus2.0.X.production.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\GCPlus2.0.X.production.o
 __Hconfig 30000A 0 CONFIG 0 config dist/default/production\GCPlus2.0.X.production.o
 __size_of_portsInit 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-__end_of_SIClear 7224 0 CODE 0 text23 dist/default/production\GCPlus2.0.X.production.o
+__end_of_SIClear 71E2 0 CODE 0 text23 dist/default/production\GCPlus2.0.X.production.o
 __size_of_buttonsSetOrigins 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-__end_of_EEPROMWriteByte 71EC 0 CODE 0 text5 dist/default/production\GCPlus2.0.X.production.o
+__end_of_EEPROMWriteByte 71AA 0 CODE 0 text5 dist/default/production\GCPlus2.0.X.production.o
 __Lbank0 0 0 ABS 0 bank0 dist/default/production\GCPlus2.0.X.production.o
 __Lbank1 0 0 ABS 0 bank1 dist/default/production\GCPlus2.0.X.production.o
 __Lbank2 0 0 ABS 0 bank2 dist/default/production\GCPlus2.0.X.production.o
@@ -1023,14 +1016,14 @@ __Lrbss 0 0 COMRAM 1 rbss dist/default/production\GCPlus2.0.X.production.o
 __Ltemp 0 0 COMRAM 1 temp dist/default/production\GCPlus2.0.X.production.o
 __Ltext 0 0 ABS 0 text dist/default/production\GCPlus2.0.X.production.o
 __CFG_XINST$OFF 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-__end_of_NVMUnlock 7212 0 CODE 0 text6 dist/default/production\GCPlus2.0.X.production.o
+__end_of_NVMUnlock 71D0 0 CODE 0 text6 dist/default/production\GCPlus2.0.X.production.o
 memset@c 2E 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
 memset@n 30 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
 memset@p 32 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
 __CFG_WDTCWS$WDTCWS_7 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\GCPlus2.0.X.production.o
-_portsInit 6EA8 0 CODE 0 text1 dist/default/production\GCPlus2.0.X.production.o
-__end_of_buttonsGetOrigins 7044 0 CODE 0 text14 dist/default/production\GCPlus2.0.X.production.o
+_portsInit 6E6E 0 CODE 0 text1 dist/default/production\GCPlus2.0.X.production.o
+__end_of_buttonsGetOrigins 7074 0 CODE 0 text14 dist/default/production\GCPlus2.0.X.production.o
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
 __size_of_NVMUnlock 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _CLC1GLS0 3C7A 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
@@ -1084,13 +1077,13 @@ _config B6 0 BANK0 1 bssBANK0 dist/default/production\GCPlus2.0.X.production.o
 __HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\GCPlus2.0.X.production.o
 buttonsSetMapByte0@map 2C 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
 buttonsSetMapByte1@map 2C 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
-_NVMUnlock 7200 0 CODE 0 text6 dist/default/production\GCPlus2.0.X.production.o
+_NVMUnlock 71BE 0 CODE 0 text6 dist/default/production\GCPlus2.0.X.production.o
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\GCPlus2.0.X.production.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\GCPlus2.0.X.production.o
 __size_of_buttonsGetMessage 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 EEPROMReadByte@address 2C 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
-_EEPROMWriteByte 71C8 0 CODE 0 text5 dist/default/production\GCPlus2.0.X.production.o
-_hi_int 6E3E 0 CODE 0 text25 dist/default/production\GCPlus2.0.X.production.o
+_EEPROMWriteByte 7186 0 CODE 0 text5 dist/default/production\GCPlus2.0.X.production.o
+_hi_int 6E04 0 CODE 0 text25 dist/default/production\GCPlus2.0.X.production.o
 __Hramtop 800 0 RAM 0 ramtop dist/default/production\GCPlus2.0.X.production.o
 __Hrparam 0 0 COMRAM 1 rparam dist/default/production\GCPlus2.0.X.production.o
 buttonsGetMapByte0@i 2E 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
@@ -1121,25 +1114,25 @@ __CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _PIE1bits 3991 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _PIE9bits 3999 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _origins 10 0 COMRAM 1 bssCOMRAM dist/default/production\GCPlus2.0.X.production.o
-_memset 7080 0 CODE 0 text13 dist/default/production\GCPlus2.0.X.production.o
+_memset 7008 0 CODE 0 text13 dist/default/production\GCPlus2.0.X.production.o
 memset@p1 2C 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
-__ptext10 714A 0 CODE 0 text10 dist/default/production\GCPlus2.0.X.production.o
-__ptext11 7176 0 CODE 0 text11 dist/default/production\GCPlus2.0.X.production.o
-__ptext12 6D48 0 CODE 0 text12 dist/default/production\GCPlus2.0.X.production.o
-__ptext13 7080 0 CODE 0 text13 dist/default/production\GCPlus2.0.X.production.o
-__ptext14 7006 0 CODE 0 text14 dist/default/production\GCPlus2.0.X.production.o
+__ptext10 7108 0 CODE 0 text10 dist/default/production\GCPlus2.0.X.production.o
+__ptext11 7134 0 CODE 0 text11 dist/default/production\GCPlus2.0.X.production.o
+__ptext12 6D0E 0 CODE 0 text12 dist/default/production\GCPlus2.0.X.production.o
+__ptext13 7008 0 CODE 0 text13 dist/default/production\GCPlus2.0.X.production.o
+__ptext14 703E 0 CODE 0 text14 dist/default/production\GCPlus2.0.X.production.o
 __ptext15 6710 0 CODE 0 text15 dist/default/production\GCPlus2.0.X.production.o
-__ptext16 70B6 0 CODE 0 text16 dist/default/production\GCPlus2.0.X.production.o
-__ptext17 70EA 0 CODE 0 text17 dist/default/production\GCPlus2.0.X.production.o
-__ptext18 6FC2 0 CODE 0 text18 dist/default/production\GCPlus2.0.X.production.o
-__ptext19 6BE6 0 CODE 0 text19 dist/default/production\GCPlus2.0.X.production.o
-__ptext20 6CBE 0 CODE 0 text20 dist/default/production\GCPlus2.0.X.production.o
-__ptext21 6B04 0 CODE 0 text21 dist/default/production\GCPlus2.0.X.production.o
-__ptext22 7044 0 CODE 0 text22 dist/default/production\GCPlus2.0.X.production.o
-__ptext23 7212 0 CODE 0 text23 dist/default/production\GCPlus2.0.X.production.o
-__ptext24 694C 0 CODE 0 text24 dist/default/production\GCPlus2.0.X.production.o
-__ptext25 6E3E 0 CODE 0 text25 dist/default/production\GCPlus2.0.X.production.o
-__ptext26 7224 0 CODE 0 text26 dist/default/production\GCPlus2.0.X.production.o
+__ptext16 7074 0 CODE 0 text16 dist/default/production\GCPlus2.0.X.production.o
+__ptext17 70A8 0 CODE 0 text17 dist/default/production\GCPlus2.0.X.production.o
+__ptext18 6F88 0 CODE 0 text18 dist/default/production\GCPlus2.0.X.production.o
+__ptext19 6BAC 0 CODE 0 text19 dist/default/production\GCPlus2.0.X.production.o
+__ptext20 6C84 0 CODE 0 text20 dist/default/production\GCPlus2.0.X.production.o
+__ptext21 6ACA 0 CODE 0 text21 dist/default/production\GCPlus2.0.X.production.o
+__ptext22 6FCC 0 CODE 0 text22 dist/default/production\GCPlus2.0.X.production.o
+__ptext23 71D0 0 CODE 0 text23 dist/default/production\GCPlus2.0.X.production.o
+__ptext24 6912 0 CODE 0 text24 dist/default/production\GCPlus2.0.X.production.o
+__ptext25 6E04 0 CODE 0 text25 dist/default/production\GCPlus2.0.X.production.o
+__ptext26 71E2 0 CODE 0 text26 dist/default/production\GCPlus2.0.X.production.o
 __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\GCPlus2.0.X.production.o
 __Lbigram 0 0 ABS 0 bigram dist/default/production\GCPlus2.0.X.production.o
 _DMA1CON0bits 3BFC 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
@@ -1155,20 +1148,20 @@ ADCInit@cyCh 2E 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.prod
 ADCInit@sxCh 33 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
 ADCInit@syCh 2C 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
 __CFG_WRTAPP$OFF 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-_configInit 6F6A 0 CODE 0 text2 dist/default/production\GCPlus2.0.X.production.o
+_configInit 6F30 0 CODE 0 text2 dist/default/production\GCPlus2.0.X.production.o
 main@addr AE 0 BANK0 1 cstackBANK0 dist/default/production\GCPlus2.0.X.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\GCPlus2.0.X.production.o
 main@inBut B2 0 BANK0 1 cstackBANK0 dist/default/production\GCPlus2.0.X.production.o
-_buttonsInit 6D48 0 CODE 0 text12 dist/default/production\GCPlus2.0.X.production.o
+_buttonsInit 6D0E 0 CODE 0 text12 dist/default/production\GCPlus2.0.X.production.o
 __size_of_buttonsUpdate 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\GCPlus2.0.X.production.o
 __size_of_hi_int 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-_buttonsGetOrigins 7006 0 CODE 0 text14 dist/default/production\GCPlus2.0.X.production.o
-__end_of_buttonsSetOrigins 71C8 0 CODE 0 text9 dist/default/production\GCPlus2.0.X.production.o
-buttonsGetMessage@cx 46 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
-buttonsGetMessage@cy 47 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
-stackhi 7FF 0 ABS 0 - C:\Users\jeffa\AppData\Local\Temp\s7uk.o
-stacklo 124 0 ABS 0 - C:\Users\jeffa\AppData\Local\Temp\s7uk.o
+_buttonsGetOrigins 703E 0 CODE 0 text14 dist/default/production\GCPlus2.0.X.production.o
+__end_of_buttonsSetOrigins 7186 0 CODE 0 text9 dist/default/production\GCPlus2.0.X.production.o
+buttonsGetMessage@cx 40 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
+buttonsGetMessage@cy 41 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
+stackhi 7FF 0 ABS 0 - C:\Users\jeffa\AppData\Local\Temp\scqg.o
+stacklo 124 0 ABS 0 - C:\Users\jeffa\AppData\Local\Temp\scqg.o
 _sticks_lut 2023 0 MEDIUMCONST 0 mediumconst dist/default/production\GCPlus2.0.X.production.o
 _ButtonsID 21 0 COMRAM 1 bssCOMRAM dist/default/production\GCPlus2.0.X.production.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\GCPlus2.0.X.production.o
@@ -1221,7 +1214,7 @@ __CFG_CSWEN$ON 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
 __CFG_ZCD$OFF 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _SPI1TCNTL 3D12 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-end_of_initialization 6F60 0 CODE 0 cinit dist/default/production\GCPlus2.0.X.production.o
+end_of_initialization 6F26 0 CODE 0 cinit dist/default/production\GCPlus2.0.X.production.o
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\GCPlus2.0.X.production.o
 __CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __end_of_buttonsUpdate 6710 0 CODE 0 text8 dist/default/production\GCPlus2.0.X.production.o
@@ -1234,21 +1227,21 @@ __HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\GCPlus2.0.X.production.o
 __HbssBANK1 0 0 ABS 0 bssBANK1 dist/default/production\GCPlus2.0.X.production.o
 EEPROMWriteByte@data 2C 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
 portsInit@state 2C 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
-__end_of_buttonsGetMessage 694C 0 CODE 0 text15 dist/default/production\GCPlus2.0.X.production.o
+__end_of_buttonsGetMessage 6912 0 CODE 0 text15 dist/default/production\GCPlus2.0.X.production.o
 __Lramtop 800 0 RAM 0 ramtop dist/default/production\GCPlus2.0.X.production.o
 _SICMDReceived 1E 0 COMRAM 1 bssCOMRAM dist/default/production\GCPlus2.0.X.production.o
 __Lrparam 0 0 COMRAM 1 rparam dist/default/production\GCPlus2.0.X.production.o
-__pcinit 6F0E 0 CODE 0 cinit dist/default/production\GCPlus2.0.X.production.o
+__pcinit 6ED4 0 CODE 0 cinit dist/default/production\GCPlus2.0.X.production.o
 __ptext0 6024 0 CODE 0 text0 dist/default/production\GCPlus2.0.X.production.o
-__ptext1 6EA8 0 CODE 0 text1 dist/default/production\GCPlus2.0.X.production.o
-__ptext2 6F6A 0 CODE 0 text2 dist/default/production\GCPlus2.0.X.production.o
-__ptext3 6DC8 0 CODE 0 text3 dist/default/production\GCPlus2.0.X.production.o
-__ptext4 711E 0 CODE 0 text4 dist/default/production\GCPlus2.0.X.production.o
-__ptext5 71C8 0 CODE 0 text5 dist/default/production\GCPlus2.0.X.production.o
-__ptext6 7200 0 CODE 0 text6 dist/default/production\GCPlus2.0.X.production.o
-__ptext7 71EC 0 CODE 0 text7 dist/default/production\GCPlus2.0.X.production.o
+__ptext1 6E6E 0 CODE 0 text1 dist/default/production\GCPlus2.0.X.production.o
+__ptext2 6F30 0 CODE 0 text2 dist/default/production\GCPlus2.0.X.production.o
+__ptext3 6D8E 0 CODE 0 text3 dist/default/production\GCPlus2.0.X.production.o
+__ptext4 70DC 0 CODE 0 text4 dist/default/production\GCPlus2.0.X.production.o
+__ptext5 7186 0 CODE 0 text5 dist/default/production\GCPlus2.0.X.production.o
+__ptext6 71BE 0 CODE 0 text6 dist/default/production\GCPlus2.0.X.production.o
+__ptext7 71AA 0 CODE 0 text7 dist/default/production\GCPlus2.0.X.production.o
 __ptext8 6402 0 CODE 0 text8 dist/default/production\GCPlus2.0.X.production.o
-__ptext9 71A2 0 CODE 0 text9 dist/default/production\GCPlus2.0.X.production.o
+__ptext9 7160 0 CODE 0 text9 dist/default/production\GCPlus2.0.X.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\GCPlus2.0.X.production.o
 __Ltext10 0 0 ABS 0 text10 dist/default/production\GCPlus2.0.X.production.o
 __Ltext11 0 0 ABS 0 text11 dist/default/production\GCPlus2.0.X.production.o
@@ -1267,22 +1260,22 @@ __Ltext23 0 0 ABS 0 text23 dist/default/production\GCPlus2.0.X.production.o
 __Ltext24 0 0 ABS 0 text24 dist/default/production\GCPlus2.0.X.production.o
 __Ltext25 0 0 ABS 0 text25 dist/default/production\GCPlus2.0.X.production.o
 __Ltext26 0 0 ABS 0 text26 dist/default/production\GCPlus2.0.X.production.o
-__end_of_configInit 6FC2 0 CODE 0 text2 dist/default/production\GCPlus2.0.X.production.o
-__ramtop 800 0 RAM 0 ramtop C:\Users\jeffa\AppData\Local\Temp\s7uk.o
+__end_of_configInit 6F88 0 CODE 0 text2 dist/default/production\GCPlus2.0.X.production.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\jeffa\AppData\Local\Temp\scqg.o
 _SMT1SIGPPS 3AD2 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-_SIConfigureCLC 6B04 0 CODE 0 text21 dist/default/production\GCPlus2.0.X.production.o
+_SIConfigureCLC 6ACA 0 CODE 0 text21 dist/default/production\GCPlus2.0.X.production.o
 __size_of_ADCInit 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __pivt0x200C 200C 0 CODE 0 ivt0x200C dist/default/production\GCPlus2.0.X.production.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\GCPlus2.0.X.production.o
 _SMT1CON1bits 3F1F 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-_SIClear 7212 0 CODE 0 text23 dist/default/production\GCPlus2.0.X.production.o
+_SIClear 71D0 0 CODE 0 text23 dist/default/production\GCPlus2.0.X.production.o
 _buttonsMessage 22 0 COMRAM 1 bssCOMRAM dist/default/production\GCPlus2.0.X.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\GCPlus2.0.X.production.o
-_EEPROMReadByte 71EC 0 CODE 0 text7 dist/default/production\GCPlus2.0.X.production.o
+_EEPROMReadByte 71AA 0 CODE 0 text7 dist/default/production\GCPlus2.0.X.production.o
 __Lreset_vec 2004 0 CODE 0 reset_vec dist/default/production\GCPlus2.0.X.production.o
 __end_of_sticks_lut 6023 0 MEDIUMCONST 0 mediumconst dist/default/production\GCPlus2.0.X.production.o
 configInit@i 36 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
-_bootBootloader 6FC2 0 CODE 0 text18 dist/default/production\GCPlus2.0.X.production.o
+_bootBootloader 6F88 0 CODE 0 text18 dist/default/production\GCPlus2.0.X.production.o
 __CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 ___param_bank 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __CFG_WDTE$ON 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
@@ -1293,7 +1286,7 @@ _SMT1PRL 3F1B 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _SMT1PRU 3F1D 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _SMT1SIG 3F22 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _SMT1WIN 3F23 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-__end_of__initialization 6F60 0 CODE 0 cinit dist/default/production\GCPlus2.0.X.production.o
+__end_of__initialization 6F26 0 CODE 0 cinit dist/default/production\GCPlus2.0.X.production.o
 main@flashBufferIdx 84 0 BANK0 1 cstackBANK0 dist/default/production\GCPlus2.0.X.production.o
 _INTCON0 3FD2 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _SIBitCounter 20 0 COMRAM 1 bssCOMRAM dist/default/production\GCPlus2.0.X.production.o
@@ -1302,20 +1295,20 @@ __CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __CFG_WRTD$OFF 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _NVMCON1bits 39E5 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _SITempByte 1D 0 COMRAM 1 bssCOMRAM dist/default/production\GCPlus2.0.X.production.o
-_buttonsSetOrigins 71A2 0 CODE 0 text9 dist/default/production\GCPlus2.0.X.production.o
+_buttonsSetOrigins 7160 0 CODE 0 text9 dist/default/production\GCPlus2.0.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production\GCPlus2.0.X.production.o
 __CFG_PWRTS$PWRT_OFF 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _SPI1CLK 3D1C 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _SPI1TXB 3D11 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __CFG_BORV$VBOR_2P85 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-__end_ofi2_SIClear 7236 0 CODE 0 text26 dist/default/production\GCPlus2.0.X.production.o
+__end_ofi2_SIClear 71F4 0 CODE 0 text26 dist/default/production\GCPlus2.0.X.production.o
 __pcstackCOMRAM 2C 0 COMRAM 1 cstackCOMRAM dist/default/production\GCPlus2.0.X.production.o
 __size_ofi2_SIClear 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __pmediumconst 2022 0 MEDIUMCONST 0 mediumconst dist/default/production\GCPlus2.0.X.production.o
 __CFG_BOREN$SBORDIS 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _CCPTMRS1 3F5F 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __end_of_main 6402 0 CODE 0 text0 dist/default/production\GCPlus2.0.X.production.o
-__end_of_SIConfigureCLC 6BE6 0 CODE 0 text21 dist/default/production\GCPlus2.0.X.production.o
+__end_of_SIConfigureCLC 6BAC 0 CODE 0 text21 dist/default/production\GCPlus2.0.X.production.o
 _IVTBASE 3FD5 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _IVTLOCK 3FD4 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _ADACT 3EFE 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
@@ -1351,28 +1344,28 @@ __LRAM 1 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __Lbss 0 0 RAM 1 bss dist/default/production\GCPlus2.0.X.production.o
 __Lram 0 0 ABS 0 ram dist/default/production\GCPlus2.0.X.production.o
 __Lsfr 0 0 ABS 0 sfr dist/default/production\GCPlus2.0.X.production.o
-__end_of_EEPROMReadByte 7200 0 CODE 0 text7 dist/default/production\GCPlus2.0.X.production.o
+__end_of_EEPROMReadByte 71BE 0 CODE 0 text7 dist/default/production\GCPlus2.0.X.production.o
 _T6INPPS 3ACC 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-i2_SIClear 7224 0 CODE 0 text26 dist/default/production\GCPlus2.0.X.production.o
-__end_of_buttonsGetMapByte0 711E 0 CODE 0 text17 dist/default/production\GCPlus2.0.X.production.o
-__end_of_buttonsGetMapByte1 70EA 0 CODE 0 text16 dist/default/production\GCPlus2.0.X.production.o
-__end_of_bootBootloader 7006 0 CODE 0 text18 dist/default/production\GCPlus2.0.X.production.o
+i2_SIClear 71E2 0 CODE 0 text26 dist/default/production\GCPlus2.0.X.production.o
+__end_of_buttonsGetMapByte0 70DC 0 CODE 0 text17 dist/default/production\GCPlus2.0.X.production.o
+__end_of_buttonsGetMapByte1 70A8 0 CODE 0 text16 dist/default/production\GCPlus2.0.X.production.o
+__end_of_bootBootloader 6FCC 0 CODE 0 text18 dist/default/production\GCPlus2.0.X.production.o
 _buttonsGetMessage 6710 0 CODE 0 text15 dist/default/production\GCPlus2.0.X.production.o
-_ADCChannels 5A 0 COMRAM 1 dataCOMRAM dist/default/production\GCPlus2.0.X.production.o
-__initialization 6F0E 0 CODE 0 cinit dist/default/production\GCPlus2.0.X.production.o
+_ADCChannels 54 0 COMRAM 1 dataCOMRAM dist/default/production\GCPlus2.0.X.production.o
+__initialization 6ED4 0 CODE 0 cinit dist/default/production\GCPlus2.0.X.production.o
 __pbssBANK0 B6 0 BANK0 1 bssBANK0 dist/default/production\GCPlus2.0.X.production.o
 __pbssBANK1 100 0 BANK1 1 bssBANK1 dist/default/production\GCPlus2.0.X.production.o
-__pdataCOMRAM 54 0 COMRAM 1 dataCOMRAM dist/default/production\GCPlus2.0.X.production.o
+__pdataCOMRAM 4E 0 COMRAM 1 dataCOMRAM dist/default/production\GCPlus2.0.X.production.o
 __CFG_MVECEN$OFF 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 _PPSLOCK 3ABF 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __CFG_WRTB$ON 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
 __Hfardata 0 0 FARRAM 0 fardata dist/default/production\GCPlus2.0.X.production.o
 __Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\GCPlus2.0.X.production.o
-__end_of_ADCInit 6B04 0 CODE 0 text24 dist/default/production\GCPlus2.0.X.production.o
+__end_of_ADCInit 6ACA 0 CODE 0 text24 dist/default/production\GCPlus2.0.X.production.o
 __Lifardata 0 0 CODE 0 ifardata dist/default/production\GCPlus2.0.X.production.o
 __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\GCPlus2.0.X.production.o
 __CFG_MCLRE$EXTMCLR 0 0 ABS 0 - dist/default/production\GCPlus2.0.X.production.o
-_ADCValues 54 0 COMRAM 1 dataCOMRAM dist/default/production\GCPlus2.0.X.production.o
+_ADCValues 4E 0 COMRAM 1 dataCOMRAM dist/default/production\GCPlus2.0.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -1398,11 +1391,11 @@ _ADCValues 54 0 COMRAM 1 dataCOMRAM dist/default/production\GCPlus2.0.X.producti
 # All other numeric quantities are in decimal.
 %SEGMENTS
 idloc 0 200000 200000 10 1
-text0 0 6024 6024 121E 1
+text0 0 6024 6024 11DC 1
 cstackBANK0 1 60 60 8C 1
 reset_vec 0 2004 2004 4 1
 bssBANK1 1 100 100 24 1
-bssCOMRAM 1 1 1 5F 1
+bssCOMRAM 1 1 1 59 1
 mediumconst 0 2022 2022 4002 1
 config 0 300000 300000 A 1
 ivt0x200C 0 200C 200C 16 1
